@@ -1,0 +1,8 @@
+title: linear3735's notes
+description: LLM 系统 / 推理 / 量化笔记
+theme: minima
+markdown: kramdown
+permalink: /:title/
+author: linear3735
+plugins:
+  - jekyll-feed
