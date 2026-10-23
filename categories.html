@@ -1,0 +1,15 @@
+---
+layout: page
+title: 分类与标签
+description: 按主题找到笔记，也可以从一个关键词开始。
+permalink: /categories/
+---
+<div class="topic-links">{% for category in site.categories %}<a href="#category-{{ category[0] | slugify: 'raw' | uri_escape }}">{{ category[0] }} <span>{{ category[1].size }}</span></a>{% endfor %}</div>
+{% for category in site.categories %}
+<section class="archive-group" id="category-{{ category[0] | slugify: 'raw' }}"><h2>{{ category[0] }}</h2>{% for post in category[1] %}<a class="archive-row" href="{{ post.url | relative_url }}"><time>{{ post.date | date: '%Y.%m.%d' }}</time><span>{{ post.display_title | default: post.title | escape }}</span><span aria-hidden="true">↗</span></a>{% endfor %}</section>
+{% endfor %}
+<h2 class="tag-heading">标签</h2>
+<div class="tags">{% for tag in site.tags %}<a href="#tag-{{ tag[0] | slugify: 'raw' | uri_escape }}">{{ tag[0] }}</a>{% endfor %}</div>
+{% for tag in site.tags %}
+<section class="archive-group" id="tag-{{ tag[0] | slugify: 'raw' }}"><h3>{{ tag[0] }}</h3>{% for post in tag[1] %}<a class="archive-row" href="{{ post.url | relative_url }}"><time>{{ post.date | date: '%Y.%m.%d' }}</time><span>{{ post.display_title | default: post.title | escape }}</span><span aria-hidden="true">↗</span></a>{% endfor %}</section>
+{% endfor %}

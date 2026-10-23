@@ -1,6 +1,9 @@
 title: linear3735's notes
 description: LLM 系统 / 推理 / 量化笔记
 theme: minima
+url: https://linear3735.github.io
+lang: zh-CN
+timezone: Asia/Hong_Kong
 markdown: kramdown
 permalink: /:title/
 author: linear3735

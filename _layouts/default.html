@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#202329">
+  {% seo %}
+  {% feed_meta %}
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="{{ '/' | relative_url }}">linear3735<span> / notes</span></a>
+      <span class="site-tagline">{{ site.description }}</span>
+      <nav class="site-nav" aria-label="全站导航">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>首页</a>
+        <a href="{{ '/categories/' | relative_url }}"{% if page.url == '/categories/' %} aria-current="page"{% endif %}>分类</a>
+        <a href="{{ '/archive/' | relative_url }}"{% if page.url == '/archive/' %} aria-current="page"{% endif %}>归档</a>
+        <a class="search-link" href="{{ '/search/' | relative_url }}"{% if page.url == '/search/' %} aria-current="page"{% endif %}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>搜索</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="site-main" tabindex="-1">{{ content }}</main>
+  <footer class="site-footer">
+    <span>© {{ site.time | date: '%Y' }} {{ site.author }} · {{ site.description }}</span>
+    <div><a href="https://github.com/linear3735">GitHub ↗</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></div>
+  </footer>
+  <a class="back-to-top" href="#top" aria-label="返回顶部" title="返回顶部">↑</a>
+</body>
+</html>

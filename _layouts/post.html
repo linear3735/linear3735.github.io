@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="breadcrumbs"><a href="{{ '/' | relative_url }}">全部笔记</a><span>/</span><a href="{{ '/categories/' | relative_url }}">{{ page.categories | last }}</a><span>/</span><span>正文</span></div>
+<div class="reading-layout">
+  <article class="paper post" itemscope itemtype="https://schema.org/BlogPosting">
+    <header class="post-header">
+      <div class="eyebrow">研究笔记 <span> / </span> RESEARCH NOTES</div>
+      <h1 itemprop="headline">{{ page.display_title | default: page.title | escape }}</h1>
+      {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle | escape }}</p>{% endif %}
+      <div class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: '%Y年%m月%d日' }}</time><span>{{ page.author | default: site.author }}</span><span>约 {{ content | strip_html | size | divided_by: 500 | plus: 1 }} 分钟阅读</span></div>
+      <div class="tags">{% for tag in page.tags %}<a href="{{ '/categories/' | relative_url }}#tag-{{ tag | slugify: 'raw' | uri_escape }}">{{ tag }}</a>{% endfor %}</div>
+    </header>
+    <details class="mobile-toc" hidden><summary>文章目录 <span>展开章节导航</span></summary><nav data-toc aria-label="文章目录（移动端）"></nav></details>
+    <div class="post-content" itemprop="articleBody">{{ content }}</div>
+    <footer class="post-footer"><a href="{{ '/' | relative_url }}">← 返回全部笔记</a><a href="https://github.com/linear3735/linear3735.github.io/blob/main/{{ page.path }}">查看 Markdown 源文 ↗</a></footer>
+  </article>
+  <aside class="reading-sidebar" aria-label="阅读辅助">
+    <section class="toc-panel">
+      <div class="sidebar-heading"><h2>本文目录</h2><span id="reading-percent">0%</span></div>
+      <div class="reading-track" aria-hidden="true"><div id="reading-progress"></div></div>
+      <nav data-toc aria-label="文章目录"></nav>
+      <noscript><p>目录见正文开头。</p></noscript>
+      <a class="toc-top" href="#top">↑ 回到文章开头</a>
+    </section>
+    <div class="sidebar-note"><span>LINEAR3735 / NOTES</span><p>沿着论文、源码与实践，<br>把问题一层层拆开。</p><a href="{{ '/archive/' | relative_url }}">浏览笔记归档 →</a></div>
+  </aside>
+</div>

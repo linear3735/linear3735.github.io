@@ -1,0 +1,34 @@
+<figure class="lineage-map" aria-label="五条量化血统线总览">
+  <div class="lineage-row">
+    <div class="lineage-label"><strong>A.</strong><span>块标量/补偿线</span></div>
+    <div class="lineage-path">
+      <p>GPTQ(2023-03) → SpQR → AWQ → GPTAQ(2025-04) → GPTQ=Babai(2025-07)</p>
+      <p>└ 工程化:AutoGPTQ / Q2_K + imatrix / Marlin kernel / llm-compressor</p>
+    </div>
+  </div>
+  <div class="lineage-row">
+    <div class="lineage-label"><strong>B.</strong><span>向量码本线</span></div>
+    <div class="lineage-path">
+      <p>SqueezeLLM(2023-06) → QuIP(2023-08) → QuIP#(E8,2024-02) → AQLM(2024-02) → QTIP(TCQ,2024-06) → VPTQ(2024-09) → 2026 大爆炸:XOR-Trellis / CurveTQ / Tetra / BCJR-QAT / pingala8 进 GGUF</p>
+      <p>└ 工程化:IQ2_XXS(E8 离线查表) / EXL3(QTIP 直系) / VPTQ-kernel</p>
+    </div>
+  </div>
+  <div class="lineage-row">
+    <div class="lineage-label"><strong>C.</strong><span>激活匀衡/旋转线</span></div>
+    <div class="lineage-path">
+      <p>SmoothQuant(2022-11) → AWQ-scale → QuaRot(2024-04) → SpinQuant(2024-05) → DuQuant / FlatQuant(2024) → WUSH / ParoQuant / OffQ(2025-11→2026)</p>
+    </div>
+  </div>
+  <div class="lineage-row">
+    <div class="lineage-label"><strong>D.</strong><span>硬件块浮点线</span></div>
+    <div class="lineage-path">
+      <p>int8(2022) → FP8 E4M3 块缩放(2023-) → OCP MX 格式 → MXFP4(2025) → NVFP4(Blackwell 原生,2025) → Disaggregated Quantization(2026-09)</p>
+    </div>
+  </div>
+  <div class="lineage-row">
+    <div class="lineage-label"><strong>E.</strong><span>原生低比特训练</span></div>
+    <div class="lineage-path">
+      <p>BitNet b1.58(2024-02) → bitnet.cpp(2025) → gpt-oss MXFP4(2025-08) → Kimi-K2-Thinking INT4 QAT(2025-11) → TRACE(RL FP4-QAT,2026-10)</p>
+    </div>
+  </div>
+</figure>

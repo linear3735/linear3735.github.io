@@ -1,0 +1,10 @@
+---
+layout: page
+title: 笔记归档
+description: 按时间回看。每篇笔记，都是理解问题的一步。
+permalink: /archive/
+---
+{% assign years = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% for year in years %}
+<section class="archive-group"><h2>{{ year.name }} <small>{{ year.items.size }} 篇</small></h2>{% for post in year.items %}<a class="archive-row" href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%m.%d' }}</time><span>{{ post.display_title | default: post.title | escape }}</span><span aria-hidden="true">↗</span></a>{% endfor %}</section>
+{% endfor %}

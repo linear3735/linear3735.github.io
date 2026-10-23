@@ -1,8 +1,13 @@
 ---
 layout: post
 title:  "LLM 量化五年血统图:从 GPTQ 到 QTIP,再到 INT4 原生训练(2022→2026)"
+display_title: LLM 量化五年血统图
+subtitle: 从 GPTQ 到 QTIP，再到 INT4 原生训练（2022→2026）
+description: 沿五条技术谱系，梳理 LLM 量化论文、工程格式与部署工具之间的关系。
+excerpt: 从 GPTQ、QTIP 到原生低比特训练，读懂五条量化谱系与常用工具的来路。
 date:   2026-10-23 00:00:00 +0800
 categories: llm quantization
+tags: [GPTQ, QTIP, GGUF, FP8, QAT]
 ---
 
 > 一句话总纲:五年里 LLM 量化不是在比"谁的 bit 低",而是在五条血统线的接力——
@@ -36,20 +41,7 @@ LLM 推理 decode 阶段是 memory-bound:每生成一个 token,要把全部权�
 
 ## 1 总览:五条血统线
 
-```
-A. 块标量/补偿线     GPTQ(2023-03) → SpQR → AWQ → GPTAQ(2025-04) → GPTQ=Babai(2025-07)
-                     └ 工程化:AutoGPTQ / Q2_K + imatrix / Marlin kernel / llm-compressor
-B. 向量码本线        SqueezeLLM(2023-06) → QuIP(2023-08) → QuIP#(E8,2024-02)
-                     → AQLM(2024-02) → QTIP(TCQ,2024-06) → VPTQ(2024-09)
-                     → 2026 大爆炸:XOR-Trellis / CurveTQ / Tetra / BCJR-QAT / pingala8 进 GGUF
-                     └ 工程化:IQ2_XXS(E8 离线查表) / EXL3(QTIP 直系) / VPTQ-kernel
-C. 激活匀衡/旋转线   SmoothQuant(2022-11) → AWQ-scale → QuaRot(2024-04) → SpinQuant(2024-05)
-                     → DuQuant / FlatQuant(2024) → WUSH / ParoQuant / OffQ(2025-11→2026)
-D. 硬件块浮点线      int8(2022) → FP8 E4M3 块缩放(2023-) → OCP MX 格式 → MXFP4(2025)
-                     → NVFP4(Blackwell 原生,2025) → Disaggregated Quantization(2026-09)
-E. 原生低比特训练    BitNet b1.58(2024-02) → bitnet.cpp(2025) → gpt-oss MXFP4(2025-08)
-                     → Kimi-K2-Thinking INT4 QAT(2025-11) → TRACE(RL FP4-QAT,2026-10)
-```
+{% include lineages.html %}
 
 ## 2 第一世代 2022-2023:地基期,敌人是 outlier
 

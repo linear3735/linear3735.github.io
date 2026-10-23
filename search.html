@@ -1,0 +1,14 @@
+---
+layout: page
+title: 搜索笔记
+description: 搜索文章标题、标签和正文。
+permalink: /search/
+---
+<form class="search-form" action="{{ '/search/' | relative_url }}" role="search" data-index="{{ '/search.json' | relative_url }}">
+  <label class="visually-hidden" for="search-input">搜索关键词</label>
+  <input id="search-input" name="q" type="search" placeholder="试试 GPTQ、QTIP 或量化…" autocomplete="off">
+  <button type="submit">搜索</button>
+</form>
+<p id="search-status" class="search-status" role="status">输入关键词，搜索全部笔记。</p>
+<div id="search-results" class="search-results"></div>
+<noscript><p>搜索需要启用 JavaScript。你也可以从<a href="{{ '/archive/' | relative_url }}">笔记归档</a>阅读文章。</p></noscript>
