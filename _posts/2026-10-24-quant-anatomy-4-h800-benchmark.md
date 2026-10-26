@@ -25,7 +25,7 @@ categories: llm quantization deepseek
 |---|---|---|---|---|
 | A. Xolotl XQ | Xolotl 原生引擎(单会话) | **1×H800 80GB + 32C + 512GB RAM** | **我方第一手实测**(2026-10-21 单卡验收 + 7 天长服务) | H800 真数 |
 | B. 原生 Q2 vLLM 栈(ELVEZ 同配方) | vLLM(TP4EP4 DSpark5) | **4×H800** | **我方第一手实测** | H800 真数,但注意:不是 ELVEZ 文件 |
-| C. EXL3 2.875 | vLLM (EXL3 backend) | 4×**RTX PRO 6000 Blackwell 96GB**(作者共享多租户) | 作者卡第一手 | **非 H800**,我方 H800 数在排队 |
+| C. EXL3 2.875 | vLLM (EXL3 backend) | 4×**RTX PRO 6000 Blackwell 96GB**(作者共享多租户) | 作者卡第一手 | **非 H800**;我方 H800 数已补,见[第 ⑤ 篇](/quant-anatomy-5-exl3-h800-live/) |
 
 必须大声说清的两点:
 
@@ -126,7 +126,7 @@ draft   4.84ms  + sample 0.31ms
 
 | 缺 | 补法 | 优先级 |
 |---|---|---|
-| EXL3 我方 H800 C1/C8/C16 服务 benchmark | 冻结包已备,等 4×H800 时值 | 高 |
+| EXL3 我方 H800 C1/C8/C16 服务 benchmark | ~~冻结包已备,等 4×H800 时值~~(已补:C1/C4/C16/C32/C64 五档实测,见[第 ⑤ 篇](/quant-anatomy-5-exl3-h800-live/)) | ✅ |
 | vLLM 原生 Q2 栈 per-card 运行时 VRAM 快照 | 1 次 nvidia-smi + KV pool dump | 高 |
 | Xolotl H800 自跑 PPL/任务子集 | 1 次 ppl_eval + 短任务可复链 | 高 |
 | Xolotl 与 vLLM TP8 长 A/B | 同 stage 2× 4 卡对开 | 中 |
@@ -142,11 +142,11 @@ draft   4.84ms  + sample 0.31ms
 |---|---|---|---|---|---|---|---|
 | ELVEZ GGUF | 2.06(g/u)+2.625(down) | ixv-server(Metal) | M3 Ultra(卡面) | 47.14(M3 实测) | — | — | **H800 无态**;同配方等价 = 下一行 |
 | 原生 Q2 vLLM | 2.06/2.625 同配方 | vLLM TP4EP4 DSpark5 | **4×H800** | 39.0 (C1,聚合=单请求) | 825.9 (C32) | 快照 GAP;payload/卡 35.6 GiB 算术 | 我方实测 |
-| EXL3 2.875 | 2.875(expert mean) | vLLM EXL3 backend | 4×Blackwell 96GB(作者) | 125.86 (C1) | 452.16 (C32) | —(非 H800);experts/卡 48.8 GB 算术 | 作者数,我方 H800 排队 |
+| EXL3 2.875 | 2.875(expert mean) | vLLM EXL3 backend | 4×Blackwell 96GB(作者) | 125.86 (C1) | 452.16 (C32) | —(非 H800);experts/卡 48.8 GB 算术 | 作者数;我方 H800 实测见[第 ⑤ 篇](/quant-anatomy-5-exl3-h800-live/)(C1 156.81 / C32 695.27) |
 | Xolotl XQ | 2.25(September 包测);2.093(1017 V2 卡) | Xolotl 原生引擎(单会话) | **1×H800 + 512GB RAM** | 47.0–60.7 decode;533–567 prefill | N/A(单会话设计) | **81,079 MiB 实测** | 我方实测;7 天长服务 run 过 |
 
 ## 参考与来源
 
 - 作者侧第一手:[ELVEZ Q2 卡](https://huggingface.co/Elvez)、[LibertAI/Infatoshi EXL3 2.875 件+benchmark](https://huggingface.co/Infatoshi)、[Xolotl XQ pipeline](https://huggingface.co/IndrasMirror)
 - 我方第一手:Xolotl 单 H800 全载荷验收/七天服务、原生 Q2 栈 4×H800 并发压测、EXL3 CPU 装配链双段验收 + kernel 级一层抽样——均为本团队只读取证产物,集群标识不写入此文
-- 前文:[第 ① 篇 ELVEZ GGUF](/quant-anatomy-1-elvez-gguf/)、[第 ② 篇 EXL3](/quant-anatomy-2-exl3/)、[第 ③ 篇 Xolotl XQ](/quant-anatomy-3-xolotl-xq/)
+- 前文:[第 ① 篇 ELVEZ GGUF](/quant-anatomy-1-elvez-gguf/)、[第 ② 篇 EXL3](/quant-anatomy-2-exl3/)、[第 ③ 篇 Xolotl XQ](/quant-anatomy-3-xolotl-xq/);后续:[第 ⑤ 篇 EXL3 的 4×H800 五档实测](/quant-anatomy-5-exl3-h800-live/)

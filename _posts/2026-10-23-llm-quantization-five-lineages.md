@@ -13,6 +13,8 @@ tags: [GPTQ, QTIP, GGUF, FP8, QAT]
 > 一句话总纲:五年里 LLM 量化不是在比"谁的 bit 低",而是在五条血统线的接力——
 > **块标量补偿线(GPTQ 系)、向量码本线(QuIP→QTIP 系)、激活匀衡/旋转线(SmoothQuant→QuaRot 系)、硬件块浮点线(int8→NVFP4)、原生低比特训练线(BitNet→Kimi-K2)**。
 > 你手上的 Q2_K / IQ2_XXS / EXL3 / vLLM-FP8,各自挂在这棵树的不同枝上。
+>
+> 更新 2026-10-26:§4.4 的九篇 2026 年新工作已从"标题+方向"粗列升级为逐篇精读(arXiv 全文或官方仓库原文核对,数字注明表号);TRACE/DuoRate 等仍只有标题级的条目在文中标明。
 
 ## 目录
 
@@ -174,11 +176,13 @@ LLM 推理 decode 阶段是 memory-bound:每生成一个 token,要把全部权�
 - **【2025】OCP MX 格式铺开**:MXFP4/MXFP6/MXFP8(32 元素共享 e8m0 块 scale);AMD MI355X(2025-06)原生 MX FP4/FP6
 - 精密化论文一串:AMXFP4(ACL 2025 Findings,非对称微缩放对付激活 outlier)、Quartet(NeurIPS 2025,原生 FP4 训练性)、ARCQuant(ACL 2026,NVFP4+残差通道)、OSFP4(2026-10,对角平滑+块 scale 联合优化)
 - **【2026-09】Disaggregated Quantization**:prefill(算力密集)用 NVFP4、decode(访存密集)用 1-bit——**prefill/decode 用不同精度**成为显式范式
+- **【2026-10-09】DuoRate**(arXiv 2610.13328,Huawei)★:MoE 的 bit 被计两次费——存一份(驻留)读一份(每步 decode),旧 per-expert 分配只压存量,**store-read gap** 是真账:BitsMoE 2-bit 件存 2.5425 bpw、batch-1 decode 每步读 7.5008 bpw(2.95x,FP16 basis 被 128 专家摊掉存储、decode 只摊激活的 8 个)。存=统一档前缀可读流(2-bit 分组仿射基码+至多 4 张 1-bit 细化平面,切档=读字节前缀)+离线烙好的失真张量;在线免标签——profile 一份自己的 prefill,解 Lagrangian 速率-失真 **`M_e = argmin[d_e(M) + λR(M)]`**,**路由频率在 per-expert argmin 里可解析消去**(Prop.1/Cor.1:频率不能重排两个专家)——不用整数规划,CPU 秒级。Qwen3-30B-A3B(唯一评测模型,作者自承)读 2.3 bpw 超全体 2-bit 基线 6.3-47.0 分、读 2.9 ≈ NF4,GSM8K 91.00 距 BF16 仅 0.25(Table 1);decode 流量 520.9/588.9/656.8 MB/token vs BitsMoE 1698.9、BF16 3623.9(Table 2)。代价=驻留反而变大(14.41 GiB vs BitsMoE 8.58)——它买的是读取量;**prefix-read kernel 留 future work,Q4 kernel BOSS 又现身**
 
 ### 4.2 E 线兑现承诺:低比特成为出厂配置
 
 - **【2025-08】gpt-oss-120b/20b**(OpenAI,arXiv 2508.10925):MoE 权重**原生 MXFP4 后训练**,官方评测直接在 MXFP4 下跑,单 H100 可装 120B——顶级实验室第一次把低比特当交付精度
 - **【2025-11】Kimi-K2-Thinking**(月之暗面)★:1T 总参/32B 激活 MoE,**expert 权重在 post-training 阶段原生 INT4 QAT**,官方成绩全部在 INT4 下报,生成提速约 2x;走 llm-compressor 的 compressed-tensors 格式,vLLM/SGLang/KTransformers 全支持——PTQ/QAT 之争的量产级裁判
+- **【2026-10-06】TRACE**(arXiv 2610.07767,Alibaba Token Hub + OSU)★:**RL 后训练链的原生 FP4**(Train-Rollout Quantization Alignment)。旧 FP4-RL 把训练侧和 rollout 侧各自独立量化,列车不同轨直接崩:朴素 FP4-QAT 均值 59.6、QaRL 58.6、QUADS 68.8 vs BF16 74.9(Table 1)。做法=rollout 侧回传每个匹配位置的 FP4 码字和 scale,训练侧不四舍五入,在 E2M1 相邻两码字中挑更靠 rollout 的那个(列车同轨);通信只带深层 1-bit mantissa+scale,7.5 KB/token、约为全激活缓存的 1/6(§3.2)。格式=NVFP4 W+A+KV 联合(只量化 routed experts 与 KV),栈=VeRL+Megatron+SGLang,GRPO+R3 routing 回放。四模型:Qwen3.5-35B-A3B/122B-A10B、Qwen3.8-Flash-Next、Qwen3.8-2.4T-A95B;reasoning/coding/长程(DeepSWE、Terminal-Bench 2.1、GDPval)与 BF16 全差<1 分,均值 75.3 vs 74.9,比 post-hoc FP4 PTQ 全家高 3.9-4.9 分(Table 7);rollout 吞吐最高 5.4x(128K 输出),端到端开销仅 7.4%;约 120 步后 policy 自适应 FP4、曲线追上 BF16 参考——**§9(b) 的胜负手已有人交卷**
 - **BitNet 战线**:bitnet.cpp(2025-04 出 2B-4T、2025-05 官方 GPU kernel、2026-01 CPU 优化、2026-07 首批 1-bit embedding 模型)——技术成立,但 1-bit 仍困在 CPU/edge/embedding 生态位
 - **旗舰出厂精度普查**:Qwen3 全系官方 FP8 block-128(arXiv 2505.09388);DeepSeek-V3.2(2025-09)BF16+F8_E4M3 块wise scales;MiniMax-M2(约 2025-10)FP8 E4M3;GLM-4.6(约 2025-10)只发 BF16——**FP8 E4M3 块缩放 = 开源旗舰默认出厂位**
 

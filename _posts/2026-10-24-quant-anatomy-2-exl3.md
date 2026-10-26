@@ -148,6 +148,8 @@ Infatoshi 卡面第一手实测(**授权硬件 = 4×RTX PRO 6000 Blackwell 96GB,
 
 ## 7 我们的 H800 现状与缺口
 
+> 更新 2026-10-26:本条第一缺口已实测补完——EXL3 4×H800 五档并发 benchmark,见[第 ⑤ 篇](/quant-anatomy-5-exl3-h800-live/)。下述"排队中"为成文当时(10-24)的状态,保留原文。
+
 诚实栏,不藏:
 
 - 已有的:CPU 装配链全过(3,921 键审计 PASS)、SM90 ext 构建过(284MiB/112 cubin)、kernel 级一层 255fit+100held-out 全过、混合件 EOF 关 188,245 键。
@@ -161,6 +163,7 @@ Infatoshi 卡面第一手实测(**授权硬件 = 4×RTX PRO 6000 Blackwell 96GB,
 
 - 原量化与再制:[LibertAI DeepSeek-V4.1-Flash-EXL3](https://huggingface.co/LibertAIDAI)(commit `c178a012`)、[Infatoshi 2.875 件 + 四件套对照](https://huggingface.co/Infatoshi)(量化 config 与 Blackwell 实测表)
 - exllamav3 pin 版 `5be8865`:pack 入口 `quantize.py:1408`、forward 分派 `exl3.py:126`、128-block Hadamard 变换、144 行边界
+- 后续实测:[本博客 → 第 ⑤ 篇 EXL3 的 4×H800 五档实测](/quant-anatomy-5-exl3-h800-live/)
 - 血统:[本博客 → LLM 量化五年血统图 §4](/llm-quantization-five-lineages/)
 - 综合横评:[本博客 → DSV4.1 三基线](/dsv41-three-quant-baselines/)
 - 内部 CPU 装配验收与 kernel 级抽样:本团队只读取证产物,集群标识不写入此文
