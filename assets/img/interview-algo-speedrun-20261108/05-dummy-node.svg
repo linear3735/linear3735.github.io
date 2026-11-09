@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img">
+  <rect width="960" height="430" fill="#ffffff"/>
+  <text x="480" y="36" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">虚拟头结点 dummy:为什么它值得多开一个节点</text>
+  <text x="480" y="64" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">以「合并两个有序链表」为例</text>
+  <circle cx="132" cy="118" r="21" fill="#e4f1ee" stroke="#252b33" stroke-width="1.5"/>
+  <text x="126" y="123" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <line x1="136" y1="109" x2="136" y2="127" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="155" y1="118" x2="167.00" y2="118.00" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="175.00,118.00 167.00,122.60 167.00,113.40" fill="#737c88"/>
+  <circle cx="198" cy="118" r="21" fill="#e4f1ee" stroke="#252b33" stroke-width="1.5"/>
+  <text x="192" y="123" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <line x1="202" y1="109" x2="202" y2="127" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="221" y1="118" x2="233.00" y2="118.00" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="241.00,118.00 233.00,122.60 233.00,113.40" fill="#737c88"/>
+  <circle cx="264" cy="118" r="21" fill="#e4f1ee" stroke="#252b33" stroke-width="1.5"/>
+  <text x="258" y="123" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <line x1="268" y1="109" x2="268" y2="127" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="64" y="123" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="400">l1</text>
+  <circle cx="132" cy="178" r="21" fill="#fdf0e3" stroke="#252b33" stroke-width="1.5"/>
+  <text x="126" y="183" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <line x1="136" y1="169" x2="136" y2="187" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="155" y1="178" x2="167.00" y2="178.00" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="175.00,178.00 167.00,182.60 167.00,173.40" fill="#737c88"/>
+  <circle cx="198" cy="178" r="21" fill="#fdf0e3" stroke="#252b33" stroke-width="1.5"/>
+  <text x="192" y="183" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <line x1="202" y1="169" x2="202" y2="187" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="221" y1="178" x2="233.00" y2="178.00" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="241.00,178.00 233.00,182.60 233.00,173.40" fill="#737c88"/>
+  <circle cx="264" cy="178" r="21" fill="#fdf0e3" stroke="#252b33" stroke-width="1.5"/>
+  <text x="258" y="183" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <line x1="268" y1="169" x2="268" y2="187" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="64" y="183" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">l2</text>
+  <circle cx="138" cy="268" r="21" fill="#ffffff" stroke="#252b33" stroke-width="1.5"/>
+  <text x="138" y="273" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">−1</text>
+  <line x1="142" y1="259" x2="142" y2="277" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="138" y="230" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="400">dummy</text>
+  <line x1="161" y1="268" x2="167.00" y2="268.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="175.00,268.00 167.00,272.60 167.00,263.40" fill="#3568a3"/>
+  <circle cx="198" cy="268" r="21" fill="#e8eff7" stroke="#252b33" stroke-width="1.5"/>
+  <text x="192" y="273" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <line x1="202" y1="259" x2="202" y2="277" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="221" y1="268" x2="233.00" y2="268.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="241.00,268.00 233.00,272.60 233.00,263.40" fill="#3568a3"/>
+  <circle cx="264" cy="268" r="21" fill="#e8eff7" stroke="#252b33" stroke-width="1.5"/>
+  <text x="258" y="273" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <line x1="268" y1="259" x2="268" y2="277" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="287" y1="268" x2="299.00" y2="268.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="307.00,268.00 299.00,272.60 299.00,263.40" fill="#3568a3"/>
+  <circle cx="330" cy="268" r="21" fill="#e8eff7" stroke="#252b33" stroke-width="1.5"/>
+  <text x="324" y="273" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <line x1="334" y1="259" x2="334" y2="277" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="353" y1="268" x2="365.00" y2="268.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="373.00,268.00 365.00,272.60 365.00,263.40" fill="#3568a3"/>
+  <circle cx="396" cy="268" r="21" fill="#e8eff7" stroke="#252b33" stroke-width="1.5"/>
+  <text x="390" y="273" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <line x1="400" y1="259" x2="400" y2="277" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="396" y="330" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">p</text>
+  <line x1="396" y1="318" x2="396.00" y2="301.00" stroke="#3568a3" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="396.00,293.00 400.60,301.00 391.40,301.00" fill="#3568a3"/>
+  <text x="700" y="123" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">① l1、l2 各自的头结点也可能被先取走</text>
+  <text x="700" y="273" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">② 结果链表的第一个节点还没确定,</text>
+  <text x="700" y="295" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">     没法先写 head.next</text>
+  <text x="700" y="330" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">有了 dummy:结果链表从创建那一刻</text>
+  <text x="700" y="352" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">就有头结点,最后 return dummy.next</text>
+  <text x="480" y="410" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">口诀:但凡要「创造一条新链表」,就先开一个 dummy —— 它不存数据,只负责让指针一定有地方落</text>
+</svg>

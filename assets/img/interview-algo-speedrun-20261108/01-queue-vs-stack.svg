@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img">
+  <rect width="1000" height="440" fill="#ffffff"/>
+  <text x="500.0" y="38" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">队列与栈:同一批元素,两种取出顺序</text>
+  <rect x="32" y="68" width="460" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="262.0" y="100" font-size="15" fill="#3568a3" text-anchor="middle" font-weight="600">队列 Queue —— FIFO 先进先出</text>
+  <rect x="102" y="178" width="74" height="60" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="139.0" y="213.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="176" y="178" width="74" height="60" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="213.0" y="213.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="250" y="178" width="74" height="60" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="287.0" y="213.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="324" y="178" width="74" height="60" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="361.0" y="213.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <text x="102" y="158" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="400">队头 front</text>
+  <text x="398" y="158" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="400">队尾 rear</text>
+  <line x1="92" y1="208.0" x2="66.00" y2="208.00" stroke="#252b33" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="58.00,208.00 66.00,203.40 66.00,212.60" fill="#252b33"/>
+  <text x="52" y="198.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">出队 dequeue</text>
+  <text x="52" y="262" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">最先取出 1</text>
+  <line x1="472" y1="208.0" x2="416.00" y2="208.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="408.00,208.00 416.00,203.40 416.00,212.60" fill="#3568a3"/>
+  <text x="470" y="262" font-size="11" fill="#3568a3" text-anchor="end" font-weight="400">入队 enqueue</text>
+  <text x="262.0" y="300" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">谁先进,谁先出:像排队买票,</text>
+  <text x="262.0" y="322" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">不能插队,也不能从中间走。</text>
+  <text x="262.0" y="352" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">常见用途:BFS 层序遍历、任务队列</text>
+  <rect x="508" y="68" width="460" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="738.0" y="100" font-size="15" fill="#3568a3" text-anchor="middle" font-weight="600">栈 Stack —— LIFO 后进先出</text>
+  <rect x="574" y="148" width="120" height="38" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="634.0" y="172.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="574" y="186" width="120" height="38" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="634.0" y="210.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="574" y="224" width="120" height="38" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="634.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="706" y="170" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">栈顶 top</text>
+  <line x1="634.0" y1="118" x2="634.00" y2="134.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="634.00,142.00 629.40,134.00 638.60,134.00" fill="#3568a3"/>
+  <text x="624.0" y="108" font-size="11" fill="#3568a3" text-anchor="end" font-weight="400">压栈 push</text>
+  <line x1="702" y1="205.0" x2="940.00" y2="205.00" stroke="#252b33" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="948.00,205.00 940.00,209.60 940.00,200.40" fill="#252b33"/>
+  <text x="710" y="235.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">出栈 pop</text>
+  <text x="634.0" y="284" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">栈底 bottom</text>
+  <text x="738.0" y="300" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">最后进来的最先出去,</text>
+  <text x="738.0" y="322" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">像一摞盘子,只能从顶上拿。</text>
+  <text x="738.0" y="352" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">常见用途:DFS、括号匹配、函数调用栈</text>
+  <text x="500.0" y="424" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">两者的 push / pop 都是 O(1) —— 受限,恰恰是它们存在的理由</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img">
+  <rect width="960" height="430" fill="#ffffff"/>
+  <text x="480" y="36" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">相交链表:让两条路各走一遍对方的路</text>
+  <circle cx="120" cy="128" r="21" fill="#e4f1ee" stroke="#252b33" stroke-width="1.5"/>
+  <text x="114" y="133" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">a1</text>
+  <line x1="124" y1="119" x2="124" y2="137" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="143" y1="128" x2="157.00" y2="128.00" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="165.00,128.00 157.00,132.60 157.00,123.40" fill="#737c88"/>
+  <circle cx="188" cy="128" r="21" fill="#e4f1ee" stroke="#252b33" stroke-width="1.5"/>
+  <text x="182" y="133" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">a2</text>
+  <line x1="192" y1="119" x2="192" y2="137" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="211" y1="128" x2="225.00" y2="128.00" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="233.00,128.00 225.00,132.60 225.00,123.40" fill="#737c88"/>
+  <text x="120" y="82" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="400">headA</text>
+  <circle cx="120" cy="232" r="21" fill="#fdf0e3" stroke="#252b33" stroke-width="1.5"/>
+  <text x="114" y="237" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">b1</text>
+  <line x1="124" y1="223" x2="124" y2="241" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="143" y1="232" x2="157.00" y2="232.00" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="165.00,232.00 157.00,236.60 157.00,227.40" fill="#737c88"/>
+  <circle cx="188" cy="232" r="21" fill="#fdf0e3" stroke="#252b33" stroke-width="1.5"/>
+  <text x="182" y="237" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">b2</text>
+  <line x1="192" y1="223" x2="192" y2="241" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="211" y1="232" x2="225.00" y2="232.00" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="233.00,232.00 225.00,236.60 225.00,227.40" fill="#737c88"/>
+  <circle cx="256" cy="232" r="21" fill="#fdf0e3" stroke="#252b33" stroke-width="1.5"/>
+  <text x="250" y="237" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">b3</text>
+  <line x1="260" y1="223" x2="260" y2="241" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="279" y1="232" x2="293.00" y2="232.00" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="301.00,232.00 293.00,236.60 293.00,227.40" fill="#737c88"/>
+  <text x="120" y="288" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="400">headB</text>
+  <circle cx="324" cy="180.0" r="21" fill="#e8eff7" stroke="#252b33" stroke-width="1.5"/>
+  <text x="318" y="185.0" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">c1</text>
+  <line x1="328" y1="171.0" x2="328" y2="189.0" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="347" y1="180.0" x2="361.00" y2="180.00" stroke="#3568a3" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="369.00,180.00 361.00,184.60 361.00,175.40" fill="#3568a3"/>
+  <circle cx="392" cy="180.0" r="21" fill="#e8eff7" stroke="#252b33" stroke-width="1.5"/>
+  <text x="386" y="185.0" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">c2</text>
+  <line x1="396" y1="171.0" x2="396" y2="189.0" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="415" y1="180.0" x2="429.00" y2="180.00" stroke="#3568a3" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="437.00,180.00 429.00,184.60 429.00,175.40" fill="#3568a3"/>
+  <circle cx="460" cy="180.0" r="21" fill="#e8eff7" stroke="#252b33" stroke-width="1.5"/>
+  <text x="454" y="185.0" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">c3</text>
+  <line x1="464" y1="171.0" x2="464" y2="189.0" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="211" y1="128" x2="291.66" y2="162.83" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="299.00,166.00 289.83,167.05 293.48,158.61" fill="#737c88"/>
+  <line x1="279" y1="232" x2="295.27" y2="201.08" stroke="#737c88" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="299.00,194.00 299.34,203.22 291.20,198.94" fill="#737c88"/>
+  <text x="392" y="136.0" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="400">公共部分</text>
+  <text x="120" y="310" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">记 A 独有 a、B 独有 b、公共 c:p1 走 a+c+b,p2 走 b+c+a,</text>
+  <text x="120" y="332" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">两条路的总长都是 a+b+c —— 所以一定在 c1 相遇。</text>
+  <line x1="483" y1="180.0" x2="516" y2="180.0" stroke="#737c88" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="522" y="185.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">null</text>
+  <text x="480" y="364" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">不相交时 c 就是 null,两条路都走 a+b 步,同时到达 null,</text>
+  <text x="480" y="386" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">循环条件 p1 != p2 自然退出并返回 null。</text>
+  <text x="480" y="410" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">空间 O(1),时间 O(a+b+c) —— 不需要 HashSet</text>
+</svg>
