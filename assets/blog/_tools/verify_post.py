@@ -69,34 +69,46 @@ def anchor_hazards(text: str) -> list:
 
 
 def github_id(text: str) -> str:
-    """GitHub Pages 的标题 id(线上实测反推,不是猜的)。
+    """GitHub Pages 的标题 id(**只对安全字符集有把握**)。
 
-    规则:去掉标点;大写转小写;空白折成一个 `-`;紧跟在空白后的 `-` 丢掉;
-    CJK 原样保留。
+    有把握的规则:CJK 原样保留;ASCII 字母数字转小写;空白折成一个 `-`;
+    其余字符丢掉。凡是标题里出现 ASCII 标点(括号、冒号、`*` 等),
+    连字符的**个数和位置我没能反推出来**,所以那种标题一律按
+    anchor_hazards / anchor_key 的路子处理,不要依赖这个函数的输出。
 
-    实测样本:
+    已实测确认的样本:
       `1 哈希表:O(1) 是怎么挣来的` -> `1-哈希表o1-是怎么挣来的`
       `0 先说明材料和我的写法`     -> `0-先说明材料和我的写法`
-      `O(log²n) 是怎么推出来的`    -> `ologn-是怎么推出来的`   (² 被丢)
+      `O(log²n) 是怎么推出来的`    -> `ologn-是怎么推出来的`
+      `O(log n * log n)`          -> `olog-n--log-n-`   (连字符数:没把握)
+
+    注意 `²` 这一类上标:本地 kramdown 走 NFKC 会把它变成 ASCII `2`,
+    线上则直接丢掉 —— 这正是 2026-11-13 那条线上死锚点的成因。
     """
-    import unicodedata
-    # 不做 NFKC!NFKC 会把 `²` 变成 ASCII `2`,而 GitHub 是把它**丢掉**的。
-    # 这正是本地/线上分叉的根源,所以这里必须按原字符判定。
-    s = text
     keep = []
-    for ch in s:
+    for ch in text:
         if _HAZARD_OK.match(ch):                     # CJK 原样留
             keep.append(ch)
         elif ch.isspace():
             keep.append(" ")
         elif ch.isascii() and (ch.isalnum() or ch in "-_"):
             keep.append(ch)
-        # 其余(含全部 ASCII 标点、括号、冒号)直接丢
+        # 其余(含全部 ASCII 标点、括号、冒号、上标)丢掉
     s = "".join(keep).lower()
-    # 空白折成连字符;`O(1) 是` 里 `)` 被丢后留下 `o1 是`,只出一个 `-`
-    s = re.sub(r"\s+", "-", s)
-    # `:O(log` -> 冒号被丢,不留连字符;这里不会产生多余 `-`
-    return s.strip("-")
+    return re.sub(r"\s+", "-", s).strip("-")
+
+
+def anchor_key(slug: str) -> str:
+    """把 id 折成「忽略连字符个数与位置」的比较键。
+
+    为什么要这样:线上 id 里连字符的个数取决于标点如何参与折叠,
+    这个规则我没能可靠反推(见 github_id)。但**去掉连字符之后**,
+    字符本身是否一致是可以判定的 —— 而真实事故(`olog2n` vs `ologn`)
+    差别正是在字符上,不是在连字符上。所以:
+      · 字符级差异(上标被丢、字母不同)   -> 报错  ✅ 抓得住
+      · 仅连字符个数/位置不同              -> 放过  ✅ 不误报
+    """
+    return re.sub(r"[-_]+", "", slug).lower()
 
 
 def main() -> int:
@@ -195,21 +207,21 @@ def main() -> int:
     if not toc:
         notes.append("no 目录 block; the theme builds a TOC from headings anyway")
     else:
-        # 用线上真正生效的 id 规则做**精确**比对。
-        # 旧版这里是 `want in i` 的子串包含,所以 `...olog2n...` 会被
+        # 用线上真正生效的 id 做比对,但按 anchor_key 忽略连字符差异。
+        # 旧版这里是 `want in i` 的子串包含,所以 `...olog2n...` 被
         # `...ologn...` 判成"包含即通过",真实死锚点就这样溜过去了。
-        real_ids = {github_id(t) for lvl, t in headings if lvl == 2}
+        h2_keys = {anchor_key(github_id(t)): t for lvl, t in headings if lvl == 2}
         for lvl, t in headings:
             if lvl != 2:
                 continue
             want = github_id(t)
-            if want not in toc_ids:
+            if anchor_key(want) not in {anchor_key(i) for i in toc_ids}:
                 problems.append(f"heading not linked from 目录: {t!r} (id {want!r})")
         for _, i in toc:
-            # 锚点必须精确等于某个 h2 的真实 id,否则线上就是死链接
-            if i not in real_ids:
-                near = [r for r in real_ids if r[:8] == i[:8] or r[:6] == i[:6]]
-                hint = f", 最接近的是 #{near[0]}" if near else ""
+            # 锚点必须对应某个 h2,允许连字符个数/位置不同,但不允许字符不同
+            if anchor_key(i) not in h2_keys:
+                near = [k for k in h2_keys if k[:8] == anchor_key(i)[:8]]
+                hint = f", 最接近的标题是 {h2_keys[near[0]]!r}" if near else ""
                 problems.append(f"目录 anchor matches no heading: #{i}{hint}")
         if len(toc) != len(h2):
             notes.append(f"目录 has {len(toc)} links for {len(h2)} level-2 headings")
