@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="470" viewBox="0 0 860 470" role="img">
+  <rect width="860" height="470" fill="#ffffff"/>
+  <text x="430" y="34" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">信息流 = k 条已排序链表的归并(每条只深入前 10 格)</text>
+  <rect x="36" y="58" width="500" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="286" y="84" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">每个用户的推文链(左 = 最新)</text>
+  <text x="88" y="134" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">user 1</text>
+  <rect x="92" y="104" width="84" height="52" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="134.0" y="135.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t5</text>
+  <rect x="200" y="104" width="84" height="52" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="242.0" y="135.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t3</text>
+  <line x1="176" y1="130" x2="188.00" y2="130.00" stroke="#3568a3" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="196.00,130.00 188.00,134.60 188.00,125.40" fill="#3568a3"/>
+  <rect x="308" y="104" width="84" height="52" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="350.0" y="135.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t1</text>
+  <line x1="284" y1="130" x2="296.00" y2="130.00" stroke="#3568a3" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="304.00,130.00 296.00,134.60 296.00,125.40" fill="#3568a3"/>
+  <text x="88" y="210" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">user 2</text>
+  <rect x="92" y="180" width="84" height="52" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="134.0" y="211.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t6</text>
+  <rect x="200" y="180" width="84" height="52" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="242.0" y="211.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t4</text>
+  <line x1="176" y1="206" x2="188.00" y2="206.00" stroke="#3568a3" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="196.00,206.00 188.00,210.60 188.00,201.40" fill="#3568a3"/>
+  <text x="88" y="286" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">user 3</text>
+  <rect x="92" y="256" width="84" height="52" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="134.0" y="287.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t7</text>
+  <rect x="200" y="256" width="84" height="52" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="242.0" y="287.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t2</text>
+  <line x1="176" y1="282" x2="188.00" y2="282.00" stroke="#3568a3" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="196.00,282.00 188.00,286.60 188.00,277.40" fill="#3568a3"/>
+  <rect x="556" y="58" width="268" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="690" y="84" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">归并输出(最新 3 条)</text>
+  <rect x="612" y="104" width="156" height="50" rx="6" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="690.0" y="134.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t7</text>
+  <rect x="612" y="166" width="156" height="50" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="690.0" y="196.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t6</text>
+  <rect x="612" y="228" width="156" height="50" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="690.0" y="258.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">t5</text>
+  <text x="430" y="392" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">堆里始终只有「每条链当前最新的那一个」;取走一个,就把它所属的链往回退一格补上</text>
+  <text x="430" y="424" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="400">所以最多碰 k + 10 个元素 —— 与「关注的人一共发过多少条」完全无关</text>
+  <text x="430" y="452" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="400">漏掉「往回退一格」这步不会报错:信息流会退化成每个关注对象只剩最新一条</text>
+</svg>

@@ -1,0 +1,700 @@
+
+== 0. extract code blocks from the article body
+   article: _posts/2026-11-29-dp-advanced.md  (28679 chars)
+   ok   从正文抽到 python 块: 8
+   ok   从正文抽到 cpp 块: 8
+   ok   python 块数与 cpp 块数相等（8 == 8）
+   ok   围栏语言都在允许集合内（越界: []）
+   ok   正文第 6 节点名了本脚本（文章声称代码是从正文里抽出来跑的）
+   fence languages: cpp=8, python=8, text=8
+   ok   8 个 Python 块 exec 成功，全部测试目标都在
+
+== section 1.2: knapsack01Rows vs 2D DP and subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   reference 2D DP agrees with subset enumeration
+   ok   knapsack01Rows matches brute force on every random case
+   ok   boundary W=0 wt=[] val=[]
+   ok   boundary W=10 wt=[] val=[]
+   ok   boundary W=0 wt=[3, 4] val=[5, 6]
+   ok   boundary W=5 wt=[5, 5] val=[7, 7]
+   ok   boundary W=4 wt=[5, 5] val=[7, 7]
+   ok   boundary W=6 wt=[3, 3, 3] val=[2, 2, 2]
+   ok   boundary W=9 wt=[10, 10] val=[100, 100]
+   ok   boundary W=7 wt=[7] val=[0]
+   ok   boundary W=7 wt=[7] val=[13]
+       knapsack01Rows: 400 random cases + 9 boundaries, all match subset enumeration 2^n
+
+== section 1.3: editDistance2D / editDistance1D vs BFS on the edit graph
+   ok   2D known value ''/'' = 0
+   ok   1D known value ''/'' = 0
+   ok   2D known value ''/'abc' = 3
+   ok   1D known value ''/'abc' = 3
+   ok   2D known value 'abc'/'' = 3
+   ok   1D known value 'abc'/'' = 3
+   ok   2D known value 'kitten'/'sitting' = 3
+   ok   1D known value 'kitten'/'sitting' = 3
+   ok   2D known value 'ab'/'ba' = 2
+   ok   1D known value 'ab'/'ba' = 2
+   ok   2D known value 'aaa'/'aaa' = 0
+   ok   1D known value 'aaa'/'aaa' = 0
+   ok   2D known value 'aaa'/'a' = 2
+   ok   1D known value 'aaa'/'a' = 2
+   ok   2D known value 'a'/'aaa' = 2
+   ok   1D known value 'a'/'aaa' = 2
+   ok   both edit-distance versions match the BFS reference
+   ok   compressed 1D matches the 2D table on longer strings
+       edit distance: 300 BFS-cross-checked pairs + 300 long pairs (1D vs 2D), plus 8 known values
+
+== section 1.3 claim: swapping `prev = dp[0]` and `dp[0] = i` inflates the answer
+   ok   the swapped order really does change the answer on some inputs
+   ok   when it differs, the swapped version is always LARGER (正文说「整体偏大」)
+       swapped-order counterexample: 'baaaabbabba' -> 'aba' correct=8 swapped=9 (larger by 1)
+       swapped order: 286 differing / 214 identical out of 500 random pairs
+
+== section 2.1: stoneGameDiff vs explicit minimax game tree + 二元组版
+   ok   empty piles -> 0
+   ok   single pile -> that pile
+   ok   LC 877 例 1: [5, 3, 4, 5] -> 净胜 1
+   ok   minimax reference agrees on [5, 3, 4, 5]
+   ok   二元组版 agrees on [5, 3, 4, 5]
+   ok   LC 877 例 2: [3, 7, 2, 3] -> 净胜 5
+   ok   minimax reference agrees on [3, 7, 2, 3]
+   ok   二元组版 agrees on [3, 7, 2, 3]
+   ok   LC 486 例 1: [1, 5, 2] -> 净胜 -2
+   ok   minimax reference agrees on [1, 5, 2]
+   ok   二元组版 agrees on [1, 5, 2]
+   ok   LC 486 例 2: [1, 5, 233, 7] -> 净胜 222
+   ok   minimax reference agrees on [1, 5, 233, 7]
+   ok   二元组版 agrees on [1, 5, 233, 7]
+   ok   差值版、二元组版、显式 minimax 三方在随机用例上一致
+   ok   boundary piles=[4, 4] (全相等 / 负数 / 退化区间)
+   ok   boundary piles=[9, 9, 9, 9] (全相等 / 负数 / 退化区间)
+   ok   boundary piles=[0, 0, 0, 0] (全相等 / 负数 / 退化区间)
+   ok   boundary piles=[-3, -1, -4, -2] (全相等 / 负数 / 退化区间)
+   ok   boundary piles=[5, 5, 5, 5, 5, 5] (全相等 / 负数 / 退化区间)
+   ok   boundary piles=[1, 2] (全相等 / 负数 / 退化区间)
+   ok   boundary piles=[2, 1] (全相等 / 负数 / 退化区间)
+       stone game: 300 random cases triple-checked (差值 DP vs minimax vs 二元组版)
+
+== section 2.1 claim: with an even number of piles the first player always wins
+       even-length piles checked: 400, 2 of them have diff <= 0, e.g. [2, 2] -> 0
+
+== section 2.2 claim: filling row-major (i then j) instead of by length is wrong
+   ok   row-major fill really does produce wrong answers
+       row-major counterexample: [4, 14, 7, 14, 9, 5, 13, 23] correct=23 row-major=14
+       row-major: 250 wrong out of 300 random cases
+
+== section 2.2 claim: for n = 1 the length loop never runs and dp[0][0] is returned
+   ok   stoneGameDiff([42]) == dp[0][0] == 42
+   ok   single negative pile
+
+== section 2.3 claim: interval DP without a split point k compresses to O(n)
+   ok   最长回文子序列确实能压成一维（正文 §2.3 的断言成立）
+   ok   LPS known value '' = 0
+   ok   LPS 1D known value '' = 0
+   ok   LPS known value 'a' = 1
+   ok   LPS 1D known value 'a' = 1
+   ok   LPS known value 'aa' = 2
+   ok   LPS 1D known value 'aa' = 2
+   ok   LPS known value 'ab' = 1
+   ok   LPS 1D known value 'ab' = 1
+   ok   LPS known value 'aaa' = 3
+   ok   LPS 1D known value 'aaa' = 3
+   ok   LPS known value 'bbbab' = 4
+   ok   LPS 1D known value 'bbbab' = 4
+   ok   LPS known value 'cbbd' = 2
+   ok   LPS 1D known value 'cbbd' = 2
+       LPS compressibility: 400 random strings, 1D == 2D every time
+
+== section 3.2/3.4: maxProfitK / maxProfitInf vs 3^n action enumeration
+   ok   k=2 on empty prices -> 0
+   ok   maxProfitInf on empty prices -> 0
+   ok   k=0 -> 0
+   ok   negative k -> 0
+   ok   single day -> no trade -> 0
+   ok   single day with k=1 -> 0
+   ok   strictly decreasing -> 0
+   ok   strictly decreasing, unlimited -> 0
+   ok   all equal -> 0
+   ok   negative prices: buy -3, sell -1 -> +2
+   ok   negative prices vs 3^n enumeration
+   ok   LC 121/123/188 known k=1 [7, 1, 5, 3, 6, 4] -> 5
+   ok   LC 121/123/188 known k=2 [3, 3, 5, 0, 0, 3, 1, 4] -> 6
+   ok   LC 121/123/188 known k=1 [7, 6, 4, 3, 1] -> 0
+   ok   LC 121/123/188 known k=2 [1, 2, 3, 4, 5] -> 4
+   ok   LC 122 known case -> 7
+   ok   LC 122 known case -> 4
+   ok   maxProfitK / maxProfitInf match the 3^n brute force on every case
+   ok   k=+inf（两个变量）与 k=n（滚动数组）在同一批用例上结果一致
+       stock series: 400 cases x {k=1,2,3,n} vs 3^n enumeration (up to 3^7 = 2187 sequences each), plus 200 inf-vs-k=n pairs
+
+== section 3.2 claim: `dp1[j] + p` keeps the max but breaks the fee variant
+   ok   无手续费时，buggy 版与正确版答案完全一样（正文说「不会让答案变大」）
+       old1: plain cases all identical (300/300); fee cases differing: 0
+
+== section 3.4 claim: splitting the tuple assignment into two lines breaks it
+       tuple assignment: 0 differing / 400 cases
+
+== section 4.2: lengthOfLISFenwick vs O(n^2) DP, tails, and 2^n enumeration
+   ok   empty array -> 0
+   ok   single element -> 1
+   ok   all equal -> 1 (严格递增)
+   ok   strictly decreasing -> 1
+   ok   negative values -> 3
+   ok   LC 300 known case -> 4
+   ok   LC 300 known case -> 4
+   ok   LC 300 known case -> 1
+   ok   Fenwick LIS matches O(n^2) DP, tails, and 2^n enumeration
+   ok   Fenwick LIS matches O(n^2) DP on large arrays too
+       LIS: 300 small cases vs 4 references, 60 large cases (n up to 300) vs O(n^2) DP
+
+== section 4.2 claim: querying query(r) instead of query(r-1) inflates [2,2,2] to 3
+   ok   all-equal array discretizes to a single rank
+   ok   query(r) on [2,2,2] gives 3 (正文的断言)
+   ok   query(r-1) on [2,2,2] gives the correct 1
+       strict-vs-non-strict: query(r) -> 3, query(r-1) -> 1 on [2,2,2]
+
+== section 4.2: FenwickMax vs a brute-force prefix-maximum array
+   ok   FenwickMax.query matches brute-force prefix max (and returns 0 for i <= 0)
+   ok   query(0) -> 0
+   ok   query(negative) -> 0
+       FenwickMax.query(i) 契约: 0 <= i <= n（i <= 0 返回 0，i > n 越界，正文的用法 r-1 与 r 都落在这个区间内）
+       FenwickMax: 200 randomized update/query sessions vs brute force
+
+== greedy vs exact DP (required by the task; the article makes no greedy claim)
+   ok   no-fee greedy == exact DP on the LC 122 example
+   ok   无手续费 122：贪心与 DP 精确解在 400 个用例上完全一致
+   ok   找到 714（含手续费）的贪心失效反例
+   ok   找到 309（含冷冻期）的贪心失效反例
+       Greedy fails on 714: prices=[5, 6, 8, 8, 7, 11] fee=4 exact DP=2 greedy=0 (greedy UNDER-estimates by 2)
+       Greedy fails on 309: prices=[7, 7, 9, 5, 8] cooldown=1 exact DP=3 greedy=5 (greedy OVER-estimates by 2)
+       两个反例方向相反：手续费让贪心偏低，冷冻期让贪心偏高
+
+== prose claims: statements in the article, measured one by one
+   holds    L247 「prev = dp[0] 和 dp[0] = i 交换顺序，答案整体偏大」
+            380/600 random pairs differ, and every one is larger (e.g. 'aababbbbaa'->'aab': 7 -> 8)
+   probe    原 §2.1「偶数堆先手必胜」: 偶数堆**不是**充分条件（正文已改，见 claim_regression）
+            偶数堆但先手没赢: 7/1200, e.g. piles=[28, 28] 先手净胜 0（S_A=28 S_B=28）。真正的条件是 S_A != S_B，它由「总石子数为奇数」保证：偶数堆且总数为奇时 0/591 例失败
+   holds    §2.1 补：偶数堆 + 总数为奇数 ⟹ 先手必胜
+            591 cases, 0 with diff <= 0
+   probe    原 §2.1「486 也是同一个判定」: 不成立：486 判 `>= 0`，877 判 `> 0`（正文已改，见 claim_regression）
+            piles=[4, 4] 时 stoneGameDiff = 0（平局）。力扣 486 的规则是「平局也算先手赢」即 `>= 0`，而 877 是严格 `> 0`；[4, 4] 是 486 的合法输入（1 <= n <= 20），两种判定给出相反答案。共 4 个这样的最小反例
+   holds    L338 「按行遍历（i 正序 j 正序）会算错」
+            253/300 wrong, e.g. [19, 1, 23, 3, 11, 14, 7, 3, 25] correct=-14 row-major=19
+   holds    L353 「n = 1 时长度循环不执行，直接返回 dp[0][0]」
+            stoneGameDiff([42]) == 42, stoneGameDiff([-5]) == -5
+   holds    L366 §2.3 「只依赖下 / 左 / 左上的区间 DP 能压成一维」
+            最长回文子序列 1D == 2D on 500 random strings
+   holds    L442 「写成 dp1[j] + p 不会让答案变大（空转不赚钱）」
+            500/500 cases give an identical answer, none larger
+   probe    原 §3.2「手续费/冷冻期变体立刻出错」: 手续费变体实测不出区别（正文已改，见 claim_regression）
+            正确版 vs buggy 版在 1500 个含手续费用例上答案**完全相同**（1500/1500）。原因可证：buggy 多出的候选是 `dp0[j-1] - fee`，而 dp0 对 j 单调不减，所以 `dp0[j-1] - fee <= dp0[j-1] <= dp0[j]`，永远赢不了。「同一天空转不赚钱」这句是对的，但它同时说明这个 bug 只影响语义/可读性，不会变成数值错误
+   probe    原 §3.4「元组赋值拆两行就会出错」: 实测答案不变（正文已改，见 claim_regression）
+            元组版 vs 拆两行版在 1500 个用例上答案**完全相同**（1500/1500）。原因可证：拆行后若 `hold` 被更新成`cash - p`，则 `hold + p == cash`，`cash = max(cash, cash)` 等于没变；`hold` 没被更新时两版一样。也就是「买入当天就卖出」的收益是 0，被 `max` 吃掉了
+   holds    L602 §4.2 「查 query(r) 而不是 query(r-1)，[2,2,2] 会返回 3 而不是 1」
+            query(r) -> 3, query(r-1) -> 1
+   holds    L245 「把 s2 取短的那一个，空间就是 O(min(m,n))」
+            编辑距离对称（300/300），所以交换 s1/s2 不改变答案；而 editDistance1D 只开 len(s2)+1 的一维数组
+
+== prose claims: is the article's CURRENT wording the corrected one?
+   holds    §2.1 当前措辞是修正版（even-piles）
+            旧措辞已从正文彻底删除；修正措辞命中 ['偶数下标之和', '总石子数是奇数']
+   holds    §2.1 当前措辞是修正版（lc486-judgement）
+            旧措辞已从正文彻底删除；修正措辞命中 ['平局也算先手赢', '> 0']
+   holds    §3.2 当前措辞是修正版（old1-fee-variant）
+            旧措辞只在 L[463] 作为「被证伪的原文」被引用；修正措辞命中 ['证伪']
+   holds    §3.4 当前措辞是修正版（tuple-two-lines）
+            旧措辞只在 L[517] 作为「被证伪的原文」被引用；修正措辞命中 ['证伪']
+
+== table audit: every measurable number in the article's tables
+   ok   §3.3 表: 121 = k=1
+   ok   §3.3 表: 122 = k 无限
+   ok   §3.3 表: 123 = k=2
+   ok   §3.3 表: 188 = 任意 k（k=2 取值）
+   ok   §3.3 表: 122 的 k=+inf 与 k=n 一致
+       §3.3 表: 121/122/123/188 的 k 口径全部实测通过（用各自官方样例）
+   ok       §6 题号表: 10 行，题号/标题/链接三列齐全
+            877  石子游戏  -> https://leetcode.cn/problems/stone-game/
+            486  预测赢家  -> https://leetcode.cn/problems/predict-the-winner/
+            121  买卖股票的最佳时机  -> https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/
+            122  买卖股票的最佳时机 II  -> https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/
+            123  买卖股票的最佳时机 III  -> https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/
+            188  买卖股票的最佳时机 IV  -> https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/
+            309  买卖股票的最佳时机含冷冻期  -> https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/
+            714  买卖股票的最佳时机含手续费  -> https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
+            300  最长递增子序列  -> https://leetcode.cn/problems/longest-increasing-subsequence/
+            312  戳气球  -> https://leetcode.cn/problems/burst-balloons/
+   ok   §6 题号表覆盖全部必需题号 ['121', '122', '123', '188', '309', '486', '714', '877']
+   ok   §5 表: 一维逆序遍历 == 2^n 子集枚举（0-1 语义）
+   ok   §5 表: 一维正序遍历 == 完全背包参照（同一物品被拿两次）
+   ok   §5 表: 存在用例能看出正/逆序的差别（完全背包严格更大）
+   ok   §5 表: 方向断言在 59 组随机 (W, wt, val) 上复现
+       §5 表「0-1 方向写反 → 同一物品被用两次」: W=6 wt=[3, 4] val=[5, 6] 时 正序得 10（= 完全背包参照 10），逆序得 6（= 2^n 枚举 6）
+
+== NOT APPLICABLE: task-spec items with no matching code in this article
+   n/a      状态压缩 DP（bitmask / 子集 DP） —— 不适用，原因：正文无此类代码块；本篇的「状态压缩」指空间压缩（滚动数组/一维）
+   n/a      子集枚举作为正文算法 —— 不适用，原因：正文无此类代码块；但已用作 0-1 背包的外部参照（2^n）
+   n/a      戳气球（312）的区间 DP 实现 —— 不适用，原因：正文只在 §2.3 给了递推式，§4.4 明确写「我没做实现」
+   n/a      棋盘类校验器（数独 / N 皇后 / 解数独验证） —— 不适用，原因：正文无此类代码块
+   n/a      贪心算法（区间调度 / 跳跃游戏） —— 不适用，原因：正文无贪心代码块；贪心 vs DP 的对照按 lead 要求另做，不是正文的断言
+   n/a      四边形不等式优化 / 斜率优化 —— 不适用，原因：正文 §4.4 明确写「没有实现、没有对拍」，无代码块
+   n/a      冷冻期 309 / 手续费 714 的正文实现 —— 不适用，原因：正文 §3.3 只用表格描述改动，未给代码块；本门只用它们做参照对拍
+   n/a      KMP / 字典树 / 并查集 —— 不适用，原因：正文无此类代码块
+
+== C++ side: zero-warning compile of the article's blocks, then run the harness
+   $ g++ -std=c++17 -Wall -Wextra -Werror -O1  (8 个正文块 + 633 行对拍代码)
+   ok   g++ -std=c++17 -Wall -Wextra -Werror -O1 编译：**零诊断输出**
+   [cpp] section 1.2 knapsack01Rows vs subset enumeration
+   [cpp] section 1.3 edit distance vs BFS on the edit graph
+       swapped-order counterexample: "aaaabbb" -> "bb" correct=5 swapped=6
+       swapped order: 235 differing / 400 random pairs
+   [cpp] section 2.1/2.2 stone game vs explicit minimax tree
+       stone game: 300 random cases triple-checked; even-length checked=400
+       even-length + odd total: 201 cases, 0 violations
+       even-length TIE (even count alone is not enough): [24,24] diff=0
+       row-major (wrong order) differs on 204 cases; example [9,9,37,38,20,26,33] correct=26 row-major=18
+   [cpp] section 3.2/3.4 stock series vs 3^n action enumeration
+       stocks: 350 cases x {k=1,2,3,n} vs 3^n; inf-vs-k=n pairs=305
+   REFUTED   L442 "fee variant breaks without old1": 0/500 differ
+   REFUTED   L492 "splitting the tuple assignment breaks it": 0/500 differ
+
+       fee cases differing: 0/500 ; tuple-split differing: 0/500
+   [cpp] section 4.2 Fenwick LIS vs O(n^2), tails, 2^n enumeration
+       LIS: 300 small cases vs 4 references, 40 large cases (n<=300)
+   [cpp] greedy vs exact DP (required by the task; article makes no greedy claim)
+       Greedy fails on 714: prices=[3,6,3,5,10,4] exact DP=6 greedy=4
+       Greedy fails on 309: prices=[5,10,1,8] cooldown=1 exact DP=7 greedy=12
+   [cpp] 5570 assertions, 0 failures
+   ok   C++ 对拍全部通过（进程退出码 0）
+       C++ 侧: 5570 条断言, 0 条失败
+       C++ 编译诊断输出长度: 0 字节（-Werror 下没有任何 warning）
+
+== measured values (all produced by this run, nothing hand-written)
+   - knapsack01Rows: 400 random cases + 9 boundaries, all match subset enumeration 2^n
+   - knapsack subsets enumerated: up to 2^8 = 256 per case
+   - edit distance: 300 BFS-cross-checked pairs + 300 long pairs (1D vs 2D), plus 8 known values
+   - swapped-order counterexample: 'baaaabbabba' -> 'aba' correct=8 swapped=9 (larger by 1)
+   - swapped order: 286 differing / 214 identical out of 500 random pairs
+   - stone game: 300 random cases triple-checked (差值 DP vs minimax vs 二元组版)
+   - even-length piles checked: 400, 2 of them have diff <= 0, e.g. [2, 2] -> 0
+   - row-major counterexample: [4, 14, 7, 14, 9, 5, 13, 23] correct=23 row-major=14
+   - row-major: 250 wrong out of 300 random cases
+   - LPS compressibility: 400 random strings, 1D == 2D every time
+   - stock series: 400 cases x {k=1,2,3,n} vs 3^n enumeration (up to 3^7 = 2187 sequences each), plus 200 inf-vs-k=n pairs
+   - old1: plain cases all identical (300/300); fee cases differing: 0
+   - tuple assignment: 0 differing / 400 cases
+   - LIS: 300 small cases vs 4 references, 60 large cases (n up to 300) vs O(n^2) DP
+   - strict-vs-non-strict: query(r) -> 3, query(r-1) -> 1 on [2,2,2]
+   - FenwickMax.query(i) 契约: 0 <= i <= n（i <= 0 返回 0，i > n 越界，正文的用法 r-1 与 r 都落在这个区间内）
+   - FenwickMax: 200 randomized update/query sessions vs brute force
+   - Greedy fails on 714: prices=[5, 6, 8, 8, 7, 11] fee=4 exact DP=2 greedy=0 (greedy UNDER-estimates by 2)
+   - Greedy fails on 309: prices=[7, 7, 9, 5, 8] cooldown=1 exact DP=3 greedy=5 (greedy OVER-estimates by 2)
+   - 两个反例方向相反：手续费让贪心偏低，冷冻期让贪心偏高
+   - §3.3 表: 121/122/123/188 的 k 口径全部实测通过（用各自官方样例）
+   - §5 表「0-1 方向写反 → 同一物品被用两次」: W=6 wt=[3, 4] val=[5, 6] 时 正序得 10（= 完全背包参照 10），逆序得 6（= 2^n 枚举 6）
+   - C++ 侧: 5570 条断言, 0 条失败
+   - C++ 编译诊断输出长度: 0 字节（-Werror 下没有任何 warning）
+
+== verdict
+   代码失败: 0
+   正文说法证伪: 0   正文说法不精确: 0
+
+CODE OK

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="396" viewBox="0 0 1000 396" role="img">
+  <rect width="1000" height="396" fill="#ffffff"/>
+  <text x="500.0" y="34" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">同一个窗口,两种存法</text>
+  <text x="500.0" y="58" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">窗口是 [5, 5, 3],现在左端的 5 要滑出去</text>
+  <rect x="42" y="78" width="444" height="214" rx="10" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="264.0" y="110" font-size="15" fill="#b5762a" text-anchor="middle" font-weight="600">存值:pop(n) 得带参数</text>
+  <text x="64" y="146" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">窗口</text>
+  <rect x="116" y="132" width="62" height="30" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="147.0" y="151.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="186" y="132" width="62" height="30" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="217.0" y="151.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="256" y="132" width="62" height="30" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="287.0" y="151.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="64" y="194" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">队列</text>
+  <rect x="116" y="180" width="62" height="30" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="147.0" y="199.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="186" y="180" width="62" height="30" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="217.0" y="199.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="264.0" y="240" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">出去的是前一个 5,可队列里存的是值,</text>
+  <text x="264.0" y="262" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">认不出该删哪一个,只能问调用方:</text>
+  <text x="264.0" y="284" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">if 队头 == n: 弹出</text>
+  <rect x="514" y="78" width="444" height="214" rx="10" fill="#e4f1ee" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="736.0" y="110" font-size="15" fill="#2f7d6d" text-anchor="middle" font-weight="600">存下标:过期只看两个整数</text>
+  <text x="536" y="146" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">窗口</text>
+  <rect x="588" y="132" width="62" height="30" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="619.0" y="151.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">0:5</text>
+  <rect x="658" y="132" width="62" height="30" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="689.0" y="151.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">1:5</text>
+  <rect x="728" y="132" width="62" height="30" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="759.0" y="151.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">2:3</text>
+  <text x="536" y="194" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">队列</text>
+  <rect x="588" y="180" width="62" height="30" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="619.0" y="199.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">1:5</text>
+  <rect x="658" y="180" width="62" height="30" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="689.0" y="199.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">2:3</text>
+  <text x="736.0" y="240" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">下标唯一,相等值不会认错人;</text>
+  <text x="736.0" y="262" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">队头该不该走,比一次就够了:</text>
+  <text x="736.0" y="284" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">if q[0] &lt;= i - k: 弹出</text>
+  <rect x="43.0" y="310" width="290" height="66" rx="10" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="188.0" y="338" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">pop 不用带参数</text>
+  <text x="188.0" y="360" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">队列自己知道时间顺序</text>
+  <rect x="355.0" y="310" width="290" height="66" rx="10" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="500.0" y="338" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">相等值不会认错</text>
+  <text x="500.0" y="360" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">位置唯一,值不唯一</text>
+  <rect x="667.0" y="310" width="290" height="66" rx="10" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="812.0" y="338" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">size 做得到</text>
+  <text x="812.0" y="360" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">另存一份顺序记录即可</text>
+</svg>

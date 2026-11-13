@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img">
+  <rect width="1000" height="420" fill="#ffffff"/>
+  <text x="36" y="40" font-size="17" fill="#252b33" text-anchor="start" font-weight="600">Rabin-Karp 的全部秘密:窗口滑动一位,哈希只做「一减一乘一加」</text>
+  <text x="60" y="102" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">① 先算第一个窗口的哈希(整个窗口扫一遍,只有这一次是 O(L))</text>
+  <rect x="60" y="116" width="52" height="46" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="86.0" y="144.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">a</text>
+  <rect x="112" y="116" width="52" height="46" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="138.0" y="144.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">b</text>
+  <rect x="164" y="116" width="52" height="46" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="190.0" y="144.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">c</text>
+  <rect x="216" y="116" width="52" height="46" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="242.0" y="144.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">d</text>
+  <rect x="268" y="116" width="52" height="46" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="294.0" y="144.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">e</text>
+  <text x="340" y="145.0" font-size="13" fill="#b5762a" text-anchor="start" font-weight="400">h(abc) = 97·131^2 + 98·131^1 + 99 = 1677554</text>
+  <text x="60" y="180" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">② 窗口右移一位:去掉 a,乘 B,补上 d —— O(1)</text>
+  <rect x="60" y="194" width="52" height="46" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="86.0" y="222.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">a</text>
+  <rect x="112" y="194" width="52" height="46" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="138.0" y="222.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">b</text>
+  <rect x="164" y="194" width="52" height="46" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="190.0" y="222.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">c</text>
+  <rect x="216" y="194" width="52" height="46" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="242.0" y="222.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">d</text>
+  <rect x="268" y="194" width="52" height="46" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="294.0" y="222.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">e</text>
+  <text x="340" y="223.0" font-size="13" fill="#b5762a" text-anchor="start" font-weight="400">h(bcd) = 98·131^2 + 99·131^1 + 100 = 1694847</text>
+  <text x="60" y="258" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">③ 再滑一位:去掉 b,补上 e —— 依然是 O(1)</text>
+  <rect x="60" y="272" width="52" height="46" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="86.0" y="300.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">a</text>
+  <rect x="112" y="272" width="52" height="46" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="138.0" y="300.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">b</text>
+  <rect x="164" y="272" width="52" height="46" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="190.0" y="300.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">c</text>
+  <rect x="216" y="272" width="52" height="46" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="242.0" y="300.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">d</text>
+  <rect x="268" y="272" width="52" height="46" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="294.0" y="300.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">e</text>
+  <text x="340" y="301.0" font-size="13" fill="#b5762a" text-anchor="start" font-weight="400">h(cde) = 99·131^2 + 100·131^1 + 101 = 1712140</text>
+  <rect x="60" y="360" width="880" height="40" rx="8" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="500" y="386" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">h(下一位) = ( h(当前) − 离开字符 × B^(L−1) ) × B + 进入字符   (再对 M 取模)</text>
+</svg>

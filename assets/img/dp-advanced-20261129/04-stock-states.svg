@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img">
+  <rect width="1000" height="440" fill="#ffffff"/>
+  <text x="34" y="40" font-size="18" fill="#252b33" text-anchor="start" font-weight="600">股票买卖的状态机:两个状态,两条边</text>
+  <text x="34" y="63" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">「持有 / 不持有」是这张图上仅有的两个节点，交易次数是转移的代价</text>
+  <rect x="170" y="150" width="210" height="76" rx="9" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="275.0" y="184" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">不持有</text>
+  <text x="275.0" y="208" font-size="11.5" fill="#737c88" text-anchor="middle" font-weight="400">dp[i][0]</text>
+  <rect x="620" y="150" width="210" height="76" rx="9" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="725.0" y="184" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">持有</text>
+  <text x="725.0" y="208" font-size="11.5" fill="#737c88" text-anchor="middle" font-weight="400">dp[i][1]</text>
+  <line x1="380" y1="172" x2="612.00" y2="172.00" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="620.00,172.00 612.00,176.60 612.00,167.40" fill="#b5762a"/>
+  <text x="500.0" y="156" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="400">买入：不持有 → 持有</text>
+  <text x="500.0" y="204" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">消耗一次额度 k−1，现金 −price</text>
+  <line x1="620" y1="204" x2="388.00" y2="204.00" stroke="#2f7d6d" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="380.00,204.00 388.00,199.40 388.00,208.60" fill="#2f7d6d"/>
+  <text x="500.0" y="248" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="400">卖出：持有 → 不持有</text>
+  <text x="500.0" y="270" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">结算一次交易，现金 +price</text>
+  <line x1="245.0" y1="120" x2="245.00" y2="142.00" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="245.00,150.00 240.40,142.00 249.60,142.00" fill="#e7eaf0"/>
+  <text x="235.0" y="112" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">继续观望</text>
+  <line x1="755.0" y1="150" x2="755.00" y2="128.00" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="755.00,120.00 759.60,128.00 750.40,128.00" fill="#e7eaf0"/>
+  <text x="765.0" y="112" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">继续持有</text>
+  <text x="30" y="400" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">「买卖股票的最佳时机」整组题只是在这张图上改一件事：额度 k 是无限、还是有限，以及有没有冷冻期 / 手续费。</text>
+  <text x="30" y="424" font-size="11.5" fill="#2f7d6d" text-anchor="start" font-weight="400">状态数不变，所以状态机画对了，递推式基本是抄下来的。</text>
+</svg>

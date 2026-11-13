@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="590" viewBox="0 0 900 590" role="img">
+  <rect width="900" height="590" fill="#ffffff"/>
+  <text x="450.0" y="32" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">Trie:把字符串摊成路径,公共前缀变成共享的边</text>
+  <line x1="82.14810563784475" y1="229.5873380247045" x2="197.85189436215526" y2="130.4126619752955" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="226.0" y1="120.0" x2="314.0" y2="120.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="346.0" y1="120.0" x2="434.0" y2="120.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="466.0" y1="120.0" x2="554.0" y2="120.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="586.0" y1="120.0" x2="674.0" y2="120.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="82.58109342115876" y1="249.88514483091046" x2="197.41890657884124" y2="340.11485516908954" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="226.0" y1="350.0" x2="314.0" y2="350.0" stroke="#b5762a" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="343.82046241437496" y1="341.93806359161465" x2="436.17953758562504" y2="288.06193640838535" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="466.0" y1="280.0" x2="554.0" y2="280.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="343.82046241437496" y1="358.06193640838535" x2="436.17953758562504" y2="411.93806359161465" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="466.0" y1="420.0" x2="554.0" y2="420.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="70.0" cy="240.0" r="16" fill="#eef1f5" stroke="#252b33" stroke-width="1.8"/>
+  <text x="70.0" y="245.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="600">•</text>
+  <circle cx="210.0" cy="120.0" r="16" fill="#ffffff" stroke="#252b33" stroke-width="1.8"/>
+  <text x="210.0" y="125.0" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">a</text>
+  <circle cx="330.0" cy="120.0" r="16" fill="#ffffff" stroke="#252b33" stroke-width="1.8"/>
+  <text x="330.0" y="125.0" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">p</text>
+  <circle cx="450.0" cy="120.0" r="16" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.8"/>
+  <text x="450.0" y="125.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">p</text>
+  <circle cx="570.0" cy="120.0" r="16" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.8"/>
+  <text x="570.0" y="125.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">l</text>
+  <circle cx="690.0" cy="120.0" r="16" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.8"/>
+  <text x="690.0" y="125.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">e</text>
+  <circle cx="210.0" cy="350.0" r="16" fill="#ffffff" stroke="#252b33" stroke-width="1.8"/>
+  <text x="210.0" y="355.0" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">t</text>
+  <circle cx="330.0" cy="350.0" r="16" fill="#ffffff" stroke="#252b33" stroke-width="1.8"/>
+  <text x="330.0" y="355.0" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">h</text>
+  <circle cx="450.0" cy="280.0" r="16" fill="#ffffff" stroke="#252b33" stroke-width="1.8"/>
+  <text x="450.0" y="285.0" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">a</text>
+  <circle cx="570.0" cy="280.0" r="16" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.8"/>
+  <text x="570.0" y="285.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">t</text>
+  <circle cx="450.0" cy="420.0" r="16" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.8"/>
+  <text x="450.0" y="425.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">e</text>
+  <circle cx="570.0" cy="420.0" r="16" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.8"/>
+  <text x="570.0" y="425.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">m</text>
+  <text x="450.0" y="154.0" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">app</text>
+  <text x="570.0" y="154.0" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">appl</text>
+  <text x="690.0" y="154.0" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">apple</text>
+  <text x="570.0" y="256.0" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">that</text>
+  <text x="450.0" y="450.0" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">the</text>
+  <text x="570.0" y="450.0" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">them</text>
+  <text x="324.0" y="320.0" font-size="11.5" fill="#3568a3" text-anchor="middle" font-weight="400">"th" 走得通,但 isEnd = false</text>
+  <circle cx="648" cy="64" r="10" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.8"/>
+  <text x="664" y="69" font-size="11.5" fill="#b5762a" text-anchor="start" font-weight="400">isEnd = true</text>
+  <circle cx="648" cy="92" r="10" fill="#ffffff" stroke="#252b33" stroke-width="1.8"/>
+  <text x="664" y="97" font-size="11.5" fill="#252b33" text-anchor="start" font-weight="400">isEnd = false</text>
+  <rect x="28" y="468" width="844" height="106" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="48" y="494" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">省内存:HashMap 真的存了 "apple"、"app"、"appl" 三个字符串,占 12 个字符;</text>
+  <text x="48" y="514" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="600">Trie 不重复存公共前缀,只需要 "apple" 这 5 个字符。</text>
+  <text x="48" y="542" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">前缀查询:hasKeyWithPrefix("tha") 只需要沿 t → h → a 走通,不必枚举表里所有的键;</text>
+  <text x="48" y="562" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="600">而 search("th") 必须是「走得通」且「isEnd」两条同时成立。</text>
+</svg>

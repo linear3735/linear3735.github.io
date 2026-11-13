@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" role="img">
+  <rect width="1000" height="430" fill="#ffffff"/>
+  <text x="34" y="40" font-size="18" fill="#252b33" text-anchor="start" font-weight="600">冒泡每趟扫到底,插入一遇到更小就停</text>
+  <text x="34" y="63" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">两者的扫描区间宽度不同，这是 O(n²) 常数项差异的来源</text>
+  <rect x="150" y="96" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="189.0" y="124.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="240" y="96" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="279.0" y="124.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="330" y="96" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="369.0" y="124.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="420" y="96" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="459.0" y="124.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="510" y="96" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="549.0" y="124.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="600" y="96" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="639.0" y="124.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="690" y="96" width="78" height="46" rx="7" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="729.0" y="124.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">8</text>
+  <rect x="780" y="96" width="78" height="46" rx="7" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="819.0" y="124.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">9</text>
+  <text x="134" y="126" font-size="12.5" fill="#737c88" text-anchor="end" font-weight="400">冒泡 第2趟</text>
+  <text x="735.0" y="84" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">8、9 已就位(第1趟的成果)</text>
+  <text x="420" y="172" font-size="11.5" fill="#b5762a" text-anchor="middle" font-weight="400">本趟仍要把 [0, 5] 整段扫完：6 个格子，一个都不能跳</text>
+  <rect x="150" y="258" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="189.0" y="286.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="240" y="258" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="279.0" y="286.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="330" y="258" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="369.0" y="286.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="420" y="258" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="459.0" y="286.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="510" y="258" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="549.0" y="286.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="600" y="258" width="78" height="46" rx="7" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="639.0" y="286.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="690" y="258" width="78" height="46" rx="7" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="729.0" y="286.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">8</text>
+  <rect x="780" y="258" width="78" height="46" rx="7" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="819.0" y="286.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">9</text>
+  <text x="134" y="288" font-size="12.5" fill="#737c88" text-anchor="end" font-weight="400">插入 处理第6个</text>
+  <rect x="600" y="336" width="78" height="40" rx="7" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="639.0" y="360.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">key=4</text>
+  <text x="639.0" y="396" font-size="11.5" fill="#2f7d6d" text-anchor="middle" font-weight="400">向左只看一格：3 &lt; 4，立刻停</text>
+  <line x1="639.0" y1="332" x2="535.94" y2="319.00" stroke="#2f7d6d" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <polygon points="528.00,318.00 536.51,314.44 535.36,323.56" fill="#2f7d6d"/>
+</svg>

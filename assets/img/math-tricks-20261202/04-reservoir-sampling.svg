@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" role="img">
+  <rect width="1180" height="620" fill="#ffffff"/>
+  <text x="590.0" y="50" font-size="19" fill="#252b33" text-anchor="middle" font-weight="600">水塘抽样:第 j 个元素活到最后的概率是 1/n</text>
+  <rect x="28" y="84" width="520" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="288" y="118" font-size="13.5" fill="#252b33" text-anchor="middle" font-weight="400">第 i 个元素(i &gt; k)到达时:</text>
+  <text x="288" y="146" font-size="13.5" fill="#252b33" text-anchor="middle" font-weight="600">以 k/i 的概率替换一个槽位</text>
+  <rect x="122" y="190" width="60" height="50" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <text x="152.0" y="222" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">j</text>
+  <rect x="190" y="190" width="60" height="50" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.2"/>
+  <text x="220.0" y="222" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">j+1</text>
+  <rect x="258" y="190" width="60" height="50" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.2"/>
+  <text x="288.0" y="222" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">j+2</text>
+  <rect x="326" y="190" width="60" height="50" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.2"/>
+  <text x="356.0" y="222" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">…</text>
+  <rect x="394" y="190" width="60" height="50" rx="4" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <text x="424.0" y="222" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">n</text>
+  <text x="270" y="264" font-size="11.5" fill="#737c88" text-anchor="end" font-weight="400">到达顺序:共 n 个</text>
+  <line x1="288.0" y1="250" x2="288.00" y2="278.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="288.00,286.00 283.40,278.00 292.60,278.00" fill="#3568a3"/>
+  <rect x="122" y="292" width="332" height="60" rx="6" fill="#e4f1ee" stroke="#252b33" stroke-width="1.2"/>
+  <text x="288" y="328" font-size="12.5" fill="#252b33" text-anchor="middle" font-weight="400">水塘:k 个槽位,每个槽位机会相同</text>
+  <rect x="576" y="84" width="576" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="604" y="118" font-size="13.5" fill="#252b33" text-anchor="start" font-weight="600">两个条件相乘(相互独立):</text>
+  <text x="604" y="152" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">① 它到达时被选中:概率 1/j</text>
+  <text x="604" y="182" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">② 之后每个 i 都没替换它:1 - 1/i = (i-1)/i</text>
+  <text x="604" y="222" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">P = (1/j) · (j/(j+1)) · ((j+1)/(j+2)) · …</text>
+  <text x="604" y="252" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">     · ((n-1)/n)</text>
+  <text x="604" y="300" font-size="15" fill="#3568a3" text-anchor="start" font-weight="600">= 1/n,和 j 无关</text>
+  <text x="604" y="340" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">k &gt; 1 时:被挤掉 = (k/i)·(1/k) = 1/i,同一个连乘</text>
+  <rect x="28" y="416" width="1124" height="176" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="56" y="452" font-size="14" fill="#252b33" text-anchor="start" font-weight="600">连锁约掉:中间的 j、j+1、…、n-1 两两抵消</text>
+  <text x="56" y="492" font-size="13.5" fill="#252b33" text-anchor="start" font-weight="400">P = (1/j) × [j/(j+1)] × [(j+1)/(j+2)] × … × [(n-1)/n] = 1/n</text>
+  <text x="56" y="526" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">k = 1, n = 3, j = 1 时:(1/1) × (1/2) × (2/3) = 1/3</text>
+  <text x="56" y="560" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="400">换成 k 个槽位:每个元素被留下的概率都是 k/n</text>
+</svg>

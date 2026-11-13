@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="660" viewBox="0 0 1240 660" role="img">
+  <rect width="1240" height="660" fill="#ffffff"/>
+  <text x="620" y="46" font-size="21" fill="#252b33" text-anchor="middle" font-weight="700">哨兵节点:把「头部插入」这个特判变成结构上不存在的情况</text>
+  <text x="620" y="74" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">少一个分支,不是少几行代码 —— 是少一类边界 bug</text>
+  <rect x="40" y="116" width="1160" height="254" rx="10" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.2"/>
+  <text x="70" y="156" font-size="15" fill="#b5762a" text-anchor="start" font-weight="600">没有哨兵:head 可能为 null,必须分两种情况</text>
+  <rect x="70" y="202" width="104" height="54" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="122.0" y="234.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="174" y="202" width="104" height="54" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="226.0" y="234.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="278" y="202" width="104" height="54" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="330.0" y="234.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="70" y="286" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">head 指向第一个节点(它可能为 null)</text>
+  <text x="309.2" y="286" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="400">头插要改 head 变量本身</text>
+  <text x="309.2" y="314" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">中间插入只改某个节点的 next</text>
+  <rect x="40" y="388" width="1160" height="254" rx="10" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.2"/>
+  <text x="70" y="428" font-size="15" fill="#2f7d6d" text-anchor="start" font-weight="600">有哨兵:dummy 永远存在,一条路径走到底</text>
+  <rect x="70" y="474" width="104" height="54" rx="4" fill="#eef1f5" stroke="#2f7d6d" stroke-width="1.4" stroke-dasharray="5,4"/>
+  <text x="122.0" y="506.0" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="400">dummy</text>
+  <rect x="174" y="474" width="104" height="54" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="226.0" y="506.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="278" y="474" width="104" height="54" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="330.0" y="506.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="382" y="474" width="104" height="54" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="434.0" y="506.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="70" y="558" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">head 永远指向 dummy,不再被修改</text>
+  <text x="309.2" y="558" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">头插 = 在 dummy 后面插入</text>
+  <text x="309.2" y="586" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">和中间插入完全是同一段代码</text>
+</svg>

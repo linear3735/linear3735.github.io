@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="596" viewBox="0 0 1200 596" role="img">
+  <rect width="1200" height="596" fill="#ffffff"/>
+  <text x="600" y="34" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">LIS = [10, 9, 2, 5, 3, 7, 101, 18] 的 dp 表</text>
+  <text x="600" y="58" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">dp[i] 只承认「以 nums[i] 结尾」的递增子序列,所以答案要看整张表的最大值</text>
+  <text x="142.0" y="116" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="96" y="128" width="92" height="62" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="142.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">10</text>
+  <rect x="96" y="340" width="92" height="62" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="142.0" y="376.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="254.0" y="116" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">1</text>
+  <rect x="208" y="128" width="92" height="62" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="254.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">9</text>
+  <rect x="208" y="340" width="92" height="62" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="254.0" y="376.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="366.0" y="116" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">2</text>
+  <rect x="320" y="128" width="92" height="62" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="366.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="320" y="340" width="92" height="62" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="366.0" y="376.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="478.0" y="116" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">3</text>
+  <rect x="432" y="128" width="92" height="62" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="478.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="432" y="340" width="92" height="62" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="478.0" y="376.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="590.0" y="116" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">4</text>
+  <rect x="544" y="128" width="92" height="62" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="590.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="544" y="340" width="92" height="62" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="590.0" y="376.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="702.0" y="116" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">5</text>
+  <rect x="656" y="128" width="92" height="62" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="702.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="656" y="340" width="92" height="62" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="702.0" y="376.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="814.0" y="116" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">6</text>
+  <rect x="768" y="128" width="92" height="62" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="814.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">101</text>
+  <rect x="768" y="340" width="92" height="62" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="814.0" y="376.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <text x="926.0" y="116" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">7</text>
+  <rect x="880" y="128" width="92" height="62" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="926.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">18</text>
+  <rect x="880" y="340" width="92" height="62" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="926.0" y="376.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <text x="600" y="216" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">nums</text>
+  <text x="600" y="296" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">dp[i]:以 nums[i] 结尾的最长递增子序列长度</text>
+  <path d="M 478.0 402 L 478.0 430 L 366.0 430 L 366.0 406" fill="none" stroke="#2f7d6d" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <path d="M 590.0 402 L 590.0 430 L 366.0 430 L 366.0 406" fill="none" stroke="#2f7d6d" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <path d="M 702.0 402 L 702.0 430 L 590.0 430 L 590.0 406" fill="none" stroke="#2f7d6d" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <path d="M 814.0 402 L 814.0 430 L 702.0 430 L 702.0 406" fill="none" stroke="#2f7d6d" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <path d="M 926.0 402 L 926.0 430 L 702.0 430 L 702.0 406" fill="none" stroke="#2f7d6d" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <text x="600" y="460" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">dp</text>
+  <text x="600" y="490" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="400">虚线:dp[i] 的值来自某个更小的 dp[j] + 1(j &lt; i 且 nums[j] &lt; nums[i])</text>
+  <rect x="96" y="522" width="1008" height="44" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="600.0" y="549.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">答案 = max(dp) = 4,不是 dp[7]</text>
+</svg>

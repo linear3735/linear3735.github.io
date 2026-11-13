@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470" role="img">
+  <rect width="1080" height="470" fill="#ffffff"/>
+  <text x="36" y="40" font-size="17" fill="#252b33" text-anchor="start" font-weight="600">层序遍历的三种写法:差别不在遍历顺序,而在「每个节点随身带了多少信息」</text>
+  <rect x="30" y="66" width="328" height="250" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <rect x="44" y="80" width="300" height="40" rx="7" fill="#eef1f5" stroke="#eef1f5" stroke-width="1.4"/>
+  <text x="194" y="105" font-size="15" fill="#737c88" text-anchor="middle" font-weight="600">写法一</text>
+  <text x="44" y="142" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">一个队列,取队头、把左右孩子入队</text>
+  <text x="52" y="176" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">·</text>
+  <text x="64" y="176" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">能:一层一层从左到右</text>
+  <text x="52" y="210" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">·</text>
+  <text x="64" y="210" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">不能:不知道当前是第几层</text>
+  <text x="52" y="244" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">·</text>
+  <text x="64" y="244" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">代码最短,但用得最少</text>
+  <text x="44" y="300" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">queue: 1 → 2,3 → 4,5,6,7</text>
+  <rect x="378" y="66" width="328" height="250" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <rect x="392" y="80" width="300" height="40" rx="7" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="542" y="105" font-size="15" fill="#3568a3" text-anchor="middle" font-weight="600">写法二(最常用)</text>
+  <text x="392" y="142" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">先存 sz = q.size(),再循环 sz 次</text>
+  <text x="400" y="176" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">·</text>
+  <text x="412" y="176" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">能:知道每层的分界和层号</text>
+  <text x="400" y="210" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">·</text>
+  <text x="412" y="210" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">关键:sz 必须在循环前存下来</text>
+  <text x="400" y="244" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">·</text>
+  <text x="412" y="244" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">不能:同一层节点的权重不同时失效</text>
+  <text x="392" y="300" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">sz: 1 → 2 → 4</text>
+  <rect x="726" y="66" width="328" height="250" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <rect x="740" y="80" width="300" height="40" rx="7" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="890" y="105" font-size="15" fill="#2f7d6d" text-anchor="middle" font-weight="600">写法三</text>
+  <text x="740" y="142" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">每个节点自带 State{node, depth}</text>
+  <text x="748" y="176" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="400">·</text>
+  <text x="760" y="176" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">能:每节点携带自己的路径权重和</text>
+  <text x="748" y="210" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="400">·</text>
+  <text x="760" y="210" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">适用:边权不是 1 的多源 BFS / Dijkstra</text>
+  <text x="748" y="244" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="400">·</text>
+  <text x="760" y="244" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">代价:要多定义一个 State</text>
+  <text x="740" y="300" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">State.depth: 1 → 2 → 3</text>
+  <text x="36" y="348" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">同一棵树上的队列演化(写法二):q=[1] → 取 1、入 2,3 → q=[2,3] → 取 2,3、入 4,5,6,7 → q=[4,5,6,7] → q=[]</text>
+  <text x="36" y="386" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">写法二的 sz 如果不预存,直接写 while q: sz = len(q) 或 for i in range(len(q)),队列在循环里一边出队一边入队,</text>
+  <text x="36" y="406" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">长度会变,一层就切不干净——这是这三种写法里最常见的一个 bug。</text>
+</svg>

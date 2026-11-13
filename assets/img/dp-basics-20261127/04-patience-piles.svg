@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="776" viewBox="0 0 1160 776" role="img">
+  <rect width="1160" height="776" fill="#ffffff"/>
+  <text x="580" y="34" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">耐心排序:牌堆数 = LIS 长度</text>
+  <text x="580" y="58" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">每张牌压在最左边那个堆顶不小于它的堆上;压不下去就新建一堆</text>
+  <text x="72" y="120" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">第 1 步: 10</text>
+  <rect x="700" y="96" width="96" height="26" rx="0" fill="#ffffff" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="748.0" y="114.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">10</text>
+  <line x1="674" y1="109" x2="404.00" y2="109.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="396.00,109.00 404.00,104.40 404.00,113.60" fill="#b5762a"/>
+  <text x="900" y="148" font-size="11" fill="#b5762a" text-anchor="start" font-weight="400">新建堆 1</text>
+  <text x="72" y="186" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">第 2 步: 9</text>
+  <rect x="700" y="162" width="96" height="26" rx="0" fill="#ffffff" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="748.0" y="180.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">9</text>
+  <line x1="674" y1="175" x2="404.00" y2="175.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="396.00,175.00 404.00,170.40 404.00,179.60" fill="#b5762a"/>
+  <text x="900" y="214" font-size="11" fill="#b5762a" text-anchor="start" font-weight="400">替换堆 1(9 &lt; 10)</text>
+  <text x="72" y="252" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">第 3 步: 2</text>
+  <rect x="700" y="228" width="96" height="26" rx="0" fill="#ffffff" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="748.0" y="246.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <line x1="674" y1="241" x2="404.00" y2="241.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="396.00,241.00 404.00,236.40 404.00,245.60" fill="#b5762a"/>
+  <text x="900" y="280" font-size="11" fill="#b5762a" text-anchor="start" font-weight="400">替换堆 1(2 &lt; 9)</text>
+  <text x="72" y="318" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">第 4 步: 5</text>
+  <rect x="300" y="294" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="348.0" y="312.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="424" y="294" width="96" height="26" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="472.0" y="312.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="700" y="294" width="96" height="26" rx="0" fill="#ffffff" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="748.0" y="312.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <line x1="674" y1="307" x2="528.00" y2="307.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="520.00,307.00 528.00,302.40 528.00,311.60" fill="#b5762a"/>
+  <text x="900" y="346" font-size="11" fill="#b5762a" text-anchor="start" font-weight="400">新建堆 2</text>
+  <text x="72" y="384" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">第 5 步: 3</text>
+  <rect x="300" y="360" width="96" height="26" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="348.0" y="378.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="300" y="386" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="348.0" y="404.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="424" y="386" width="96" height="26" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="472.0" y="404.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="700" y="360" width="96" height="26" rx="0" fill="#ffffff" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="748.0" y="378.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <line x1="674" y1="373" x2="528.00" y2="373.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="520.00,373.00 528.00,368.40 528.00,377.60" fill="#b5762a"/>
+  <text x="900" y="412" font-size="11" fill="#b5762a" text-anchor="start" font-weight="400">替换堆 2(3 &lt; 5)</text>
+  <text x="72" y="450" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">第 6 步: 7</text>
+  <rect x="300" y="478" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="348.0" y="496.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="424" y="478" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="472.0" y="496.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="548" y="426" width="96" height="26" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="596.0" y="444.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="700" y="426" width="96" height="26" rx="0" fill="#ffffff" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="748.0" y="444.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <line x1="674" y1="439" x2="652.00" y2="439.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="644.00,439.00 652.00,434.40 652.00,443.60" fill="#b5762a"/>
+  <text x="900" y="478" font-size="11" fill="#b5762a" text-anchor="start" font-weight="400">新建堆 3</text>
+  <text x="72" y="516" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">第 7 步: 101</text>
+  <rect x="300" y="570" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="348.0" y="588.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="424" y="570" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="472.0" y="588.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="548" y="518" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="596.0" y="536.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="672" y="492" width="96" height="26" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="720.0" y="510.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">101</text>
+  <rect x="700" y="492" width="96" height="26" rx="0" fill="#ffffff" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="748.0" y="510.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">101</text>
+  <line x1="674" y1="505" x2="760.00" y2="505.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="768.00,505.00 760.00,509.60 760.00,500.40" fill="#b5762a"/>
+  <text x="900" y="544" font-size="11" fill="#b5762a" text-anchor="start" font-weight="400">新建堆 4</text>
+  <text x="72" y="582" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">第 8 步: 18</text>
+  <rect x="300" y="636" width="96" height="26" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="348.0" y="654.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">101</text>
+  <rect x="300" y="662" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="348.0" y="680.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="424" y="662" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="472.0" y="680.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="548" y="610" width="96" height="26" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="596.0" y="628.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="672" y="584" width="96" height="26" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="720.0" y="602.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">18</text>
+  <rect x="700" y="558" width="96" height="26" rx="0" fill="#ffffff" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="748.0" y="576.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">18</text>
+  <line x1="674" y1="571" x2="760.00" y2="571.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="768.00,571.00 760.00,575.60 760.00,566.40" fill="#b5762a"/>
+  <text x="900" y="610" font-size="11" fill="#b5762a" text-anchor="start" font-weight="400">替换堆 4(18 &lt; 101)</text>
+  <rect x="60" y="708" width="1040" height="54" rx="8" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="580" y="740" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="400">跑完 8 步:tails = [2, 3, 7, 18],长度 4 = LIS 长度;每堆从上到下递减,堆顶从左到右严格递增</text>
+</svg>

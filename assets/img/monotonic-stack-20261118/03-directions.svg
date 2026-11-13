@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img">
+  <rect width="1000" height="420" fill="#ffffff"/>
+  <text x="500.0" y="34" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">四个方向只差一个比较符号:同一个 nums = [3, 1, 2, 2]</text>
+  <text x="500.0" y="58" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">栈的单调方向跟着「等谁」走:等更大用递减栈,等更小用递增栈</text>
+  <rect x="24" y="80" width="464" height="130" rx="10" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <rect x="40" y="98" width="200" height="32" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="140.0" y="118.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">下一个更大</text>
+  <text x="256" y="112" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">答案 = [-1, 2, -1, -1]</text>
+  <text x="40" y="152" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">栈(底→顶):非递增</text>
+  <text x="40" y="172" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">弹出条件:nums[top] &lt; nums[i]</text>
+  <text x="40" y="192" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">答案写在被弹出的 j 身上:res[j] = nums[i]</text>
+  <rect x="512" y="80" width="464" height="130" rx="10" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <rect x="528" y="98" width="200" height="32" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="628.0" y="118.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">下一个更大或相等</text>
+  <text x="744" y="112" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">答案 = [-1, 2, 2, -1]</text>
+  <text x="528" y="152" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">栈(底→顶):严格递减</text>
+  <text x="528" y="172" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">弹出条件:nums[top] &lt;= nums[i]</text>
+  <text x="528" y="192" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">答案写在被弹出的 j 身上:res[j] = nums[i]</text>
+  <rect x="24" y="228" width="464" height="130" rx="10" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <rect x="40" y="246" width="200" height="32" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="140.0" y="266.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">下一个更小</text>
+  <text x="256" y="260" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">答案 = [1, -1, -1, -1]</text>
+  <text x="40" y="300" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">栈(底→顶):非递减</text>
+  <text x="40" y="320" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">弹出条件:nums[top] &gt; nums[i]</text>
+  <text x="40" y="340" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">答案写在被弹出的 j 身上:res[j] = nums[i]</text>
+  <rect x="512" y="228" width="464" height="130" rx="10" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <rect x="528" y="246" width="200" height="32" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="628.0" y="266.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">下一个更小或相等</text>
+  <text x="744" y="260" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">答案 = [1, -1, 2, -1]</text>
+  <text x="528" y="300" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">栈(底→顶):严格递增</text>
+  <text x="528" y="320" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">弹出条件:nums[top] &gt;= nums[i]</text>
+  <text x="528" y="340" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">答案写在被弹出的 j 身上:res[j] = nums[i]</text>
+  <rect x="24" y="380" width="952" height="30" rx="10" fill="#e4f1ee" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="500.0" y="400" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">「上一个更小」不用新循环:j 被弹出的那一刻,栈里挨着它下面的就是它左边第一根更矮(或相等)的柱子</text>
+</svg>

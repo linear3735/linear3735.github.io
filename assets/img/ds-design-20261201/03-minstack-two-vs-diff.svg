@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="440" viewBox="0 0 860 440" role="img">
+  <rect width="860" height="440" fill="#ffffff"/>
+  <text x="430" y="34" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">最小栈:push 5 → 3 → 4 之后,两种解法各存了什么</text>
+  <rect x="36" y="60" width="380" height="280" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="226" y="88" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">双栈法:历史最小值原样留一份</text>
+  <text x="121" y="116" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="400">data</text>
+  <text x="271" y="116" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="400">mins</text>
+  <rect x="76" y="130" width="90" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="121.0" y="158.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="226" y="130" width="90" height="46" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="271.0" y="158.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="76" y="180" width="90" height="46" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="121.0" y="208.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="226" y="180" width="90" height="46" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="271.0" y="208.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="76" y="230" width="90" height="46" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="121.0" y="258.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="226" y="230" width="90" height="46" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="271.0" y="258.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <text x="226" y="314" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">mins[i] = min(data[0..i]),两栈同增同减</text>
+  <rect x="444" y="60" width="380" height="280" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="634" y="88" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">差值法:只存「与当时最小值的差」</text>
+  <text x="545" y="116" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="400">diff</text>
+  <rect x="500" y="130" width="90" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="545.0" y="158.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="500" y="180" width="90" height="46" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="545.0" y="208.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">-2</text>
+  <rect x="500" y="230" width="90" height="46" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="545.0" y="258.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <rect x="654" y="176" width="116" height="48" rx="6" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="712.0" y="197.0" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">min_val</text>
+  <text x="712.0" y="214.0" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">= 3</text>
+  <text x="634" y="314" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">d &lt; 0 说明这一层存的正是最小值本身</text>
+  <text x="430" y="384" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">双栈法对每个元素各留一份最小值;差值法把信息编码进这一个数里,只多一个变量</text>
+  <text x="430" y="414" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="400">代价:差值法要 x - min_val,极端值下会溢出 32 位 int</text>
+</svg>

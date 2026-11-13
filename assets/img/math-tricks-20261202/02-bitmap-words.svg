@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" role="img">
+  <rect width="1180" height="560" fill="#ffffff"/>
+  <text x="590.0" y="50" font-size="20" fill="#252b33" text-anchor="middle" font-weight="600">位图:8 字节装 64 个布尔,而不是 8 个</text>
+  <rect x="28" y="84" width="548" height="330" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="302" y="118" font-size="16" fill="#252b33" text-anchor="middle" font-weight="600">boolean[]:每个元素占 1 字节</text>
+  <rect x="175" y="150" width="56" height="56" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <text x="203.0" y="184.72" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">1</text>
+  <rect x="241" y="150" width="56" height="56" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.2"/>
+  <text x="269.0" y="184.72" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="307" y="150" width="56" height="56" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <text x="335.0" y="184.72" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">1</text>
+  <rect x="373" y="150" width="56" height="56" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <text x="401.0" y="184.72" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">1</text>
+  <rect x="175" y="224" width="56" height="56" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.2"/>
+  <text x="203.0" y="258.72" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="241" y="224" width="56" height="56" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.2"/>
+  <text x="269.0" y="258.72" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="307" y="224" width="56" height="56" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <text x="335.0" y="258.72" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">1</text>
+  <rect x="373" y="224" width="56" height="56" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.2"/>
+  <text x="401.0" y="258.72" font-size="18" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <text x="302" y="316" font-size="13.5" fill="#252b33" text-anchor="middle" font-weight="400">8 个布尔 = 8 字节 = 64 比特</text>
+  <text x="302" y="346" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">真正携带信息的只有 8 比特,其余 56 比特是浪费(7/8)</text>
+  <text x="302" y="376" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">所以日常开发用布尔数组就够了</text>
+  <rect x="604" y="84" width="548" height="330" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="878" y="118" font-size="16" fill="#252b33" text-anchor="middle" font-weight="600">位图:1 个 64 位字装 64 个布尔</text>
+  <rect x="623" y="170" width="30" height="56" rx="3" fill="#fdf0e3" stroke="#252b33" stroke-width="1.1"/>
+  <text x="638.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">1</text>
+  <rect x="655" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="670.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="687" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="702.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="719" y="170" width="30" height="56" rx="3" fill="#fdf0e3" stroke="#252b33" stroke-width="1.1"/>
+  <text x="734.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">1</text>
+  <rect x="751" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="766.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="783" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="798.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="815" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="830.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="847" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="862.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="879" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="894.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="911" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="926.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="943" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="958.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="975" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="990.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="1007" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="1022.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="1039" y="170" width="30" height="56" rx="3" fill="#fdf0e3" stroke="#252b33" stroke-width="1.1"/>
+  <text x="1054.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">1</text>
+  <rect x="1071" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="1086.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <rect x="1103" y="170" width="30" height="56" rx="3" fill="#ffffff" stroke="#252b33" stroke-width="1.1"/>
+  <text x="1118.0" y="204" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <text x="638" y="248" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">bit 63</text>
+  <text x="1118" y="248" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">bit 48</text>
+  <text x="878" y="278" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">(画的是字里的高 16 位,其余 48 位同理)</text>
+  <text x="878" y="314" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">第 i 位 → words[i &gt;&gt; 6] 的第 (i &amp; 63) 位</text>
+  <text x="878" y="344" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">64 = 2^6,所以 i % 64 等价于 i &amp; 63</text>
+  <text x="878" y="374" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">i = 100 → 字下标 1、位偏移 36</text>
+  <text x="590.0" y="460" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">代价:字下标与位偏移要自己算,换来的内存是原来的 1/8</text>
+  <text x="590.0" y="492" font-size="13.5" fill="#737c88" text-anchor="middle" font-weight="400">集合没大到布尔数组开不下时,不值得换成位图</text>
+</svg>

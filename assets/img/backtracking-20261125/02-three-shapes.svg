@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img">
+  <rect width="1200" height="470" fill="#ffffff"/>
+  <text x="20" y="32" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">同一棵树,答案挂的位置不同:nums = [1,2],k = 2</text>
+  <rect x="20" y="52" width="385.0" height="330" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="40" y="82" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">排列 permute</text>
+  <text x="40" y="102" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">答案在叶子</text>
+  <rect x="415" y="52" width="385.0" height="330" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="435" y="82" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">子集 subsets</text>
+  <text x="435" y="102" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">答案在每个节点</text>
+  <rect x="810" y="52" width="385.0" height="330" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="830" y="82" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">组合 combine(n,2)</text>
+  <text x="830" y="102" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">答案在长度为 k 的节点</text>
+  <rect x="174.0" y="135.0" width="76" height="30" rx="8" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="212.0" y="154.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[]</text>
+  <rect x="94.0" y="220.0" width="76" height="30" rx="8" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="132.0" y="239.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[1]</text>
+  <rect x="254.0" y="220.0" width="76" height="30" rx="8" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="292.0" y="239.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[2]</text>
+  <rect x="64.0" y="305.0" width="76" height="30" rx="8" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="102.0" y="324.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[1,2]</text>
+  <rect x="284.0" y="305.0" width="76" height="30" rx="8" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="322.0" y="324.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[2,1]</text>
+  <text x="212.0" y="360" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">只有走满 n 步才算答案</text>
+  <line x1="212.0" y1="165.0" x2="132.0" y2="220.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="212.0" y1="165.0" x2="292.0" y2="220.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="132.0" y1="250.0" x2="102.0" y2="305.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="292.0" y1="250.0" x2="322.0" y2="305.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="569.0" y="135.0" width="76" height="30" rx="8" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="607.0" y="154.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[]</text>
+  <rect x="489.0" y="220.0" width="76" height="30" rx="8" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="527.0" y="239.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[1]</text>
+  <rect x="649.0" y="220.0" width="76" height="30" rx="8" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="687.0" y="239.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[2]</text>
+  <rect x="489.0" y="305.0" width="76" height="30" rx="8" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="527.0" y="324.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[1,2]</text>
+  <text x="607.0" y="360" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">每进入一个节点就先收一次</text>
+  <line x1="607.0" y1="165.0" x2="527.0" y2="220.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="607.0" y1="165.0" x2="687.0" y2="220.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="527.0" y1="250.0" x2="527.0" y2="305.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="964.0" y="135.0" width="76" height="30" rx="8" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="1002.0" y="154.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[]</text>
+  <rect x="884.0" y="220.0" width="76" height="30" rx="8" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="922.0" y="239.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[1]</text>
+  <rect x="1044.0" y="220.0" width="76" height="30" rx="8" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="1082.0" y="239.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[2]</text>
+  <rect x="884.0" y="305.0" width="76" height="30" rx="8" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="922.0" y="324.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[1,2]</text>
+  <text x="1002.0" y="360" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">长度够了才收,不再往深处走</text>
+  <line x1="1002.0" y1="165.0" x2="922.0" y2="220.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="1002.0" y1="165.0" x2="1082.0" y2="220.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="922.0" y1="250.0" x2="922.0" y2="305.0" stroke="#e7eaf0" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="24" y="387" width="16" height="16" rx="4" fill="#e4f1ee" stroke="#252b33" stroke-width="1.0"/>
+  <text x="48" y="400" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">= 会被收进结果集的节点</text>
+  <rect x="280" y="387" width="16" height="16" rx="4" fill="#e8eff7" stroke="#252b33" stroke-width="1.0"/>
+  <text x="304" y="400" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">= 只是中间状态,不收</text>
+  <text x="560" y="400" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">差异只有三处:循环起点、有没有 used、答案收在哪一层</text>
+</svg>

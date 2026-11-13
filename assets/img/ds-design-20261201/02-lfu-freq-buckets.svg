@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="470" viewBox="0 0 860 470" role="img">
+  <rect width="860" height="470" fill="#ffffff"/>
+  <text x="430" y="34" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">LFU = 哈希表 + 频率桶(每个桶自己是一条 LRU)+ minFreq</text>
+  <rect x="36" y="60" width="300" height="310" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="186" y="86" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">两张映射表</text>
+  <rect x="56" y="106" width="260" height="40" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="186.0" y="130.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">a  →  val 10 ,  freq 2</text>
+  <rect x="56" y="156" width="260" height="40" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="186.0" y="180.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">b  →  val 20 ,  freq 1</text>
+  <rect x="56" y="206" width="260" height="40" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="186.0" y="230.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">c  →  val 30 ,  freq 1</text>
+  <rect x="56" y="256" width="260" height="40" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="186.0" y="280.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">d  →  val 40 ,  freq 3</text>
+  <rect x="356" y="60" width="468" height="310" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="590" y="86" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">freqToKeys:频率 → 桶(桶内按进入先后排序)</text>
+  <rect x="376" y="106" width="76" height="48" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="414.0" y="134.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">freq 1</text>
+  <rect x="468" y="106" width="76" height="48" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="506.0" y="135.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">a</text>
+  <rect x="560" y="106" width="76" height="48" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="598.0" y="135.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">b</text>
+  <line x1="544" y1="130" x2="552.00" y2="130.00" stroke="#b5762a" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="560.00,130.00 552.00,134.60 552.00,125.40" fill="#b5762a"/>
+  <text x="792" y="130" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="400">← minFreq</text>
+  <rect x="376" y="176" width="76" height="48" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="414.0" y="204.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">freq 2</text>
+  <rect x="468" y="176" width="76" height="48" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="506.0" y="205.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">c</text>
+  <rect x="376" y="246" width="76" height="48" rx="6" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="414.0" y="274.32" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">freq 3</text>
+  <rect x="468" y="246" width="76" height="48" rx="6" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="506.0" y="275.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">d</text>
+  <text x="590" y="320" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="400">淘汰 = minFreq 那一行的桶头(同频里最旧)</text>
+  <text x="590" y="346" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="400">升频:freq f → f+1,从旧桶摘走、挂到新桶尾部</text>
+  <text x="430" y="412" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">旧的最小桶空了,新最小值必然正好是 f+1 —— 因为频率每次只 +1,不会跳档</text>
+  <text x="430" y="442" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">所以 minFreq 只需常数时间维护;若写成「无条件 minFreq = f+1」,就会淘汰错对象</text>
+</svg>

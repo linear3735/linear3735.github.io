@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img">
+  <rect width="1100" height="520" fill="#ffffff"/>
+  <rect x="0" y="0" width="1100" height="520" rx="0" fill="#f3f5f7" stroke="#f3f5f7" stroke-width="1.4"/>
+  <text x="550.0" y="44" font-size="20" fill="#252b33" text-anchor="middle" font-weight="600">顺序存储 vs 链式存储:能力是取舍,不是优劣</text>
+  <rect x="40" y="82" width="480" height="360" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="280" y="118" font-size="16" fill="#3568a3" text-anchor="middle" font-weight="600">顺序存储(数组)</text>
+  <text x="280" y="142" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">地址 = 起始 + 下标 × 元素大小</text>
+  <rect x="68" y="176" width="80" height="56" rx="0" fill="#ffffff" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="108.0" y="209.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <text x="108" y="248" font-size="10" fill="#737c88" text-anchor="middle" font-weight="400">+0</text>
+  <rect x="156" y="176" width="80" height="56" rx="0" fill="#ffffff" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="196.0" y="209.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="196" y="248" font-size="10" fill="#737c88" text-anchor="middle" font-weight="400">+4</text>
+  <rect x="244" y="176" width="80" height="56" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="284.0" y="209.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="284" y="248" font-size="10" fill="#737c88" text-anchor="middle" font-weight="400">+8</text>
+  <rect x="332" y="176" width="80" height="56" rx="0" fill="#ffffff" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="372.0" y="209.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="372" y="248" font-size="10" fill="#737c88" text-anchor="middle" font-weight="400">+12</text>
+  <rect x="420" y="176" width="80" height="56" rx="0" fill="#ffffff" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="460.0" y="209.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <text x="460" y="248" font-size="10" fill="#737c88" text-anchor="middle" font-weight="400">+16</text>
+  <text x="280" y="274" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">一块连续内存,下标直接算出地址</text>
+  <text x="68" y="314" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="600">✓ 随机访问 O(1)</text>
+  <text x="68" y="344" font-size="13" fill="#b5762a" text-anchor="start" font-weight="400">✗ 中间插入要搬数据 O(n)</text>
+  <text x="68" y="374" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="400">✓ 尾部追加均摊 O(1)</text>
+  <text x="68" y="404" font-size="13" fill="#b5762a" text-anchor="start" font-weight="400">✗ 扩容时要整块搬迁</text>
+  <rect x="576" y="82" width="484" height="360" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="818" y="118" font-size="16" fill="#2f7d6d" text-anchor="middle" font-weight="600">链式存储(链表)</text>
+  <text x="818" y="142" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">节点分散,靠指针串起来</text>
+  <rect x="610" y="190" width="108" height="46" rx="6" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="644" y="220" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <text x="692" y="220" font-size="20" fill="#2f7d6d" text-anchor="middle" font-weight="400">•</text>
+  <line x1="714" y1="213" x2="757.00" y2="266.75" stroke="#2f7d6d" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="762.00,273.00 753.41,269.63 760.59,263.88" fill="#2f7d6d"/>
+  <rect x="760" y="250" width="108" height="46" rx="6" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="794" y="280" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="842" y="280" font-size="20" fill="#2f7d6d" text-anchor="middle" font-weight="400">•</text>
+  <line x1="864" y1="273" x2="907.00" y2="219.25" stroke="#2f7d6d" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="912.00,213.00 910.59,222.12 903.41,216.37" fill="#2f7d6d"/>
+  <rect x="910" y="190" width="108" height="46" rx="6" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="944" y="220" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="992" y="220" font-size="20" fill="#2f7d6d" text-anchor="middle" font-weight="400">•</text>
+  <text x="818" y="322" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">每个节点多花一个指针的空间</text>
+  <text x="610" y="368" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="600">✓ 已知前驱时插入删除 O(1)</text>
+  <text x="610" y="398" font-size="13" fill="#b5762a" text-anchor="start" font-weight="400">✗ 不支持随机访问,要走一遍 O(n)</text>
+  <text x="550.0" y="480" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">哈希表、栈、队列、堆、树、图 —— 都是这两者加约束的结果</text>
+</svg>

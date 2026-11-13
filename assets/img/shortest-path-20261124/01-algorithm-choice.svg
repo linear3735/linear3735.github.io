@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="452" viewBox="0 0 980 452" role="img">
+  <rect width="980" height="452" fill="#ffffff"/>
+  <text x="24" y="30" font-size="15" fill="#252b33" text-anchor="start" font-weight="600">选型:先问是哪一类问题,再问图长什么样</text>
+  <rect x="20" y="48" width="460" height="184" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="32" y="74" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">① 最短路</text>
+  <text x="36" y="104" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">有负权边 → 任意两点: Floyd   O(V³)</text>
+  <text x="36" y="128" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">有负权边 → 单源: Bellman-Ford  O(V·E)</text>
+  <text x="36" y="152" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">想更快: SPFA（实测快, 无硬保证）</text>
+  <line x1="36" y1="168" x2="464" y2="168" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="36" y="194" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">无负权 → 稠密: 朴素 Dijkstra   O(V²)</text>
+  <text x="36" y="218" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">无负权 → 稀疏: 堆版 Dijkstra   O(E log V)</text>
+  <rect x="500" y="48" width="460" height="184" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="512" y="74" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">② 最小生成树:连通所有点、总代价最小</text>
+  <text x="516" y="104" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">Kruskal: 排序 + 并查集判环  O(E log E)</text>
+  <text x="516" y="128" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">Prim 朴素（稠密）        O(V²)</text>
+  <text x="516" y="152" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">Prim 堆版（稀疏）        O(E log V)</text>
+  <line x1="516" y1="168" x2="944" y2="168" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="516" y="194" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">负权边不影响: MST 只看权重的大小关系</text>
+  <text x="516" y="218" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">图不连通 → 最小生成森林（Kruskal 天然给）</text>
+  <rect x="20" y="248" width="460" height="152" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="32" y="274" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">③ A*:点对点, 能设计出可采纳的 h</text>
+  <text x="36" y="304" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">排序键从 g 换成 f = g + h</text>
+  <text x="36" y="328" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">h ≡ 0 → 退化成 Dijkstra（5.4 实测）</text>
+  <text x="36" y="352" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">h 高估 → 更快, 但答案会错（5.4 实测）</text>
+  <text x="36" y="376" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">无权网格上不如直接 BFS: O(E)</text>
+  <rect x="500" y="248" width="460" height="152" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="512" y="274" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">④ 欧拉路径:每条边恰好走一次</text>
+  <text x="516" y="304" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">先判: 度数条件 + 连通性（两个都要）</text>
+  <text x="516" y="328" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">再跑 Hierholzer   O(E + V)</text>
+  <text x="516" y="352" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">输出 = 遍历所有边的 DFS 逆后序</text>
+  <text x="516" y="376" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">无向: 全偶 ⇒ 回路 / 恰两奇 ⇒ 路径</text>
+  <text x="24" y="434" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">选错不会报错, 只会给你一个偏大（或偏小）的答案; 各条线的依据在 1.2 / 4.2 / 5.2 / 6.2。</text>
+</svg>

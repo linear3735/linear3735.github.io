@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="380" viewBox="0 0 1000 380" role="img">
+  <rect width="1000" height="380" fill="#ffffff"/>
+  <text x="500.0" y="34" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">记账法:代价在 push 的那一刻就已经预付完了</text>
+  <rect x="60" y="78" width="250" height="36" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.2"/>
+  <text x="185.0" y="102" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">阶段</text>
+  <rect x="310" y="78" width="220" height="36" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.2"/>
+  <text x="420.0" y="102" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">谁付这枚硬币</text>
+  <rect x="530" y="78" width="130" height="36" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.2"/>
+  <text x="595.0" y="102" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">枚数</text>
+  <rect x="660" y="78" width="280" height="36" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.2"/>
+  <text x="800.0" y="102" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">每个元素发生几次</text>
+  <rect x="60" y="114" width="250" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <rect x="310" y="114" width="220" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <rect x="530" y="114" width="130" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <rect x="660" y="114" width="280" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <text x="74" y="140" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">① push 进 s1</text>
+  <text x="324" y="140" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">本次 push 当场付</text>
+  <text x="595.0" y="140" font-size="12.5" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="674" y="140" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">恰好 1 次</text>
+  <rect x="60" y="154" width="250" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <rect x="310" y="154" width="220" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <rect x="530" y="154" width="130" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <rect x="660" y="154" width="280" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <text x="74" y="180" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">② 从 s1 搬到 s2</text>
+  <text x="324" y="180" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">用元素自己的存款</text>
+  <text x="595.0" y="180" font-size="12.5" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="674" y="180" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">最多 1 次</text>
+  <rect x="60" y="194" width="250" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <rect x="310" y="194" width="220" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <rect x="530" y="194" width="130" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <rect x="660" y="194" width="280" height="40" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.0"/>
+  <text x="74" y="220" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">③ 从 s2 弹出</text>
+  <text x="324" y="220" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">用元素自己的存款</text>
+  <text x="595.0" y="220" font-size="12.5" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="674" y="220" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">最多 1 次</text>
+  <text x="500.0" y="272" font-size="13.5" fill="#2f7d6d" text-anchor="middle" font-weight="400">每个元素一生最多 3 枚硬币 → m 个元素 ≤ 3m → 均摊到每次操作是 O(1)</text>
+  <rect x="40" y="296" width="300" height="62" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="190" y="320" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">整体法</text>
+  <text x="190" y="342" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">总代价 ≤ 3m + n ≤ 4n</text>
+  <rect x="350" y="296" width="300" height="62" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="500" y="320" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">记账法</text>
+  <text x="500" y="342" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">每个元素预付 3 枚硬币</text>
+  <rect x="660" y="296" width="300" height="62" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="810" y="320" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">势能法</text>
+  <text x="810" y="342" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">Φ = |s1|,每次均摊 ≤ 2</text>
+</svg>

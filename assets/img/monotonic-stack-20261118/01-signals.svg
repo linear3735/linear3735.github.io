@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img">
+  <rect width="1000" height="360" fill="#ffffff"/>
+  <text x="500.0" y="36" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">先翻译题面:要的是「第一个比我大/小的邻居」,才轮到单调栈</text>
+  <text x="500.0" y="60" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">翻译成功,剩下的就是套模板;翻译不成功,先换别的数据结构</text>
+  <rect x="30" y="84" width="460" height="214" rx="10" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="50" y="110" font-size="13" fill="#252b33" text-anchor="start" font-weight="600">看到这些说法 → 上单调栈</text>
+  <text x="50" y="140" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">· 右边第一个比它大的数</text>
+  <text x="50" y="155" font-size="11" fill="#3568a3" text-anchor="start" font-weight="400">    → 下一个更大:496 / 739</text>
+  <text x="50" y="178" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">· 左边第一根比它矮的挡板</text>
+  <text x="50" y="193" font-size="11" fill="#3568a3" text-anchor="start" font-weight="400">    → 上一个更小:弹出时读栈顶</text>
+  <text x="50" y="216" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">· 以它最矮时能撑多宽的矩形</text>
+  <text x="50" y="231" font-size="11" fill="#3568a3" text-anchor="start" font-weight="400">    → 上一个 + 下一个更小:84</text>
+  <text x="50" y="254" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">· 环形数组里绕一圈的下一个更大</text>
+  <text x="50" y="269" font-size="11" fill="#3568a3" text-anchor="start" font-weight="400">    → 翻倍 + 取模:503</text>
+  <rect x="510" y="84" width="460" height="214" rx="10" fill="#eef1f5" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="530" y="110" font-size="13" fill="#252b33" text-anchor="start" font-weight="600">看到这些说法 → 别急</text>
+  <text x="530" y="140" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">· 全局最大 / 最小</text>
+  <text x="530" y="155" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">    → 堆、排序</text>
+  <text x="530" y="178" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">· 随便一个满足条件的元素</text>
+  <text x="530" y="193" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">    → 双指针、前缀和</text>
+  <text x="530" y="216" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">· 窗口内的最值</text>
+  <text x="530" y="231" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">    → 单调队列(下一篇)</text>
+  <text x="530" y="254" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">· 反复随机问某个区间的第一个更大</text>
+  <text x="530" y="269" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">    → 单调栈只扫一遍,答不了</text>
+  <rect x="30" y="310" width="940" height="40" rx="10" fill="#e4f1ee" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="500.0" y="335" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="400">三条同时成立才值得上:「第一个」+「所有元素都要问一遍」+「一次从左到右的扫描能问完」</text>
+</svg>

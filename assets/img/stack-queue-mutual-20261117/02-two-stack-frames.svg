@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="430" viewBox="0 0 1080 430" role="img">
+  <rect width="1080" height="430" fill="#ffffff"/>
+  <text x="540.0" y="30" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">MyQueue 的五个时刻:注意 s2 没排空之前,新元素一直等在 s1</text>
+  <rect x="14" y="52" width="196" height="344" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="112.0" y="82" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">push 1,2,3</text>
+  <text x="64" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s1</text>
+  <text x="160" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s2</text>
+  <rect x="32" y="272" width="64" height="30" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="64.0" y="291.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="32" y="242" width="64" height="30" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="64.0" y="261.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="32" y="212" width="64" height="30" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="64.0" y="231.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="128" y="272" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="128" y="242" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="128" y="212" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <text x="112.0" y="344" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">三个元素都进了 s1</text>
+  <text x="112.0" y="362" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">s2 还是空的</text>
+  <rect x="228" y="52" width="196" height="344" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="326.0" y="82" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">peek()</text>
+  <text x="278" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s1</text>
+  <text x="374" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s2</text>
+  <rect x="246" y="272" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="246" y="242" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="246" y="212" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="342" y="272" width="64" height="30" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="374.0" y="291.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="342" y="242" width="64" height="30" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="374.0" y="261.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="342" y="212" width="64" height="30" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="374.0" y="231.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="326.0" y="344" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">s2 空,把 s1 一次倒空</text>
+  <text x="326.0" y="362" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">队头 1 到了 s2 栈顶</text>
+  <rect x="442" y="52" width="196" height="344" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="540.0" y="82" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">push(4)</text>
+  <text x="492" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s1</text>
+  <text x="588" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s2</text>
+  <rect x="460" y="272" width="64" height="30" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="492.0" y="291.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="460" y="242" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="460" y="212" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="556" y="272" width="64" height="30" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="588.0" y="291.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="556" y="242" width="64" height="30" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="588.0" y="261.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="556" y="212" width="64" height="30" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="588.0" y="231.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="540.0" y="344" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">4 只能等在 s1 里</text>
+  <text x="540.0" y="362" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">它比 s2 里的都晚入队</text>
+  <rect x="656" y="52" width="196" height="344" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="754.0" y="82" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">pop() → 1</text>
+  <text x="706" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s1</text>
+  <text x="802" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s2</text>
+  <rect x="674" y="272" width="64" height="30" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="706.0" y="291.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="674" y="242" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="674" y="212" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="770" y="272" width="64" height="30" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="802.0" y="291.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="770" y="242" width="64" height="30" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="802.0" y="261.68" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="770" y="212" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <text x="754.0" y="344" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">返回队头 1</text>
+  <text x="754.0" y="362" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">s2 没空就绝不搬</text>
+  <rect x="870" y="52" width="196" height="344" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="968.0" y="82" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">pop() x3</text>
+  <text x="920" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s1</text>
+  <text x="1016" y="110" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">s2</text>
+  <rect x="888" y="272" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="888" y="242" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="888" y="212" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="984" y="272" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="984" y="242" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <rect x="984" y="212" width="64" height="30" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.0" stroke-dasharray="3 3"/>
+  <text x="968.0" y="344" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">2 3 出完后 s2 空</text>
+  <text x="968.0" y="362" font-size="10.5" fill="#252b33" text-anchor="middle" font-weight="400">再搬一次,s1 的 4 出队</text>
+  <text x="540.0" y="416" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">虚线格 = 空;橙色格 = 该栈的栈顶,也就是队列的队头</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="600" viewBox="0 0 1240 600" role="img">
+  <rect width="1240" height="600" fill="#ffffff"/>
+  <text x="620" y="38" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">同样的两层循环,换个嵌套顺序就从「组合」变成「排列」</text>
+  <text x="620" y="62" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">面额 = {1, 2, 3}，目标 amount = 3。两边的转移方程一字不差</text>
+  <rect x="40" y="130" width="560" height="330" rx="10" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="320.0" y="160" font-size="15" fill="#2f7d6d" text-anchor="middle" font-weight="600">面额在外层 → 组合数</text>
+  <text x="320.0" y="184" font-size="12.5" fill="#252b33" text-anchor="middle" font-weight="400">for c in coins:  for a in range(c, A+1):</text>
+  <rect x="80" y="212" width="480" height="32" rx="5" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320.0" y="233" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="400">{1,1,1}</text>
+  <text x="546" y="233" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">算入</text>
+  <rect x="80" y="252" width="480" height="32" rx="5" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320.0" y="273" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="400">{1,2}</text>
+  <text x="546" y="273" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">算入</text>
+  <rect x="80" y="292" width="480" height="32" rx="5" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320.0" y="313" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">{2,1}</text>
+  <text x="546" y="313" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">重复，不计</text>
+  <rect x="80" y="332" width="480" height="32" rx="5" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320.0" y="353" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="400">{3}</text>
+  <text x="546" y="353" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">算入</text>
+  <text x="320.0" y="432" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="600">答案 = 3（{1,1,1} / {1,2} / {3}）</text>
+  <rect x="640" y="130" width="560" height="330" rx="10" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="920.0" y="160" font-size="15" fill="#b5762a" text-anchor="middle" font-weight="600">容量在外层 → 排列数</text>
+  <text x="920.0" y="184" font-size="12.5" fill="#252b33" text-anchor="middle" font-weight="400">for a in range(1, A+1):  for c in coins:</text>
+  <rect x="680" y="212" width="480" height="32" rx="5" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="920.0" y="233" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">{1,1,1}</text>
+  <text x="1146" y="233" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">算入</text>
+  <rect x="680" y="252" width="480" height="32" rx="5" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="920.0" y="273" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">{1,2}</text>
+  <text x="1146" y="273" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">算入</text>
+  <rect x="680" y="292" width="480" height="32" rx="5" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="920.0" y="313" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">{2,1}</text>
+  <text x="1146" y="313" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">算入</text>
+  <rect x="680" y="332" width="480" height="32" rx="5" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="920.0" y="353" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">{3}</text>
+  <text x="1146" y="353" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">算入</text>
+  <text x="920.0" y="432" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">答案 = 4（{1,2} 与 {2,1} 算两种）</text>
+  <rect x="40" y="506" width="1160" height="56" rx="8" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="620" y="530" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">面额在外层时,每个面额只有一轮,顺序被钉死 → 组合</text>
+  <text x="620" y="551" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">容量在外层时,每个容量都能重新挑任意面额 → 顺序自由 → 排列</text>
+  <text x="620" y="588" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">转移方程两边完全一样,唯一的差别就是哪一层在外面</text>
+</svg>

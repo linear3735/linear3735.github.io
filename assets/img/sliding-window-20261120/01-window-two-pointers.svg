@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="340" viewBox="0 0 980 340" role="img">
+  <rect width="980" height="340" fill="#ffffff"/>
+  <text x="36" y="40" font-size="17" fill="#252b33" text-anchor="start" font-weight="600">窗口 [left, right):右指针只往前扩,左指针只往前缩</text>
+  <text x="36" y="66" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">两个指针都不回头,所以每个元素最多进窗口一次、出窗口一次</text>
+  <rect x="246" y="110" width="396" height="66" rx="10" fill="#e8eff7" stroke="#3568a3" stroke-width="1.6"/>
+  <rect x="60" y="116" width="64" height="54" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="92.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="92.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="124" y="116" width="64" height="54" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="156.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="156.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">1</text>
+  <rect x="188" y="116" width="64" height="54" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="220.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <text x="220.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">2</text>
+  <rect x="252" y="116" width="64" height="54" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="284.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="284.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">3</text>
+  <rect x="316" y="116" width="64" height="54" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="348.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <text x="348.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">4</text>
+  <rect x="380" y="116" width="64" height="54" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="412.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">9</text>
+  <text x="412.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">5</text>
+  <rect x="444" y="116" width="64" height="54" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="476.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="476.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">6</text>
+  <rect x="508" y="116" width="64" height="54" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="540.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">6</text>
+  <text x="540.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">7</text>
+  <rect x="572" y="116" width="64" height="54" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="604.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <text x="604.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">8</text>
+  <rect x="636" y="116" width="64" height="54" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="668.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="668.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">9</text>
+  <rect x="700" y="116" width="64" height="54" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="732.0" y="148.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <text x="732.0" y="190" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">10</text>
+  <text x="284.0" y="214" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">left</text>
+  <text x="604.0" y="214" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">right</text>
+  <text x="250" y="98" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">窗口内的元素:left ≤ i ≤ right−1</text>
+  <line x1="520" y1="84" x2="712.00" y2="84.00" stroke="#2f7d6d" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="720.00,84.00 712.00,88.60 712.00,79.40" fill="#2f7d6d"/>
+  <text x="770" y="88" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="600">right++ → 扩大</text>
+  <line x1="720" y1="300" x2="528.00" y2="300.00" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="520.00,300.00 528.00,295.40 528.00,304.60" fill="#b5762a"/>
+  <text x="770" y="304" font-size="13" fill="#b5762a" text-anchor="start" font-weight="600">left++ → 收缩</text>
+  <text x="36" y="308" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">入窗:right 扫过的元素各一次  ·  出窗:left 扫过的元素各一次  →  合计 O(N)</text>
+</svg>

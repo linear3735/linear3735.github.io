@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330" role="img">
+  <rect width="1000" height="330" fill="#ffffff"/>
+  <text x="36" y="40" font-size="17" fill="#252b33" text-anchor="start" font-weight="600">哈希相等 ≠ 子串相等:命中的时候必须逐字符回验一次</text>
+  <rect x="36" y="62" width="448" height="190" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="260" y="88" font-size="14" fill="#2f7d6d" text-anchor="middle" font-weight="600">真命中</text>
+  <rect x="156" y="106" width="52" height="44" rx="0" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="182.0" y="133.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">a</text>
+  <rect x="208" y="106" width="52" height="44" rx="0" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="234.0" y="133.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">b</text>
+  <rect x="260" y="106" width="52" height="44" rx="0" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="286.0" y="133.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">c</text>
+  <text x="260" y="176" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">h = 97·131²+98·131+99</text>
+  <text x="260" y="214" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="600">逐字符比对 → 通过,返回下标</text>
+  <rect x="516" y="62" width="448" height="190" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="740" y="88" font-size="14" fill="#b5762a" text-anchor="middle" font-weight="600">假命中(碰撞)</text>
+  <rect x="636" y="106" width="52" height="44" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="662.0" y="133.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">x</text>
+  <rect x="688" y="106" width="52" height="44" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="714.0" y="133.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">q</text>
+  <rect x="740" y="106" width="52" height="44" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="766.0" y="133.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">z</text>
+  <text x="740" y="176" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">h 恰好相同</text>
+  <text x="740" y="214" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">逐字符比对 → 失败,继续往后滑</text>
+  <text x="36" y="288" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">期望 O(n+m):哈希把「几乎每一步都要比对」变成「几乎不用比对」;最坏 O(nm) 来自蓄意构造的碰撞</text>
+  <text x="36" y="310" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">实用做法:随机化底数 B,或者像力扣 187 那样用 4 进制 + 位运算做到无模数、无碰撞</text>
+</svg>

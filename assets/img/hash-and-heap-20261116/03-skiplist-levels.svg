@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="450.0" y="30" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">跳表:多层索引 + 抛硬币决定层数,期望 O(log n)</text>
+  <line x1="108.0" y1="92.0" x2="363.66666666666663" y2="92.0" stroke="#b5762a" stroke-width="2.4" stroke-linecap="round"/>
+  <rect x="72.0" y="79.0" width="26" height="26" rx="5" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="85.0" y="96.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="600">H</text>
+  <text x="10" y="96.5" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">第 3 层</text>
+  <circle cx="376.66666666666663" cy="92.0" r="13.0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.6"/>
+  <text x="376.66666666666663" y="96.5" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="600">40</text>
+  <line x1="108.0" y1="166.0" x2="363.66666666666663" y2="166.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="389.66666666666663" y1="166.0" x2="665.8888888888889" y2="166.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <rect x="72.0" y="153.0" width="26" height="26" rx="5" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="85.0" y="170.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="600">H</text>
+  <text x="10" y="170.5" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">第 2 层</text>
+  <circle cx="376.66666666666663" cy="166.0" r="13.0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.6"/>
+  <text x="376.66666666666663" y="170.5" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="600">40</text>
+  <circle cx="678.8888888888889" cy="166.0" r="13.0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.6"/>
+  <text x="678.8888888888889" y="170.5" font-size="11" fill="#252b33" text-anchor="middle" font-weight="400">80</text>
+  <line x1="108.0" y1="240.0" x2="212.55555555555554" y2="240.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="238.55555555555554" y1="240.0" x2="363.66666666666663" y2="240.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="389.66666666666663" y1="240.0" x2="514.7777777777778" y2="240.0" stroke="#b5762a" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="540.7777777777778" y1="240.0" x2="665.8888888888889" y2="240.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="691.8888888888889" y1="240.0" x2="817.0" y2="240.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <rect x="72.0" y="227.0" width="26" height="26" rx="5" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="85.0" y="244.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="600">H</text>
+  <text x="10" y="244.5" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">第 1 层</text>
+  <circle cx="225.55555555555554" cy="240.0" r="13.0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.6"/>
+  <text x="225.55555555555554" y="244.5" font-size="11" fill="#252b33" text-anchor="middle" font-weight="400">20</text>
+  <circle cx="376.66666666666663" cy="240.0" r="13.0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.6"/>
+  <text x="376.66666666666663" y="244.5" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="600">40</text>
+  <circle cx="527.7777777777778" cy="240.0" r="13.0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.6"/>
+  <text x="527.7777777777778" y="244.5" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="600">60</text>
+  <circle cx="678.8888888888889" cy="240.0" r="13.0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.6"/>
+  <text x="678.8888888888889" y="244.5" font-size="11" fill="#252b33" text-anchor="middle" font-weight="400">80</text>
+  <circle cx="830.0" cy="240.0" r="13.0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.6"/>
+  <text x="830.0" y="244.5" font-size="11" fill="#252b33" text-anchor="middle" font-weight="400">100</text>
+  <line x1="108.0" y1="322.0" x2="137.0" y2="322.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="163.0" y1="322.0" x2="212.55555555555554" y2="322.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="238.55555555555554" y1="322.0" x2="288.1111111111111" y2="322.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="314.1111111111111" y1="322.0" x2="363.66666666666663" y2="322.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="389.66666666666663" y1="322.0" x2="439.22222222222223" y2="322.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="465.22222222222223" y1="322.0" x2="514.7777777777778" y2="322.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="540.7777777777778" y1="322.0" x2="590.3333333333333" y2="322.0" stroke="#b5762a" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="616.3333333333333" y1="322.0" x2="665.8888888888889" y2="322.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="691.8888888888889" y1="322.0" x2="741.4444444444445" y2="322.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="767.4444444444445" y1="322.0" x2="817.0" y2="322.0" stroke="#e7eaf0" stroke-width="1.6" stroke-linecap="round"/>
+  <rect x="72.0" y="309.0" width="26" height="26" rx="5" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="85.0" y="326.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="600">H</text>
+  <text x="10" y="326.5" font-size="11.5" fill="#3568a3" text-anchor="start" font-weight="600">第 0 层</text>
+  <rect x="119.0" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="150.0" y="326.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="400">10</text>
+  <rect x="194.55555555555554" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="225.55555555555554" y="326.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="400">20</text>
+  <rect x="270.1111111111111" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="301.1111111111111" y="326.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="400">30</text>
+  <rect x="345.66666666666663" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="376.66666666666663" y="326.5" font-size="11.5" fill="#b5762a" text-anchor="middle" font-weight="600">40</text>
+  <rect x="421.22222222222223" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="452.22222222222223" y="326.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="400">50</text>
+  <rect x="496.7777777777778" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="527.7777777777778" y="326.5" font-size="11.5" fill="#b5762a" text-anchor="middle" font-weight="600">60</text>
+  <rect x="572.3333333333333" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="603.3333333333333" y="326.5" font-size="11.5" fill="#b5762a" text-anchor="middle" font-weight="600">70</text>
+  <rect x="647.8888888888889" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="678.8888888888889" y="326.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="400">80</text>
+  <rect x="723.4444444444445" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="754.4444444444445" y="326.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="400">90</text>
+  <rect x="799.0" y="307.0" width="62.0" height="30.0" rx="6" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="830.0" y="326.5" font-size="11.5" fill="#252b33" text-anchor="middle" font-weight="400">100</text>
+  <line x1="376.66666666666663" y1="105.0" x2="376.66666666666663" y2="153.0" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <line x1="376.66666666666663" y1="179.0" x2="376.66666666666663" y2="227.0" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <line x1="376.66666666666663" y1="105.0" x2="376.67" y2="113.00" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="376.67,119.00 372.07,113.00 381.27,113.00" fill="#b5762a"/>
+  <line x1="527.7777777777778" y1="253.0" x2="527.7777777777778" y2="307.0" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <line x1="527.7777777777778" y1="253.0" x2="527.78" y2="261.00" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="527.78,267.00 523.18,261.00 532.38,261.00" fill="#b5762a"/>
+  <text x="388.66666666666663" y="70.0" font-size="11.5" fill="#b5762a" text-anchor="start" font-weight="400">从最高层出发:第 3 层只有 40,走到它就停</text>
+  <text x="388.66666666666663" y="144.0" font-size="11.5" fill="#b5762a" text-anchor="start" font-weight="400">第 2 层:40 的下一个 80 已经超过 70,往下掉</text>
+  <text x="539.7777777777778" y="218.0" font-size="11.5" fill="#b5762a" text-anchor="start" font-weight="400">第 1 层:40 → 60,再往右是 80,往下掉</text>
+  <text x="615.3333333333333" y="298.0" font-size="11.5" fill="#b5762a" text-anchor="start" font-weight="400">第 0 层:60 的下一个就是 70,命中</text>
+  <rect x="28" y="380" width="844" height="120" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="48" y="406" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">抛硬币决定层数:P(层数 &gt;= h) = (1/2)^(h-1),所以第 h 层的期望节点数是 n / 2^(h-1)</text>
+  <text x="48" y="426" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="600">—— 正好就是原文简化示例里「每上一层减半」的理想情况。</text>
+  <text x="48" y="454" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">每层最多移动 2 次,一共 log n 层 =&gt; 期望 O(log n);</text>
+  <text x="48" y="474" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="600">但这是期望而不是最坏:硬币全抛成反面时所有节点都在第 0 层,退化成 O(n)。</text>
+</svg>

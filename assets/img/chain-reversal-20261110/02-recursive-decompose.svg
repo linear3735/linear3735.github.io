@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="430" viewBox="0 0 880 430" role="img">
+  <rect width="880" height="430" fill="#ffffff"/>
+  <rect x="20" y="20" width="840" height="190" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="40" y="50" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">① 先假设子问题已经解决:last = reverseList(head.next)</text>
+  <rect x="89.0" y="100.0" width="62.0" height="50.0" rx="6" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="120" y="130.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="120" y="79" font-size="12" fill="#b5762a" text-anchor="start" font-weight="600">head</text>
+  <rect x="229.0" y="100.0" width="62.0" height="50.0" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="260" y="130.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="369.0" y="100.0" width="62.0" height="50.0" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="400" y="130.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="509.0" y="100.0" width="62.0" height="50.0" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="540" y="130.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <line x1="153.0" y1="125" x2="221.00" y2="125.00" stroke="#737c88" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <polygon points="227.00,125.00 221.00,129.60 221.00,120.40" fill="#737c88"/>
+  <text x="190" y="111" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">旧链接,待断</text>
+  <line x1="293.0" y1="125" x2="361.00" y2="125.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="367.00,125.00 361.00,129.60 361.00,120.40" fill="#3568a3"/>
+  <line x1="433.0" y1="125" x2="501.00" y2="125.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="507.00,125.00 501.00,129.60 501.00,120.40" fill="#3568a3"/>
+  <line x1="573.0" y1="125" x2="597.00" y2="125.00" stroke="#737c88" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="4 3"/>
+  <polygon points="603.00,125.00 597.00,129.60 597.00,120.40" fill="#737c88"/>
+  <text x="644" y="129" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">null</text>
+  <rect x="20" y="235" width="840" height="175" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="40" y="265" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">② 再把 head 接到反转后的尾巴上,并断开它自己的 next</text>
+  <rect x="169.0" y="315.0" width="62.0" height="50.0" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="200" y="345.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="289.0" y="315.0" width="62.0" height="50.0" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320" y="345.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="409.0" y="315.0" width="62.0" height="50.0" rx="6" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="440" y="345.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="529.0" y="315.0" width="62.0" height="50.0" rx="6" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="560" y="345.76" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <line x1="233.0" y1="340" x2="281.00" y2="340.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="287.00,340.00 281.00,344.60 281.00,335.40" fill="#3568a3"/>
+  <line x1="353.0" y1="340" x2="401.00" y2="340.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="407.00,340.00 401.00,344.60 401.00,335.40" fill="#3568a3"/>
+  <line x1="473.0" y1="340" x2="521.00" y2="340.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="527.00,340.00 521.00,344.60 521.00,335.40" fill="#3568a3"/>
+  <text x="560" y="290" font-size="12" fill="#b5762a" text-anchor="start" font-weight="600">head 变成新尾巴</text>
+  <text x="640" y="344" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">null</text>
+  <text x="200" y="398" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">子链表 2→3→4 已被子问题翻成 4→3→2</text>
+</svg>

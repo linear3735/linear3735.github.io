@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="410" viewBox="0 0 940 410" role="img">
+  <rect width="940" height="410" fill="#ffffff"/>
+  <rect x="20" y="40" width="440" height="350" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="32" y="66" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">同一张图, 两法都给出总权重 16</text>
+  <line x1="110" y1="140" x2="280" y2="110" stroke="#2f7d6d" stroke-width="3.2" stroke-linecap="round"/>
+  <text x="195.0" y="113.0" font-size="12.5" fill="#2f7d6d" text-anchor="middle" font-weight="600">4</text>
+  <line x1="110" y1="140" x2="110" y2="270" stroke="#2f7d6d" stroke-width="3.2" stroke-linecap="round"/>
+  <text x="94.0" y="205.0" font-size="12.5" fill="#2f7d6d" text-anchor="middle" font-weight="600">3</text>
+  <line x1="300" y1="250" x2="110" y2="270" stroke="#2f7d6d" stroke-width="3.2" stroke-linecap="round"/>
+  <text x="205.0" y="276.0" font-size="12.5" fill="#2f7d6d" text-anchor="middle" font-weight="600">2</text>
+  <line x1="300" y1="250" x2="400" y2="180" stroke="#2f7d6d" stroke-width="3.2" stroke-linecap="round"/>
+  <text x="350.0" y="201.0" font-size="12.5" fill="#2f7d6d" text-anchor="middle" font-weight="600">7</text>
+  <line x1="110" y1="140" x2="300" y2="250" stroke="#e7eaf0" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 5"/>
+  <text x="205.0" y="207.0" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">6</text>
+  <line x1="280" y1="110" x2="300" y2="250" stroke="#e7eaf0" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 5"/>
+  <text x="308.0" y="180.0" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">6</text>
+  <line x1="280" y1="110" x2="400" y2="180" stroke="#e7eaf0" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 5"/>
+  <text x="340.0" y="131.0" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">8</text>
+  <circle cx="110" cy="140" r="22" fill="#ffffff" stroke="#252b33" stroke-width="1.6"/>
+  <text x="110" y="145.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <circle cx="280" cy="110" r="22" fill="#ffffff" stroke="#252b33" stroke-width="1.6"/>
+  <text x="280" y="115.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">1</text>
+  <circle cx="300" cy="250" r="22" fill="#ffffff" stroke="#252b33" stroke-width="1.6"/>
+  <text x="300" y="255.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">2</text>
+  <circle cx="110" cy="270" r="22" fill="#ffffff" stroke="#252b33" stroke-width="1.6"/>
+  <text x="110" y="275.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">3</text>
+  <circle cx="400" cy="180" r="22" fill="#ffffff" stroke="#252b33" stroke-width="1.6"/>
+  <text x="400" y="185.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">4</text>
+  <text x="36" y="344" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="400">实线 = 选中的边（2+3+4+7=16）</text>
+  <text x="36" y="368" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">虚线 = 被判环或已连通而放弃的边</text>
+  <rect x="480" y="40" width="210" height="350" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="492" y="66" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">Kruskal: 全局排序</text>
+  <text x="496" y="104" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">2-3 (2)  ✓</text>
+  <text x="496" y="132" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">0-3 (3)  ✓</text>
+  <text x="496" y="160" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">0-1 (4)  ✓</text>
+  <text x="496" y="188" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="400">0-2 (6)  ✗ 成环</text>
+  <text x="496" y="216" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="400">1-2 (6)  ✗ 成环</text>
+  <text x="496" y="244" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">2-4 (7)  ✓</text>
+  <text x="496" y="272" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="400">1-4 (8)  ✗ 已连通</text>
+  <text x="496" y="330" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">排序主导 O(E log E)</text>
+  <text x="496" y="356" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">不连通 → 生成森林</text>
+  <rect x="710" y="40" width="210" height="350" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="722" y="66" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">Prim: 从一个点长</text>
+  <text x="726" y="104" font-size="12.5" fill="#3568a3" text-anchor="start" font-weight="400">已选 {0}</text>
+  <text x="726" y="132" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">0-3 (3)  ✓</text>
+  <text x="726" y="160" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">3-2 (2)  ✓</text>
+  <text x="726" y="188" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">0-1 (4)  ✓</text>
+  <text x="726" y="216" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">2-4 (7)  ✓</text>
+  <text x="726" y="262" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">每轮挑最小的横跨边</text>
+  <text x="726" y="300" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">O(V²) 朴素</text>
+  <text x="726" y="324" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">O(E log V) 堆版</text>
+  <text x="726" y="356" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">结果与 Kruskal 同一棵</text>
+</svg>

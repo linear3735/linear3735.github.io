@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" role="img">
+  <rect width="1000" height="430" fill="#ffffff"/>
+  <text x="34" y="40" font-size="18" fill="#252b33" text-anchor="start" font-weight="600">preSum 的那一格偏移：哨兵为什么必须存在</text>
+  <text x="34" y="63" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">nums = [-2, 0, 3, -5, 2, -1]，preSum = [0, -2, -2, 1, -4, -2, -3]</text>
+  <text x="160" y="108" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">0</text>
+  <rect x="100" y="120" width="120" height="52" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="160.0" y="152.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">-2</text>
+  <text x="280" y="108" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">1</text>
+  <rect x="220" y="120" width="120" height="52" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="280.0" y="152.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <text x="400" y="108" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">2</text>
+  <rect x="340" y="120" width="120" height="52" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="400.0" y="152.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="520" y="108" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">3</text>
+  <rect x="460" y="120" width="120" height="52" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="520.0" y="152.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">-5</text>
+  <text x="640" y="108" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">4</text>
+  <rect x="580" y="120" width="120" height="52" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="640.0" y="152.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="760" y="108" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">5</text>
+  <rect x="700" y="120" width="120" height="52" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="760.0" y="152.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">-1</text>
+  <line x1="160" y1="174" x2="160" y2="212" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 4"/>
+  <line x1="280" y1="174" x2="280" y2="212" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 4"/>
+  <line x1="400" y1="174" x2="400" y2="212" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 4"/>
+  <line x1="520" y1="174" x2="520" y2="212" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 4"/>
+  <line x1="640" y1="174" x2="640" y2="212" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 4"/>
+  <line x1="760" y1="174" x2="760" y2="212" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 4"/>
+  <text x="100" y="200" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">0</text>
+  <rect x="40" y="216" width="120" height="52" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="100.0" y="248.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <text x="220" y="200" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">1</text>
+  <rect x="160" y="216" width="120" height="52" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="220.0" y="248.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">-2</text>
+  <text x="340" y="200" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">2</text>
+  <rect x="280" y="216" width="120" height="52" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="340.0" y="248.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">-2</text>
+  <text x="460" y="200" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">3</text>
+  <rect x="400" y="216" width="120" height="52" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="460.0" y="248.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="580" y="200" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">4</text>
+  <rect x="520" y="216" width="120" height="52" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="580.0" y="248.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">-4</text>
+  <text x="700" y="200" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">5</text>
+  <rect x="640" y="216" width="120" height="52" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="700.0" y="248.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">-2</text>
+  <text x="820" y="200" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">6</text>
+  <rect x="760" y="216" width="120" height="52" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="820.0" y="248.12" font-size="17" fill="#252b33" text-anchor="middle" font-weight="400">-3</text>
+  <text x="100" y="296" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">哨兵：空数组的和 = 0</text>
+  <text x="580" y="296" font-size="11.5" fill="#3568a3" text-anchor="start" font-weight="400">= nums[0..3] 的和</text>
+  <text x="800" y="296" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">整个数组的和</text>
+  <rect x="30" y="318" width="940" height="82" rx="9" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1"/>
+  <text x="46" y="348" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">nums[i] 正落在 preSum[i] 和 preSum[i+1] 的接缝上：第一个包含 nums[i] 的前缀和是 preSum[i+1]。</text>
+  <text x="46" y="376" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">所以 preSum[i] 的含义是「前 i 个元素」，不是「到下标 i 为止」——下标 i 变成了元素个数 i。</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" role="img">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="450.0" y="30" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">二分答案:在值域上找一个单调谓词的翻转点</text>
+  <text x="138" y="121.0" font-size="13" fill="#3568a3" text-anchor="end" font-weight="600">候选值 x</text>
+  <rect x="150.0" y="92" width="74" height="48" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="187.0" y="121.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="224.0" y="92" width="74" height="48" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="261.0" y="121.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="298.0" y="92" width="74" height="48" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="335.0" y="121.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="372.0" y="92" width="74" height="48" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="409.0" y="121.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="446.0" y="92" width="74" height="48" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="483.0" y="121.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="520.0" y="92" width="74" height="48" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="557.0" y="121.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">6</text>
+  <rect x="594.0" y="92" width="74" height="48" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="631.0" y="121.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="668.0" y="92" width="74" height="48" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="705.0" y="121.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">8</text>
+  <rect x="742.0" y="92" width="74" height="48" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="779.0" y="121.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">9</text>
+  <text x="150.0" y="158" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">lo = 1</text>
+  <text x="816.0" y="158" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">hi = 9 (开区间上界)</text>
+  <text x="138" y="185" font-size="12" fill="#737c88" text-anchor="end" font-weight="400">feasible(x)</text>
+  <rect x="150.0" y="168" width="74" height="26" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="187.0" y="186" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">false</text>
+  <rect x="224.0" y="168" width="74" height="26" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="261.0" y="186" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">false</text>
+  <rect x="298.0" y="168" width="74" height="26" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="335.0" y="186" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">false</text>
+  <rect x="372.0" y="168" width="74" height="26" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="409.0" y="186" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">false</text>
+  <rect x="446.0" y="168" width="74" height="26" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="483.0" y="186" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">true</text>
+  <rect x="520.0" y="168" width="74" height="26" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="557.0" y="186" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">true</text>
+  <rect x="594.0" y="168" width="74" height="26" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="631.0" y="186" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">true</text>
+  <rect x="668.0" y="168" width="74" height="26" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="705.0" y="186" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">true</text>
+  <rect x="742.0" y="168" width="74" height="26" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="779.0" y="186" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">true</text>
+  <line x1="446.0" y1="206" x2="446.0" y2="242" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="446.0" y1="242" x2="446.00" y2="217.00" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="446.00,210.00 450.60,217.00 441.40,217.00" fill="#b5762a"/>
+  <text x="456.0" y="228" font-size="13" fill="#b5762a" text-anchor="start" font-weight="600">第一个 true 就是答案:x = 5</text>
+  <text x="268.4" y="272" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">false 区</text>
+  <text x="631.0" y="272" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="400">true 区</text>
+  <rect x="28" y="300" width="844" height="84" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="48" y="328" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="600">while lo &lt; hi:   mid = lo + (hi - lo) // 2</text>
+  <text x="48" y="352" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">if feasible(mid):  hi = mid        # 可行 → 答案在 mid 或更左</text>
+  <text x="48" y="374" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="400">else:              lo = mid + 1    # 不可行 → 答案一定在右边</text>
+</svg>

@@ -4,3 +4,15 @@ _site/
 .sass-cache/
 Gemfile.lock
 .DS_Store
+
+# ---- 代码门的构建产物 ----
+# 每个 assets/blog/<slug>-<YYYYMMDD>/ 下的 verify_code.py 都会:
+#   · 把抽取出来的用例写到 build/cases.txt
+#   · 把 C++ 侧拼成 build/cpp_main.cpp 并编译出可执行文件
+#   · 少数几个门把生成的 .cpp / 可执行文件写在目录根上(_generated_*)
+# 这些都是一次性的,重跑门就会重新生成,而且包含 Mach-O 可执行文件
+# (最大的 ~160KB 一个,全部加起来 2MB 级)。绝对不该进仓库。
+__pycache__/
+*.py[cod]
+assets/blog/*/build/
+assets/blog/*/_generated_*

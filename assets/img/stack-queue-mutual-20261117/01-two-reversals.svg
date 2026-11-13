@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img">
+  <rect width="1000" height="300" fill="#ffffff"/>
+  <text x="500.0" y="36" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">一个栈是反转,两个栈是反转两次,而反转两次等于没反转</text>
+  <rect x="50" y="142" width="60" height="34" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="80.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="110" y="142" width="60" height="34" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="140.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="170" y="142" width="60" height="34" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="200.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="140" y="74" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">① 入队顺序 1 2 3</text>
+  <text x="140" y="240" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">原始顺序:FIFO</text>
+  <rect x="305" y="176" width="90" height="34" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="350.0" y="198.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="305" y="142" width="90" height="34" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="350.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="305" y="108" width="90" height="34" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="350.0" y="130.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="350" y="74" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">② 依次 push 进 s1</text>
+  <text x="350" y="96" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">第一次反转:3 2 1</text>
+  <text x="350" y="240" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">栈顶是 3,队头 1 被压在最底下</text>
+  <rect x="515" y="176" width="90" height="34" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="560.0" y="198.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="515" y="142" width="90" height="34" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="560.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="515" y="108" width="90" height="34" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="560.0" y="130.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="560" y="74" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">③ 全部倒入 s2</text>
+  <text x="560" y="96" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">第二次反转:1 2 3</text>
+  <text x="560" y="240" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">栈顶变成 1,正是队头</text>
+  <rect x="680" y="142" width="60" height="34" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="710.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="740" y="142" width="60" height="34" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="770.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="800" y="142" width="60" height="34" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="830.0" y="164.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="770" y="74" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">④ 依次弹出</text>
+  <text x="770" y="240" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">回到原始顺序:FIFO</text>
+  <line x1="240" y1="159.0" x2="288.00" y2="159.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="296.00,159.00 288.00,163.60 288.00,154.40" fill="#3568a3"/>
+  <line x1="405" y1="159.0" x2="498.00" y2="159.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="506.00,159.00 498.00,163.60 498.00,154.40" fill="#3568a3"/>
+  <line x1="615" y1="159.0" x2="663.00" y2="159.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="671.00,159.00 663.00,163.60 663.00,154.40" fill="#3568a3"/>
+  <text x="455" y="128" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">必须一次倒空</text>
+</svg>

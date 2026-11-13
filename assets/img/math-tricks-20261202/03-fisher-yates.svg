@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" role="img">
+  <rect width="1180" height="620" fill="#ffffff"/>
+  <text x="590.0" y="50" font-size="19" fill="#252b33" text-anchor="middle" font-weight="600">Fisher-Yates:从后往前,已确定的位置不再参与交换</text>
+  <rect x="28" y="84" width="660" height="330" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="358" y="118" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">第 i 轮:j 在 [0, i] 里均匀取,交换 a[i] 和 a[j]</text>
+  <rect x="102" y="200" width="96" height="64" rx="4" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <text x="150.0" y="242" font-size="20" fill="#252b33" text-anchor="middle" font-weight="600">a</text>
+  <text x="150.0" y="290" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="206" y="200" width="96" height="64" rx="4" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <text x="254.0" y="242" font-size="20" fill="#252b33" text-anchor="middle" font-weight="600">b</text>
+  <text x="254.0" y="290" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">1</text>
+  <rect x="310" y="200" width="96" height="64" rx="4" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <text x="358.0" y="242" font-size="20" fill="#252b33" text-anchor="middle" font-weight="600">c</text>
+  <text x="358.0" y="290" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">2</text>
+  <rect x="414" y="200" width="96" height="64" rx="4" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <text x="462.0" y="242" font-size="20" fill="#252b33" text-anchor="middle" font-weight="600">d</text>
+  <text x="462.0" y="290" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">3</text>
+  <rect x="518" y="200" width="96" height="64" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.2"/>
+  <text x="566.0" y="242" font-size="20" fill="#252b33" text-anchor="middle" font-weight="600">e</text>
+  <text x="566.0" y="290" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">4</text>
+  <line x1="102" y1="186" x2="510" y2="186" stroke="#3568a3" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="102" y1="178" x2="102" y2="186" stroke="#3568a3" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="510" y1="178" x2="510" y2="186" stroke="#3568a3" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="306.0" y="168" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">候选区间:j ∈ [0, 3]</text>
+  <text x="566.0" y="168" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">已确定</text>
+  <line x1="510" y1="330" x2="110.00" y2="330.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="102.00,330.00 110.00,325.40 110.00,334.60" fill="#3568a3"/>
+  <text x="306.0" y="312" font-size="12.5" fill="#3568a3" text-anchor="middle" font-weight="400">swap(a[i], a[j]):i 与随机的 j 交换</text>
+  <text x="358" y="380" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">第 i 轮之后,位置 i 不会再被任何后续步骤碰到</text>
+  <rect x="716" y="84" width="436" height="330" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="934" y="118" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">为什么是 n! 种等概率的选择序列</text>
+  <text x="744" y="160" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">每轮的选择次数:n, n-1, …, 2</text>
+  <text x="744" y="190" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">总序列数 = n × (n-1) × … × 1 = n!</text>
+  <text x="744" y="220" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">每种选择序列的概率彼此相等</text>
+  <text x="744" y="250" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">每种序列 ↔ 一个不同的排列(一一对应)</text>
+  <text x="744" y="280" font-size="13" fill="#3568a3" text-anchor="start" font-weight="400">⇒ 每个排列的概率 = 1/n!</text>
+  <text x="744" y="320" font-size="13" fill="#b5762a" text-anchor="start" font-weight="400">已确定的后缀不参与后续交换,</text>
+  <text x="744" y="350" font-size="13" fill="#b5762a" text-anchor="start" font-weight="400">这正是序列与排列一一对应的原因。</text>
+  <rect x="28" y="442" width="1124" height="150" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="56" y="478" font-size="14" fill="#b5762a" text-anchor="start" font-weight="400">对照:错误的写法 —— for i in 0 … n-1,每轮 j 都取 [0, n-1]</text>
+  <text x="56" y="514" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">选择序列有 n^n 种且等概率 ⇒ 若结果均匀,则每个排列的概率 = m / n^n,必须 n! | n^n</text>
+  <text x="56" y="544" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">而 n = 3 时 6 不能整除 27,n = 4 时 24 不能整除 256 ⇒ 不可能均匀(纯计数论证,不用跑程序)</text>
+</svg>

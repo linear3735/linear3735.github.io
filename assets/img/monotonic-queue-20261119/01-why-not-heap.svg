@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="386" viewBox="0 0 1000 386" role="img">
+  <rect width="1000" height="386" fill="#ffffff"/>
+  <text x="500.0" y="36" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">两个需求卡在一起,所以需要一个新结构</text>
+  <text x="500.0" y="60" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">既要按入队时间出队,又要在 O(1) 时间拿到最值</text>
+  <rect x="43.0" y="84" width="290" height="168" rx="10" fill="#e4f1ee" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="188.0" y="114" font-size="14" fill="#2f7d6d" text-anchor="middle" font-weight="600">① 加一个数</text>
+  <text x="188.0" y="142" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">拿新元素和当前最大值比一下</text>
+  <text x="188.0" y="164" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">一次比较就够</text>
+  <rect x="355.0" y="84" width="290" height="168" rx="10" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="500.0" y="114" font-size="14" fill="#b5762a" text-anchor="middle" font-weight="600">② 删一个数</text>
+  <text x="500.0" y="142" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">如果出去的正好是最大值</text>
+  <text x="500.0" y="164" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">剩下谁是最大?只能重扫一遍</text>
+  <rect x="667.0" y="84" width="290" height="168" rx="10" fill="#eef1f5" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="812.0" y="114" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">③ 用堆行不行</text>
+  <text x="812.0" y="142" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">堆顶是最值,但出队顺序是</text>
+  <text x="812.0" y="164" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">元素大小,不是入队时间</text>
+  <line x1="188.0" y1="262" x2="492.00" y2="262.00" stroke="#737c88" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <polygon points="500.00,262.00 492.00,266.60 492.00,257.40" fill="#737c88"/>
+  <line x1="500.0" y1="262" x2="804.00" y2="262.00" stroke="#737c88" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <polygon points="812.00,262.00 804.00,266.60 804.00,257.40" fill="#737c88"/>
+  <rect x="42" y="282" width="916" height="78" rx="10" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="500.0" y="314" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">单调队列 = 一个仍然是队列的容器,同时 O(1) 给出最值</text>
+  <text x="500.0" y="340" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">队头是答案,队里其余的是候补;被压扁的候补永远不会成为答案</text>
+</svg>

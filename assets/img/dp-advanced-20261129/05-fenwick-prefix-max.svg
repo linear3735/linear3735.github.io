@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="460" viewBox="0 0 1000 460" role="img">
+  <rect width="1000" height="460" fill="#ffffff"/>
+  <text x="34" y="40" font-size="18" fill="#252b33" text-anchor="start" font-weight="600">把内层二维查询换成树状数组</text>
+  <text x="34" y="63" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">下标维度由「扫描顺序」保证，值维度由「前缀查询」保证，两层一叠加就省掉一个 log</text>
+  <text x="30" y="100" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">优化前：每个 i 都要回看所有 j &lt; i，并检查 nums[j] &lt; nums[i]</text>
+  <rect x="150" y="118" width="74" height="40" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.3"/>
+  <text x="187.0" y="144" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">nums[0]</text>
+  <rect x="240" y="118" width="74" height="40" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.3"/>
+  <text x="277.0" y="144" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">nums[1]</text>
+  <rect x="330" y="118" width="74" height="40" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.3"/>
+  <text x="367.0" y="144" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">nums[2]</text>
+  <rect x="420" y="118" width="74" height="40" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.3"/>
+  <text x="457.0" y="144" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">nums[3]</text>
+  <rect x="510" y="118" width="74" height="40" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.3"/>
+  <text x="547.0" y="144" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">nums[4]</text>
+  <line x1="277.0" y1="164" x2="219.50" y2="185.23" stroke="#b5762a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3"/>
+  <polygon points="212.00,188.00 217.91,180.91 221.10,189.54" fill="#b5762a"/>
+  <line x1="367.0" y1="164" x2="219.91" y2="186.78" stroke="#b5762a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3"/>
+  <polygon points="212.00,188.00 219.20,182.23 220.61,191.32" fill="#b5762a"/>
+  <line x1="457.0" y1="164" x2="219.96" y2="187.22" stroke="#b5762a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3"/>
+  <polygon points="212.00,188.00 219.51,182.64 220.41,191.80" fill="#b5762a"/>
+  <line x1="547.0" y1="164" x2="219.98" y2="187.43" stroke="#b5762a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 3"/>
+  <polygon points="212.00,188.00 219.65,182.84 220.31,192.02" fill="#b5762a"/>
+  <text x="150" y="214" font-size="11.5" fill="#b5762a" text-anchor="start" font-weight="400">代价：O(n²) —— 内层每次都是一次线性回看</text>
+  <text x="30" y="268" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">优化后：把「值」当作树状数组的下标，查询变成前缀 max</text>
+  <rect x="150" y="300" width="62" height="46" rx="5" fill="#e4f1ee" stroke="#252b33" stroke-width="1.2"/>
+  <text x="181.0" y="322" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[1]</text>
+  <text x="181.0" y="338" font-size="9.5" fill="#737c88" text-anchor="middle" font-weight="400">管1格</text>
+  <rect x="222" y="300" width="62" height="46" rx="5" fill="#e4f1ee" stroke="#252b33" stroke-width="1.2"/>
+  <text x="253.0" y="322" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[2]</text>
+  <text x="253.0" y="338" font-size="9.5" fill="#737c88" text-anchor="middle" font-weight="400">管2格</text>
+  <rect x="294" y="300" width="62" height="46" rx="5" fill="#ffffff" stroke="#252b33" stroke-width="1.2"/>
+  <text x="325.0" y="322" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[3]</text>
+  <text x="325.0" y="338" font-size="9.5" fill="#737c88" text-anchor="middle" font-weight="400">管1格</text>
+  <rect x="366" y="300" width="62" height="46" rx="5" fill="#e4f1ee" stroke="#252b33" stroke-width="1.2"/>
+  <text x="397.0" y="322" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[4]</text>
+  <text x="397.0" y="338" font-size="9.5" fill="#737c88" text-anchor="middle" font-weight="400">管4格</text>
+  <rect x="438" y="300" width="62" height="46" rx="5" fill="#ffffff" stroke="#252b33" stroke-width="1.2"/>
+  <text x="469.0" y="322" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[5]</text>
+  <text x="469.0" y="338" font-size="9.5" fill="#737c88" text-anchor="middle" font-weight="400">管1格</text>
+  <rect x="510" y="300" width="62" height="46" rx="5" fill="#ffffff" stroke="#252b33" stroke-width="1.2"/>
+  <text x="541.0" y="322" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[6]</text>
+  <text x="541.0" y="338" font-size="9.5" fill="#737c88" text-anchor="middle" font-weight="400">管2格</text>
+  <rect x="582" y="300" width="62" height="46" rx="5" fill="#ffffff" stroke="#252b33" stroke-width="1.2"/>
+  <text x="613.0" y="322" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[7]</text>
+  <text x="613.0" y="338" font-size="9.5" fill="#737c88" text-anchor="middle" font-weight="400">管1格</text>
+  <rect x="654" y="300" width="62" height="46" rx="5" fill="#e4f1ee" stroke="#252b33" stroke-width="1.2"/>
+  <text x="685.0" y="322" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">[8]</text>
+  <text x="685.0" y="338" font-size="9.5" fill="#737c88" text-anchor="middle" font-weight="400">管8格</text>
+  <line x1="613.0" y1="356" x2="549.00" y2="356.00" stroke="#2f7d6d" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="541.00,356.00 549.00,351.40 549.00,360.60" fill="#2f7d6d"/>
+  <line x1="541.0" y1="356" x2="405.00" y2="356.00" stroke="#2f7d6d" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="397.00,356.00 405.00,351.40 405.00,360.60" fill="#2f7d6d"/>
+  <text x="582" y="382" font-size="11.5" fill="#2f7d6d" text-anchor="middle" font-weight="400">查询前缀 max：7 → 7−lowbit(7)=6 → 6−lowbit(6)=4 → 0，只要 3 步</text>
+  <text x="30" y="428" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">lowbit(k) = k &amp; (−k) 就是 k 管辖的格子数。每次减去 lowbit 恰好剥掉一层管辖范围，所以前缀查询只走 log n 步。</text>
+  <text x="30" y="450" font-size="11.5" fill="#2f7d6d" text-anchor="start" font-weight="400">代价：一次查询 O(log n)，总体从 O(n²) 降到 O(n log n)。</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="600" viewBox="0 0 1240 600" role="img">
+  <rect width="1240" height="600" fill="#ffffff"/>
+  <text x="620" y="46" font-size="21" fill="#252b33" text-anchor="middle" font-weight="700">翻倍扩容:总搬移次数不到 2n</text>
+  <text x="620" y="74" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">四行分别是容量 1、2、4、8;右边算的是 n 次追加搬了多少个元素</text>
+  <text x="184" y="156" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">容量</text>
+  <text x="210" y="156" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">（暖色=已有元素,蓝色=本次从旧数组搬过来的）</text>
+  <text x="140" y="224.0" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">1</text>
+  <rect x="210" y="196" width="58" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <text x="292" y="224.0" font-size="12" fill="#3568a3" text-anchor="start" font-weight="600">新开</text>
+  <text x="140" y="302.0" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">2</text>
+  <rect x="210" y="274" width="58" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="268" y="274" width="58" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <text x="350" y="302.0" font-size="12" fill="#3568a3" text-anchor="start" font-weight="600">搬 1</text>
+  <text x="140" y="380.0" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">4</text>
+  <rect x="210" y="352" width="58" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="268" y="352" width="58" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="326" y="352" width="58" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="384" y="352" width="58" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <text x="466" y="380.0" font-size="12" fill="#3568a3" text-anchor="start" font-weight="600">搬 2</text>
+  <text x="140" y="458.0" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">8</text>
+  <rect x="210" y="430" width="58" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="268" y="430" width="58" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="326" y="430" width="58" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="384" y="430" width="58" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="442" y="430" width="58" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="500" y="430" width="58" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="558" y="430" width="58" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <rect x="616" y="430" width="58" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.2"/>
+  <text x="698" y="458.0" font-size="12" fill="#3568a3" text-anchor="start" font-weight="600">搬 4</text>
+  <rect x="790" y="150" width="420" height="330" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="1000" y="190" font-size="16" fill="#252b33" text-anchor="middle" font-weight="600">总搬移次数</text>
+  <text x="816" y="228" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">搬移发生在容量 1, 2, 4, …, 2ᵏ 上</text>
+  <text x="816" y="258" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">2ᵏ 是 ≥ n 的最小 2 的幂(n=10 时是 16)</text>
+  <text x="816" y="288" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">每次搬当时的 size 个,所以总数是</text>
+  <text x="816" y="318" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">1 + 2 + 4 + … + 2ᵏ⁻¹ = 2ᵏ − 1</text>
+  <text x="816" y="348" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">n=10 → 15 次;n=1024 → 1023 次</text>
+  <text x="816" y="378" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="400">因为 2ᵏ &lt; 2n,总数 &lt; 2n,所以总共 O(n)</text>
+  <text x="816" y="408" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="600">→ 平均每次 O(1)(摊还)</text>
+  <text x="400" y="532" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">如果改成每次只 +1,总次数是 1+2+...+n = O(n²) —— 摊还 O(1) 就没了</text>
+</svg>

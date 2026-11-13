@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" role="img">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">最小栈:辅助栈和主栈同步升降,所以两栈永远等长</text>
+  <rect x="40" y="62" width="380" height="318" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="150" y="92" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">data</text>
+  <text x="310" y="92" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">mins</text>
+  <rect x="100" y="300" width="100" height="44" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="150.0" y="327.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="260" y="300" width="100" height="44" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="310.0" y="327.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <line x1="206" y1="322.0" x2="246.00" y2="322.00" stroke="#737c88" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="254.00,322.00 246.00,326.60 246.00,317.40" fill="#737c88"/>
+  <rect x="100" y="256" width="100" height="44" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="150.0" y="283.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="260" y="256" width="100" height="44" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="310.0" y="283.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <line x1="206" y1="278.0" x2="246.00" y2="278.00" stroke="#737c88" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="254.00,278.00 246.00,282.60 246.00,273.40" fill="#737c88"/>
+  <text x="230" y="388" font-size="11" fill="#252b33" text-anchor="middle" font-weight="400">push(3), push(1):两栈等长,mins 栈顶就是最小值 1</text>
+  <rect x="480" y="62" width="380" height="318" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="590" y="92" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">data</text>
+  <text x="750" y="92" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">mins</text>
+  <rect x="540" y="300" width="100" height="44" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="590.0" y="327.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="700" y="300" width="100" height="44" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="750.0" y="327.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <line x1="646" y1="322.0" x2="686.00" y2="322.00" stroke="#737c88" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="694.00,322.00 686.00,326.60 686.00,317.40" fill="#737c88"/>
+  <rect x="540" y="256" width="100" height="44" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="590.0" y="283.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="700" y="256" width="100" height="44" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="750.0" y="283.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <line x1="646" y1="278.0" x2="686.00" y2="278.00" stroke="#737c88" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="694.00,278.00 686.00,282.60 686.00,273.40" fill="#737c88"/>
+  <rect x="540" y="212" width="100" height="44" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="590.0" y="239.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="700" y="212" width="100" height="44" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.4"/>
+  <text x="750.0" y="239.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <line x1="646" y1="234.0" x2="686.00" y2="234.00" stroke="#737c88" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="694.00,234.00 686.00,238.60 686.00,229.40" fill="#737c88"/>
+  <text x="670" y="388" font-size="11" fill="#252b33" text-anchor="middle" font-weight="400">push(2):2 没刷新纪录,mins 仍然压 1 → 两栈依然等长</text>
+  <text x="450.0" y="408" font-size="10.5" fill="#737c88" text-anchor="middle" font-weight="400">橙色 = 数据栈栈顶;绿色 = 辅助栈栈顶,getMin() 直接读它</text>
+</svg>

@@ -17,9 +17,22 @@ python3 assets/blog/interview-algo-speedrun-20261108/verify_markdown.py \
 # 事实门:文章里每一条来自教程的说法，逐条核对到归档源文本的具体行
 python3 assets/blog/interview-algo-speedrun-20261108/verify_citations.py \
         _posts/2026-11-08-interview-algo-speedrun.md
+
+# 代码门:把文章里的 Python 抽出来真跑一遍，8 道题共 32 个用例
+python3 assets/blog/interview-algo-speedrun-20261108/verify_code.py
 ```
 
-两个脚本退出码 0 表示全部通过。
+三个脚本退出码 0 表示全部通过。
+
+C++ 版本单独编译验证（文章里的代码和这个 harness 用的是同一套 include）:
+
+```bash
+cd assets/blog/interview-algo-speedrun-20261108
+g++ -std=c++17 -Wall -Wextra -O1 -o /tmp/cpp_solutions_test cpp_solutions_test.cpp \
+  && /tmp/cpp_solutions_test
+```
+
+**为什么两个语言都要真跑。** 它们错的点不一样。第 2.3 节的最小堆是个具体例子:Python 的 `heapq` 在元素值相同时会去比较元组的第二个元素，塞 `(val, node)` 会抛 `TypeError`，所以必须塞一个可比较的序号进去；C++ 的 `priority_queue` 比较器只读 `val`，压根不会碰到这个问题。只写一种语言的话，这个坑对读者就是不存在的。
 
 ## verify_citations.py 的设计
 

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img">
+  <rect width="1000" height="500" fill="#ffffff"/>
+  <text x="500.0" y="34" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">柱状图中最大的矩形:每根柱子认领一段区间</text>
+  <text x="500.0" y="58" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">heights = [2, 1, 5, 6, 2, 3],答案是 10(高 5、宽 2)</text>
+  <rect x="80" y="230" width="64" height="80" rx="3" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="112.0" y="328" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">i=0  h=2</text>
+  <rect x="166" y="270" width="64" height="40" rx="3" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="198.0" y="328" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">i=1  h=1</text>
+  <rect x="252" y="110" width="64" height="200" rx="3" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="284.0" y="328" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">i=2  h=5</text>
+  <rect x="338" y="70" width="64" height="240" rx="3" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="370.0" y="328" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">i=3  h=6</text>
+  <rect x="424" y="230" width="64" height="80" rx="3" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="456.0" y="328" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">i=4  h=2</text>
+  <rect x="510" y="190" width="64" height="120" rx="3" fill="#e8eff7" stroke="#252b33" stroke-width="1.4"/>
+  <text x="542.0" y="328" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">i=5  h=3</text>
+  <rect x="252" y="110" width="150" height="200" rx="3" fill="none" stroke="#b5762a" stroke-width="2.2" stroke-dasharray="6 4"/>
+  <text x="327.0" y="170" font-size="14" fill="#b5762a" text-anchor="middle" font-weight="600">5 × 2 = 10</text>
+  <text x="327.0" y="192" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">柱子 2 说了算的范围</text>
+  <rect x="648" y="76" width="328" height="234" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="668" y="104" font-size="13" fill="#252b33" text-anchor="start" font-weight="600">柱子 j = 2 的两笔账</text>
+  <text x="668" y="132" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">L(j) = 左边第一根「更矮或相等」 = 1</text>
+  <text x="668" y="154" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">R(j) = 右边第一根「严格更矮」 = 4</text>
+  <text x="668" y="198" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">84:面积 = 高 × (R - L - 1)</text>
+  <text x="668" y="220" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">          = 5 × (4 - 1 - 1) = 10</text>
+  <text x="668" y="242" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">907:个数 = (j - L) × (R - j)</text>
+  <text x="668" y="264" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">          = 1 × 2 = 2 个区间</text>
+  <text x="668" y="296" font-size="11" fill="#2f7d6d" text-anchor="start" font-weight="400">宽度是「一个矩形」,个数是「一堆区间」</text>
+  <rect x="24" y="336" width="460" height="130" rx="10" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="44" y="362" font-size="13" fill="#252b33" text-anchor="start" font-weight="600">84 只要一笔账:最大值</text>
+  <text x="44" y="386" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">高 = heights[j],宽 = R - L - 1</text>
+  <text x="44" y="406" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">每根柱子算一次,取最大的 → 10</text>
+  <text x="44" y="430" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">柱子 3(h=6)只拿到 6 × 1 = 6,比 10 小</text>
+  <rect x="510" y="336" width="466" height="130" rx="10" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="530" y="362" font-size="13" fill="#252b33" text-anchor="start" font-weight="600">907 要另一笔账:求和</text>
+  <text x="530" y="386" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">个数 = (j - L) × (R - j)</text>
+  <text x="530" y="406" font-size="12" fill="#252b33" text-anchor="start" font-weight="400">左端点 j-L 种选法,右端点 R-j 种选法</text>
+  <text x="530" y="430" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">Σ 高度 × 个数 = 所有子区间的最小值之和</text>
+</svg>

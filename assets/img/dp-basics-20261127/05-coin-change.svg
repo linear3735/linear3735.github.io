@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570" role="img">
+  <rect width="1200" height="570" fill="#ffffff"/>
+  <text x="600" y="34" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">零钱兑换:coins = [1, 2, 5], amount = 11</text>
+  <text x="600" y="58" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">每个 dp[n] 都要回头看 dp[n-1]、dp[n-2]、dp[n-5],选其中最小的再加一</text>
+  <text x="432.0" y="132" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">dp[n]:凑出金额 n 的最少硬币数</text>
+  <text x="138.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="96" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="138.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <text x="222.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">1</text>
+  <rect x="180" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="222.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="306.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">2</text>
+  <rect x="264" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="306.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="390.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">3</text>
+  <rect x="348" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="390.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="474.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">4</text>
+  <rect x="432" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="474.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="558.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">5</text>
+  <rect x="516" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="558.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="642.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">6</text>
+  <rect x="600" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="642.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="726.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">7</text>
+  <rect x="684" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="726.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="810.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">8</text>
+  <rect x="768" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="810.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="894.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">9</text>
+  <rect x="852" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="894.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="978.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">10</text>
+  <rect x="936" y="180" width="84" height="64" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="978.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="1062.0" y="168" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">11</text>
+  <rect x="1020" y="180" width="84" height="64" rx="0" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="1062.0" y="217.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <path d="M 642.0 246 A 210.0 182 0 0 0 1062.0 246" fill="none" stroke="#2f7d6d" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <path d="M 894.0 246 A 84.0 178 0 0 0 1062.0 246" fill="none" stroke="#2f7d6d" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <path d="M 978.0 246 A 42.0 120 0 0 0 1062.0 246" fill="none" stroke="#2f7d6d" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="600" y="424" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">c=5</text>
+  <text x="1046" y="392" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">c=2</text>
+  <text x="1102" y="366" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">c=1</text>
+  <rect x="96" y="462" width="1008" height="52" rx="8" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="600" y="495" font-size="14" fill="#2f7d6d" text-anchor="middle" font-weight="400">dp[6] = 2,dp[9] = 3,dp[10] = 2  → dp[11] = min(3, 4, 3) = 3</text>
+  <text x="600" y="544" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">兜底规则:如果某个来源是「无解」,它不能参与 min,否则假的「无解 + 1」会顶掉真答案</text>
+</svg>

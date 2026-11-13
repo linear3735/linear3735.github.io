@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="620" viewBox="0 0 1240 620" role="img">
+  <rect width="1240" height="620" fill="#ffffff"/>
+  <text x="620" y="36" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">多源 BFS:所有源一起放进第 0 层 —— 半径直接减半</text>
+  <text x="620" y="60" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">两个 5×5 网格(没有遮挡),格子里的数字是「第几分钟腐烂」,都由这段代码真跑出来</text>
+  <rect x="30" y="84" width="580" height="460" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="320" y="122" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">只从第一个源出发(单源)</text>
+  <rect x="165.0" y="150" width="62" height="62" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="196.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <rect x="227.0" y="150" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="258.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="289.0" y="150" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="351.0" y="150" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="382.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="413.0" y="150" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="444.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="165.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="196.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="227.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="258.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="289.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="351.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="382.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="413.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="444.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="165.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="196.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="227.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="258.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="289.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="351.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="382.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="413.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="444.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">6</text>
+  <rect x="165.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="196.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="227.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="258.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="289.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="351.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="382.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">6</text>
+  <rect x="413.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="444.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="165.0" y="398" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="196.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="227.0" y="398" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="258.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="289.0" y="398" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="320.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">6</text>
+  <rect x="351.0" y="398" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="382.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="413.0" y="398" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="444.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">8</text>
+  <text x="320" y="494" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">答案 8 分钟:右下角离唯一的源最远</text>
+  <text x="320" y="522" font-size="11.5" fill="#737c88" text-anchor="middle" font-weight="400">橙色 = 唯一的源</text>
+  <rect x="630" y="84" width="580" height="460" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="920" y="122" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">两个源同时出发(多源)</text>
+  <rect x="765.0" y="150" width="62" height="62" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="796.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <rect x="827.0" y="150" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="858.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="889.0" y="150" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="920.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="951.0" y="150" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="982.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="1013.0" y="150" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="1044.0" y="186.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="765.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="796.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="827.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="858.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="889.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="920.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="951.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="982.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="1013.0" y="212" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="1044.0" y="248.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="765.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="796.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="827.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="858.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="889.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="920.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="951.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="982.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="1013.0" y="274" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="1044.0" y="310.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="765.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="796.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="827.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="858.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="889.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="920.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="951.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="982.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="1013.0" y="336" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="1044.0" y="372.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="765.0" y="398" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="796.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="827.0" y="398" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="858.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="889.0" y="398" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="920.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="951.0" y="398" width="62" height="62" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="982.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="1013.0" y="398" width="62" height="62" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="1044.0" y="434.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <text x="920" y="494" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">答案 4 分钟:两个源各自扩散,谁也不等谁</text>
+  <text x="920" y="522" font-size="11.5" fill="#737c88" text-anchor="middle" font-weight="400">橙色 = 初始就腐烂的橘子(第 0 层)</text>
+  <text x="620.0" y="566" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">同一张网格、同一批橘子,只把两个源都放进第 0 层:答案从 8 变成 4 分钟;多源 BFS 相对单源只改了「入队」那两行</text>
+</svg>

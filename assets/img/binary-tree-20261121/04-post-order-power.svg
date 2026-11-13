@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="430" viewBox="0 0 1080 430" role="img">
+  <rect width="1080" height="430" fill="#ffffff"/>
+  <text x="36" y="40" font-size="17" fill="#252b33" text-anchor="start" font-weight="600">前中后序位置的能力依次增强:能拿到的信息越来越多</text>
+  <rect x="36" y="78" width="240" height="74" rx="8" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="156" y="110" font-size="15" fill="#3568a3" text-anchor="middle" font-weight="600">前序位置</text>
+  <text x="156" y="134" font-size="11" fill="#3568a3" text-anchor="middle" font-weight="400">能力 1 档</text>
+  <text x="300" y="108" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">能看到:函数参数(父节点传下来的)</text>
+  <text x="300" y="134" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">典型题:打印每个节点的层数</text>
+  <line x1="156" y1="156" x2="156.00" y2="164.00" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="156.00,172.00 151.40,164.00 160.60,164.00" fill="#3568a3"/>
+  <rect x="36" y="174" width="240" height="74" rx="8" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="156" y="206" font-size="15" fill="#b5762a" text-anchor="middle" font-weight="600">中序位置</text>
+  <text x="156" y="230" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">能力 2 档</text>
+  <text x="300" y="204" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">能看到:+ 左子树通过返回值传回来的</text>
+  <text x="300" y="230" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">典型题:BST 场景:中序结果有序</text>
+  <line x1="156" y1="252" x2="156.00" y2="260.00" stroke="#b5762a" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="156.00,268.00 151.40,260.00 160.60,260.00" fill="#b5762a"/>
+  <rect x="36" y="270" width="240" height="74" rx="8" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="156" y="302" font-size="15" fill="#2f7d6d" text-anchor="middle" font-weight="600">后序位置</text>
+  <text x="156" y="326" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">能力 3 档</text>
+  <text x="300" y="300" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">能看到:+ 左右子树通过返回值传回来的</text>
+  <text x="300" y="326" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">典型题:543 直径 / 110 平衡 / 124 最大路径和</text>
+  <text x="36" y="376" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">根本区别在信息的来源:参数是「别人给你」的,返回值是「子树算完给你」的。</text>
+  <text x="36" y="396" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">所以判断标准很简单:如果一道题要用的信息「子树算完才知道」,那就只能放在后序位置。</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="470" viewBox="0 0 1120 470" role="img">
+  <rect width="1120" height="470" fill="#ffffff"/>
+  <rect x="0" y="0" width="1120" height="470" rx="0" fill="#f3f5f7" stroke="#f3f5f7" stroke-width="1.4"/>
+  <text x="560.0" y="44" font-size="20" fill="#252b33" text-anchor="middle" font-weight="600">为什么 LRU 必须同时用哈希表和双向链表</text>
+  <rect x="40" y="82" width="470" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="275" y="116" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">① 先列出需求</text>
+  <text x="70" y="156" font-size="14" fill="#3568a3" text-anchor="start" font-weight="600">按 key 查 O(1)</text>
+  <text x="70" y="176" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">数组做不到,链表更做不到</text>
+  <text x="70" y="210" font-size="14" fill="#3568a3" text-anchor="start" font-weight="600">删掉任意节点 O(1)</text>
+  <text x="70" y="230" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">单链表要 O(n) 找前驱</text>
+  <text x="70" y="264" font-size="14" fill="#3568a3" text-anchor="start" font-weight="600">移动到头部 O(1)</text>
+  <text x="70" y="284" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">需要能同时拿到前后</text>
+  <text x="70" y="318" font-size="14" fill="#3568a3" text-anchor="start" font-weight="600">淘汰尾部 O(1)</text>
+  <text x="70" y="338" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">要维护尾部指针</text>
+  <line x1="516" y1="232" x2="548.00" y2="232.00" stroke="#252b33" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="556.00,232.00 548.00,236.60 548.00,227.40" fill="#252b33"/>
+  <text x="536" y="218" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">反推</text>
+  <rect x="566" y="82" width="514" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="823" y="116" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">② 需求逼出的组合</text>
+  <rect x="600" y="148" width="200" height="66" rx="6" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="700" y="176" font-size="15" fill="#3568a3" text-anchor="middle" font-weight="600">哈希表</text>
+  <text x="700" y="198" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">key → 节点指针</text>
+  <rect x="846" y="148" width="200" height="66" rx="6" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="946" y="176" font-size="15" fill="#2f7d6d" text-anchor="middle" font-weight="600">双向链表</text>
+  <text x="946" y="198" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">维护使用顺序</text>
+  <text x="823" y="240" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">哈希表负责「找到」,链表负责「顺序」</text>
+  <text x="823" y="268" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="400">单用任何一个都凑不齐四条需求</text>
+  <text x="823" y="306" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="400">O(1) + O(1) = 查、删、移、淘汰全是常数</text>
+  <text x="823" y="340" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">交替使用两种结构,是这个系列最常见的套路</text>
+  <text x="560.0" y="424" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">结论:先有你想要的「能力」,才有结构的设计</text>
+</svg>

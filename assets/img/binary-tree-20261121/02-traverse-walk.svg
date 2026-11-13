@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="430" viewBox="0 0 1080 430" role="img">
+  <rect width="1080" height="430" fill="#ffffff"/>
+  <text x="36" y="40" font-size="17" fill="#252b33" text-anchor="start" font-weight="600">traverse 指针的游走序列:每个节点被进入一次、离开一次,顺序与插在哪无关</text>
+  <text x="36" y="72" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">① 游走序列:共 21 次事件(空指针返回已省略;同一节点出现两次——进去一次、离开一次)</text>
+  <rect x="36" y="84" width="46" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="59.0" y="104" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">1前</text>
+  <rect x="84" y="84" width="46" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="107.0" y="104" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">2前</text>
+  <rect x="132" y="84" width="46" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="155.0" y="104" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">4前</text>
+  <rect x="180" y="84" width="46" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="203.0" y="104" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">4中</text>
+  <rect x="228" y="84" width="46" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="251.0" y="104" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">4后</text>
+  <rect x="276" y="84" width="46" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="299.0" y="104" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">2中</text>
+  <rect x="324" y="84" width="46" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="347.0" y="104" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">5前</text>
+  <rect x="372" y="84" width="46" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="395.0" y="104" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">5中</text>
+  <rect x="420" y="84" width="46" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="443.0" y="104" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">5后</text>
+  <rect x="468" y="84" width="46" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="491.0" y="104" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">2后</text>
+  <rect x="516" y="84" width="46" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="539.0" y="104" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">1中</text>
+  <rect x="564" y="84" width="46" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="587.0" y="104" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">3前</text>
+  <rect x="612" y="84" width="46" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="635.0" y="104" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">6前</text>
+  <rect x="660" y="84" width="46" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="683.0" y="104" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">6中</text>
+  <rect x="708" y="84" width="46" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="731.0" y="104" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">6后</text>
+  <rect x="756" y="84" width="46" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="779.0" y="104" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">3中</text>
+  <rect x="804" y="84" width="46" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="827.0" y="104" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">7前</text>
+  <rect x="852" y="84" width="46" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="875.0" y="104" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">7中</text>
+  <rect x="900" y="84" width="46" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="923.0" y="104" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">7后</text>
+  <rect x="948" y="84" width="46" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="971.0" y="104" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">3后</text>
+  <rect x="996" y="84" width="46" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="1019.0" y="104" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">1后</text>
+  <text x="36" y="162" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">② 从游走序列里「按位置筛选」,就得到三种遍历结果</text>
+  <text x="36" y="200" font-size="12" fill="#3568a3" text-anchor="start" font-weight="600">前序:只取「前」</text>
+  <rect x="210" y="182" width="44" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="232.0" y="202" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">1</text>
+  <rect x="260" y="182" width="44" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="282.0" y="202" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">2</text>
+  <rect x="310" y="182" width="44" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="332.0" y="202" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">4</text>
+  <rect x="360" y="182" width="44" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="382.0" y="202" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">5</text>
+  <rect x="410" y="182" width="44" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="432.0" y="202" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">3</text>
+  <rect x="460" y="182" width="44" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="482.0" y="202" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">6</text>
+  <rect x="510" y="182" width="44" height="28" rx="5" fill="#e8eff7" stroke="#e8eff7" stroke-width="1.4"/>
+  <text x="532.0" y="202" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="600">7</text>
+  <text x="36" y="248" font-size="12" fill="#b5762a" text-anchor="start" font-weight="600">中序:只取「中」</text>
+  <rect x="210" y="230" width="44" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="232.0" y="250" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">4</text>
+  <rect x="260" y="230" width="44" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="282.0" y="250" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">2</text>
+  <rect x="310" y="230" width="44" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="332.0" y="250" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">5</text>
+  <rect x="360" y="230" width="44" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="382.0" y="250" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">1</text>
+  <rect x="410" y="230" width="44" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="432.0" y="250" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">6</text>
+  <rect x="460" y="230" width="44" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="482.0" y="250" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">3</text>
+  <rect x="510" y="230" width="44" height="28" rx="5" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.4"/>
+  <text x="532.0" y="250" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">7</text>
+  <text x="36" y="296" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="600">后序:只取「后」</text>
+  <rect x="210" y="278" width="44" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="232.0" y="298" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">4</text>
+  <rect x="260" y="278" width="44" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="282.0" y="298" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">5</text>
+  <rect x="310" y="278" width="44" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="332.0" y="298" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">2</text>
+  <rect x="360" y="278" width="44" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="382.0" y="298" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">6</text>
+  <rect x="410" y="278" width="44" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="432.0" y="298" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">7</text>
+  <rect x="460" y="278" width="44" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="482.0" y="298" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">3</text>
+  <rect x="510" y="278" width="44" height="28" rx="5" fill="#e4f1ee" stroke="#e4f1ee" stroke-width="1.4"/>
+  <text x="532.0" y="298" font-size="12" fill="#2f7d6d" text-anchor="middle" font-weight="600">1</text>
+  <text x="36" y="372" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">前/中/后序不是三套遍历算法,而是同一趟游走里三个固定的时刻;所谓「计算前序遍历结果」</text>
+  <text x="36" y="392" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">只是把「往结果里塞一个值」这句话放在了「前」这个时刻而已。</text>
+</svg>

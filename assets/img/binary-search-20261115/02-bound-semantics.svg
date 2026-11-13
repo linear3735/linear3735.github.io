@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" role="img">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="450.0" y="30" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">left_bound 与 right_bound 在同一根坐标轴上</text>
+  <text x="238" y="101.0" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">nums = [1,2,2,2,3]</text>
+  <text x="238" y="120.0" font-size="12" fill="#737c88" text-anchor="end" font-weight="400">target = 2</text>
+  <rect x="250.0" y="74" width="62" height="44" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="281.0" y="101.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <text x="281.0" y="134" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="312.0" y="74" width="62" height="44" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="343.0" y="101.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="343.0" y="134" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">1</text>
+  <rect x="374.0" y="74" width="62" height="44" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="405.0" y="101.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="405.0" y="134" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">2</text>
+  <rect x="436.0" y="74" width="62" height="44" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="467.0" y="101.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="467.0" y="134" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">3</text>
+  <rect x="498.0" y="74" width="62" height="44" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="529.0" y="101.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="529.0" y="134" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">4</text>
+  <line x1="312.0" y1="56" x2="312.0" y2="34" stroke="#3568a3" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="312.0" y1="34" x2="312.00" y2="48.00" stroke="#3568a3" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="312.00,54.00 307.40,48.00 316.60,48.00" fill="#3568a3"/>
+  <text x="320.0" y="48" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">left_bound = 1 (第一个 &gt;= target)</text>
+  <text x="506.0" y="158" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="400">right_bound = 3 (最后一个 &lt;= target)</text>
+  <line x1="498.0" y1="136" x2="498.0" y2="152" stroke="#2f7d6d" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="498.0" y1="152" x2="498.00" y2="144.00" stroke="#2f7d6d" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="498.00,138.00 502.60,144.00 493.40,144.00" fill="#2f7d6d"/>
+  <text x="405.0" y="158" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="400">target 占据 [1, 3],出现 3 次</text>
+  <text x="238" y="277.0" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">nums = [2,3,5,7]</text>
+  <text x="238" y="296.0" font-size="12" fill="#737c88" text-anchor="end" font-weight="400">target = 4</text>
+  <rect x="250.0" y="250" width="62" height="44" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="281.0" y="277.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <text x="281.0" y="310" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="312.0" y="250" width="62" height="44" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="343.0" y="277.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <text x="343.0" y="310" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">1</text>
+  <rect x="374.0" y="250" width="62" height="44" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="405.0" y="277.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <text x="405.0" y="310" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">2</text>
+  <rect x="436.0" y="250" width="62" height="44" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="467.0" y="277.04" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <text x="467.0" y="310" font-size="11" fill="#737c88" text-anchor="middle" font-weight="400">3</text>
+  <line x1="374.0" y1="232" x2="374.0" y2="210" stroke="#3568a3" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="374.0" y1="210" x2="374.00" y2="224.00" stroke="#3568a3" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="374.00,230.00 369.40,224.00 378.60,224.00" fill="#3568a3"/>
+  <text x="382.0" y="224" font-size="12" fill="#3568a3" text-anchor="start" font-weight="400">left_bound = 2</text>
+  <line x1="374.0" y1="312" x2="374.0" y2="328" stroke="#2f7d6d" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="374.0" y1="328" x2="374.00" y2="320.00" stroke="#2f7d6d" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="374.00,314.00 378.60,320.00 369.40,320.00" fill="#2f7d6d"/>
+  <text x="382.0" y="334" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="400">right_bound = 1</text>
+  <text x="514.0" y="277.0" font-size="12" fill="#b5762a" text-anchor="start" font-weight="400">right_bound &lt; left_bound =&gt; 不存在</text>
+  <rect x="28" y="348" width="844" height="52" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="48" y="380" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">两种写法返回的是同一个坐标系里的两条界线:</text>
+  <text x="420" y="380" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="600">left_bound 永远是 lower_bound,right_bound 永远是 upper_bound - 1</text>
+</svg>

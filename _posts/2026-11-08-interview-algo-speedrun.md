@@ -19,7 +19,9 @@ tags: [算法, 数据结构, 链表, 双指针, 面试]
 
 需要讲清楚的是：**这不是转载，也不是翻译**。原文有完整的可视化面板和动图，那是这套教程最有价值的部分，而我这里复现不了。所以下面写的是我自己的理解——每个技巧我会补上"为什么这样是对的"，以及我在自己写的时候踩过或差点踩到的坑。图的 8 张示意图都是我自己用 SVG 画的。
 
-有一点要坦白：写第一节的时候，教程原文的正文我没能取到。那个页面是客户端渲染的，静态 HTML 里只有侧边栏目录和元信息（标题「队列/栈基本原理」，以及一句话摘要"队列和栈是操作受限的数据结构，底层可以用数组或链表实现，分别支持先进先出和先进后出的操作"）。所以**第一节的讲解是从这个标题和摘要出发，我自己组织的第一性原理推导**，其中我没有逐字对照过原文。第二节的 7 道链表题则取到了完整正文，所有代码、复杂度和结论我都核对过原文。
+**代码是 Python 3 和 C++ 两版**，不是原文的语言。教程原文用 Java 写，我按自己的习惯重新实现了一遍，所以这些片段是我写的、不是从原文抄的；不过每道题的**算法骨架和注释要点忠于原文**，方便你对照着读。两种语言并排给出，因为它们的坑不一样——比如第 2.3 节的最小堆，Python 和 C++ 在"值相等时怎么比较"上的行为完全不同，那是只有把两种语言都写一遍才会撞上的地方。
+
+有一点要坦白：写第一节的时候，教程原文的正文我没能取到。那个页面是客户端渲染的，静态 HTML 里只有侧边栏目录和元信息（标题「队列/栈基本原理」，以及一句话摘要"队列和栈是操作受限的数据结构，底层可以用数组或链表实现，分别支持先进先出和先进后出的操作"）。所以**第一节的讲解是从这个标题和摘要出发，我自己组织的第一性原理推导**，其中我没有逐字对照过原文。第二节的 7 道链表题则取到了完整正文，所有结论和复杂度我都核对过原文。
 
 ### 目录
 
@@ -97,34 +99,69 @@ tags: [算法, 数据结构, 链表, 双指针, 面试]
 
 第 1 道题（力扣 21，合并两个有序链表）看起来平淡无奇，但它是后面所有"造新链表"类题目的模板。原文用了一个很准确的类比:**拉拉链**——两条链表是锯齿，`p` 指针是拉索往前进。
 
-```text
-class Solution {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        // 虚拟头结点
-        ListNode dummy = new ListNode(-1), p = dummy;
-        ListNode p1 = l1, p2 = l2;
+第 1 道题（力扣 21，合并两个有序链表）的解法。下面所有 Python 代码都用这个节点定义:
 
-        while (p1 != null && p2 != null) {
-            // 比较 p1 和 p2 两个指针,将值较小的节点接到 p 指针
-            if (p1.val > p2.val) {
-                p.next = p2;
-                p2 = p2.next;
-            } else {
-                p.next = p1;
-                p1 = p1.next;
-            }
-            // p 指针不断前进
-            p = p.next;
-        }
+```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val, self.next = val, next
+```
 
-        if (p1 != null) {
-            p.next = p1;
+所有 C++ 代码都用这个节点定义:
+
+```cpp
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode(int x = 0) : val(x), next(nullptr) {}
+};
+```
+
+（C++ 需要 `<vector>`、`<queue>`;如果按力扣的原样提交，这两行平台已经替你包好了。）
+
+**Python 3**:
+
+```python
+def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
+    dummy = ListNode(-1)          # 虚拟头结点
+    p = dummy
+    p1, p2 = l1, l2
+
+    while p1 and p2:
+        # 比较 p1 和 p2，把值较小的节点接到 p 后面
+        if p1.val > p2.val:
+            p.next = p2
+            p2 = p2.next
+        else:
+            p.next = p1
+            p1 = p1.next
+        p = p.next                # p 不断前进
+
+    p.next = p1 if p1 else p2     # 把还没走完的那条整条接上
+    return dummy.next
+```
+
+**C++**:
+
+```cpp
+ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+    ListNode dummy(-1);           // 虚拟头结点，栈上分配即可
+    ListNode* p = &dummy;
+    ListNode* p1 = l1;
+    ListNode* p2 = l2;
+
+    while (p1 && p2) {
+        if (p1->val > p2->val) {
+            p->next = p2;
+            p2 = p2->next;
+        } else {
+            p->next = p1;
+            p1 = p1->next;
         }
-        if (p2 != null) {
-            p.next = p2;
-        }
-        return dummy.next;
+        p = p->next;
     }
+    p->next = p1 ? p1 : p2;       // 剩余部分整条接上
+    return dummy.next;
 }
 ```
 
@@ -138,11 +175,62 @@ class Solution {
 
 思路是开两个 dummy，分别长成"小于区"和"大于等于区"两条新链表，最后把两条接起来。原文的代码里有一行特别值得盯住:
 
+原文的代码里有一行特别值得盯住:
+
 ```text
 ListNode temp = p.next;
 // 断开原链表中的每个节点的 next 指针
 p.next = null;
 p = temp;
+```
+
+**Python 3**:
+
+```python
+def partition(head: ListNode, x: int) -> ListNode:
+    d1, d2 = ListNode(-1), ListNode(-1)   # 两条新链表的虚拟头结点
+    p1, p2 = d1, d2
+    p = head
+
+    while p:
+        if p.val < x:
+            p1.next = p
+            p1 = p1.next
+        else:
+            p2.next = p
+            p2 = p2.next
+        temp = p.next             # 断开原链表中的每个节点的 next 指针
+        p.next = None
+        p = temp
+
+    p1.next = d2.next             # 把两条链表接起来
+    return d1.next
+```
+
+**C++**:
+
+```cpp
+ListNode* partition(ListNode* head, int x) {
+    ListNode d1(-1), d2(-1);
+    ListNode* p1 = &d1;
+    ListNode* p2 = &d2;
+    ListNode* p = head;
+
+    while (p) {
+        if (p->val < x) {
+            p1->next = p;
+            p1 = p1->next;
+        } else {
+            p2->next = p;
+            p2 = p2->next;
+        }
+        ListNode* temp = p->next;   // 断开原链表中的每个节点的 next 指针
+        p->next = nullptr;
+        p = temp;
+    }
+    p1->next = d2.next;
+    return d1.next;
+}
 ```
 
 **这一行如果省掉，结果里就会出现环。** 原因是:当 `p.next = null` 不执行时，被接进新链表的节点仍然保留着原来指向下一个节点的指针，而这些节点可能已经被接到别处去了——某个节点被两个地方指着，链就成环了。
@@ -155,36 +243,59 @@ p = temp;
 
 答案是用最小堆。
 
-```text
-class Solution {
-    public ListNode mergeKLists(ListNode[] lists) {
-        if (lists.length == 0) return null;
-        // 虚拟头结点
-        ListNode dummy = new ListNode(-1);
-        ListNode p = dummy;
-        // 优先级队列，最小堆
-        PriorityQueue<ListNode> pq = new PriorityQueue<>(
-            lists.length, (a, b)->(a.val - b.val));
-        // 将 k 个链表的头结点加入最小堆
-        for (ListNode head : lists) {
-            if (head != null)
-                pq.add(head);
-        }
+**Python 3**:
 
-        while (!pq.isEmpty()) {
-            // 获取最小节点，接到结果链表中
-            ListNode node = pq.poll();
-            p.next = node;
-            if (node.next != null) {
-                pq.add(node.next);
-            }
-            // p 指针不断前进
-            p = p.next;
-        }
-        return dummy.next;
+```python
+import heapq
+
+def mergeKLists(lists: list) -> ListNode:
+    if not lists:
+        return None
+    dummy = ListNode(-1)
+    p = dummy
+    # 最小堆，元素是 (节点值, 唯一序号, 节点)
+    pq = []
+    for i, head in enumerate(lists):
+        if head:                          # 空链表不能进堆
+            heapq.heappush(pq, (head.val, i, head))
+
+    while pq:
+        _, i, node = heapq.heappop(pq)    # 取出最小节点
+        p.next = node
+        if node.next:                     # 别忘了把它的后继放回去
+            heapq.heappush(pq, (node.next.val, i, node.next))
+        p = p.next
+
+    return dummy.next
+```
+
+**C++**:
+
+```cpp
+ListNode* mergeKLists(vector<ListNode*>& lists) {
+    if (lists.empty()) return nullptr;
+    ListNode dummy(-1);
+    ListNode* p = &dummy;
+    // 小根堆：比较器只看 val
+    auto cmp = [](ListNode* a, ListNode* b) { return a->val > b->val; };
+    priority_queue<ListNode*, vector<ListNode*>, decltype(cmp)> pq(cmp);
+
+    for (ListNode* head : lists) {
+        if (head) pq.push(head);
     }
+    while (!pq.empty()) {
+        ListNode* node = pq.top(); pq.pop();
+        p->next = node;
+        if (node->next) pq.push(node->next);
+        p = p->next;
+    }
+    return dummy.next;
 }
 ```
+
+Python 这里有个坑要专门说:`heapq` 在元素值相同时会去比较元组的**第二个元素**。如果直接塞 `(val, node)`，一旦两个 `val` 相等，它就会尝试比较两个 `ListNode` 对象，而 Python 没有给自定义类定义 `<`，于是抛 `TypeError`。所以必须塞一个**能比较、且各不相同**的序号 `i` 进去——这是个只有真跑过才会知道的细节。
+
+C++ 没这个问题:`priority_queue` 的比较器只读 `val`，相等时不会去比较指针所指向的对象。
 
 两个容易忽略的细节:
 
@@ -203,22 +314,30 @@ class Solution {
 
 只需要让一个指针先走 k 步:
 
-```text
-// 返回链表的倒数第 k 个节点
-ListNode findFromEnd(ListNode head, int k) {
-    ListNode p1 = head;
-    // p1 先走 k 步
-    for (int i = 0; i < k; i++) {
-        p1 = p1.next;
+```python
+def findFromEnd(head: ListNode, k: int) -> ListNode:
+    p1 = head
+    for _ in range(k):            # p1 先走 k 步
+        p1 = p1.next
+    p2 = head
+    while p1:                     # p1 和 p2 同时走 n - k 步
+        p2 = p2.next
+        p1 = p1.next
+    return p2                     # 此时 p2 在倒数第 k 个节点
+```
+
+```cpp
+ListNode* findFromEnd(ListNode* head, int k) {
+    ListNode* p1 = head;
+    for (int i = 0; i < k; i++) {  // p1 先走 k 步
+        p1 = p1->next;
     }
-    ListNode p2 = head;
-    // p1 和 p2 同时走 n - k 步
-    while (p1 != null) {
-        p2 = p2.next;
-        p1 = p1.next;
+    ListNode* p2 = head;
+    while (p1) {                   // p1 和 p2 同时走 n - k 步
+        p2 = p2->next;
+        p1 = p1->next;
     }
-    // p2 现在指向第 n - k + 1 个节点，即倒数第 k 个节点
-    return p2;
+    return p2;                     // p2 现在在倒数第 k 个节点
 }
 ```
 
@@ -230,20 +349,24 @@ ListNode findFromEnd(ListNode head, int k) {
 
 第 5 道题（力扣 876）。让 slow 每次走一步、fast 每次走两步，fast 到末尾时 slow 正好在中点:
 
-```text
-class Solution {
-    public ListNode middleNode(ListNode head) {
-        // 快慢指针初始化指向 head
-        ListNode slow = head, fast = head;
-        // 快指针走到末尾时停止
-        while (fast != null && fast.next != null) {
-            // 慢指针走一步，快指针走两步
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        // 慢指针指向中点
-        return slow;
+```python
+def middleNode(head: ListNode) -> ListNode:
+    slow = fast = head
+    while fast and fast.next:     # 快指针走到末尾时停止
+        slow = slow.next          # 慢指针走一步
+        fast = fast.next.next     # 快指针走两步
+    return slow                   # slow 指向中点
+```
+
+```cpp
+ListNode* middleNode(ListNode* head) {
+    ListNode* slow = head;
+    ListNode* fast = head;
+    while (fast && fast->next) {
+        slow = slow->next;        // 慢指针走一步
+        fast = fast->next->next;  // 快指针走两步
     }
+    return slow;                  // slow 指向中点
 }
 ```
 
@@ -258,57 +381,72 @@ class Solution {
 
 判断有没有环很简单:如果 fast 能正常走到末尾，就没有环；如果 fast 走着走着和 slow 相遇了，说明它在环里转圈，有环。
 
-```text
-class Solution {
-    public boolean hasCycle(ListNode head) {
-        // 快慢指针初始化指向 head
-        ListNode slow = head, fast = head;
-        // 快指针走到末尾时停止
-        while (fast != null && fast.next != null) {
-            // 慢指针走一步，快指针走两步
-            slow = slow.next;
-            fast = fast.next.next;
-            // 快慢指针相遇，说明含有环
-            if (slow == fast) {
-                return true;
-            }
-        }
-        // 不包含环
-        return false;
+```python
+def hasCycle(head: ListNode) -> bool:
+    slow = fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow is fast:          # 快慢指针相遇，说明有环
+            return True
+    return False                  # 走到末尾，没有环
+```
+
+```cpp
+bool hasCycle(ListNode* head) {
+    ListNode* slow = head;
+    ListNode* fast = head;
+    while (fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast) return true;   // 相遇即有环
     }
+    return false;                        // 走到末尾则无环
 }
 ```
+
+注意 Python 这里要用 `is` 而不是 `==`:`is` 判的是"是不是同一个对象"，`==` 会去调用 `__eq__`。本节为了简化没给 `ListNode` 定义 `__eq__`，所以此刻两者结果一样;但只要哪天你给节点加了按值比较，`==` 就会悄悄改变判环的语义。判"同一个节点"永远应该用 `is`。
 
 真正有意思的是进阶版（力扣 142）:**如果有环，环的起点在哪？**
 
 ![快慢指针找环起点：x 为 head 到环起点的距离，相遇后把指针放回 head](/assets/img/interview-algo-speedrun-20261108/07-cycle-start.svg)
 
-```text
-class Solution {
-    public ListNode detectCycle(ListNode head) {
-        ListNode fast, slow;
-        fast = slow = head;
-        while (fast != null && fast.next != null) {
-            fast = fast.next.next;
-            slow = slow.next;
-            if (fast == slow) break;
-        }
-        // 上面的代码类似 hasCycle 函数
-        if (fast == null || fast.next == null) {
-            // fast 遇到空指针说明没有环
-            return null;
-        }
+```python
+def detectCycle(head: ListNode) -> ListNode:
+    slow = fast = head
+    while fast and fast.next:
+        fast = fast.next.next
+        slow = slow.next
+        if slow is fast:
+            break
+    # 上面的逻辑和 hasCycle 一样
+    if not fast or not fast.next:
+        return None               # fast 走到空指针，说明没有环
 
-        // 重新指向头结点
-        slow = head;
+    slow = head                   # 一个指针重新指向头结点
+    while slow is not fast:       # 同速前进
+        fast = fast.next
+        slow = slow.next
+    return slow                   # 相遇点就是环起点
+```
 
-        // 快慢指针同步前进，相交点就是环起点
-        while (slow != fast) {
-            fast = fast.next;
-            slow = slow.next;
-        }
-        return slow;
+```cpp
+ListNode* detectCycle(ListNode* head) {
+    ListNode* slow = head;
+    ListNode* fast = head;
+    while (fast && fast->next) {
+        fast = fast->next->next;
+        slow = slow->next;
+        if (slow == fast) break;
     }
+    if (!fast || !fast->next) return nullptr;   // 无环
+
+    slow = head;                  // 一个指针重新指向头结点
+    while (slow != fast) {        // 同速前进
+        fast = fast->next;
+        slow = slow->next;
+    }
+    return slow;                  // 相遇点就是环起点
 }
 ```
 
@@ -348,21 +486,28 @@ class Solution {
 
 难点在于两条链表长度可能不同，两个指针没法同步走到公共节点。破局思路是**让两条路的总长相等**:
 
-```text
-class Solution {
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        // p1 指向 A 链表头结点，p2 指向 B 链表头结点
-        ListNode p1 = headA, p2 = headB;
-        while (p1 != p2) {
-            // p1 走一步，如果走到 A 链表末尾，转到 B 链表
-            if (p1 == null) p1 = headB;
-            else p1 = p1.next;
-            // p2 走一步，如果走到 B 链表末尾，转到 A 链表
-            if (p2 == null) p2 = headA;
-            else p2 = p2.next;
-        }
-        return p1;
+```python
+def getIntersectionNode(headA: ListNode, headB: ListNode) -> ListNode:
+    p1, p2 = headA, headB
+    while p1 is not p2:
+        # p1 走一步；走到 A 的末尾就转到 B
+        p1 = headB if p1 is None else p1.next
+        # p2 走一步；走到 B 的末尾就转到 A
+        p2 = headA if p2 is None else p2.next
+    return p1                     # 相交则返回交点，不相交则是 None
+```
+
+```cpp
+ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
+    ListNode* p1 = headA;
+    ListNode* p2 = headB;
+    while (p1 != p2) {
+        // p1 走一步；走到 A 的末尾就转到 B
+        p1 = (p1 == nullptr) ? headB : p1->next;
+        // p2 走一步；走到 B 的末尾就转到 A
+        p2 = (p2 == nullptr) ? headA : p2->next;
     }
+    return p1;                    // 相交则返回交点，否则是 nullptr
 }
 ```
 

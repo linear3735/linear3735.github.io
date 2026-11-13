@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" role="img">
+  <rect width="900" height="440" fill="#ffffff"/>
+  <rect x="20" y="40" width="250" height="210" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="32" y="64" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">同一个无向图: V=4, E=3</text>
+  <line x1="85" y1="120" x2="195" y2="120" stroke="#252b33" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="85" y1="120" x2="85" y2="210" stroke="#252b33" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="195" y1="120" x2="195" y2="210" stroke="#252b33" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="85" cy="120" r="20" fill="#ffffff" stroke="#252b33" stroke-width="1.6"/>
+  <text x="85" y="125.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">0</text>
+  <circle cx="195" cy="120" r="20" fill="#ffffff" stroke="#252b33" stroke-width="1.6"/>
+  <text x="195" y="125.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">1</text>
+  <circle cx="85" cy="210" r="20" fill="#ffffff" stroke="#252b33" stroke-width="1.6"/>
+  <text x="85" y="215.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">2</text>
+  <circle cx="195" cy="210" r="20" fill="#ffffff" stroke="#252b33" stroke-width="1.6"/>
+  <text x="195" y="215.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">3</text>
+  <rect x="290" y="40" width="260" height="210" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="302" y="64" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">邻接表 graph[u]</text>
+  <text x="306" y="100" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">0 -&gt; [1, 2]</text>
+  <text x="306" y="130" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">1 -&gt; [0, 3]</text>
+  <text x="306" y="160" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">2 -&gt; [0]</text>
+  <text x="306" y="190" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">3 -&gt; [1]</text>
+  <rect x="570" y="40" width="310" height="210" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="582" y="64" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">邻接矩阵 m[u][v]</text>
+  <text x="656.0" y="87" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <text x="626" y="115.0" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <text x="688.0" y="87" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">1</text>
+  <text x="626" y="147.0" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">1</text>
+  <text x="720.0" y="87" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">2</text>
+  <text x="626" y="179.0" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">2</text>
+  <text x="752.0" y="87" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">3</text>
+  <text x="626" y="211.0" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">3</text>
+  <rect x="640" y="95" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="656.0" y="115.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="672" y="95" width="32" height="32" rx="0" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="688.0" y="115.0" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">1</text>
+  <rect x="704" y="95" width="32" height="32" rx="0" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="720.0" y="115.0" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">1</text>
+  <rect x="736" y="95" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="752.0" y="115.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="640" y="127" width="32" height="32" rx="0" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="656.0" y="147.0" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">1</text>
+  <rect x="672" y="127" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="688.0" y="147.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="704" y="127" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="720.0" y="147.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="736" y="127" width="32" height="32" rx="0" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="752.0" y="147.0" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">1</text>
+  <rect x="640" y="159" width="32" height="32" rx="0" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="656.0" y="179.0" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">1</text>
+  <rect x="672" y="159" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="688.0" y="179.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="704" y="159" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="720.0" y="179.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="736" y="159" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="752.0" y="179.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="640" y="191" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="656.0" y="211.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="672" y="191" width="32" height="32" rx="0" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="688.0" y="211.0" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">1</text>
+  <rect x="704" y="191" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="720.0" y="211.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="736" y="191" width="32" height="32" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="752.0" y="211.0" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">0</text>
+  <rect x="20" y="280" width="250" height="140" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="32" y="304" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">邻接表的代价</text>
+  <text x="34" y="330" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">空间 O(V+E)</text>
+  <text x="34" y="356" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">查 u-v 有无边 O(deg u)</text>
+  <text x="34" y="382" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">枚举邻居 O(deg u)</text>
+  <text x="34" y="408" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="400">遍历整图 O(E+V)</text>
+  <rect x="290" y="280" width="260" height="140" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="302" y="304" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">邻接矩阵的代价</text>
+  <text x="304" y="330" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">空间 O(V^2)</text>
+  <text x="304" y="356" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">查 u-v 有无边 O(1)</text>
+  <text x="304" y="382" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">枚举邻居 O(V)</text>
+  <text x="304" y="408" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="400">遍历整图 O(V^2)</text>
+  <rect x="570" y="280" width="310" height="140" rx="10" fill="#fdf0e3" stroke="#fdf0e3" stroke-width="1.2"/>
+  <text x="582" y="304" font-size="13" fill="#b5762a" text-anchor="start" font-weight="600">怎么选</text>
+  <text x="582" y="334" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">简单图里 0 &lt;= E &lt;= V(V-1)/2</text>
+  <text x="582" y="360" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">E 接近 V^2 -&gt; 稠密 -&gt; 矩阵</text>
+  <text x="582" y="386" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">E 远小于 V^2 -&gt; 稀疏 -&gt; 邻接表</text>
+  <text x="582" y="410" font-size="12" fill="#b5762a" text-anchor="start" font-weight="400">要三层循环的算法(Floyd)偏爱矩阵</text>
+</svg>

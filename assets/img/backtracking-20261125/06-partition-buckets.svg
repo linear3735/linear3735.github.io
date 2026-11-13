@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img">
+  <rect width="1200" height="530" fill="#ffffff"/>
+  <text x="24" y="34" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">划分:把 n 个数放进 k 个和相等的桶(力扣 698)</text>
+  <text x="24" y="56" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">示例 1:nums = [4, 3, 2, 3, 5, 2, 1],k = 4,总和 20 =&gt; target = 5;分组、调用次数都是本脚本现算的</text>
+  <rect x="60.0" y="96.0" width="62.0" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.0"/>
+  <text x="91.0" y="126.0" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">4</text>
+  <rect x="122.0" y="96.0" width="62.0" height="46" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.0"/>
+  <text x="153.0" y="126.0" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">3</text>
+  <rect x="184.0" y="96.0" width="62.0" height="46" rx="0" fill="#e4f1ee" stroke="#252b33" stroke-width="1.0"/>
+  <text x="215.0" y="126.0" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">2</text>
+  <rect x="246.0" y="96.0" width="62.0" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.0"/>
+  <text x="277.0" y="126.0" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">3</text>
+  <rect x="308.0" y="96.0" width="62.0" height="46" rx="0" fill="#eef1f5" stroke="#252b33" stroke-width="1.0"/>
+  <text x="339.0" y="126.0" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">5</text>
+  <rect x="370.0" y="96.0" width="62.0" height="46" rx="0" fill="#fdf0e3" stroke="#252b33" stroke-width="1.0"/>
+  <text x="401.0" y="126.0" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">2</text>
+  <rect x="432.0" y="96.0" width="62.0" height="46" rx="0" fill="#e8eff7" stroke="#252b33" stroke-width="1.0"/>
+  <text x="463.0" y="126.0" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">1</text>
+  <text x="60.0" y="84.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">数组(颜色 = 它进了哪个桶)</text>
+  <rect x="60.0" y="196.0" width="258.0" height="84" rx="10" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="74.0" y="222.0" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">0 号桶</text>
+  <text x="74.0" y="254.0" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">1 + 4 = 5</text>
+  <rect x="334.0" y="196.0" width="258.0" height="84" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="348.0" y="222.0" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">1 号桶</text>
+  <text x="348.0" y="254.0" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">2 + 3 = 5</text>
+  <rect x="608.0" y="196.0" width="258.0" height="84" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="622.0" y="222.0" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">2 号桶</text>
+  <text x="622.0" y="254.0" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">2 + 3 = 5</text>
+  <rect x="882.0" y="196.0" width="258.0" height="84" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="896.0" y="222.0" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">3 号桶</text>
+  <text x="896.0" y="254.0" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">5 = 5</text>
+  <text x="60.0" y="308.0" font-size="12" fill="#2f7d6d" text-anchor="start" font-weight="400">每个桶的和都等于 target = 5;桶与桶之间没有编号之分(这是剪枝的来源)</text>
+  <rect x="60.0" y="348.0" width="349.3333333333333" height="90" rx="10" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="74.0" y="378.0" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">否决式剪枝</text>
+  <text x="74.0" y="404.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">总和 % k 必须先整除,否则 0 次调用就有答案</text>
+  <text x="74.0" y="424.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">最大的数超过 target 直接 False</text>
+  <rect x="425.3333333333333" y="348.0" width="349.3333333333333" height="90" rx="10" fill="#e8eff7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="439.3333333333333" y="378.0" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">对称性剪枝</text>
+  <text x="439.3333333333333" y="404.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">桶可互换:最大的数固定进 0 号桶</text>
+  <text x="439.3333333333333" y="424.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">和相同的桶只试一个</text>
+  <rect x="790.6666666666666" y="348.0" width="349.3333333333333" height="90" rx="10" fill="#e4f1ee" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="804.6666666666666" y="378.0" font-size="14" fill="#252b33" text-anchor="start" font-weight="400">去重与撤销</text>
+  <text x="804.6666666666666" y="404.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">同一层同值的候选跳过</text>
+  <text x="804.6666666666666" y="424.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">每层结束必须撤销 buckets[j] -= nums[i]</text>
+  <text x="60.0" y="472.0" font-size="12" fill="#b5762a" text-anchor="start" font-weight="400">实测:这组输入 7 次递归调用;把内层 continue 换成 break,[1,1] k=2 就会判错(本脚本跑过:True -&gt; False)</text>
+  <text x="60.0" y="496.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">桶内部没有排序,所以「装不下」只能 continue——后面的桶还可能装得下;这就是 2.4 节球盒模型的落地</text>
+</svg>

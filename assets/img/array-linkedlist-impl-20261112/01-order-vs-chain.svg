@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="560" viewBox="0 0 1240 560" role="img">
+  <rect width="1240" height="560" fill="#ffffff"/>
+  <text x="620" y="46" font-size="21" fill="#252b33" text-anchor="middle" font-weight="700">顺序存储 vs 链式存储:代价来自物理形态</text>
+  <text x="620" y="74" font-size="13" fill="#737c88" text-anchor="middle" font-weight="400">数组用「连续」换来「地址可计算」;链表用「指针」换来「插入不搬移」</text>
+  <rect x="40" y="110" width="540" height="400" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="310" y="152" font-size="16" fill="#2f7d6d" text-anchor="middle" font-weight="600">顺序存储:元素挨着放</text>
+  <text x="310" y="178" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">第 i 个的地址 = base + i × sizeof(E)</text>
+  <text x="82" y="170" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">一段连续内存</text>
+  <rect x="82" y="216" width="76" height="56" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="120.0" y="249.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <rect x="158" y="216" width="76" height="56" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="196.0" y="249.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">6</text>
+  <rect x="234" y="216" width="76" height="56" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="272.0" y="249.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <rect x="310" y="216" width="76" height="56" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="348.0" y="249.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">8</text>
+  <rect x="386" y="216" width="76" height="56" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <rect x="462" y="216" width="76" height="56" rx="0" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="272.0" y="296" font-size="11.5" fill="#737c88" text-anchor="middle" font-weight="400">下标 0..3 有效,后面是预留容量</text>
+  <text x="120.0" y="324" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">base+0</text>
+  <text x="196.0" y="324" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">+4</text>
+  <text x="272.0" y="324" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">+8</text>
+  <text x="348.0" y="324" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">+12</text>
+  <text x="310" y="376" font-size="12.5" fill="#252b33" text-anchor="middle" font-weight="400">访问 get(i):一次乘法加一次加法就拿到</text>
+  <text x="310" y="400" font-size="12.5" fill="#2f7d6d" text-anchor="middle" font-weight="600">→ 与 i 无关,O(1)</text>
+  <text x="310" y="436" font-size="12.5" fill="#b5762a" text-anchor="middle" font-weight="400">代价:中间插入要把它后面的全部后移 → O(n)</text>
+  <rect x="660" y="110" width="540" height="400" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="930" y="152" font-size="16" fill="#b5762a" text-anchor="middle" font-weight="600">链式存储:节点散落,靠指针串</text>
+  <text x="930" y="178" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">节点 = 值 + 一个指向下一个节点的指针</text>
+  <rect x="684" y="226" width="96" height="52" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="710" y="257.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">5</text>
+  <line x1="736" y1="232" x2="736" y2="272" stroke="#b5762a" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="758" y="257.0" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">next</text>
+  <rect x="796" y="266" width="96" height="52" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="822" y="297.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">6</text>
+  <line x1="848" y1="272" x2="848" y2="312" stroke="#b5762a" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="870" y="297.0" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">next</text>
+  <line x1="782" y1="252.0" x2="790.06" y2="284.24" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="792.00,292.00 785.60,285.35 794.52,283.12" fill="#3568a3"/>
+  <rect x="908" y="238" width="96" height="52" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="934" y="269.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">7</text>
+  <line x1="960" y1="244" x2="960" y2="284" stroke="#b5762a" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="982" y="269.0" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">next</text>
+  <line x1="894" y1="292.0" x2="901.31" y2="271.53" stroke="#3568a3" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="904.00,264.00 905.64,273.08 896.98,269.99" fill="#3568a3"/>
+  <text x="930" y="336" font-size="12.5" fill="#252b33" text-anchor="middle" font-weight="400">每个节点多存一个指针(64 位下 8 字节)</text>
+  <text x="930" y="360" font-size="12.5" fill="#b5762a" text-anchor="middle" font-weight="400">存 4 字节的 int 却要付 8 字节指针 → 开销可能到 4 倍</text>
+  <text x="930" y="394" font-size="12.5" fill="#252b33" text-anchor="middle" font-weight="400">访问 get(i):只能从头一个个数 → O(i)</text>
+  <text x="930" y="418" font-size="12.5" fill="#b5762a" text-anchor="middle" font-weight="400">代价:节点分散,没有空间局部性,cache 命中率低</text>
+</svg>

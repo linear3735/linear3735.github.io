@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="452" viewBox="0 0 1120 452" role="img">
+  <rect width="1120" height="452" fill="#ffffff"/>
+  <text x="36" y="40" font-size="17" fill="#252b33" text-anchor="start" font-weight="600">力扣 76 现场:s = ADOBECODEBANC,t = ABC(窗口是 s[left..right] 闭区间)</text>
+  <rect x="96" y="100" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="116.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">A</text>
+  <rect x="136" y="100" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="156.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">D</text>
+  <rect x="176" y="100" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="196.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">O</text>
+  <rect x="216" y="100" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="236.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">B</text>
+  <rect x="256" y="100" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="276.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">E</text>
+  <rect x="296" y="100" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="316.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">C</text>
+  <rect x="336" y="100" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="356.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">O</text>
+  <rect x="376" y="100" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="396.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">D</text>
+  <rect x="416" y="100" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="436.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">E</text>
+  <rect x="456" y="100" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="476.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">B</text>
+  <rect x="496" y="100" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="516.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">A</text>
+  <rect x="536" y="100" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="556.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">N</text>
+  <rect x="576" y="100" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="596.0" y="124.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">C</text>
+  <text x="36" y="125.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">第 1 行</text>
+  <text x="116.0" y="156" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">↑left</text>
+  <text x="316.0" y="156" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">↑right</text>
+  <text x="700" y="118" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">① 扩:right 扫到 5,窗口 ADOBEC 集齐 ABC</text>
+  <text x="700" y="140" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">valid=3 → 记 ans=ADOBEC(长 6),再开始缩</text>
+  <rect x="96" y="190" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="116.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">A</text>
+  <rect x="136" y="190" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="156.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">D</text>
+  <rect x="176" y="190" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="196.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">O</text>
+  <rect x="216" y="190" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="236.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">B</text>
+  <rect x="256" y="190" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="276.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">E</text>
+  <rect x="296" y="190" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="316.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">C</text>
+  <rect x="336" y="190" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="356.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">O</text>
+  <rect x="376" y="190" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="396.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">D</text>
+  <rect x="416" y="190" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="436.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">E</text>
+  <rect x="456" y="190" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="476.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">B</text>
+  <rect x="496" y="190" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="516.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">A</text>
+  <rect x="536" y="190" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="556.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">N</text>
+  <rect x="576" y="190" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="596.0" y="214.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">C</text>
+  <text x="36" y="215.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">第 2 行</text>
+  <text x="356.0" y="246" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">↑left</text>
+  <text x="516.0" y="246" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">↑right</text>
+  <text x="700" y="208" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">② 缩到缩不动:再缩掉 C 就 valid=2</text>
+  <text x="700" y="230" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">left 停在 6,窗口 ODEBA 缺 C,ans 不变</text>
+  <rect x="96" y="280" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="116.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">A</text>
+  <rect x="136" y="280" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="156.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">D</text>
+  <rect x="176" y="280" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="196.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">O</text>
+  <rect x="216" y="280" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="236.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">B</text>
+  <rect x="256" y="280" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="276.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">E</text>
+  <rect x="296" y="280" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="316.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">C</text>
+  <rect x="336" y="280" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="356.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">O</text>
+  <rect x="376" y="280" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="396.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">D</text>
+  <rect x="416" y="280" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="436.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">E</text>
+  <rect x="456" y="280" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="476.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">B</text>
+  <rect x="496" y="280" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="516.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">A</text>
+  <rect x="536" y="280" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="556.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">N</text>
+  <rect x="576" y="280" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="596.0" y="304.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">C</text>
+  <text x="36" y="305.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">第 3 行</text>
+  <text x="356.0" y="336" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">↑left</text>
+  <text x="596.0" y="336" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">↑right</text>
+  <text x="700" y="298" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">③ 再扩:right 扫到 12,ODEBANC 又集齐</text>
+  <text x="700" y="320" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">valid=3 → 进入第二轮收缩</text>
+  <rect x="96" y="370" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="116.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">A</text>
+  <rect x="136" y="370" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="156.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">D</text>
+  <rect x="176" y="370" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="196.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">O</text>
+  <rect x="216" y="370" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="236.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">B</text>
+  <rect x="256" y="370" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="276.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">E</text>
+  <rect x="296" y="370" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="316.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">C</text>
+  <rect x="336" y="370" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="356.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">O</text>
+  <rect x="376" y="370" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="396.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">D</text>
+  <rect x="416" y="370" width="40" height="38" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="436.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">E</text>
+  <rect x="456" y="370" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="476.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">B</text>
+  <rect x="496" y="370" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="516.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">A</text>
+  <rect x="536" y="370" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="556.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">N</text>
+  <rect x="576" y="370" width="40" height="38" rx="0" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="596.0" y="394.4" font-size="15" fill="#252b33" text-anchor="middle" font-weight="400">C</text>
+  <text x="36" y="395.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">第 4 行</text>
+  <text x="476.0" y="426" font-size="11" fill="#b5762a" text-anchor="middle" font-weight="400">↑left</text>
+  <text x="596.0" y="426" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="400">↑right</text>
+  <text x="700" y="388" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">④ 再缩:这一轮里 O→D→E 连缩三步</text>
+  <text x="700" y="410" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">长 4 的 BANC 刷新答案;再缩掉 B 就 valid=2</text>
+  <text x="36" y="440" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">④ 之前的三次收缩都发生在同一个内层 while 里:全程 right 只走 0→12,left 只走 0→10</text>
+</svg>

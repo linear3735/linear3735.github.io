@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400" role="img">
+  <rect width="1000" height="400" fill="#ffffff"/>
+  <text x="36" y="40" font-size="17" fill="#252b33" text-anchor="start" font-weight="600">先问一句:你要的是「最小」还是「最大」——它决定循环体里两件事的先后</text>
+  <rect x="36" y="62" width="448" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <rect x="54" y="80" width="412" height="34" rx="8" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="260" y="102" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">① 求最小窗口(76 最小覆盖子串)</text>
+  <circle cx="76" cy="146" r="13" fill="#ffffff" stroke="#2f7d6d" stroke-width="1.6"/>
+  <text x="76" y="151" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="600">1</text>
+  <text x="100" y="151" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">right++ 先扩,直到窗口「满足条件」</text>
+  <circle cx="76" cy="198" r="13" fill="#ffffff" stroke="#b5762a" stroke-width="1.6"/>
+  <text x="76" y="203" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">2</text>
+  <text x="100" y="203" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">满足后立刻:先更新答案,再 left++</text>
+  <circle cx="76" cy="250" r="13" fill="#ffffff" stroke="#737c88" stroke-width="1.6"/>
+  <text x="76" y="255" font-size="13" fill="#737c88" text-anchor="middle" font-weight="600">3</text>
+  <text x="100" y="255" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">一直缩到「不再满足」为止,回到 1</text>
+  <text x="260" y="336" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="600">答案在【收缩过程中】越缩越小</text>
+  <rect x="516" y="62" width="448" height="300" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <rect x="534" y="80" width="412" height="34" rx="8" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="740" y="102" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">② 求最大窗口(3 无重复最长子串)</text>
+  <circle cx="556" cy="146" r="13" fill="#ffffff" stroke="#2f7d6d" stroke-width="1.6"/>
+  <text x="556" y="151" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="600">1</text>
+  <text x="580" y="151" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">right++ 先扩,把新元素并进窗口状态</text>
+  <circle cx="556" cy="198" r="13" fill="#ffffff" stroke="#b5762a" stroke-width="1.6"/>
+  <text x="556" y="203" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">2</text>
+  <text x="580" y="203" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">只要「违反条件」就 left++ 一直缩</text>
+  <circle cx="556" cy="250" r="13" fill="#ffffff" stroke="#737c88" stroke-width="1.6"/>
+  <text x="556" y="255" font-size="13" fill="#737c88" text-anchor="middle" font-weight="600">3</text>
+  <text x="580" y="255" font-size="13" fill="#252b33" text-anchor="start" font-weight="400">循环退出时窗口必然合法,此刻更新答案</text>
+  <text x="740" y="336" font-size="13" fill="#2f7d6d" text-anchor="middle" font-weight="600">答案在【扩张之后】越扩越大</text>
+  <text x="36" y="386" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">共同点:收缩条件永远是「窗口合法」的取反;差别只在「合法」之后还缩不缩</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="452" viewBox="0 0 1080 452" role="img">
+  <rect width="1080" height="452" fill="#ffffff"/>
+  <text x="20" y="32" font-size="16" fill="#252b33" text-anchor="start" font-weight="400">组合总和:剪枝前后的递归调用次数(实测)</text>
+  <text x="20" y="54" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">条形长度按平方根刻度;条右侧的数字是本脚本现跑正文 4.2 的两个函数量出来的</text>
+  <text x="234.0" y="126.0" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">[2, 3, 6, 7] target=7</text>
+  <rect x="250.0" y="96.0" width="37.15681540199066" height="20" rx="3" fill="#d8dee8" stroke="#252b33" stroke-width="1.0"/>
+  <text x="295.1568154019907" y="111.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">28  不剪枝</text>
+  <rect x="250.0" y="122.0" width="22.20544440010804" height="20" rx="3" fill="#e4f1ee" stroke="#252b33" stroke-width="1.0"/>
+  <text x="280.20544440010804" y="137.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">10  剪枝后</text>
+  <text x="940.0" y="124.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">2.8x</text>
+  <text x="234.0" y="192.0" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">[2, 3, 5] target=8</text>
+  <rect x="250.0" y="162.0" width="33.676223813166246" height="20" rx="3" fill="#d8dee8" stroke="#252b33" stroke-width="1.0"/>
+  <text x="291.67622381316625" y="177.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">23  不剪枝</text>
+  <rect x="250.0" y="188.0" width="25.318102008408452" height="20" rx="3" fill="#e4f1ee" stroke="#252b33" stroke-width="1.0"/>
+  <text x="283.31810200840846" y="203.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">13  剪枝后</text>
+  <text x="940.0" y="190.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">1.8x</text>
+  <text x="234.0" y="258.0" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">[3, 4, 7, 8] target=11</text>
+  <rect x="250.0" y="228.0" width="40.94481636814829" height="20" rx="3" fill="#d8dee8" stroke="#252b33" stroke-width="1.0"/>
+  <text x="298.9448163681483" y="243.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">34  不剪枝</text>
+  <rect x="250.0" y="254.0" width="26.27383613804435" height="20" rx="3" fill="#e4f1ee" stroke="#252b33" stroke-width="1.0"/>
+  <text x="284.2738361380444" y="269.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">14  剪枝后</text>
+  <text x="940.0" y="256.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">2.4x</text>
+  <text x="234.0" y="324.0" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">[2, 3, 5, 7, 11, 13] target=30</text>
+  <rect x="250.0" y="294.0" width="300.47174649249735" height="20" rx="3" fill="#d8dee8" stroke="#252b33" stroke-width="1.0"/>
+  <text x="558.4717464924973" y="309.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">1831  不剪枝</text>
+  <rect x="250.0" y="320.0" width="182.03047640332827" height="20" rx="3" fill="#e4f1ee" stroke="#252b33" stroke-width="1.0"/>
+  <text x="440.0304764033283" y="335.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">672  剪枝后</text>
+  <text x="940.0" y="322.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">2.7x</text>
+  <text x="234.0" y="390.0" font-size="12" fill="#252b33" text-anchor="end" font-weight="400">[1, 2, 3, 4, 5, 6, 7, 8] target=20</text>
+  <rect x="250.0" y="360.0" width="560.0" height="20" rx="3" fill="#d8dee8" stroke="#252b33" stroke-width="1.0"/>
+  <text x="818.0" y="375.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">6360  不剪枝</text>
+  <rect x="250.0" y="386.0" width="321.71083543334396" height="20" rx="3" fill="#e4f1ee" stroke="#252b33" stroke-width="1.0"/>
+  <text x="579.710835433344" y="401.0" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">2099  剪枝后</text>
+  <text x="940.0" y="388.0" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="400">3.0x</text>
+  <text x="940.0" y="88" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">倍数</text>
+  <text x="20" y="440" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">剪掉的只是「已经超过 target 还继续往下探」的常数层,所以倍数稳定在 2~3 倍,不会随规模爆炸</text>
+</svg>

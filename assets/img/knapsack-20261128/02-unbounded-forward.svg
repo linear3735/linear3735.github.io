@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="560" viewBox="0 0 1240 560" role="img">
+  <rect width="1240" height="560" fill="#ffffff"/>
+  <text x="620" y="38" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">完全背包:转移读的是本行已经更新过的那一格</text>
+  <text x="620" y="62" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">同一件物品 wt=3、val=4 可以重复拿。右图把 w=6 的完整推导链摊开</text>
+  <text x="106.0" y="128" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">w=0</text>
+  <text x="238.0" y="128" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">w=1</text>
+  <text x="370.0" y="128" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">w=2</text>
+  <text x="502.0" y="128" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">w=3</text>
+  <text x="634.0" y="128" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">w=4</text>
+  <text x="766.0" y="128" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">w=5</text>
+  <text x="898.0" y="128" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">w=6</text>
+  <text x="40" y="104" font-size="12" fill="#b5762a" text-anchor="start" font-weight="600">本行(压成一维后就只有这一行)</text>
+  <rect x="40" y="150" width="132" height="62" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="106.0" y="186.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <rect x="172" y="150" width="132" height="62" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="238.0" y="186.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <rect x="304" y="150" width="132" height="62" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="370.0" y="186.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <rect x="436" y="150" width="132" height="62" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="502.0" y="186.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="568" y="150" width="132" height="62" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="634.0" y="186.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="700" y="150" width="132" height="62" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="766.0" y="186.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">4</text>
+  <rect x="832" y="150" width="132" height="62" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="898.0" y="186.0" font-size="14" fill="#252b33" text-anchor="middle" font-weight="400">8</text>
+  <path d="M 502.0 212 V 242.0 H 898.0 V 214.0" fill="none" stroke="#3568a3" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="898.0" y1="242" x2="898.00" y2="222.00" stroke="#3568a3" stroke-width="2.0" stroke-linecap="round"/>
+  <polygon points="898.00,214.00 902.60,222.00 893.40,222.00" fill="#3568a3"/>
+  <text x="700.0" y="102" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="400">dp[6] 读 dp[6−3] = dp[3]，是同一行</text>
+  <text x="620" y="270" font-size="14" fill="#252b33" text-anchor="middle" font-weight="600">推导链:每次多拿一件,容量就 +3</text>
+  <rect x="190" y="290" width="160" height="46" rx="6" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="270" y="319" font-size="14" fill="#2f7d6d" text-anchor="middle" font-weight="400">dp[0]=0</text>
+  <rect x="540" y="290" width="160" height="46" rx="6" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="620" y="319" font-size="14" fill="#2f7d6d" text-anchor="middle" font-weight="400">dp[3]=4</text>
+  <line x1="352" y1="313" x2="528.00" y2="313.00" stroke="#e7eaf0" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="536.00,313.00 528.00,317.60 528.00,308.40" fill="#e7eaf0"/>
+  <rect x="890" y="290" width="160" height="46" rx="6" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="970" y="319" font-size="14" fill="#2f7d6d" text-anchor="middle" font-weight="400">dp[6]=8</text>
+  <line x1="702" y1="313" x2="878.00" y2="313.00" stroke="#e7eaf0" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="886.00,313.00 878.00,317.60 878.00,308.40" fill="#e7eaf0"/>
+  <text x="620" y="362" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">每步都是 +4，所以拿的次数不受限制</text>
+  <rect x="40" y="392" width="1160" height="46" rx="8" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="620" y="421" font-size="13" fill="#252b33" text-anchor="middle" font-weight="400">两个背包只差一个循环方向:0-1 从大到小(读旧值)，完全从小到大(读本行)</text>
+</svg>

@@ -1,0 +1,524 @@
+[
+  {
+    "section": "甲、数据结构基础",
+    "note": "先把底层结构自己实现一遍，后面的题才有地方挂",
+    "items": [
+      {
+        "title": "手写动态数组",
+        "desc": "扩容、均摊、迭代器失效",
+        "status": "done",
+        "post_slug": "array-linkedlist-impl"
+      },
+      {
+        "title": "手写单链表与双链表",
+        "desc": "哨兵节点、增删改查的边界",
+        "status": "done",
+        "post_slug": "array-linkedlist-impl"
+      },
+      {
+        "title": "数组与链表的互相变换",
+        "desc": "数组转链表、链表转数组、原地重排",
+        "status": "done",
+        "post_slug": "array-linkedlist-impl"
+      },
+      {
+        "title": "手写队列与栈",
+        "desc": "环形缓冲、假溢出、均摊扩容",
+        "status": "done",
+        "post_slug": "interview-algo-speedrun"
+      },
+      {
+        "title": "双端队列 Deque",
+        "desc": "两端进出、单调队列的底座",
+        "status": "done",
+        "post_slug": "interview-algo-speedrun"
+      },
+      {
+        "title": "手写哈希表",
+        "desc": "拉链法、线性探测、负载因子与扩容",
+        "status": "done",
+        "post_slug": "hash-and-heap"
+      },
+      {
+        "title": "哈希表的变体",
+        "desc": "HashSet、有序表、哈希与一致性哈希",
+        "status": "done",
+        "post_slug": "hash-and-heap"
+      },
+      {
+        "title": "二叉树的结构与遍历",
+        "desc": "递归遍历、层序遍历、Morris",
+        "status": "done",
+        "post_slug": "binary-tree"
+      },
+      {
+        "title": "二叉树的花式变换",
+        "desc": "翻转、序列化、最近公共祖先、构造",
+        "status": "done",
+        "post_slug": "binary-tree-advanced"
+      },
+      {
+        "title": "并查集",
+        "desc": "路径压缩、按秩合并、连通分量",
+        "status": "done",
+        "post_slug": "graph-traversal"
+      },
+      {
+        "title": "二叉堆 / 优先队列",
+        "desc": "上浮下沉、建堆的 O(n)、堆排序",
+        "status": "done",
+        "post_slug": "hash-and-heap"
+      },
+      {
+        "title": "Trie 字典树",
+        "desc": "前缀匹配、通配符搜索",
+        "status": "done",
+        "post_slug": "hash-and-heap"
+      },
+      {
+        "title": "线段树与树状数组",
+        "desc": "区间查询、懒标记、树状数组的 lowbit",
+        "status": "done",
+        "post_slug": "hash-and-heap"
+      },
+      {
+        "title": "跳表与有序表",
+        "desc": "多层索引、随机层数",
+        "status": "done",
+        "post_slug": "hash-and-heap"
+      }
+    ]
+  },
+  {
+    "section": "乙、十大排序",
+    "note": "自己写一遍，才知道每种排序的取舍在哪",
+    "items": [
+      {
+        "title": "冒泡 / 选择 / 插入",
+        "desc": "三种 O(n²) 的差异与适用场景",
+        "status": "done",
+        "post_slug": "sorting"
+      },
+      {
+        "title": "归并排序",
+        "desc": "分治、稳定排序、外排序的基础",
+        "status": "done",
+        "post_slug": "sorting"
+      },
+      {
+        "title": "快速排序",
+        "desc": "分区、随机化、三路快排",
+        "status": "done",
+        "post_slug": "sorting"
+      },
+      {
+        "title": "堆排序",
+        "desc": "建堆与原地排序",
+        "status": "done",
+        "post_slug": "sorting"
+      },
+      {
+        "title": "计数 / 桶 / 基数排序",
+        "desc": "非比较排序的适用边界",
+        "status": "done",
+        "post_slug": "sorting"
+      },
+      {
+        "title": "希尔排序",
+        "desc": "增量序列的影响",
+        "status": "done",
+        "post_slug": "sorting"
+      }
+    ]
+  },
+  {
+    "section": "丙、核心解题框架",
+    "note": "面试真正考的是这几套模板",
+    "items": [
+      {
+        "title": "学习算法的框架思维",
+        "desc": "先有框架，再谈技巧",
+        "status": "done",
+        "post_slug": "framework-thinking"
+      },
+      {
+        "title": "双指针速解链表七题",
+        "desc": "虚拟头结点 + 快慢指针",
+        "status": "done",
+        "post_slug": "interview-algo-speedrun"
+      },
+      {
+        "title": "双指针速解数组七题",
+        "desc": "左右指针与快慢指针",
+        "status": "done",
+        "post_slug": "array-two-pointers"
+      }
+    ]
+  },
+  {
+    "section": "丁、链表算法",
+    "note": "链表题的考点是「能不能一趟扫描」",
+    "items": [
+      {
+        "title": "链表双指针经典习题",
+        "desc": "把七题的技巧用到新题上",
+        "status": "done",
+        "post_slug": "chain-reversal"
+      },
+      {
+        "title": "单链表的花式反转",
+        "desc": "整体反转、区间反转、K 个一组",
+        "status": "done",
+        "post_slug": "chain-reversal"
+      },
+      {
+        "title": "判断回文链表",
+        "desc": "反转后半段与递归两种解法",
+        "status": "done",
+        "post_slug": "chain-reversal"
+      }
+    ]
+  },
+  {
+    "section": "戊、数组与字符串算法",
+    "note": "题目最多、套路最固定的一块",
+    "items": [
+      {
+        "title": "二维数组的花式遍历",
+        "desc": "螺旋、旋转、转置、原地操作",
+        "status": "done",
+        "post_slug": "array-two-pointers"
+      },
+      {
+        "title": "数组双指针经典习题",
+        "desc": "原地删除、去重、移动零",
+        "status": "done",
+        "post_slug": "array-two-pointers"
+      },
+      {
+        "title": "nSum 问题统一解法",
+        "desc": "从两数之和推到 N 数之和",
+        "status": "done",
+        "post_slug": "array-two-pointers"
+      },
+      {
+        "title": "接雨水",
+        "desc": "单调栈、双指针、按列与按行",
+        "status": "done",
+        "post_slug": "array-two-pointers"
+      },
+      {
+        "title": "前缀和数组",
+        "desc": "区间和 O(1)、二维前缀和",
+        "status": "done",
+        "post_slug": "prefix-sum-diff"
+      },
+      {
+        "title": "差分数组",
+        "desc": "区间增减 O(1)、航班预订",
+        "status": "done",
+        "post_slug": "prefix-sum-diff"
+      },
+      {
+        "title": "滑动窗口模板",
+        "desc": "定长与不定长、窗口内计数",
+        "status": "done",
+        "post_slug": "sliding-window"
+      },
+      {
+        "title": "Rabin-Karp 字符匹配",
+        "desc": "滚动哈希、重复子串",
+        "status": "done",
+        "post_slug": "sliding-window"
+      },
+      {
+        "title": "二分搜索核心模板",
+        "desc": "左闭右闭与左闭右开、边界判定",
+        "status": "done",
+        "post_slug": "binary-search"
+      },
+      {
+        "title": "二分的实际运用",
+        "desc": "二分答案、在无序结构上二分",
+        "status": "done",
+        "post_slug": "binary-search"
+      },
+      {
+        "title": "带权重的随机选择",
+        "desc": "前缀和 + 二分",
+        "status": "done",
+        "post_slug": "binary-search"
+      }
+    ]
+  },
+  {
+    "section": "己、栈与队列算法",
+    "note": "受限结构在题里能做的事比想象中多",
+    "items": [
+      {
+        "title": "用栈实现队列 / 用队列实现栈",
+        "desc": "两个栈的均摊分析",
+        "status": "done",
+        "post_slug": "stack-queue-mutual"
+      },
+      {
+        "title": "栈的经典习题",
+        "desc": "最小栈、栈的压入弹出序列",
+        "status": "done",
+        "post_slug": "stack-queue-mutual"
+      },
+      {
+        "title": "括号类问题汇总",
+        "desc": "有效括号、生成括号、最长有效",
+        "status": "done",
+        "post_slug": "stack-queue-mutual"
+      },
+      {
+        "title": "队列的经典习题",
+        "desc": "滑动窗口平均值、最近的请求次数",
+        "status": "done",
+        "post_slug": "stack-queue-mutual"
+      },
+      {
+        "title": "单调栈模板",
+        "desc": "下一个更大元素、每日温度、直方图",
+        "status": "done",
+        "post_slug": "monotonic-stack"
+      },
+      {
+        "title": "单调栈的变体",
+        "desc": "循环数组、区间贡献",
+        "status": "done",
+        "post_slug": "monotonic-stack"
+      },
+      {
+        "title": "单调队列与滑动窗口",
+        "desc": "窗口最值 O(1)",
+        "status": "done",
+        "post_slug": "monotonic-queue"
+      },
+      {
+        "title": "单调队列的通用实现",
+        "desc": "自己封装一个可复用的单调队列",
+        "status": "done",
+        "post_slug": "monotonic-queue"
+      }
+    ]
+  },
+  {
+    "section": "庚、二叉树算法",
+    "note": "递归思维训练的主战场",
+    "items": [
+      {
+        "title": "二叉树的遍历框架",
+        "desc": "前中后序的本质区别",
+        "status": "done",
+        "post_slug": "binary-tree"
+      },
+      {
+        "title": "二叉树习题汇总",
+        "desc": "对称、最大深度、路径总和、直径",
+        "status": "done",
+        "post_slug": "binary-tree"
+      },
+      {
+        "title": "BST 的特性与操作",
+        "desc": "中序有序、查找插入删除、验证 BST",
+        "status": "done",
+        "post_slug": "binary-tree-advanced"
+      },
+      {
+        "title": "二叉树的构造与序列化",
+        "desc": "由前中序构造、序列化反序列化",
+        "status": "done",
+        "post_slug": "binary-tree-advanced"
+      },
+      {
+        "title": "最近公共祖先",
+        "desc": "LCA 的递归与二进制 lifting",
+        "status": "done",
+        "post_slug": "binary-tree-advanced"
+      },
+      {
+        "title": "完全二叉树的节点个数",
+        "desc": "利用完全二叉树性质降到 O(log²n)",
+        "status": "done",
+        "post_slug": "binary-tree-advanced"
+      },
+      {
+        "title": "二叉树的拓展",
+        "desc": "归并思想、树形 DP、打家劫舍 III",
+        "status": "done",
+        "post_slug": "binary-tree-advanced"
+      }
+    ]
+  },
+  {
+    "section": "辛、图论算法",
+    "note": "图题的关键是先想清楚建图和遍历顺序",
+    "items": [
+      {
+        "title": "图的存储与遍历",
+        "desc": "邻接表、邻接矩阵、DFS/BFS 框架",
+        "status": "done",
+        "post_slug": "graph-traversal"
+      },
+      {
+        "title": "环检测与拓扑排序",
+        "desc": "有向无环图、课程表",
+        "status": "done",
+        "post_slug": "graph-traversal"
+      },
+      {
+        "title": "二分图判定",
+        "desc": "染色法",
+        "status": "done",
+        "post_slug": "graph-traversal"
+      },
+      {
+        "title": "并查集的应用",
+        "desc": "连通分量、冗余连接",
+        "status": "done",
+        "post_slug": "graph-traversal"
+      },
+      {
+        "title": "Dijkstra 最短路径",
+        "desc": "堆优化、单源最短路",
+        "status": "done",
+        "post_slug": "shortest-path"
+      },
+      {
+        "title": "Floyd 与 Bellman-Ford",
+        "desc": "多源最短路、负权边",
+        "status": "done",
+        "post_slug": "shortest-path"
+      },
+      {
+        "title": "最小生成树",
+        "desc": "Prim 与 Kruskal",
+        "status": "done",
+        "post_slug": "shortest-path"
+      },
+      {
+        "title": "A* 启发式搜索",
+        "desc": "估价函数与优先队列",
+        "status": "done",
+        "post_slug": "shortest-path"
+      },
+      {
+        "title": "欧拉路径",
+        "desc": "Hierholzer 算法、重排行程",
+        "status": "done",
+        "post_slug": "shortest-path"
+      }
+    ]
+  },
+  {
+    "section": "壬、暴力搜索",
+    "note": "不会做时的兜底，也是最容易写出框架的",
+    "items": [
+      {
+        "title": "回溯算法框架",
+        "desc": "选择、路径、结束条件",
+        "status": "done",
+        "post_slug": "backtracking"
+      },
+      {
+        "title": "排列 / 组合 / 子集",
+        "desc": "三类基本问题的统一写法",
+        "status": "done",
+        "post_slug": "backtracking"
+      },
+      {
+        "title": "棋盘类问题",
+        "desc": "N 皇后、解数独",
+        "status": "done",
+        "post_slug": "backtracking"
+      },
+      {
+        "title": "集合划分与子集划分",
+        "desc": "回溯 + 剪枝",
+        "status": "done",
+        "post_slug": "backtracking"
+      },
+      {
+        "title": "BFS 框架",
+        "desc": "层序遍历、最短路径、双向 BFS",
+        "status": "done",
+        "post_slug": "bfs"
+      },
+      {
+        "title": "BFS 习题",
+        "desc": "打开转盘锁、单词接龙",
+        "status": "done",
+        "post_slug": "bfs"
+      }
+    ]
+  },
+  {
+    "section": "癸、动态规划",
+    "note": "从暴力递归到状态转移",
+    "items": [
+      {
+        "title": "DP 基本技巧",
+        "desc": "状态定义、遍历方向、空间压缩",
+        "status": "done",
+        "post_slug": "dp-basics"
+      },
+      {
+        "title": "子序列类型问题",
+        "desc": "LIS、LCS、编辑距离",
+        "status": "done",
+        "post_slug": "dp-basics"
+      },
+      {
+        "title": "背包类型问题",
+        "desc": "01 背包、完全背包、子集背包",
+        "status": "done",
+        "post_slug": "knapsack"
+      },
+      {
+        "title": "经典 DP 问题",
+        "desc": "打家劫舍、股票买卖、正则匹配",
+        "status": "done",
+        "post_slug": "knapsack"
+      },
+      {
+        "title": "区间 DP 与状态压缩",
+        "desc": "戳气球、石子游戏",
+        "status": "done",
+        "post_slug": "dp-advanced"
+      },
+      {
+        "title": "贪心类型问题",
+        "desc": "区间调度、跳跃游戏",
+        "status": "done",
+        "post_slug": "dp-advanced"
+      }
+    ]
+  },
+  {
+    "section": "子、数学与设计题",
+    "note": "最后一公里",
+    "items": [
+      {
+        "title": "经典数据结构设计",
+        "desc": "LRU、LFU、O(1) 时间戳结构",
+        "status": "done",
+        "post_slug": "ds-design"
+      },
+      {
+        "title": "数学运算技巧",
+        "desc": "位运算、随机、概率、取模",
+        "status": "done",
+        "post_slug": "math-tricks"
+      },
+      {
+        "title": "设计类面试题",
+        "desc": "限流器、排行榜、定时器",
+        "status": "done",
+        "post_slug": "ds-design"
+      }
+    ]
+  }
+]

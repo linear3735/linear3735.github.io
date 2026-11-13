@@ -1,0 +1,1931 @@
+[
+ {
+  "folder": "手把手带你实现动态数组",
+  "label": "数组（顺序存储）基本原理",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/array-basic/",
+  "file": "datastructurebasic__arraybasic.md",
+  "full_text": "data-structure-basic__array-basic.md",
+  "chars": 5242,
+  "lc": [],
+  "headings": 6
+ },
+ {
+  "folder": "手把手带你实现动态数组",
+  "label": "动态数组代码实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/array-implement/",
+  "file": "datastructurebasic__arrayimplement.md",
+  "full_text": "data-structure-basic__array-implement.md",
+  "chars": 3671,
+  "lc": [
+   707
+  ],
+  "headings": 6
+ },
+ {
+  "folder": "手把手带你实现单/双链表",
+  "label": "链表（链式存储）基本原理",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/linkedlist-basic/",
+  "file": "datastructurebasic__linkedlistbasic.md",
+  "full_text": "data-structure-basic__linkedlist-basic.md",
+  "chars": 8501,
+  "lc": [],
+  "headings": 10
+ },
+ {
+  "folder": "手把手带你实现单/双链表",
+  "label": "链表代码实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/linkedlist-implement/",
+  "file": "datastructurebasic__linkedlistimplement.md",
+  "full_text": "data-structure-basic__linkedlist-implement.md",
+  "chars": 7668,
+  "lc": [
+   707
+  ],
+  "headings": 6
+ },
+ {
+  "folder": "数组链表的种种变换",
+  "label": "环形数组技巧及实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/cycle-array/",
+  "file": "datastructurebasic__cyclearray.md",
+  "full_text": "data-structure-basic__cycle-array.md",
+  "chars": 4009,
+  "lc": [],
+  "headings": 4
+ },
+ {
+  "folder": "数组链表的种种变换",
+  "label": "跳表核心原理",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/skip-list-basic/",
+  "file": "datastructurebasic__skiplistbasic.md",
+  "full_text": "data-structure-basic__skip-list-basic.md",
+  "chars": 2073,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "数组链表的种种变换",
+  "label": "位图原理及实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/bitmap/",
+  "file": "datastructurebasic__bitmap.md",
+  "full_text": "data-structure-basic__bitmap.md",
+  "chars": 828,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "手把手带你实现队列/栈",
+  "label": "队列/栈基本原理",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/queue-stack-basic/",
+  "file": "datastructurebasic__queuestackbasic.md",
+  "full_text": "data-structure-basic__queue-stack-basic.md",
+  "chars": 1273,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "手把手带你实现队列/栈",
+  "label": "用链表实现队列/栈",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/linked-queue-stack/",
+  "file": "datastructurebasic__linkedqueuestack.md",
+  "full_text": "data-structure-basic__linked-queue-stack.md",
+  "chars": 2193,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "手把手带你实现队列/栈",
+  "label": "用数组实现队列/栈",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/array-queue-stack/",
+  "file": "datastructurebasic__arrayqueuestack.md",
+  "full_text": "data-structure-basic__array-queue-stack.md",
+  "chars": 1511,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "手把手带你实现队列/栈",
+  "label": "双端队列（Deque）原理及实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/deque-implement/",
+  "file": "datastructurebasic__dequeimplement.md",
+  "full_text": "data-structure-basic__deque-implement.md",
+  "chars": 2459,
+  "lc": [],
+  "headings": 3
+ },
+ {
+  "folder": "哈希表的原理及实现",
+  "label": "哈希表核心原理",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/hashmap-basic/",
+  "file": "datastructurebasic__hashmapbasic.md",
+  "full_text": "data-structure-basic__hashmap-basic.md",
+  "chars": 9575,
+  "lc": [],
+  "headings": 10
+ },
+ {
+  "folder": "哈希表的原理及实现",
+  "label": "用拉链法实现哈希表",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/hashtable-chaining/",
+  "file": "datastructurebasic__hashtablechaining.md",
+  "full_text": "data-structure-basic__hashtable-chaining.md",
+  "chars": 864,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "哈希表的原理及实现",
+  "label": "线性探查法的两个难点",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/linear-probing-key-point/",
+  "file": "datastructurebasic__linearprobingkeypoint.md",
+  "full_text": "data-structure-basic__linear-probing-key-point.md",
+  "chars": 1136,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "哈希表的原理及实现",
+  "label": "线性探查法的两种代码实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/linear-probing-code/",
+  "file": "datastructurebasic__linearprobingcode.md",
+  "full_text": "data-structure-basic__linear-probing-code.md",
+  "chars": 757,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "哈希表的原理及实现",
+  "label": "哈希集合的原理及代码实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/hash-set/",
+  "file": "datastructurebasic__hashset.md",
+  "full_text": "data-structure-basic__hash-set.md",
+  "chars": 399,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "哈希表结构的种种变换",
+  "label": "用链表加强哈希表（LinkedHashMap）",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/hashtable-with-linked-list/",
+  "file": "datastructurebasic__hashtablewithlinkedlist.md",
+  "full_text": "data-structure-basic__hashtable-with-linked-list.md",
+  "chars": 2054,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "哈希表结构的种种变换",
+  "label": "用数组加强哈希表（ArrayHashMap）",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/hashtable-with-array/",
+  "file": "datastructurebasic__hashtablewitharray.md",
+  "full_text": "data-structure-basic__hashtable-with-array.md",
+  "chars": 2960,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "哈希表结构的种种变换",
+  "label": "布隆过滤器原理及实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/bloom-filter/",
+  "file": "datastructurebasic__bloomfilter.md",
+  "full_text": "data-structure-basic__bloom-filter.md",
+  "chars": 958,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树结构及遍历",
+  "label": "二叉树基础及常见类型",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/binary-tree-basic/",
+  "file": "datastructurebasic__binarytreebasic.md",
+  "full_text": "data-structure-basic__binary-tree-basic.md",
+  "chars": 4563,
+  "lc": [],
+  "headings": 7
+ },
+ {
+  "folder": "二叉树结构及遍历",
+  "label": "二叉树的递归/层序遍历",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/binary-tree-traverse-basic/",
+  "file": "datastructurebasic__binarytreetraversebasic.md",
+  "full_text": "data-structure-basic__binary-tree-traverse-basic.md",
+  "chars": 7218,
+  "lc": [],
+  "headings": 7
+ },
+ {
+  "folder": "二叉树结构及遍历",
+  "label": "DFS 和 BFS 的适用场景",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/use-case-of-dfs-bfs/",
+  "file": "datastructurebasic__usecaseofdfsbfs.md",
+  "full_text": "data-structure-basic__use-case-of-dfs-bfs.md",
+  "chars": 457,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树结构及遍历",
+  "label": "多叉树的递归/层序遍历",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/n-ary-tree-traverse-basic/",
+  "file": "datastructurebasic__narytreetraversebasic.md",
+  "full_text": "data-structure-basic__n-ary-tree-traverse-basic.md",
+  "chars": 1080,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "二叉树结构的种种变换",
+  "label": "二叉搜索树的应用及可视化",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/tree-map-basic/",
+  "file": "datastructurebasic__treemapbasic.md",
+  "full_text": "data-structure-basic__tree-map-basic.md",
+  "chars": 3013,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "二叉树结构的种种变换",
+  "label": "红黑树的完美平衡及可视化",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/rbtree-basic/",
+  "file": "datastructurebasic__rbtreebasic.md",
+  "full_text": "data-structure-basic__rbtree-basic.md",
+  "chars": 631,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树结构的种种变换",
+  "label": "Trie/字典树/前缀树原理及可视化",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/trie-map-basic/",
+  "file": "datastructurebasic__triemapbasic.md",
+  "full_text": "data-structure-basic__trie-map-basic.md",
+  "chars": 3010,
+  "lc": [],
+  "headings": 3
+ },
+ {
+  "folder": "二叉树结构的种种变换",
+  "label": "二叉堆核心原理及可视化",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/binary-heap-basic/",
+  "file": "datastructurebasic__binaryheapbasic.md",
+  "full_text": "data-structure-basic__binary-heap-basic.md",
+  "chars": 526,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树结构的种种变换",
+  "label": "二叉堆/优先级队列代码实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/binary-heap-implement/",
+  "file": "datastructurebasic__binaryheapimplement.md",
+  "full_text": "data-structure-basic__binary-heap-implement.md",
+  "chars": 443,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树结构的种种变换",
+  "label": "线段树核心原理及可视化",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/segment-tree-basic/",
+  "file": "datastructurebasic__segmenttreebasic.md",
+  "full_text": "data-structure-basic__segment-tree-basic.md",
+  "chars": 1420,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "二叉树结构的种种变换",
+  "label": "数据压缩和霍夫曼树",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/huffman-tree/",
+  "file": "datastructurebasic__huffmantree.md",
+  "full_text": "data-structure-basic__huffman-tree.md",
+  "chars": 3062,
+  "lc": [],
+  "headings": 3
+ },
+ {
+  "folder": "图结构基础及算法概览",
+  "label": "图论中的基本术语",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/graph-terminology/",
+  "file": "datastructurebasic__graphterminology.md",
+  "full_text": "data-structure-basic__graph-terminology.md",
+  "chars": 2871,
+  "lc": [],
+  "headings": 7
+ },
+ {
+  "folder": "图结构基础及算法概览",
+  "label": "图结构的通用代码实现",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/graph-basic/",
+  "file": "datastructurebasic__graphbasic.md",
+  "full_text": "data-structure-basic__graph-basic.md",
+  "chars": 670,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "图结构基础及算法概览",
+  "label": "图结构的 DFS/BFS 遍历",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/graph-traverse-basic/",
+  "file": "datastructurebasic__graphtraversebasic.md",
+  "full_text": "data-structure-basic__graph-traverse-basic.md",
+  "chars": 5263,
+  "lc": [],
+  "headings": 4
+ },
+ {
+  "folder": "图结构基础及算法概览",
+  "label": "欧拉图和一笔画游戏",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/eulerian-graph/",
+  "file": "datastructurebasic__euleriangraph.md",
+  "full_text": "data-structure-basic__eulerian-graph.md",
+  "chars": 1300,
+  "lc": [],
+  "headings": 3
+ },
+ {
+  "folder": "图结构基础及算法概览",
+  "label": "图结构最短路径算法概览",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/graph-shortest-path/",
+  "file": "datastructurebasic__graphshortestpath.md",
+  "full_text": "data-structure-basic__graph-shortest-path.md",
+  "chars": 2809,
+  "lc": [],
+  "headings": 5
+ },
+ {
+  "folder": "图结构基础及算法概览",
+  "label": "最小生成树算法概览",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/graph-minimum-spanning-tree/",
+  "file": "datastructurebasic__graphminimumspanningtree.md",
+  "full_text": "data-structure-basic__graph-minimum-spanning-tree.md",
+  "chars": 1774,
+  "lc": [],
+  "headings": 4
+ },
+ {
+  "folder": "图结构基础及算法概览",
+  "label": "Union Find 并查集原理",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/union-find-basic/",
+  "file": "datastructurebasic__unionfindbasic.md",
+  "full_text": "data-structure-basic__union-find-basic.md",
+  "chars": 2493,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "本章导读",
+  "url": "https://labuladong.online/zh/algo/intro/sorting/",
+  "file": "intro__sorting.md",
+  "full_text": "intro__sorting.md",
+  "chars": 337,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "排序算法的关键指标",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/sort-basic/",
+  "file": "datastructurebasic__sortbasic.md",
+  "full_text": "data-structure-basic__sort-basic.md",
+  "chars": 1489,
+  "lc": [],
+  "headings": 3
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "选择排序所面临的问题",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/select-sort/",
+  "file": "datastructurebasic__selectsort.md",
+  "full_text": "data-structure-basic__select-sort.md",
+  "chars": 4963,
+  "lc": [
+   912
+  ],
+  "headings": 4
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "拥有稳定性：冒泡排序",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/bubble-sort/",
+  "file": "datastructurebasic__bubblesort.md",
+  "full_text": "data-structure-basic__bubble-sort.md",
+  "chars": 3293,
+  "lc": [
+   912
+  ],
+  "headings": 3
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "运用逆向思维：插入排序",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/insertion-sort/",
+  "file": "datastructurebasic__insertionsort.md",
+  "full_text": "data-structure-basic__insertion-sort.md",
+  "chars": 2517,
+  "lc": [
+   912
+  ],
+  "headings": 2
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "突破 O(N^2)：希尔排序",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/shell-sort/",
+  "file": "datastructurebasic__shellsort.md",
+  "full_text": "data-structure-basic__shell-sort.md",
+  "chars": 674,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "妙用二叉树前序位置：快速排序",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/quick-sort/",
+  "file": "datastructurebasic__quicksort.md",
+  "full_text": "data-structure-basic__quick-sort.md",
+  "chars": 837,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "妙用二叉树后序位置：归并排序",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/merge-sort/",
+  "file": "datastructurebasic__mergesort.md",
+  "full_text": "data-structure-basic__merge-sort.md",
+  "chars": 756,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "二叉堆结构的运用：堆排序",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/heap-sort/",
+  "file": "datastructurebasic__heapsort.md",
+  "full_text": "data-structure-basic__heap-sort.md",
+  "chars": 2033,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "全新的排序原理：计数排序",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/counting-sort/",
+  "file": "datastructurebasic__countingsort.md",
+  "full_text": "data-structure-basic__counting-sort.md",
+  "chars": 2043,
+  "lc": [
+   75
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "博采众长：桶排序",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/bucket-sort/",
+  "file": "datastructurebasic__bucketsort.md",
+  "full_text": "data-structure-basic__bucket-sort.md",
+  "chars": 2584,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "十大排序算法原理及可视化",
+  "label": "基数排序（Radix Sort）",
+  "url": "https://labuladong.online/zh/algo/data-structure-basic/radix-sort/",
+  "file": "datastructurebasic__radixsort.md",
+  "full_text": "data-structure-basic__radix-sort.md",
+  "chars": 1695,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "本章导读",
+  "url": "https://labuladong.online/zh/algo/intro/core-intro/",
+  "file": "intro__coreintro.md",
+  "full_text": "intro__core-intro.md",
+  "chars": 956,
+  "lc": [],
+  "headings": 3
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "学习数据结构和算法的框架思维",
+  "url": "https://labuladong.online/zh/algo/essential-technique/algorithm-summary/",
+  "file": "essentialtechnique__algorithmsummary.md",
+  "full_text": "essential-technique__algorithm-summary.md",
+  "chars": 11514,
+  "lc": [],
+  "headings": 14
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "双指针技巧秒杀七道链表题目",
+  "url": "https://labuladong.online/zh/algo/essential-technique/linked-list-skills-summary/",
+  "file": "essentialtechnique__linkedlistskillssummary.md",
+  "full_text": "essential-technique__linked-list-skills-summary.md",
+  "chars": 12399,
+  "lc": [
+   19,
+   21,
+   23,
+   86,
+   142,
+   160,
+   876
+  ],
+  "headings": 7
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "双指针技巧秒杀七道数组题目",
+  "url": "https://labuladong.online/zh/algo/essential-technique/array-two-pointers-summary/",
+  "file": "essentialtechnique__arraytwopointerssummary.md",
+  "full_text": "essential-technique__array-two-pointers-summary.md",
+  "chars": 9342,
+  "lc": [
+   5,
+   26,
+   27,
+   83,
+   167,
+   283,
+   344
+  ],
+  "headings": 8
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "滑动窗口算法核心代码模板",
+  "url": "https://labuladong.online/zh/algo/essential-technique/sliding-window-framework/",
+  "file": "essentialtechnique__slidingwindowframework.md",
+  "full_text": "essential-technique__sliding-window-framework.md",
+  "chars": 10040,
+  "lc": [
+   3,
+   76,
+   438,
+   567
+  ],
+  "headings": 5
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "二叉树系列算法核心纲领",
+  "url": "https://labuladong.online/zh/algo/essential-technique/binary-tree-summary/",
+  "file": "essentialtechnique__binarytreesummary.md",
+  "full_text": "essential-technique__binary-tree-summary.md",
+  "chars": 17479,
+  "lc": [
+   104,
+   144,
+   543
+  ],
+  "headings": 10
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "一个视角 + 两种思维模式搞定递归",
+  "url": "https://labuladong.online/zh/algo/essential-technique/understand-recursion/",
+  "file": "essentialtechnique__understandrecursion.md",
+  "full_text": "essential-technique__understand-recursion.md",
+  "chars": 8605,
+  "lc": [
+   104
+  ],
+  "headings": 7
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "动态规划解题套路框架",
+  "url": "https://labuladong.online/zh/algo/essential-technique/dynamic-programming-framework/",
+  "file": "essentialtechnique__dynamicprogrammingframework.md",
+  "full_text": "essential-technique__dynamic-programming-framework.md",
+  "chars": 11952,
+  "lc": [
+   322,
+   509
+  ],
+  "headings": 11
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "回溯算法解题套路框架",
+  "url": "https://labuladong.online/zh/algo/essential-technique/backtrack-framework/",
+  "file": "essentialtechnique__backtrackframework.md",
+  "full_text": "essential-technique__backtrack-framework.md",
+  "chars": 3953,
+  "lc": [
+   46
+  ],
+  "headings": 2
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "BFS 算法解题套路框架",
+  "url": "https://labuladong.online/zh/algo/essential-technique/bfs-framework/",
+  "file": "essentialtechnique__bfsframework.md",
+  "full_text": "essential-technique__bfs-framework.md",
+  "chars": 11349,
+  "lc": [
+   752,
+   773
+  ],
+  "headings": 4
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "回溯算法秒杀所有排列/组合/子集问题",
+  "url": "https://labuladong.online/zh/algo/essential-technique/permutation-combination-subset-all-in-one/",
+  "file": "essentialtechnique__permutationcombinationsubsetallinone.md",
+  "full_text": "essential-technique__permutation-combination-subset-all-in-one.md",
+  "chars": 1736,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "贪心算法解题套路框架",
+  "url": "https://labuladong.online/zh/algo/essential-technique/greedy/",
+  "file": "essentialtechnique__greedy.md",
+  "full_text": "essential-technique__greedy.md",
+  "chars": 1907,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "分治算法解题套路框架",
+  "url": "https://labuladong.online/zh/algo/essential-technique/divide-and-conquer/",
+  "file": "essentialtechnique__divideandconquer.md",
+  "full_text": "essential-technique__divide-and-conquer.md",
+  "chars": 2360,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "第零章、核心刷题框架汇总",
+  "label": "算法时空复杂度分析实用指南",
+  "url": "https://labuladong.online/zh/algo/essential-technique/complexity-analysis/",
+  "file": "essentialtechnique__complexityanalysis.md",
+  "full_text": "essential-technique__complexity-analysis.md",
+  "chars": 4669,
+  "lc": [],
+  "headings": 7
+ },
+ {
+  "folder": "手把手刷链表算法",
+  "label": "双指针技巧秒杀七道链表题目",
+  "url": "https://labuladong.online/zh/algo/essential-technique/linked-list-skills-summary-2/",
+  "file": "essentialtechnique__linkedlistskillssummary2.md",
+  "full_text": "essential-technique__linked-list-skills-summary-2.md",
+  "chars": 12394,
+  "lc": [
+   19,
+   21,
+   23,
+   86,
+   142,
+   160,
+   876
+  ],
+  "headings": 7
+ },
+ {
+  "folder": "手把手刷链表算法",
+  "label": "单链表的花式反转方法汇总",
+  "url": "https://labuladong.online/zh/algo/data-structure/reverse-linked-list-recursion/",
+  "file": "datastructure__reverselinkedlistrecursion.md",
+  "full_text": "data-structure__reverse-linked-list-recursion.md",
+  "chars": 4169,
+  "lc": [
+   206
+  ],
+  "headings": 4
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "双指针技巧秒杀七道数组题目",
+  "url": "https://labuladong.online/zh/algo/essential-technique/array-two-pointers-summary-2/",
+  "file": "essentialtechnique__arraytwopointerssummary2.md",
+  "full_text": "essential-technique__array-two-pointers-summary-2.md",
+  "chars": 9336,
+  "lc": [
+   5,
+   26,
+   27,
+   83,
+   167,
+   283,
+   344
+  ],
+  "headings": 8
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "二维数组的花式遍历技巧",
+  "url": "https://labuladong.online/zh/algo/practice-in-action/2d-array-traversal-summary/",
+  "file": "practiceinaction__2darraytraversalsummary.md",
+  "full_text": "practice-in-action__2d-array-traversal-summary.md",
+  "chars": 2343,
+  "lc": [
+   48,
+   61,
+   151
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "数组双指针经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/array-two-pointers/",
+  "file": "problemset__arraytwopointers.md",
+  "full_text": "problem-set__array-two-pointers.md",
+  "chars": 379,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "一个方法团灭 nSum 问题",
+  "url": "https://labuladong.online/zh/algo/practice-in-action/nsum/",
+  "file": "practiceinaction__nsum.md",
+  "full_text": "practice-in-action__nsum.md",
+  "chars": 1591,
+  "lc": [
+   1,
+   167
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "如何高效解决接雨水问题",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/trapping-rain-water/",
+  "file": "frequencyinterview__trappingrainwater.md",
+  "full_text": "frequency-interview__trapping-rain-water.md",
+  "chars": 1248,
+  "lc": [
+   42
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "小而美的算法技巧：前缀和数组",
+  "url": "https://labuladong.online/zh/algo/data-structure/prefix-sum/",
+  "file": "datastructure__prefixsum.md",
+  "full_text": "data-structure__prefix-sum.md",
+  "chars": 5387,
+  "lc": [
+   303,
+   304
+  ],
+  "headings": 3
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "前缀和技巧经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/perfix-sum/",
+  "file": "problemset__perfixsum.md",
+  "full_text": "problem-set__perfix-sum.md",
+  "chars": 337,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "小而美的算法技巧：差分数组",
+  "url": "https://labuladong.online/zh/algo/data-structure/diff-array/",
+  "file": "datastructure__diffarray.md",
+  "full_text": "data-structure__diff-array.md",
+  "chars": 6693,
+  "lc": [
+   370,
+   1094,
+   1109
+  ],
+  "headings": 2
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "滑动窗口算法核心代码模板",
+  "url": "https://labuladong.online/zh/algo/essential-technique/sliding-window-framework-2/",
+  "file": "essentialtechnique__slidingwindowframework2.md",
+  "full_text": "essential-technique__sliding-window-framework-2.md",
+  "chars": 10039,
+  "lc": [
+   3,
+   76,
+   438,
+   567
+  ],
+  "headings": 5
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "滑动窗口算法经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/sliding-window/",
+  "file": "problemset__slidingwindow.md",
+  "full_text": "problem-set__sliding-window.md",
+  "chars": 450,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "滑动窗口延伸：Rabin Karp 字符匹配算法",
+  "url": "https://labuladong.online/zh/algo/practice-in-action/rabinkarp/",
+  "file": "practiceinaction__rabinkarp.md",
+  "full_text": "practice-in-action__rabinkarp.md",
+  "chars": 896,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "二分搜索算法核心代码模板",
+  "url": "https://labuladong.online/zh/algo/essential-technique/binary-search-framework/",
+  "file": "essentialtechnique__binarysearchframework.md",
+  "full_text": "essential-technique__binary-search-framework.md",
+  "chars": 6909,
+  "lc": [
+   704
+  ],
+  "headings": 13
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "二分搜索左闭右开写法",
+  "url": "https://labuladong.online/zh/algo/essential-technique/binary-search-left-open/",
+  "file": "essentialtechnique__binarysearchleftopen.md",
+  "full_text": "essential-technique__binary-search-left-open.md",
+  "chars": 3749,
+  "lc": [],
+  "headings": 10
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "实际运用二分搜索时的思维框架",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/binary-search-in-action/",
+  "file": "frequencyinterview__binarysearchinaction.md",
+  "full_text": "frequency-interview__binary-search-in-action.md",
+  "chars": 1878,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "二分搜索算法经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/binary-search/",
+  "file": "problemset__binarysearch.md",
+  "full_text": "problem-set__binary-search.md",
+  "chars": 555,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "手把手刷数组算法",
+  "label": "带权重的随机选择算法",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/random-pick-with-weight/",
+  "file": "frequencyinterview__randompickwithweight.md",
+  "full_text": "frequency-interview__random-pick-with-weight.md",
+  "chars": 1994,
+  "lc": [
+   528
+  ],
+  "headings": 0
+ },
+ {
+  "folder": "经典队列/栈算法",
+  "label": "队列实现栈以及栈实现队列",
+  "url": "https://labuladong.online/zh/algo/data-structure/stack-queue/",
+  "file": "datastructure__stackqueue.md",
+  "full_text": "data-structure__stack-queue.md",
+  "chars": 4000,
+  "lc": [
+   225,
+   232
+  ],
+  "headings": 2
+ },
+ {
+  "folder": "经典队列/栈算法",
+  "label": "栈的经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/stack/",
+  "file": "problemset__stack.md",
+  "full_text": "problem-set__stack.md",
+  "chars": 380,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "经典队列/栈算法",
+  "label": "单调栈算法模板解决三道例题",
+  "url": "https://labuladong.online/zh/algo/data-structure/monotonic-stack/",
+  "file": "datastructure__monotonicstack.md",
+  "full_text": "data-structure__monotonic-stack.md",
+  "chars": 5602,
+  "lc": [
+   496,
+   503,
+   739
+  ],
+  "headings": 5
+ },
+ {
+  "folder": "经典队列/栈算法",
+  "label": "单调栈的几种变体及经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/monotonic-stack/",
+  "file": "problemset__monotonicstack.md",
+  "full_text": "problem-set__monotonic-stack.md",
+  "chars": 499,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典队列/栈算法",
+  "label": "单调队列结构解决滑动窗口问题",
+  "url": "https://labuladong.online/zh/algo/data-structure/monotonic-queue/",
+  "file": "datastructure__monotonicqueue.md",
+  "full_text": "data-structure__monotonic-queue.md",
+  "chars": 4859,
+  "lc": [
+   239
+  ],
+  "headings": 3
+ },
+ {
+  "folder": "经典队列/栈算法",
+  "label": "单调队列的通用实现及经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/monotonic-queue/",
+  "file": "problemset__monotonicqueue.md",
+  "full_text": "problem-set__monotonic-queue.md",
+  "chars": 628,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "手把手刷二叉树算法",
+  "label": "二叉树系列算法核心纲领",
+  "url": "https://labuladong.online/zh/algo/essential-technique/binary-tree-summary-2/",
+  "file": "essentialtechnique__binarytreesummary2.md",
+  "full_text": "essential-technique__binary-tree-summary-2.md",
+  "chars": 17474,
+  "lc": [
+   104,
+   144,
+   543
+  ],
+  "headings": 10
+ },
+ {
+  "folder": "手把手刷二叉树算法",
+  "label": "二叉树心法（思路篇）",
+  "url": "https://labuladong.online/zh/algo/data-structure/binary-tree-part1/",
+  "file": "datastructure__binarytreepart1.md",
+  "full_text": "data-structure__binary-tree-part1.md",
+  "chars": 833,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "手把手刷二叉树算法",
+  "label": "二叉树心法（构造篇）",
+  "url": "https://labuladong.online/zh/algo/data-structure/binary-tree-part2/",
+  "file": "datastructure__binarytreepart2.md",
+  "full_text": "data-structure__binary-tree-part2.md",
+  "chars": 11435,
+  "lc": [
+   105,
+   106,
+   654,
+   889
+  ],
+  "headings": 4
+ },
+ {
+  "folder": "手把手刷二叉树算法",
+  "label": "二叉树心法（序列化篇）",
+  "url": "https://labuladong.online/zh/algo/data-structure/serialize-and-deserialize-binary-tree/",
+  "file": "datastructure__serializeanddeserializebinarytree.md",
+  "full_text": "data-structure__serialize-and-deserialize-binary-tree.md",
+  "chars": 4607,
+  "lc": [
+   297
+  ],
+  "headings": 3
+ },
+ {
+  "folder": "手把手刷二叉树算法",
+  "label": "二叉树心法（后序篇）",
+  "url": "https://labuladong.online/zh/algo/data-structure/binary-tree-part3/",
+  "file": "datastructure__binarytreepart3.md",
+  "full_text": "data-structure__binary-tree-part3.md",
+  "chars": 1228,
+  "lc": [
+   652
+  ],
+  "headings": 0
+ },
+ {
+  "folder": "手把手刷二叉树算法",
+  "label": "二叉搜索树心法（特性篇）",
+  "url": "https://labuladong.online/zh/algo/data-structure/bst-part1/",
+  "file": "datastructure__bstpart1.md",
+  "full_text": "data-structure__bst-part1.md",
+  "chars": 1102,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "手把手刷二叉树算法",
+  "label": "二叉搜索树心法（基操篇）",
+  "url": "https://labuladong.online/zh/algo/data-structure/bst-part2/",
+  "file": "datastructure__bstpart2.md",
+  "full_text": "data-structure__bst-part2.md",
+  "chars": 7874,
+  "lc": [
+   98,
+   450,
+   700,
+   701
+  ],
+  "headings": 4
+ },
+ {
+  "folder": "手把手刷二叉树算法",
+  "label": "二叉搜索树心法（构造篇）",
+  "url": "https://labuladong.online/zh/algo/data-structure/bst-part3/",
+  "file": "datastructure__bstpart3.md",
+  "full_text": "data-structure__bst-part3.md",
+  "chars": 921,
+  "lc": [
+   96
+  ],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树算法习题汇总",
+  "label": "本章导读",
+  "url": "https://labuladong.online/zh/algo/intro/binary-tree-practice/",
+  "file": "intro__binarytreepractice.md",
+  "full_text": "intro__binary-tree-practice.md",
+  "chars": 472,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树算法习题汇总",
+  "label": "用「遍历」思维解题",
+  "url": "https://labuladong.online/zh/algo/problem-set/binary-tree-traverse-i/",
+  "file": "problemset__binarytreetraversei.md",
+  "full_text": "problem-set__binary-tree-traverse-i.md",
+  "chars": 507,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树算法习题汇总",
+  "label": "用「分解问题」思维解题",
+  "url": "https://labuladong.online/zh/algo/problem-set/binary-tree-divide-i/",
+  "file": "problemset__binarytreedividei.md",
+  "full_text": "problem-set__binary-tree-divide-i.md",
+  "chars": 460,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树算法习题汇总",
+  "label": "利用后序位置解题",
+  "url": "https://labuladong.online/zh/algo/problem-set/binary-tree-post-order-i/",
+  "file": "problemset__binarytreepostorderi.md",
+  "full_text": "problem-set__binary-tree-post-order-i.md",
+  "chars": 580,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树算法习题汇总",
+  "label": "二叉搜索树经典例题",
+  "url": "https://labuladong.online/zh/algo/problem-set/bst1/",
+  "file": "problemset__bst1.md",
+  "full_text": "problem-set__bst1.md",
+  "chars": 527,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树的拓展延伸",
+  "label": "拓展：最近公共祖先系列解题框架",
+  "url": "https://labuladong.online/zh/algo/practice-in-action/lowest-common-ancestor-summary/",
+  "file": "practiceinaction__lowestcommonancestorsummary.md",
+  "full_text": "practice-in-action__lowest-common-ancestor-summary.md",
+  "chars": 1335,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树的拓展延伸",
+  "label": "拓展：如何计算完全二叉树的节点数",
+  "url": "https://labuladong.online/zh/algo/data-structure/count-complete-tree-nodes/",
+  "file": "datastructure__countcompletetreenodes.md",
+  "full_text": "data-structure__count-complete-tree-nodes.md",
+  "chars": 716,
+  "lc": [
+   222
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "二叉树的拓展延伸",
+  "label": "拓展：归并排序详解及应用",
+  "url": "https://labuladong.online/zh/algo/practice-in-action/merge-sort/",
+  "file": "practiceinaction__mergesort.md",
+  "full_text": "practice-in-action__merge-sort.md",
+  "chars": 979,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "二叉树的拓展延伸",
+  "label": "拓展：快速排序详解及应用",
+  "url": "https://labuladong.online/zh/algo/practice-in-action/quick-sort/",
+  "file": "practiceinaction__quicksort.md",
+  "full_text": "practice-in-action__quick-sort.md",
+  "chars": 1555,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "算法就像搭乐高：手撸 LRU 算法",
+  "url": "https://labuladong.online/zh/algo/data-structure/lru-cache/",
+  "file": "datastructure__lrucache.md",
+  "full_text": "data-structure__lru-cache.md",
+  "chars": 9449,
+  "lc": [
+   146
+  ],
+  "headings": 3
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "算法就像搭乐高：手撸 LFU 算法",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/lfu/",
+  "file": "frequencyinterview__lfu.md",
+  "full_text": "frequency-interview__lfu.md",
+  "chars": 2397,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "哈希表更多习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/hash-table/",
+  "file": "problemset__hashtable.md",
+  "full_text": "problem-set__hash-table.md",
+  "chars": 524,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "优先级队列经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/binary-heap/",
+  "file": "problemset__binaryheap.md",
+  "full_text": "problem-set__binary-heap.md",
+  "chars": 677,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "基本线段树的代码实现",
+  "url": "https://labuladong.online/zh/algo/data-structure/segment-tree-implement/",
+  "file": "datastructure__segmenttreeimplement.md",
+  "full_text": "data-structure__segment-tree-implement.md",
+  "chars": 1155,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "优化：实现动态线段树",
+  "url": "https://labuladong.online/zh/algo/data-structure/segment-tree-dynamic/",
+  "file": "datastructure__segmenttreedynamic.md",
+  "full_text": "data-structure__segment-tree-dynamic.md",
+  "chars": 411,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "优化：实现懒更新线段树",
+  "url": "https://labuladong.online/zh/algo/data-structure/segment-tree-lazy-update/",
+  "file": "datastructure__segmenttreelazyupdate.md",
+  "full_text": "data-structure__segment-tree-lazy-update.md",
+  "chars": 2117,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "线段树经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/segment-tree/",
+  "file": "problemset__segmenttree.md",
+  "full_text": "problem-set__segment-tree.md",
+  "chars": 368,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "Trie 树代码实现",
+  "url": "https://labuladong.online/zh/algo/data-structure/trie-implement/",
+  "file": "datastructure__trieimplement.md",
+  "full_text": "data-structure__trie-implement.md",
+  "chars": 322,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "Trie 树算法习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/trie/",
+  "file": "problemset__trie.md",
+  "full_text": "problem-set__trie.md",
+  "chars": 615,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "更多经典设计习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/ds-design/",
+  "file": "problemset__dsdesign.md",
+  "full_text": "problem-set__ds-design.md",
+  "chars": 340,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "实现霍夫曼编码压缩算法",
+  "url": "https://labuladong.online/zh/algo/data-structure/huffman-tree-implementation/",
+  "file": "datastructure__huffmantreeimplementation.md",
+  "full_text": "data-structure__huffman-tree-implementation.md",
+  "chars": 1276,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "一致性哈希算法的原理及实现",
+  "url": "https://labuladong.online/zh/algo/data-structure/consistent-hashing/",
+  "file": "datastructure__consistenthashing.md",
+  "full_text": "data-structure__consistent-hashing.md",
+  "chars": 4696,
+  "lc": [],
+  "headings": 4
+ },
+ {
+  "folder": "经典数据结构设计",
+  "label": "拓展：如何实现一个计算器",
+  "url": "https://labuladong.online/zh/algo/data-structure/implement-calculator/",
+  "file": "datastructure__implementcalculator.md",
+  "full_text": "data-structure__implement-calculator.md",
+  "chars": 2553,
+  "lc": [],
+  "headings": 3
+ },
+ {
+  "folder": "经典图算法",
+  "label": "二分图判定算法",
+  "url": "https://labuladong.online/zh/algo/data-structure/bipartite-graph/",
+  "file": "datastructure__bipartitegraph.md",
+  "full_text": "data-structure__bipartite-graph.md",
+  "chars": 6791,
+  "lc": [
+   785,
+   886
+  ],
+  "headings": 3
+ },
+ {
+  "folder": "经典图算法",
+  "label": "Hierholzer 算法寻找欧拉路径",
+  "url": "https://labuladong.online/zh/algo/data-structure/eulerian-graph-hierholzer/",
+  "file": "datastructure__euleriangraphhierholzer.md",
+  "full_text": "data-structure__eulerian-graph-hierholzer.md",
+  "chars": 856,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典图算法",
+  "label": "欧拉路径经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/eulerian-path/",
+  "file": "problemset__eulerianpath.md",
+  "full_text": "problem-set__eulerian-path.md",
+  "chars": 333,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典图算法",
+  "label": "环检测算法",
+  "url": "https://labuladong.online/zh/algo/data-structure/cycle-detection/",
+  "file": "datastructure__cycledetection.md",
+  "full_text": "data-structure__cycle-detection.md",
+  "chars": 6317,
+  "lc": [
+   207
+  ],
+  "headings": 2
+ },
+ {
+  "folder": "经典图算法",
+  "label": "拓扑排序算法",
+  "url": "https://labuladong.online/zh/algo/data-structure/topological-sort/",
+  "file": "datastructure__topologicalsort.md",
+  "full_text": "data-structure__topological-sort.md",
+  "chars": 4975,
+  "lc": [
+   210
+  ],
+  "headings": 2
+ },
+ {
+  "folder": "经典图算法",
+  "label": "Union-Find 并查集算法",
+  "url": "https://labuladong.online/zh/algo/data-structure/union-find/",
+  "file": "datastructure__unionfind.md",
+  "full_text": "data-structure__union-find.md",
+  "chars": 1096,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "经典图算法",
+  "label": "并查集经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/union-find/",
+  "file": "problemset__unionfind.md",
+  "full_text": "problem-set__union-find.md",
+  "chars": 320,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典图算法",
+  "label": "Dijkstra 算法核心原理及实现",
+  "url": "https://labuladong.online/zh/algo/data-structure/dijkstra/",
+  "file": "datastructure__dijkstra.md",
+  "full_text": "data-structure__dijkstra.md",
+  "chars": 2173,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "经典图算法",
+  "label": "Dijkstra 拓展：带限制的最短路问题",
+  "url": "https://labuladong.online/zh/algo/data-structure/dijkstra-follow-up/",
+  "file": "datastructure__dijkstrafollowup.md",
+  "full_text": "data-structure__dijkstra-follow-up.md",
+  "chars": 723,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "经典图算法",
+  "label": "Dijkstra 算法经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/dijkstra/",
+  "file": "problemset__dijkstra.md",
+  "full_text": "problem-set__dijkstra.md",
+  "chars": 414,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典图算法",
+  "label": "A* 算法核心原理及实现",
+  "url": "https://labuladong.online/zh/algo/data-structure/a-star/",
+  "file": "datastructure__astar.md",
+  "full_text": "data-structure__a-star.md",
+  "chars": 1199,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "经典图算法",
+  "label": "Kruskal 最小生成树算法",
+  "url": "https://labuladong.online/zh/algo/data-structure/kruskal/",
+  "file": "datastructure__kruskal.md",
+  "full_text": "data-structure__kruskal.md",
+  "chars": 792,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "经典图算法",
+  "label": "Prim 最小生成树算法",
+  "url": "https://labuladong.online/zh/algo/data-structure/prim/",
+  "file": "datastructure__prim.md",
+  "full_text": "data-structure__prim.md",
+  "chars": 853,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "DFS/回溯算法",
+  "label": "回溯算法解题套路框架",
+  "url": "https://labuladong.online/zh/algo/essential-technique/backtrack-framework-2/",
+  "file": "essentialtechnique__backtrackframework2.md",
+  "full_text": "essential-technique__backtrack-framework-2.md",
+  "chars": 3960,
+  "lc": [
+   46
+  ],
+  "headings": 2
+ },
+ {
+  "folder": "DFS/回溯算法",
+  "label": "回溯算法实践：数独和 N 皇后问题",
+  "url": "https://labuladong.online/zh/algo/practice-in-action/sudoku-nqueue/",
+  "file": "practiceinaction__sudokunqueue.md",
+  "full_text": "practice-in-action__sudoku-nqueue.md",
+  "chars": 1692,
+  "lc": [],
+  "headings": 4
+ },
+ {
+  "folder": "DFS/回溯算法",
+  "label": "回溯算法秒杀所有排列/组合/子集问题",
+  "url": "https://labuladong.online/zh/algo/essential-technique/permutation-combination-subset-all-in-one-2/",
+  "file": "essentialtechnique__permutationcombinationsubsetallinone2.md",
+  "full_text": "essential-technique__permutation-combination-subset-all-in-one-2.md",
+  "chars": 1748,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "DFS/回溯算法",
+  "label": "解答回溯算法/DFS算法的若干疑问",
+  "url": "https://labuladong.online/zh/algo/essential-technique/backtrack-vs-dfs/",
+  "file": "essentialtechnique__backtrackvsdfs.md",
+  "full_text": "essential-technique__backtrack-vs-dfs.md",
+  "chars": 937,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "DFS/回溯算法",
+  "label": "一文秒杀所有岛屿题目",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/island-dfs-summary/",
+  "file": "frequencyinterview__islanddfssummary.md",
+  "full_text": "frequency-interview__island-dfs-summary.md",
+  "chars": 2144,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "DFS/回溯算法",
+  "label": "球盒模型：回溯算法穷举的两种视角",
+  "url": "https://labuladong.online/zh/algo/practice-in-action/two-views-of-backtrack/",
+  "file": "practiceinaction__twoviewsofbacktrack.md",
+  "full_text": "practice-in-action__two-views-of-backtrack.md",
+  "chars": 1755,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "DFS/回溯算法",
+  "label": "回溯算法经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/backtrack-i/",
+  "file": "problemset__backtracki.md",
+  "full_text": "problem-set__backtrack-i.md",
+  "chars": 590,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "BFS 算法",
+  "label": "BFS 算法解题套路框架",
+  "url": "https://labuladong.online/zh/algo/essential-technique/bfs-framework-2/",
+  "file": "essentialtechnique__bfsframework2.md",
+  "full_text": "essential-technique__bfs-framework-2.md",
+  "chars": 11337,
+  "lc": [
+   752,
+   773
+  ],
+  "headings": 4
+ },
+ {
+  "folder": "BFS 算法",
+  "label": "BFS 经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/bfs/",
+  "file": "problemset__bfs.md",
+  "full_text": "problem-set__bfs.md",
+  "chars": 590,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "动态规划基本技巧",
+  "label": "动态规划解题套路框架",
+  "url": "https://labuladong.online/zh/algo/essential-technique/dynamic-programming-framework-2/",
+  "file": "essentialtechnique__dynamicprogrammingframework2.md",
+  "full_text": "essential-technique__dynamic-programming-framework-2.md",
+  "chars": 11947,
+  "lc": [
+   322,
+   509
+  ],
+  "headings": 11
+ },
+ {
+  "folder": "动态规划基本技巧",
+  "label": "动态规划设计：最长递增子序列",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/longest-increasing-subsequence/",
+  "file": "dynamicprogramming__longestincreasingsubsequence.md",
+  "full_text": "dynamic-programming__longest-increasing-subsequence.md",
+  "chars": 6653,
+  "lc": [
+   300,
+   354
+  ],
+  "headings": 3
+ },
+ {
+  "folder": "动态规划基本技巧",
+  "label": "base case 和备忘录的初始值怎么定？",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/memo-fundamental/",
+  "file": "dynamicprogramming__memofundamental.md",
+  "full_text": "dynamic-programming__memo-fundamental.md",
+  "chars": 1237,
+  "lc": [
+   931
+  ],
+  "headings": 0
+ },
+ {
+  "folder": "动态规划基本技巧",
+  "label": "动态规划穷举的两种视角",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/two-views-of-dp/",
+  "file": "dynamicprogramming__twoviewsofdp.md",
+  "full_text": "dynamic-programming__two-views-of-dp.md",
+  "chars": 944,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "动态规划基本技巧",
+  "label": "动态规划和回溯算法的思维转换",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/word-break/",
+  "file": "dynamicprogramming__wordbreak.md",
+  "full_text": "dynamic-programming__word-break.md",
+  "chars": 927,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "动态规划基本技巧",
+  "label": "对动态规划进行空间压缩",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/space-optimization/",
+  "file": "dynamicprogramming__spaceoptimization.md",
+  "full_text": "dynamic-programming__space-optimization.md",
+  "chars": 569,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "动态规划基本技巧",
+  "label": "最优子结构原理和 dp 数组遍历方向",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/faq-summary/",
+  "file": "dynamicprogramming__faqsummary.md",
+  "full_text": "dynamic-programming__faq-summary.md",
+  "chars": 460,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "子序列类型问题",
+  "label": "经典动态规划：编辑距离",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/edit-distance/",
+  "file": "dynamicprogramming__editdistance.md",
+  "full_text": "dynamic-programming__edit-distance.md",
+  "chars": 8127,
+  "lc": [
+   72
+  ],
+  "headings": 6
+ },
+ {
+  "folder": "子序列类型问题",
+  "label": "动态规划设计：最大子数组",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/maximum-subarray/",
+  "file": "dynamicprogramming__maximumsubarray.md",
+  "full_text": "dynamic-programming__maximum-subarray.md",
+  "chars": 947,
+  "lc": [
+   53
+  ],
+  "headings": 0
+ },
+ {
+  "folder": "子序列类型问题",
+  "label": "经典动态规划：最长公共子序列",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/longest-common-subsequence/",
+  "file": "dynamicprogramming__longestcommonsubsequence.md",
+  "full_text": "dynamic-programming__longest-common-subsequence.md",
+  "chars": 1205,
+  "lc": [
+   1143
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "子序列类型问题",
+  "label": "动态规划之子序列问题解题模板",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/subsequence-problem/",
+  "file": "dynamicprogramming__subsequenceproblem.md",
+  "full_text": "dynamic-programming__subsequence-problem.md",
+  "chars": 868,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "背包类型问题",
+  "label": "经典动态规划：0-1 背包问题",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/knapsack1/",
+  "file": "dynamicprogramming__knapsack1.md",
+  "full_text": "dynamic-programming__knapsack1.md",
+  "chars": 2931,
+  "lc": [],
+  "headings": 2
+ },
+ {
+  "folder": "背包类型问题",
+  "label": "经典动态规划：子集背包问题",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/knapsack2/",
+  "file": "dynamicprogramming__knapsack2.md",
+  "full_text": "dynamic-programming__knapsack2.md",
+  "chars": 675,
+  "lc": [
+   416
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "背包类型问题",
+  "label": "经典动态规划：完全背包问题",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/knapsack3/",
+  "file": "dynamicprogramming__knapsack3.md",
+  "full_text": "dynamic-programming__knapsack3.md",
+  "chars": 1266,
+  "lc": [
+   322,
+   518
+  ],
+  "headings": 0
+ },
+ {
+  "folder": "背包类型问题",
+  "label": "背包问题的变体：目标和",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/target-sum/",
+  "file": "dynamicprogramming__targetsum.md",
+  "full_text": "dynamic-programming__target-sum.md",
+  "chars": 1552,
+  "lc": [
+   494
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "经典动态规划问题",
+  "label": "多源最短路径：Floyd 算法",
+  "url": "https://labuladong.online/zh/algo/data-structure/floyd/",
+  "file": "datastructure__floyd.md",
+  "full_text": "data-structure__floyd.md",
+  "chars": 1302,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "经典动态规划问题",
+  "label": "经典动态规划：正则表达式",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/regular-expression-matching/",
+  "file": "dynamicprogramming__regularexpressionmatching.md",
+  "full_text": "dynamic-programming__regular-expression-matching.md",
+  "chars": 2005,
+  "lc": [
+   10
+  ],
+  "headings": 2
+ },
+ {
+  "folder": "经典动态规划问题",
+  "label": "经典动态规划：高楼扔鸡蛋",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/egg-drop/",
+  "file": "dynamicprogramming__eggdrop.md",
+  "full_text": "dynamic-programming__egg-drop.md",
+  "chars": 1902,
+  "lc": [
+   887
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "经典动态规划问题",
+  "label": "经典动态规划：博弈问题",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/game-theory/",
+  "file": "dynamicprogramming__gametheory.md",
+  "full_text": "dynamic-programming__game-theory.md",
+  "chars": 5402,
+  "lc": [
+   486,
+   877
+  ],
+  "headings": 4
+ },
+ {
+  "folder": "经典动态规划问题",
+  "label": "一个方法团灭 LeetCode 打家劫舍问题",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/house-robber/",
+  "file": "dynamicprogramming__houserobber.md",
+  "full_text": "dynamic-programming__house-robber.md",
+  "chars": 1009,
+  "lc": [
+   198
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "经典动态规划问题",
+  "label": "一个方法团灭 LeetCode 股票买卖问题",
+  "url": "https://labuladong.online/zh/algo/dynamic-programming/stock-problem-summary/",
+  "file": "dynamicprogramming__stockproblemsummary.md",
+  "full_text": "dynamic-programming__stock-problem-summary.md",
+  "chars": 17029,
+  "lc": [
+   121,
+   122,
+   123,
+   188,
+   309,
+   714
+  ],
+  "headings": 10
+ },
+ {
+  "folder": "动态规划习题集",
+  "label": "背包问题经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/knapsack/",
+  "file": "problemset__knapsack.md",
+  "full_text": "problem-set__knapsack.md",
+  "chars": 504,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "动态规划习题集",
+  "label": "动态规划经典习题",
+  "url": "https://labuladong.online/zh/algo/problem-set/dynamic-programming-i/",
+  "file": "problemset__dynamicprogrammingi.md",
+  "full_text": "problem-set__dynamic-programming-i.md",
+  "chars": 503,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "贪心类型问题",
+  "label": "贪心算法解题套路框架",
+  "url": "https://labuladong.online/zh/algo/essential-technique/greedy-2/",
+  "file": "essentialtechnique__greedy2.md",
+  "full_text": "essential-technique__greedy-2.md",
+  "chars": 1898,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "贪心类型问题",
+  "label": "贪心算法之区间调度问题",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/interval-scheduling/",
+  "file": "frequencyinterview__intervalscheduling.md",
+  "full_text": "frequency-interview__interval-scheduling.md",
+  "chars": 1184,
+  "lc": [],
+  "headings": 1
+ },
+ {
+  "folder": "贪心类型问题",
+  "label": "一个方法解决三道区间问题",
+  "url": "https://labuladong.online/zh/algo/practice-in-action/interval-problem-summary/",
+  "file": "practiceinaction__intervalproblemsummary.md",
+  "full_text": "practice-in-action__interval-problem-summary.md",
+  "chars": 593,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "贪心类型问题",
+  "label": "扫描线技巧：安排会议室",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/scan-line-technique/",
+  "file": "frequencyinterview__scanlinetechnique.md",
+  "full_text": "frequency-interview__scan-line-technique.md",
+  "chars": 2162,
+  "lc": [
+   253,
+   1235
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "第四章、数学运算技巧",
+  "label": "一行代码就能解决的算法题",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/one-line-solutions/",
+  "file": "frequencyinterview__onelinesolutions.md",
+  "full_text": "frequency-interview__one-line-solutions.md",
+  "chars": 3505,
+  "lc": [
+   292,
+   319,
+   877
+  ],
+  "headings": 3
+ },
+ {
+  "folder": "第四章、数学运算技巧",
+  "label": "常用的位操作",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/bitwise-operation/",
+  "file": "frequencyinterview__bitwiseoperation.md",
+  "full_text": "frequency-interview__bitwise-operation.md",
+  "chars": 8722,
+  "lc": [
+   136,
+   191,
+   231,
+   268
+  ],
+  "headings": 14
+ },
+ {
+  "folder": "第四章、数学运算技巧",
+  "label": "必知必会数学技巧",
+  "url": "https://labuladong.online/zh/algo/essential-technique/math-techniques-summary/",
+  "file": "essentialtechnique__mathtechniquessummary.md",
+  "full_text": "essential-technique__math-techniques-summary.md",
+  "chars": 3190,
+  "lc": [],
+  "headings": 4
+ },
+ {
+  "folder": "第四章、数学运算技巧",
+  "label": "谈谈游戏中的随机算法",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/random-algorithm/",
+  "file": "frequencyinterview__randomalgorithm.md",
+  "full_text": "frequency-interview__random-algorithm.md",
+  "chars": 1424,
+  "lc": [],
+  "headings": 0
+ },
+ {
+  "folder": "第四章、数学运算技巧",
+  "label": "如何高效寻找素数",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/print-prime-number/",
+  "file": "frequencyinterview__printprimenumber.md",
+  "full_text": "frequency-interview__print-prime-number.md",
+  "chars": 2681,
+  "lc": [
+   204
+  ],
+  "headings": 1
+ },
+ {
+  "folder": "第四章、数学运算技巧",
+  "label": "一文秒杀所有丑数系列问题",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/ugly-number-summary/",
+  "file": "frequencyinterview__uglynumbersummary.md",
+  "full_text": "frequency-interview__ugly-number-summary.md",
+  "chars": 1269,
+  "lc": [
+   263,
+   264
+  ],
+  "headings": 2
+ },
+ {
+  "folder": "第四章、数学运算技巧",
+  "label": "几个反直觉的概率问题",
+  "url": "https://labuladong.online/zh/algo/frequency-interview/probability-problem/",
+  "file": "frequencyinterview__probabilityproblem.md",
+  "full_text": "frequency-interview__probability-problem.md",
+  "chars": 3575,
+  "lc": [],
+  "headings": 3
+ }
+]

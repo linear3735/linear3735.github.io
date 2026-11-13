@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="830" viewBox="0 0 1240 830" role="img">
+  <rect width="1240" height="830" fill="#ffffff"/>
+  <text x="620" y="38" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">编辑距离 dp[i][j] 的三个来源</text>
+  <text x="620" y="62" font-size="12" fill="#737c88" text-anchor="middle" font-weight="400">以 word1 = "cat"、word2 = "cut" 为例，看 dp[3][3] 是从哪几格走过来的</text>
+  <text x="298.0" y="130" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">c</text>
+  <text x="394.0" y="130" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">u</text>
+  <text x="490.0" y="130" font-size="15" fill="#252b33" text-anchor="middle" font-weight="600">t</text>
+  <text x="154" y="267.0" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">word1</text>
+  <text x="154" y="331.0" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">word2</text>
+  <text x="394.0" y="80" font-size="12.5" fill="#737c88" text-anchor="middle" font-weight="400">s1 = "cat"   s2 = "cut"</text>
+  <rect x="154" y="166" width="96" height="64" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="202.0" y="204.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <rect x="250" y="166" width="96" height="64" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="298.0" y="204.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="346" y="166" width="96" height="64" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="394.0" y="204.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="442" y="166" width="96" height="64" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="490.0" y="204.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="154" y="230" width="96" height="64" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="202.0" y="268.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="250" y="230" width="96" height="64" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="298.0" y="268.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">0</text>
+  <rect x="346" y="230" width="96" height="64" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="394.0" y="268.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="442" y="230" width="96" height="64" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="490.0" y="268.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="154" y="294" width="96" height="64" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="202.0" y="332.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="250" y="294" width="96" height="64" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="298.0" y="332.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="346" y="294" width="96" height="64" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="394.0" y="332.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">1</text>
+  <rect x="442" y="294" width="96" height="64" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="490.0" y="332.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="154" y="358" width="96" height="64" rx="4" fill="#eef1f5" stroke="#252b33" stroke-width="1.4"/>
+  <text x="202.0" y="396.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">3</text>
+  <rect x="250" y="358" width="96" height="64" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="298.0" y="396.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="346" y="358" width="96" height="64" rx="4" fill="#ffffff" stroke="#252b33" stroke-width="1.4"/>
+  <text x="394.0" y="396.0" font-size="16" fill="#252b33" text-anchor="middle" font-weight="400">2</text>
+  <rect x="442" y="358" width="96" height="64" rx="4" fill="#fdf0e3" stroke="#252b33" stroke-width="1.4"/>
+  <text x="490.0" y="396.0" font-size="16" fill="#b5762a" text-anchor="middle" font-weight="600">1</text>
+  <line x1="500.0" y1="336.0" x2="483.31" y2="372.72" stroke="#3568a3" stroke-width="2.0" stroke-linecap="round"/>
+  <polygon points="480.00,380.00 479.12,370.81 487.50,374.62" fill="#3568a3"/>
+  <line x1="404.0" y1="400.0" x2="472.26" y2="382.04" stroke="#2f7d6d" stroke-width="2.0" stroke-linecap="round"/>
+  <polygon points="480.00,380.00 473.43,386.48 471.09,377.59" fill="#2f7d6d"/>
+  <line x1="404.0" y1="336.0" x2="473.08" y2="375.99" stroke="#b5762a" stroke-width="2.0" stroke-linecap="round"/>
+  <polygon points="480.00,380.00 470.77,379.97 475.38,372.01" fill="#b5762a"/>
+  <rect x="70" y="466" width="16" height="16" rx="3" fill="#3568a3" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="96" y="479" font-size="13" fill="#3568a3" text-anchor="start" font-weight="600">删除:删掉 s1[i]</text>
+  <text x="96" y="500" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">看上面 dp[i-1][j] + 1</text>
+  <rect x="450" y="466" width="16" height="16" rx="3" fill="#2f7d6d" stroke="#2f7d6d" stroke-width="1.4"/>
+  <text x="476" y="479" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="600">插入:插入 s2[j]</text>
+  <text x="476" y="500" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">看左边 dp[i][j-1] + 1</text>
+  <rect x="830" y="466" width="16" height="16" rx="3" fill="#b5762a" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="856" y="479" font-size="13" fill="#b5762a" text-anchor="start" font-weight="600">替换:s1[i]→s2[j]</text>
+  <text x="856" y="500" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">看左上 dp[i-1][j-1] + 1</text>
+  <rect x="70" y="540" width="1100" height="54" rx="8" fill="#e8eff7" stroke="#3568a3" stroke-width="1.4"/>
+  <text x="620" y="562" font-size="13" fill="#3568a3" text-anchor="middle" font-weight="400">s1[3]=='t' 与 s2[3]=='t' 相等 → 直接继承左上 dp[2][2]=1，不加代价</text>
+  <text x="620" y="583" font-size="12" fill="#3568a3" text-anchor="middle" font-weight="400">写反左右两次的代价还可以互换，只有长度差很大时才露馅</text>
+</svg>
