@@ -40,6 +40,65 @@ def kramdown_id(text: str) -> str:
     return re.sub(r"\s+", "-", s).strip("-")
 
 
+# 标题锚点的危险字符:凡是 NFKC 之后会「长出 ASCII 字母或数字」的字符,
+# 本地和线上就会给出不同的 id,而本地门没法自己发现这件事。
+#
+# 真实踩过的坑(2026-11-13 线上实测):
+#   `## 5 完全二叉树的节点个数:O(log²n) 是怎么推出来的`
+#     本地 kramdown_id -> `...olog2n...`   (² NFKC 成 2,isalnum 为真,留下)
+#     GitHub Pages     -> `...ologn...`    (² 被丢掉)
+#   目录写的是本地的那个 id,于是线上那一条锚点是死的,24 篇里唯一一条。
+#
+# 判定:字符不是 ASCII、又不是 CJK 汉字/假名/谚文,就报出来,
+# 让人把它换成纯 ASCII 写法(如 O(log n * log n))或显式给 id。
+_HAZARD_OK = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af]")
+
+
+def anchor_hazards(text: str) -> list:
+    """返回标题里会导致 id 随渲染器版本变化的字符。"""
+    out = []
+    for ch in text:
+        if ord(ch) < 128:
+            continue
+        if _HAZARD_OK.match(ch):
+            continue
+        if ch in "，。、；：？！（）「」『』《》—…·【】":
+            continue          # 中文标点:本地线上都是直接丢,一致
+        out.append(ch)
+    return out
+
+
+def github_id(text: str) -> str:
+    """GitHub Pages 的标题 id(线上实测反推,不是猜的)。
+
+    规则:去掉标点;大写转小写;空白折成一个 `-`;紧跟在空白后的 `-` 丢掉;
+    CJK 原样保留。
+
+    实测样本:
+      `1 哈希表:O(1) 是怎么挣来的` -> `1-哈希表o1-是怎么挣来的`
+      `0 先说明材料和我的写法`     -> `0-先说明材料和我的写法`
+      `O(log²n) 是怎么推出来的`    -> `ologn-是怎么推出来的`   (² 被丢)
+    """
+    import unicodedata
+    # 不做 NFKC!NFKC 会把 `²` 变成 ASCII `2`,而 GitHub 是把它**丢掉**的。
+    # 这正是本地/线上分叉的根源,所以这里必须按原字符判定。
+    s = text
+    keep = []
+    for ch in s:
+        if _HAZARD_OK.match(ch):                     # CJK 原样留
+            keep.append(ch)
+        elif ch.isspace():
+            keep.append(" ")
+        elif ch.isascii() and (ch.isalnum() or ch in "-_"):
+            keep.append(ch)
+        # 其余(含全部 ASCII 标点、括号、冒号)直接丢
+    s = "".join(keep).lower()
+    # 空白折成连字符;`O(1) 是` 里 `)` 被丢后留下 `o1 是`,只出一个 `-`
+    s = re.sub(r"\s+", "-", s)
+    # `:O(log` -> 冒号被丢,不留连字符;这里不会产生多余 `-`
+    return s.strip("-")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("post")
@@ -123,21 +182,35 @@ def main() -> int:
         problems.append(f"only {len(h2)} level-2 headings")
     toc = re.findall(r"\[([^\]]+)\]\(#([^)]+)\)", text)
     toc_ids = {i for _, i in toc}
+
+    # 标题锚点里出现「本地线上会分叉」的字符就直接报出来。这类字符没法在
+    # 本地验证 —— 只能要求作者换成纯 ASCII 写法。见 github_id 的注释。
+    for lvl, t in headings:
+        hz = anchor_hazards(t)
+        if hz:
+            problems.append(
+                f"标题含锚点危险字符 {hz} (U+{', U+'.join(f'{ord(c):04X}' for c in hz)}): "
+                f"{t!r} —— 本地与线上生成的 id 会不一致,请换成纯 ASCII 写法")
+
     if not toc:
         notes.append("no 目录 block; the theme builds a TOC from headings anyway")
     else:
+        # 用线上真正生效的 id 规则做**精确**比对。
+        # 旧版这里是 `want in i` 的子串包含,所以 `...olog2n...` 会被
+        # `...ologn...` 判成"包含即通过",真实死锚点就这样溜过去了。
+        real_ids = {github_id(t) for lvl, t in headings if lvl == 2}
         for lvl, t in headings:
             if lvl != 2:
                 continue
-            want = kramdown_id(t)
-            # the TOC may point at the heading directly or at a slug variant
-            if want not in toc_ids and not any(want in i for i in toc_ids):
+            want = github_id(t)
+            if want not in toc_ids:
                 problems.append(f"heading not linked from 目录: {t!r} (id {want!r})")
         for _, i in toc:
-            # an id must correspond to some heading, else it is a dead anchor
-            if not any(kramdown_id(t).startswith(i[:12]) or i in kramdown_id(t)
-                       for _, t in headings):
-                problems.append(f"目录 anchor matches no heading: #{i}")
+            # 锚点必须精确等于某个 h2 的真实 id,否则线上就是死链接
+            if i not in real_ids:
+                near = [r for r in real_ids if r[:8] == i[:8] or r[:6] == i[:6]]
+                hint = f", 最接近的是 #{near[0]}" if near else ""
+                problems.append(f"目录 anchor matches no heading: #{i}{hint}")
         if len(toc) != len(h2):
             notes.append(f"目录 has {len(toc)} links for {len(h2)} level-2 headings")
 
