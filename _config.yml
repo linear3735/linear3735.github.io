@@ -6,6 +6,11 @@ lang: zh-CN
 timezone: Asia/Hong_Kong
 markdown: kramdown
 permalink: /:title/
+# 这一辑的发布日期是按阅读顺序排的(11-08 到 12-02),排在「今天」之后的篇目
+# Jekyll 默认不构建(future 默认 false),结果就是 11-14 及以后的 20 篇全部
+# 404、而合集页里那 20 条「已发布」链接指向不存在的页面。打开 future 让它们
+# 现在就可见;日期仍保留原来的阅读顺序。
+future: true
 author: linear3735
 plugins:
   - jekyll-feed
