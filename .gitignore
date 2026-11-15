@@ -16,3 +16,9 @@ __pycache__/
 *.py[cod]
 assets/blog/*/build/
 assets/blog/*/_generated_*
+
+# ---- 图的生成中间产物 ----
+# make_figs.py 先把 SVG 写在 assets/blog/<slug>-<YYYYMMDD>/figs/,核对通过后
+# 再复制到 assets/img/<slug>-<YYYYMMDD>/ 发布。figs/ 里那份是中间产物,和发布
+# 的那份逐字节相同,重跑图脚本就会重新生成。
+assets/blog/*/figs/

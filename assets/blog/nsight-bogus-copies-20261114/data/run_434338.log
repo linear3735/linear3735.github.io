@@ -1,0 +1,67 @@
+##### 1. bench_bogus:五种模式的墙钟 #####
+=== build bench_bogus.cu ===
+  ok
+mode=good iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=14.709  per_iter_us=73.544  checksum=-174.535
+mode=sync iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=19.697  per_iter_us=98.485  checksum=-174.535
+mode=alloc iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=148.467  per_iter_us=742.333  checksum=-174.535
+mode=errsync iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=15.786  per_iter_us=78.931  checksum=-174.535
+mode=all iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=109.630  per_iter_us=548.148  checksum=-174.535
+
+##### 2. nsys:导出逐 kernel 时间线 #####
+  good: elapsed=elapsed_ms=1.313
+  sync: elapsed=elapsed_ms=2.740
+  errsync: elapsed=elapsed_ms=1.616
+
+##### 3. kernels.cu:shared atomics / 打包传输 #####
+=== build kernels.cu ===
+  ok
+device: NVIDIA H800 sm_90 SMs=132
+
+[X] merge  ngroups=256 n=4194304
+    correctness    : global=OK shared=OK (和 CPU 计数一致)
+    global atomics :   1.3386 ms
+    shared atomics :   0.1817 ms
+    speedup        :     7.37x
+
+[Y] neighbor exchange face_len=16384 nfaces=6 (384 KB)
+    correctness    : packed result == src : OK
+    6 separate copies :   0.0189 ms
+    packed, 1 copy     :   0.0099 ms
+    speedup            :     1.92x
+
+##### 4. cpu_side.cu:spinlock / 零拷贝 #####
+=== build cpu_side.cu ===
+  ok
+host threads=8 tasks=200 batch=1
+device: NVIDIA H800 sm_90 SMs=132
+
+[Z1] host 线程同步:tasks=200 threads=8 batch=1  (同步点=200)
+    cond_broadcast :     0.139 ms  (中位数/7 轮)
+    spinlock       :     0.146 ms
+    ratio          :     0.953x
+    performance gain:    -4.7 %
+
+[Z1b] 换任务粒度(同步点数量变化)
+    batch=  1 (同步点  4000)  cond    1.069 ms  spin    1.227 ms   gain  -12.9 %
+    batch=  4 (同步点  1000)  cond    0.187 ms  spin    0.139 ms   gain   34.8 %
+    batch= 16 (同步点   250)  cond    0.140 ms  spin    0.136 ms   gain    3.4 %
+    batch= 64 (同步点    62)  cond    0.139 ms  spin    0.136 ms   gain    2.1 %
+
+[Z2] host<->device 往返:16384 字节
+    correctness      : 三条路径结果一致 : OK
+    A 同步 memcpy x2 :    0.0209 ms/iter
+    C pinned+async   :    0.0171 ms/iter
+    B 零拷贝         :    0.0043 ms/iter
+    A -> C 异步化    :    22.4 %
+    C -> B 零拷贝    :   295.0 %
+    A -> B 合计      :   383.7 %
+
+done
+  cpu_side exit=0 (124 = 超时被杀)
+
+##### done #####

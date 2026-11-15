@@ -1,0 +1,158 @@
+Generating SQLite file prof_errsync.sqlite from prof_errsync.nsys-rep
+Processing [prof_errsync.sqlite] with [/cm/shared/apps/cuda-12.6/nsight-systems-2024.4.2/host-linux-x64/reports/cuda_gpu_trace.py]... 
+Start (ns),Duration (ns),CorrId,GrdX,GrdY,GrdZ,BlkX,BlkY,BlkZ,Reg/Trd,StcSMem (MB),DymSMem (MB),Bytes (MB),Throughput (MB/s),SrcMemKd,DstMemKd,Device,Ctx,GreenCtx,Strm,Name
+469371595,1344,123,,,,,,,,,,1.049,780189.827,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469378571,1184,124,,,,,,,,,,1.049,885620.998,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469382347,768,125,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469405515,768,129,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469511594,4064,130,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469533738,15488,133,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469550922,768,134,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469553194,4000,135,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469564362,15072,138,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469581258,736,139,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469583466,3968,140,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469594890,15104,143,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469611786,736,144,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469614026,3936,145,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469624714,15071,148,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469641449,769,149,,,,,,,,,,0.000,5.202,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469643722,3967,150,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469655082,15071,153,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469671849,768,154,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469674122,3935,155,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469685513,15040,158,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469702345,768,159,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469704553,4000,160,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469715529,15072,163,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469732329,736,164,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469734569,3968,165,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469745321,15072,168,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469762057,736,169,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469764297,3936,170,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469774825,15072,173,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469791625,768,174,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469793864,3969,175,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469804905,15039,178,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469821705,736,179,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469823912,3969,180,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469835208,15072,183,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469851912,768,184,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469854152,3968,185,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469864808,15072,188,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469881512,768,189,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469883752,3968,190,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469894216,15072,193,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469910952,768,194,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469913192,4000,195,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469923944,15072,198,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469940808,768,199,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469943015,3969,200,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469954215,15137,203,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+469971144,735,204,,,,,,,,,,0.000,5.442,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+469973383,3968,205,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+469984615,15072,208,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470001319,768,209,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470003591,3968,210,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470014119,15072,213,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470030791,768,214,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470033031,3968,215,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470045287,15040,218,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470061959,768,219,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470064199,3936,220,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470075175,15039,223,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470091943,768,224,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470094183,3936,225,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470104967,15039,228,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470121798,768,229,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470124039,3967,230,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470135206,15040,233,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470152038,736,234,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470154278,3968,235,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470165350,15072,238,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470182054,768,239,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470184294,3936,240,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470195014,15072,243,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470211750,768,244,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470213990,3968,245,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470224742,15072,248,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470241478,736,249,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470243718,3968,250,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470254342,15071,253,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470271142,736,254,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470273382,3936,255,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470284390,15103,258,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470301221,768,259,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470303462,3935,260,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470314821,15072,263,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470331557,768,264,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470333829,3936,265,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470344517,15072,268,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470361381,736,269,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470363621,3936,270,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470374405,15040,273,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470391077,768,274,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470393317,3968,275,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470404389,15072,278,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470421221,768,279,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470423428,3969,280,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470434404,15072,283,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470451237,767,284,,,,,,,,,,0.000,5.215,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470453476,3969,285,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470464484,15136,288,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470481220,768,289,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470483492,3936,290,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470494052,15136,293,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470510948,736,294,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470513188,3968,295,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470523812,15104,298,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470540580,768,299,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470542820,3968,300,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470553636,15104,303,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470570532,768,304,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470572772,3967,305,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470583715,15073,308,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470600387,768,309,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470602659,3968,310,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470613859,15040,313,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470630467,768,314,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470632707,3968,315,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470643587,15072,318,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470660355,768,319,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470662595,3936,320,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470673443,15072,323,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470690147,768,324,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470692387,3936,325,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470702915,15104,328,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470719811,768,329,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470722083,3936,330,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470732643,15072,333,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470749346,736,334,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470751587,3935,335,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470762594,15137,338,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470779362,768,339,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470781602,3968,340,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470792866,15072,343,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470809666,768,344,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470811906,3968,345,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470822434,15104,348,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470839170,768,349,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470841410,3936,350,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470851938,15136,353,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470868834,768,354,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470871074,3968,355,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470881762,15072,358,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470898498,768,359,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470900706,3968,360,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470911810,15071,363,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470928481,768,364,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470930722,3999,365,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470941953,15136,368,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470958721,736,369,,,,,,,,,,0.000,5.435,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470960961,4000,370,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+470971553,15104,373,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+470988417,768,374,,,,,,,,,,0.000,5.208,Device,,NVIDIA H800 (0),1,,7,[CUDA memset]
+470990657,4000,375,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"diffuse(const float *, float *, int, int)"
+471001345,15040,378,1024,1,1,256,1,1,16,0.000,0.000,,,,,NVIDIA H800 (0),1,,7,"reduce1(const float *, float *, int)"
+471043425,2528,382,,,,,,,,,,0.000,1.582,Device,Pageable,NVIDIA H800 (0),1,,7,[CUDA memcpy Device-to-Host]
+

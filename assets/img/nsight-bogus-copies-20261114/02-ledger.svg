@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="440" viewBox="0 0 940 440" role="img">
+  <rect width="940" height="440" fill="#ffffff"/>
+  <text x="470.0" y="34" font-size="19" fill="#252b33" text-anchor="middle" font-weight="600">多出来的时间,一分钱都没花在计算上</text>
+  <text x="114.0" y="125.0" font-size="15" fill="#252b33" text-anchor="end" font-weight="600">good</text>
+  <rect x="130.0" y="96.0" width="260.3023316110148" height="46.0" rx="3" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.4"/>
+  <rect x="130.0" y="96.0" width="205.88273422597524" height="46.0" rx="3" fill="#3568a3" stroke="none" stroke-width="1.4"/>
+  <line x1="335.88273422597524" y1="90.0" x2="335.88273422597524" y2="148.0" stroke="#252b33" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="232.94136711298762" y="124.0" font-size="12.5" fill="#ffffff" text-anchor="middle" font-weight="600">在算 0.953 ms</text>
+  <text x="130.0" y="162.0" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="600">在等 0.252 ms</text>
+  <text x="280.0" y="162.0" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">总跨度 1.205 ms</text>
+  <text x="430.0" y="162.0" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">(= 空隙 0.215 + 尾 0.037)</text>
+  <text x="114.0" y="237.0" font-size="15" fill="#252b33" text-anchor="end" font-weight="600">sync</text>
+  <rect x="130.0" y="208.0" width="560.0" height="46.0" rx="3" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.4"/>
+  <rect x="130.0" y="208.0" width="205.8905124358758" height="46.0" rx="3" fill="#3568a3" stroke="none" stroke-width="1.4"/>
+  <line x1="335.8905124358758" y1="202.0" x2="335.8905124358758" y2="260.0" stroke="#252b33" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="232.9452562179379" y="236.0" font-size="12.5" fill="#ffffff" text-anchor="middle" font-weight="600">在算 0.953 ms</text>
+  <text x="130.0" y="274.0" font-size="12.5" fill="#b5762a" text-anchor="start" font-weight="600">在等 1.639 ms</text>
+  <text x="280.0" y="274.0" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">总跨度 2.592 ms</text>
+  <text x="430.0" y="274.0" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">(= 空隙 1.627 + 尾 0.012)</text>
+  <line x1="40.0" y1="326.0" x2="690.0" y2="326.0" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="40.0" y="356.0" font-size="13.5" fill="#252b33" text-anchor="start" font-weight="600">sync 比 good:</text>
+  <text x="40.0" y="380.0" font-size="13.5" fill="#252b33" text-anchor="start" font-weight="400">总跨度  +1.387 ms</text>
+  <text x="40.0" y="404.0" font-size="13.5" fill="#b5762a" text-anchor="start" font-weight="600">在算    +0.000 ms    &lt;- 零</text>
+  <text x="40.0" y="428.0" font-size="13.5" fill="#252b33" text-anchor="start" font-weight="400">在等    +1.387 ms    (= 总跨度的增量)</text>
+</svg>

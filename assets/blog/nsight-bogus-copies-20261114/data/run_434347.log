@@ -1,0 +1,68 @@
+##### 复现性检查(第二次运行)#####
+node: dgx-009  date: 2026-11-14T20:26:03+08:00
+
+=== bench_bogus 五种模式 ===
+mode=good iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=14.705  per_iter_us=73.525  checksum=-174.535
+  ^ mode=good
+mode=sync iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=19.741  per_iter_us=98.707  checksum=-174.535
+  ^ mode=sync
+mode=alloc iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=112.212  per_iter_us=561.062  checksum=-174.535
+  ^ mode=alloc
+mode=errsync iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=15.795  per_iter_us=78.974  checksum=-174.535
+  ^ mode=errsync
+mode=all iters=200 n=1048576 grid=4096 block=256
+elapsed_ms=130.423  per_iter_us=652.115  checksum=-174.535
+  ^ mode=all
+
+=== nsys 时间线(重新采) ===
+  good: 156 行
+  sync: 306 行
+  errsync: 156 行
+
+=== kernels.cu ===
+device: NVIDIA H800 sm_90 SMs=132
+
+[X] merge  ngroups=256 n=4194304
+    correctness    : global=OK shared=OK (和 CPU 计数一致)
+    global atomics :   1.3368 ms
+    shared atomics :   0.1815 ms
+    speedup        :     7.36x
+
+[Y] neighbor exchange face_len=16384 nfaces=6 (384 KB)
+    correctness    : packed result == src : OK
+    6 separate copies :   0.0185 ms
+    packed, 1 copy     :   0.0098 ms
+    speedup            :     1.89x
+
+=== cpu_side.cu ===
+host threads=8 tasks=200 batch=1
+device: NVIDIA H800 sm_90 SMs=132
+
+[Z1] host 线程同步:tasks=200 threads=8 batch=1  (同步点=200)
+    cond_broadcast :     0.141 ms  (中位数/7 轮)
+    spinlock       :     0.139 ms
+    ratio          :     1.014x
+    performance gain:     1.4 %
+
+[Z1b] 换任务粒度(同步点数量变化)
+    batch=  1 (同步点  4000)  cond    0.829 ms  spin    1.217 ms   gain  -31.9 %
+    batch=  4 (同步点  1000)  cond    0.145 ms  spin    0.138 ms   gain    5.2 %
+    batch= 16 (同步点   250)  cond    0.141 ms  spin    0.138 ms   gain    2.3 %
+    batch= 64 (同步点    62)  cond    0.139 ms  spin    0.135 ms   gain    2.6 %
+
+[Z2] host<->device 往返:16384 字节
+    correctness      : 三条路径结果一致 : OK
+    A 同步 memcpy x2 :    0.0206 ms/iter
+    C pinned+async   :    0.0184 ms/iter
+    B 零拷贝         :    0.0044 ms/iter
+    A -> C 异步化    :    11.9 %
+    C -> B 零拷贝    :   323.4 %
+    A -> B 合计      :   373.7 %
+
+done
+
+##### done #####

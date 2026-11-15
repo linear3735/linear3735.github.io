@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="440" viewBox="0 0 940 440" role="img">
+  <rect width="940" height="440" fill="#ffffff"/>
+  <text x="470.0" y="34" font-size="19" fill="#252b33" text-anchor="middle" font-weight="600">三种多余操作,各自的代价(同一份 kernel,同一次迭代)</text>
+  <rect x="150.0" y="86.56" width="58.45278748812867" height="26.880000000000003" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="136.0" y="97.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="600">good</text>
+  <text x="136.0" y="112.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="400">基线</text>
+  <text x="220.45278748812868" y="105.0" font-size="13" fill="#737c88" text-anchor="start" font-weight="400">14.7 ms</text>
+  <rect x="150.0" y="134.56" width="78.27483548532669" height="26.880000000000003" rx="3" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="136.0" y="145.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="600">sync</text>
+  <text x="136.0" y="160.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="400">同步拷贝</text>
+  <text x="240.2748354853267" y="153.0" font-size="13" fill="#b5762a" text-anchor="start" font-weight="600">19.7 ms   1.34x</text>
+  <rect x="150.0" y="182.56" width="62.732728485117896" height="26.880000000000003" rx="3" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="136.0" y="193.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="600">errsync</text>
+  <text x="136.0" y="208.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="400">多余同步</text>
+  <text x="224.7327284851179" y="201.0" font-size="13" fill="#b5762a" text-anchor="start" font-weight="600">15.8 ms   1.07x</text>
+  <rect x="150.0" y="230.56" width="590.0" height="26.880000000000003" rx="3" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="136.0" y="241.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="600">alloc</text>
+  <text x="136.0" y="256.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="400">每轮分配</text>
+  <text x="752.0" y="249.0" font-size="13" fill="#b5762a" text-anchor="start" font-weight="600">148.5 ms   10.09x</text>
+  <rect x="150.0" y="278.56" width="435.6638175486808" height="26.880000000000003" rx="3" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="136.0" y="289.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="600">all</text>
+  <text x="136.0" y="304.5" font-size="13" fill="#252b33" text-anchor="end" font-weight="400">三者全开</text>
+  <text x="597.6638175486808" y="297.0" font-size="13" fill="#b5762a" text-anchor="start" font-weight="600">109.6 ms   7.45x</text>
+  <text x="150.0" y="350.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">iters=200 n=1048576  五种模式 checksum 全部等于 -174.535 —— 它们算的是同一件事,差别只在夹带的多余操作。</text>
+</svg>

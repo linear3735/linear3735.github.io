@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img">
+  <rect width="1000" height="440" fill="#ffffff"/>
+  <text x="500.0" y="34" font-size="19" fill="#252b33" text-anchor="middle" font-weight="600">两个只在 kernel 里做的优化</text>
+  <rect x="40" y="72.0" width="920" height="140.0" rx="8" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="60" y="100.0" font-size="14.5" fill="#252b33" text-anchor="start" font-weight="600">[X] 归并计数:全局原子 vs 共享内存原子</text>
+  <text x="60" y="120.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">n=4,194,304  ngroups=256</text>
+  <rect x="290.0" y="140.0" width="330.0" height="19" rx="3" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="278.0" y="154.0" font-size="12.5" fill="#252b33" text-anchor="end" font-weight="400">全局 atomicAdd</text>
+  <text x="632.0" y="154.0" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">1.3386 ms</text>
+  <rect x="290.0" y="168.0" width="44.79381443298969" height="19" rx="3" fill="#e4f1ee" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="278.0" y="182.0" font-size="12.5" fill="#252b33" text-anchor="end" font-weight="400">共享内存 atomicAdd</text>
+  <text x="346.7938144329897" y="182.0" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">0.1817 ms</text>
+  <text x="920" y="164.0" font-size="28" fill="#2f7d6d" text-anchor="end" font-weight="700">7.37x</text>
+  <rect x="40" y="256.0" width="920" height="140.0" rx="8" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="60" y="284.0" font-size="14.5" fill="#252b33" text-anchor="start" font-weight="600">[Y] 邻居交换:6 次小拷贝 vs 打包成 1 次</text>
+  <text x="60" y="304.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">face_len=16,384  nfaces=6</text>
+  <rect x="290.0" y="324.0" width="330.0" height="19" rx="3" fill="#fdf0e3" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="278.0" y="338.0" font-size="12.5" fill="#252b33" text-anchor="end" font-weight="400">6 次独立拷贝</text>
+  <text x="632.0" y="338.0" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">0.0189 ms</text>
+  <rect x="290.0" y="352.0" width="172.85714285714286" height="19" rx="3" fill="#e4f1ee" stroke="#e7eaf0" stroke-width="1.4"/>
+  <text x="278.0" y="366.0" font-size="12.5" fill="#252b33" text-anchor="end" font-weight="400">打包后 1 次拷贝</text>
+  <text x="474.8571428571429" y="366.0" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">0.0099 ms</text>
+  <text x="920" y="348.0" font-size="28" fill="#2f7d6d" text-anchor="end" font-weight="700">1.91x</text>
+  <text x="40" y="410.0" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">两组都在计时前先和 CPU 参考实现对过答案,数值不一致就不进统计。</text>
+</svg>

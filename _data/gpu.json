@@ -1,0 +1,84 @@
+[
+  {
+    "section": "甲、已经写过的",
+    "note": "带实测数字的才放进来；数字过时了我会改，不会留着",
+    "items": [
+      {
+        "title": "用 Nsight Systems 量化「GPU 在等」",
+        "desc": "同一份计算，忙的时间 0.963 ms 一模一样，总跨度差一倍多；附四个可运行的 CUDA 程序",
+        "status": "done",
+        "post_slug": "nsight-bogus-copies",
+        "key": "主结论：优化前后 GPU 跑 kernel 的时间可以完全相同，差的全是空隙"
+      },
+      {
+        "title": "GPU / 性能剖析系列的写作体例",
+        "desc": "数字纪律、复跑要求、三道门 —— 都是踩过坑之后写下的，不是先定规范再套",
+        "status": "ready",
+        "path": "assets/blog/_tools/CONVENTIONS-GPU.md",
+        "key": "新增一个系列之前先读它，尤其是第 5 节和第 7 节"
+      }
+    ]
+  },
+  {
+    "section": "乙、想验证但还没测的",
+    "note": "只在我草稿里、还没跑出数字的题目。一篇都没写，所以一个链接都不给",
+    "items": [
+      {
+        "title": "共享内存原子操作的回报是几倍",
+        "desc": "Pascal 那代报 3x，我在 Hopper 上测出 7.37x —— 差的是硬件代际还是问题规模？",
+        "status": "planned"
+      },
+      {
+        "title": "搬 4 KB 和搬 384 KB，做法要不要换",
+        "desc": "我测出打包传输 1.91x，但已经看到收益随传输变大衰减，想把这条曲线画出来",
+        "status": "planned"
+      },
+      {
+        "title": "跨 GPU 的边界交换：打包还是常驻",
+        "desc": "我这次只测了单卡内的 6 次小拷贝，多卡那条路一次都没碰过",
+        "status": "planned"
+      },
+      {
+        "title": "固定内存 + 异步到底省掉了什么",
+        "desc": "我测到 12%–22%，但没把「省掉的那段时间去哪了」拆开看",
+        "status": "planned"
+      },
+      {
+        "title": "原子操作在新架构上会更快吗",
+        "desc": "Hopper 之后原子操作的硬件实现有变化，我没有比它更新的卡可测",
+        "status": "planned"
+      },
+      {
+        "title": "同一份代码换一代卡，7.37x 会变成几倍",
+        "desc": "手上只有一种卡，这一条我一直没法动 —— 也是最想知道答案的一条",
+        "status": "planned"
+      },
+      {
+        "title": "同步原语在一个 socket 内和跨 socket",
+        "desc": "我测出「密集同步下条件变量赢」，但只在一个 8 线程进程里成立",
+        "status": "planned"
+      },
+      {
+        "title": "Nsight Compute 补上 Nsight Systems 看不到的",
+        "desc": "时间线只说「这里有空隙」，不说 kernel 内部为什么慢",
+        "status": "planned"
+      },
+      {
+        "title": "剖析工具链的迁移路线",
+        "desc": "从 nvprof / Visual Profiler 到今天的工具，名字和分工换过几轮；这篇讲清该用哪个",
+        "status": "planned"
+      }
+    ]
+  },
+  {
+    "section": "丙、正在写的",
+    "note": "已经开工、但还没跑完最后一遍的。写完了会挪到上面去",
+    "items": [
+      {
+        "title": "多卡上的剖析：从时间线到拓扑",
+        "desc": "单卡的空隙可以靠打包传输压掉，多卡的空隙更多来自拓扑和等待",
+        "status": "planned"
+      }
+    ]
+  }
+]
