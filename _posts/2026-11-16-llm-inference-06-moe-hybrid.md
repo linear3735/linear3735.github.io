@@ -30,6 +30,30 @@ tags: ["LLM 推理", "从一个 token 读懂 LLM 推理"]
 
 用公开的 Qwen3-Coder-Next 对照一下。它有 48 层，每组 3 层 Gated DeltaNet 和 1 层 Gated Attention，所以只有 12 层需要这里说的全注意力 KV。每层 2 个 KV heads，每头 256 个元素。假设整个模型的这部分 KV 都按 BF16 存，每逻辑 token 的 K/V 为 12 层 × 2（K 和 V）× 2 heads × 256 元素 × 2 字节 = 24 KiB。这个数字只覆盖全注意力的有效 KV 数据，另外要计算页预留和递归层状态。 [Qwen3-Coder-Next 官方模型卡](https://huggingface.co/Qwen/Qwen3-Coder-Next)
 
+## 读 MoE 代码时跟住三个下标
+
+还是看 A 的前三个 token。用 `token_id` 指这批输入里的行号，用 `expert_id` 指专家编号，再用 `lane` 指这个专家在该 token 的 Top-2 结果里排第几。一个 token 可以贡献两条路由。按 token 顺序摊开 Top-2 之后，第 2 号和第 3 号路由都属于第 1 行，lane 分别是 0、1。归并时要把这两条结果加回同一输入行。下面是原创伪代码，省略了设备和并行细节。
+
+```python
+scores = softmax(router(hidden), axis="expert")
+chosen = top_k_pairs(scores, k=2)        # 每行两个 (expert_id, weight)
+routes = group_by_expert(chosen)        # 每项保留 (token_id, weight)
+
+output = zeros_like(hidden)
+for expert_id, tasks in routes.items():
+    rows, weights = unzip(tasks)
+    partial = experts[expert_id](hidden[rows])
+    add_at(output, rows, partial * weights[:, None])
+
+combined = output + sigmoid(shared_gate(hidden)) * shared_mlp(hidden)
+```
+
+**Router 看输入。** `hidden` 有 T 行，每行 H 个隐藏值。路由 Linear 输出 `[T, E]`，E 是专家总数。沿 E 维做 softmax，再取分数最高的两个专家。如果配置要求 Top-k 归一化，就让选中权重的和回到 1。前文第一个 token 的 0.75 和 0.25，就是之后加权归并会用到的两个数。 [Transformers v4.57.1 的 Router 与 Top-k](https://github.com/huggingface/transformers/blob/v4.57.1/src/transformers/models/qwen3_next/modeling_qwen3_next.py#L794-L828)
+
+**Experts 看分桶。** 第 0 个专家收到第 0、1、2 行，先取出这三行，分别做 gate 与 up 投影、SiLU 门控、down 投影。专家并行只改变这一组行去哪张卡执行。回到原卡时，源 token 下标、每个目的 rank 的收发长度和路由权重要能对应上。位置 0 出现两次，归并必须相加，普通赋值会覆盖一次结果。共享专家另外对每行执行，再按自己的 gate 加入。 [Qwen3-Next 专家计算与归并](https://github.com/huggingface/transformers/blob/v4.57.1/src/transformers/models/qwen3_next/modeling_qwen3_next.py#L830-L854) · [公开的通信实现 DeepEP](https://github.com/deepseek-ai/DeepEP)
+
+**DecoderLayer 看两次选择。** 先按层类型走 Gated DeltaNet 或全注意力，然后在后半层选择 MoE 或稠密 MLP。这个顺序解释了为什么专家分桶与序列缓存是两组独立的工作。前者按专家组织矩阵乘，后者按请求保留历史。读缓存对象时，分别找全注意力使用的 K/V，以及 Gated DeltaNet 使用的卷积和递归状态。 [模型层分支](https://github.com/huggingface/transformers/blob/v4.57.1/src/transformers/models/qwen3_next/modeling_qwen3_next.py#L857-L941) · [缓存结构](https://github.com/huggingface/transformers/blob/v4.57.1/src/transformers/models/qwen3_next/modeling_qwen3_next.py#L86-L177)
+
 ---
 
 [系列导读](/llm-inference-00-overview/) · [上一篇 · TP、PP、DP](/llm-inference-05-parallel/) · [下一篇 · FP8、NVFP4 与后端](/llm-inference-07-quantization/)

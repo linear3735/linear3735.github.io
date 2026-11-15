@@ -33,6 +33,30 @@ FP8 也有多种 scale 粒度。一种实现是每个输出通道给权重一份
 
 验收时先核对实际文件和加载峰值，再用固定输入比较数值，最后做同请求的延迟和吞吐对照。单卡 dense Linear 的通过记录覆盖的是那条输入和后端路径。涉及 MoE 时还要追到每张卡的专家布局和 grouped GEMM，服务指标要重新在真实请求路径上测。
 
+## 沿着 Quantized Linear 读三段代码
+
+A 的 decode 输入在这个例子里是一行。假设隐藏维度 K 为 1,024，Linear 输出维度 N 也为 1,024，原始权重形状就是 `[N, K]`。读量化实现时，先记下每个张量对应的轴，再顺着导出、加载和前向走一遍。下面是用来读代码的原创伪代码。这里用动态输入缩放表示其中一种实现。
+
+```python
+# 导出端
+packed_weight, weight_scales = encode_weight(weight, recipe)
+save_checkpoint(packed_weight, weight_scales, recipe.metadata)
+
+# 加载后做一次
+kernel = pick_backend(device, recipe.metadata, local_shape)
+weight_state = kernel.prepare(packed_weight, weight_scales)
+
+# 每次 forward
+packed_input, input_scales = encode_activation(hidden, recipe)
+return kernel.matmul(packed_input, input_scales, weight_state, bias)
+```
+
+**导出端决定保存什么。** 配方规定目标 Linear、排除项、权重与激活格式，以及 scale 粒度。需要校准时，校准代码先收集代表性输入的统计量，导出代码再写入 packed 权重、scale 和配置。拿 NVFP4 一维块举例，1,024 个输入通道每 16 个为一组，每个输出通道有 64 份块 scale。权重区理想形状是 `[1024, 512]` 个字节元素，未重排的块 scale 有 `[1024, 64]` 个元素。再查张量级 scale、对齐和剩余高精度层，才能从文件核对容量。 [ModelOpt 配方文档](https://nvidia.github.io/Model-Optimizer/guides/10_recipes.html) · [cuDNN 逐块缩放](https://docs.nvidia.com/cudnn/operations/BlockScaling/)
+
+**加载端把格式交给具体后端。** 以公开 vLLM v0.11.0 的 ModelOpt NVFP4 为例，先读 `from_config` 看元数据如何转成配置，再看 `create_weights` 给权重与 scale 分配什么张量。`process_weights_after_loading` 会按后端准备布局。这个阶段发生在加载后，可以由后续多次 decode 共用。 [配置解析](https://github.com/vllm-project/vllm/blob/v0.11.0/vllm/model_executor/layers/quantization/modelopt.py#L687-L750) · [张量注册和后端布局](https://github.com/vllm-project/vllm/blob/v0.11.0/vllm/model_executor/layers/quantization/modelopt.py#L865-L977)
+
+**前向看实际分支。** 同一版的 `apply` 中，Marlin 路径直接把输入交给专用入口，其他列出的路径会先生成 FP4 激活及其块 scale，再调用选定的 GEMM。于是同一份 NVFP4 checkpoint 在阅读时至少要问两次。权重如何保存？激活如何进 kernel？FP8 也要看实际实现是按 token、按张量还是用其他粒度缩放。这里的 `[1, 1024]` 是教学输入，真实开销要同时计入输入量化、GEMM 和结果收尾，再用 profiler 核对实际走的分支。 [vLLM NVFP4 Linear 的 apply](https://github.com/vllm-project/vllm/blob/v0.11.0/vllm/model_executor/layers/quantization/modelopt.py#L979-L1034)
+
 ---
 
 [系列导读](/llm-inference-00-overview/) · [上一篇 · MoE、专家并行与混合注意力](/llm-inference-06-moe-hybrid/)

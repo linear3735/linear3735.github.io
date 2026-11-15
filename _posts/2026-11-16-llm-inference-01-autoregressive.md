@@ -39,6 +39,28 @@ tags: ["LLM 推理", "从一个 token 读懂 LLM 推理"]
 
 可从 Qwen3 的模型前向与词表投影对照这条链路。 [Transformers v4.57.1 源码](https://github.com/huggingface/transformers/blob/v4.57.1/src/transformers/models/qwen3/modeling_qwen3.py#L429-L495)
 
+## 跟着代码读一次无缓存生成
+
+把请求 A 带进下面这段原创伪代码。它只保留贪心采样，且假设三轮都没有遇到结束符。真实引擎通常还需要处理上下文上限、流式解码和采样配置。
+
+```python
+prefix = tokenize(prompt_a)
+for _ in range(3):
+    positions = range(len(prefix))
+    hidden = decoder_stack(prefix, positions)
+    scores = vocab_projection(hidden[-1])
+    next_id = argmax(scores)
+    prefix.append(next_id)
+```
+
+**入口与分词。** `tokenize` 把字符串映射成 token ID。第一轮得到 6 个 ID 和 0～5 的位置编号。入口还要准备模型配置。配置给出词表大小、隐藏维度、层数和头数，权重加载器据此把 checkpoint 中的 embedding、各层投影和归一化参数装进去。权重和结构只需要装配一次，每轮变化的是序列内容与位置。
+
+**Embedding 与 Decoder。** Embedding 把每个整数查成长度为 H 的向量，6 个 ID 变成形状为 [6, H] 的隐藏状态。每个 Decoder 层先结合残差和归一化，再计算 Attention 和 MLP。Attention 给各位置生成 Q、K、V，在 Q/K 上加入位置信息，再以因果遮罩限制可见的历史范围。MLP 针对每个位置更新特征，比如门控分支决定另一条投影的信号通过多少。走完最后一层后，序列仍有 6 行。 [Qwen3 Attention 和 Decoder 层源码](https://github.com/huggingface/transformers/blob/v4.57.1/src/transformers/models/qwen3/modeling_qwen3.py#L158-L281)
+
+**词表投影与采样。** `hidden[-1]` 取最后一个位置，`vocab_projection` 将这一行变成 V 个分数，其中 V 是词表大小。假设某个只展示 3 个候选的例子里，ID 17、23、42 的分数依次是 0.2、1.4、0.9，`argmax` 选中 ID 23。第二轮把 23 接到输入末尾，以位置 6 重新前向 7 行。选择下一 token 和把 ID 转回文字分别发生在采样和解码阶段。真实代码中的词表投影可以按调用方给定的切片选择保留哪些位置。 [Qwen3 词表投影源码](https://github.com/huggingface/transformers/blob/v4.57.1/src/transformers/models/qwen3/modeling_qwen3.py#L429-L495)
+
+读实现时可以给模型前向、词表投影和采样分别记一笔。A 第一轮的计数是 6 个前向位置、1 个投影位置、1 个输出 token。第二轮对应 7、1、1。第三轮对应 8、1、1。这样就能看见下一篇要改哪一步。
+
 ---
 
 [系列导读](/llm-inference-00-overview/) · [下一篇 · KV Cache 与分页](/llm-inference-02-kv-cache/)
