@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="350" viewBox="0 0 640 350" role="img" aria-labelledby="title desc">
+  <title id="title">专家分桶后要填多少行</title>
+  <desc id="desc">专家 0 有 3 条路由，占 4 行。专家 1、2、3 各有 1 条路由，各占 2 行。合计 6 条路由，10 个行槽。</desc>
+  <defs>
+    <marker id="tip" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+      <path fill="#1555a2" d="M0 0L8 4L0 8z"/>
+    </marker>
+  </defs>
+  <g font-family="system-ui, PingFang SC, Microsoft YaHei, sans-serif">
+    <rect x="0" y="0" width="640" height="350" rx="12" fill="#fff" stroke="#cbd5df"/>
+    <text x="24" y="37" fill="#192334" font-size="25" font-weight="700" text-anchor="start">专家分桶后要填多少行</text>
+    <text x="24" y="66" fill="#465970" font-size="17" font-weight="500" text-anchor="start">前三个 token，各选两个专家。假设计算块按 2 行对齐。</text>
+    <text x="24" y="126" fill="#192334" font-size="20" font-weight="500" text-anchor="start">专家 0</text>
+    <rect x="164" y="104" width="54" height="30" rx="8" fill="#4184ce" stroke="#cbd5df"/>
+    <rect x="229" y="104" width="54" height="30" rx="8" fill="#4184ce" stroke="#cbd5df"/>
+    <rect x="294" y="104" width="54" height="30" rx="8" fill="#4184ce" stroke="#cbd5df"/>
+    <rect x="359" y="104" width="54" height="30" rx="8" fill="#f3f5f8" stroke="#cbd5df"/>
+    <text x="620" y="127" fill="#192334" font-size="19" font-weight="500" text-anchor="end">3 有效 / 4 槽</text>
+    <text x="24" y="174" fill="#192334" font-size="20" font-weight="500" text-anchor="start">专家 1</text>
+    <rect x="164" y="152" width="54" height="30" rx="8" fill="#4184ce" stroke="#cbd5df"/>
+    <rect x="229" y="152" width="54" height="30" rx="8" fill="#f3f5f8" stroke="#cbd5df"/>
+    <text x="620" y="175" fill="#192334" font-size="19" font-weight="500" text-anchor="end">1 有效 / 2 槽</text>
+    <text x="24" y="222" fill="#192334" font-size="20" font-weight="500" text-anchor="start">专家 2</text>
+    <rect x="164" y="200" width="54" height="30" rx="8" fill="#4184ce" stroke="#cbd5df"/>
+    <rect x="229" y="200" width="54" height="30" rx="8" fill="#f3f5f8" stroke="#cbd5df"/>
+    <text x="620" y="223" fill="#192334" font-size="19" font-weight="500" text-anchor="end">1 有效 / 2 槽</text>
+    <text x="24" y="270" fill="#192334" font-size="20" font-weight="500" text-anchor="start">专家 3</text>
+    <rect x="164" y="248" width="54" height="30" rx="8" fill="#4184ce" stroke="#cbd5df"/>
+    <rect x="229" y="248" width="54" height="30" rx="8" fill="#f3f5f8" stroke="#cbd5df"/>
+    <text x="620" y="271" fill="#192334" font-size="19" font-weight="500" text-anchor="end">1 有效 / 2 槽</text>
+    <rect x="24" y="310" width="24" height="18" rx="3" fill="#4184ce" stroke="#cbd5df"/>
+    <text x="58" y="325" fill="#192334" font-size="17" font-weight="500" text-anchor="start">有效行</text>
+    <rect x="156" y="310" width="24" height="18" rx="3" fill="#f3f5f8" stroke="#cbd5df"/>
+    <text x="190" y="325" fill="#192334" font-size="17" font-weight="500" text-anchor="start">填充行</text>
+    <text x="620" y="325" fill="#1555a2" font-size="18" font-weight="650" text-anchor="end">合计 6 条路由，10 个行槽</text>
+  </g>
+</svg>
