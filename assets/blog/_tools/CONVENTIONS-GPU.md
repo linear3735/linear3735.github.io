@@ -301,7 +301,20 @@ python3 $REPO/assets/blog/_tools/verify_hub.py
 
 ### 合集页门踩过的坑
 
-`verify_hub.py` 有两个独立的半边,缺一不可:
+**别链到下划线开头的目录里 —— 「文件存在」不等于「线上能打开」。**
+Jekyll 从不发布 `_` / `.` 开头的目录(`_posts/`、`_data/`、`_layouts/`,
+以及 `_tools/`)。所以 `assets/blog/_tools/CONVENTIONS-GPU.md` 在线上是
+**404**,尽管文件老老实实躺在磁盘上。这一条是**上线后才发现**的:算法系列
+那份 `CONVENTIONS.md` 一直在同一个目录、一直是 404,只因为从没人链过它;
+合集页一链,洞就露出来了。
+
+`verify_hub.py` 的 `check_links()` 因此查两件事:路径里有没有下划线开头的
+目录(构建期失败,文件系统检查看不见),以及按 `permalink: /:title/` 把
+`post_slug` 解析回 `_posts/*-<slug>.md`(**bare slug 不是路径**,别当路径查)。
+配套的体例是:这类贡献者文档**不给公开链接,只在页面里印仓库内路径**,
+并写明为什么不给链接——入口在仓库里,不在网上。
+
+`verify_hub.py` 还有两个独立的半边,缺一不可:
 
 - **算术半边**:从 JSON 在 Python 里重算「已放出 / 待写 / 总数 / 百分比」,
   和渲染出来的 HTML 对。`divided_by` 是**整除**,`2/12` 是 `16%` 不是

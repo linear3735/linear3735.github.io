@@ -266,6 +266,9 @@ h1, h2, h3, h4, p { margin-top: 0; }
    以及 done/ready 条目下面那一行「结论一句话」。 */
 .rm-doc .rm-tag { background: #e8eff7; color: #3568a3; }
 .rm-doc .rm-a { font-weight: 550; }
+/* 仓库内文件不给链接(Jekyll 不服务 _tools/ 这类下划线目录,链过去是 404),
+   只把路径贴在标签下面当说明。等宽字体 + 允许断行,一眼能看出是路径。 */
+.rm-path { display: block; margin-top: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; color: var(--muted); word-break: break-all; }
 .rm-item-key { padding-top: 0; padding-bottom: 10px; border-bottom: 0; }
 .rm-key { margin: 0; padding: 0 12px 8px 24px; border-left: 2px solid #d7e0ea; font-size: 12px; color: var(--muted); }
 @media (max-width: 560px) {

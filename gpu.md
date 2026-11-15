@@ -45,11 +45,12 @@ permalink: /gpu/
         <span class="rm-tag">已发布</span>
       </a>
       {% elsif it.status == 'ready' %}
-      <a class="rm-row rm-doc" href="{{ '/' | append: it.path | relative_url }}">
+      <div class="rm-row rm-doc">
         <span class="rm-a">{{ it.title }}</span>
         <span class="rm-d">{{ it.desc }}</span>
         <span class="rm-tag">仓库内</span>
-      </a>
+        <span class="rm-path">{{ it.path }}</span>
+      </div>
       {% else %}
       <div class="rm-row rm-planned">
         <span class="rm-a">{{ it.title }}</span>
@@ -77,5 +78,6 @@ permalink: /gpu/
 <div class="rm-foot">
   <p>这个系列只做一件事：<strong>把别人报的性能数字当成待验证的断言，而不是事实。</strong>一份性能演讲里的每个倍数都隐含着一组硬件、一个规模和一种测法；这三样没对齐，数字就不能搬。所以这里每条都写着测试环境，并且标出哪些是我实测的、哪些是实测之上的推断、哪些没验证。</p>
   <p>标「待写」的条目是我想验证但还没跑出数字的，所以不给链接 —— 我不想让你点进一个空页面或者一篇只有结论没有数据的文章。</p>
-  <p>写这个系列的规矩单独立了一份体例：<a href="{{ '/assets/blog/_tools/CONVENTIONS-GPU.md' | relative_url }}">CONVENTIONS-GPU.md</a>。里面最贵的一条是<strong>每个性能实验至少跑两遍</strong> —— 这条规矩是复跑救回来的：我原本写好的一条「自旋锁快 34.8%」，第二遍只剩 5.2%。</p>
+  <p>写这个系列的规矩单独立了一份体例，放在 <code>assets/blog/_tools/CONVENTIONS-GPU.md</code>。里面最贵的一条是<strong>每个性能实验至少跑两遍</strong> —— 这条规矩是复跑救回来的：我原本写好的一条「自旋锁快 34.8%」，第二遍只剩 5.2%。</p>
+  <p>它是<strong>贡献者文档，不是公开页面</strong>，所以我只给仓库内路径、不给链接：Jekyll 不服务下划线开头的目录（<code>_tools/</code> 和 <code>_posts/</code>、<code>_data/</code> 同类处理），链过去只会是 404。</p>
 </div>

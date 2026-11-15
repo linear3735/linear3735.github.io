@@ -33,7 +33,7 @@ import re
 import shutil
 import subprocess
 import sys
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 RELEASED = ("done", "ready")
 
@@ -223,6 +223,79 @@ def check_item_fields(repo: Path, hub: dict, problems: list[str]) -> None:
                 f"{hub['data']} carries `{f}` — one of the two is misspelled")
     return None
 
+
+def linkable(repo: Path, raw: str) -> tuple[bool, str]:
+    """Would Jekyll actually serve the page at this repo-relative path?
+
+    Found the hard way, on the live site: `assets/blog/_tools/CONVENTIONS-GPU.md`
+    is a 404.  Jekyll never copies directories whose name starts with `_` —
+    `_posts/`, `_data/`, `_layouts/` and equally `_tools/` — so a hub that links
+    into one ships a dead link.  (The algorithms series' `CONVENTIONS.md` sits in
+    the same directory and had been a 404 all along; nothing linked to it, which
+    is exactly why nobody noticed.)
+
+    A static "does the file exist" check cannot see this: the file is right
+    there on disk.  The failure is in the *build*, not the filesystem.
+    """
+    # `post_slug` is a bare slug, not a path.  Under `permalink: /:title/` it
+    # resolves to whichever `_posts/*-<slug>.md` exists, so resolve it that way.
+    if "/" not in raw and not raw.endswith(".md"):
+        hits = sorted(p for p in (repo / "_posts").glob(f"*-{raw}.md"))
+        if len(hits) == 1:
+            return True, ""
+        if not hits:
+            return False, f"_posts/ 下没有 `*-{raw}.md`"
+        return False, f"有 {len(hits)} 篇帖子共用这个 slug: {[h.name for h in hits]}"
+
+    p = repo / raw
+    if not p.exists():
+        return False, "文件不存在"
+    if p.is_dir():
+        return False, "指向目录,不是文件"
+    for part in PurePosixPath(raw).parts:
+        if part.startswith("_") or part.startswith("."):
+            return False, (f"路径里有 `{part}/`,Jekyll 不发布下划线/点开头的"
+                           "目录,链过去必定 404")
+    return True, ""
+
+
+def check_links(repo: Path, hub: dict, problems: list[str]) -> None:
+    """No hub row may link somewhere GitHub Pages will not serve.
+
+    This has to key off what the PAGE actually renders as a link, not off
+    whether some data field happens to hold a path.  `ready` rows carry a
+    repo-relative `path` precisely so the page can print it as plain text after
+    the `_tools/` 404 was found live; a path that is not linked cannot become a
+    dead link, and flagging it would pressure the data into lying about where
+    the file really lives.
+
+    `done` rows build their URL from `post_slug` under `permalink: /:title/`;
+    `verify_series.py` already resolves those against the posts on disk.
+    """
+    tag = hub["label"]
+    data = json.loads((repo / hub["data"]).read_text(encoding="utf-8"))
+    page = (repo / hub["page"]).read_text(encoding="utf-8")
+
+    linked_via = {m.group(1) for m in
+                  re.finditer(r"href=\"\{\{[^\"]*?it\.([A-Za-z_]\w*)", page)}
+    if not linked_via:
+        return None
+
+    for si, sec in enumerate(data):
+        for ii, it in enumerate(sec.get("items", [])):
+            for field in sorted(linked_via):
+                raw = it.get(field)
+                if not raw:
+                    continue
+                ok, why = linkable(repo, raw)
+                if not ok:
+                    problems.append(
+                        f"[{tag}] {hub['data']} item #{si}.{ii} "
+                        f"({it.get('title')!r}) is linked through it.{field} = "
+                        f"`{raw}`, but {why} — the page would ship a dead link")
+    return None
+
+
 def check_front_matter(repo: Path, hub: dict, problems: list[str]) -> None:
     tag = hub["label"]
     src = (repo / hub["page"]).read_text(encoding="utf-8")
@@ -265,6 +338,7 @@ def main() -> int:
             continue
         check_front_matter(repo, hub, problems)
         check_item_fields(repo, hub, problems)
+        check_links(repo, hub, problems)
 
         rendered = None
         if ok:
