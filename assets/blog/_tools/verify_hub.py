@@ -33,6 +33,8 @@ import re
 import shutil
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 from pathlib import Path, PurePosixPath
 
 RELEASED = ("done", "ready")
@@ -56,6 +58,13 @@ HUBS = [
      "item_fields": ["title", "desc", "status"],
      "item_fields_by_status": {"done": ["post_slug", "key"],
                               "ready": ["path", "key"]}},
+    {"page": "courses.md", "data": "_data/courses.json", "key": "courses",
+     "label": "CUDA 与 GPU 优化课程序列", "min_released": 1,
+     "statuses": {"done", "ready", "planned"},
+     "item_fields": ["title", "desc", "status"],
+     # ready 条目的材料可能在仓库里,也可能是外部论文/文档,所以是二选一。
+     "item_fields_by_status": {"done": ["post_slug", "key"],
+                              "ready": ["path|url", "key"]}},
 ]
 
 # Filters Jekyll provides that the bare liquid gem does not.
@@ -207,6 +216,18 @@ def check_item_fields(repo: Path, hub: dict, problems: list[str]) -> None:
                     f"which {hub['page']} has no branch for — it would fall "
                     f"through to the catch-all. Known: {sorted(hub['statuses'])}")
             for f in sorted(base | per_status.get(st, set())):
+                # `a|b` 表示这两个字段**至少有一个**。ready 条目可以指向仓库内
+                # 文件(path)或外部 URL(url),模板两个分支都渲染,所以 schema
+                # 必须能表达「二选一」—— 否则合法的外链条目会被断言拦下。
+                if "|" in f:
+                    if not any(it.get(x) for x in f.split("|")):
+                        problems.append(
+                            f"[{tag}] {hub['data']} item #{si}.{ii} "
+                            f"({it.get('title')!r}, status={st!r}) lacks all of "
+                            f"`{f}` (at least one is required); "
+                            f"{hub['page']} renders one of them at that status, "
+                            "so the row would come out blank")
+                    continue
                 if f not in it:
                     problems.append(
                         f"[{tag}] {hub['data']} item #{si}.{ii} "
@@ -246,6 +267,31 @@ def linkable(repo: Path, raw: str) -> tuple[bool, str]:
         if not hits:
             return False, f"_posts/ 下没有 `*-{raw}.md`"
         return False, f"有 {len(hits)} 篇帖子共用这个 slug: {[h.name for h in hits]}"
+
+    # 绝对 URL 不走「Jekyll 会不会服务」这条判断 —— 它的失效方式完全不同
+    # (域名没了、404、被反爬拦)。以前这里没有这条分支,于是一个外链会被当
+    # 成本地路径去 exists(),报「文件不存在」这种**措辞错、结论也对不上**的
+    # 问题:真正该问的是「这个 URL 现在还能打开吗」。
+    #
+    # 这里真的发一次 HEAD。它让门依赖网络,所以超时/连接失败单独措辞,和
+    # HTTP 4xx/5xx 区分开 —— 「网络不通」不等于「链接坏了」。
+    if raw.startswith(("http://", "https://")):
+        try:
+            req = urllib.request.Request(
+                raw, method="HEAD",
+                headers={"User-Agent": "Mozilla/5.0 (hub-link-check)"})
+            with urllib.request.urlopen(req, timeout=15) as r:
+                code = getattr(r, "status", 200)
+            if 200 <= code < 400:
+                return True, ""
+            return False, f"HTTP {code}"
+        except urllib.error.HTTPError as e:
+            # 有些站点拒绝 HEAD 但响应 GET;404/410 才是真的没了。
+            if e.code in (403, 405, 501):
+                return True, f"HEAD 被拒(HTTP {e.code}),未能确认"
+            return False, f"HTTP {e.code}"
+        except Exception as e:                             # noqa: BLE001
+            return True, f"网络不通({type(e).__name__}),未能确认"
 
     p = repo / raw
     if not p.exists():

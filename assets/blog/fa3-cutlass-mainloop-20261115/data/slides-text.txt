@@ -1,0 +1,350 @@
+CUTLASS and FlashAttention-3
+
+        Jay Shah, Colfax Research
+        https://research.colfax-intl.com/
+Outline of talk:
+
+
+1. Recap of attention and Flash Attention.
+
+2. High-level overview of the FlashAttention-3 algorithm.
+
+3. Translating the algorithm into working code built on CUTLASS.
+
+
+
+
+                                                                   2
+ Background: Attention Mechanism
+           Q             K            S = 𝑄 𝐾𝑇                 A = Softmax(𝑆)                  V             O
+         (M x d)       (N x d)         (M x N)                     (M x N)                   (N x d)       (M x d)
+
+
+
+                   x             →                    →                               x                =
+
+
+
+
+          Query         Key           Similarity                Attention prob               Value         Output
+                                        Score               = row-wise normalized
+Suppose M=N (pre-training).                                     similarity score
+Typical sequence length N: 1K – 16K                                  𝑒 𝑠1           𝑒 𝑠𝑁
+Head dimension d: 64 – 256            Softmax 𝑠1 , ⋯ , 𝑠𝑁      =             ,⋯,
+                                                                   σ𝑖 𝑒 𝑠𝑖         σ𝑖 𝑒 𝑠𝑖
+                                                         T
+                                           O = Softmax(QK )V
+                                       Attention scales quadratically in sequence length N                           3
+Naïve (Standard) Attention Algorithm
+
+
+
+
+                                       4
+Naïve Attention is Bottlenecked by Memory Reads/Writes
+      Q             K            S = 𝑄 𝐾𝑇            A = Softmax(𝑆)              V             O
+    (M x d)       (N x d)         (M x N)                (M x N)               (N x d)       (M x d)
+
+
+
+              x             →                  →                           x             =
+
+
+
+
+    Query          Key           Similarity            Attention prob          Value         Output
+                                   Score           = row-wise normalized
+                                                       similarity score
+
+
+
+                                     The biggest cost is in moving the bits!
+                                Standard implementation requires repeated R/W
+                                            from slow GPU memory
+
+                                                                                                       5
+Background: GPU Compute Model & Memory Hierarchy
+
+
+         2. Data moved to
+       compute units & SRAM
+          for computation
+
+
+
+
+        1. Inputs start out in
+        HBM (GPU memory)
+
+
+          3. Output written
+             back to HBM
+
+
+
+
+Blogpost: Horace He, Making Deep Learning Go Brrrr From First Principles.
+
+
+                                           Can we exploit the memory asymmetry to get speed up?
+                                    With IO-awareness (accounting for R/W to different levels of memory)   6
+How to Reduce HBM Reads/Writes: Tiling and Recomputation
+
+
+Challenges:                                            Approaches:
+
+(1) Don’t materialize scores matrix to HBM, and        (1) Kernel fusion with tiling and online softmax: for
+compute softmax normalization without access to        a given tile of Q, load KV block by block and
+full input.                                            accumulate values of corresponding tile of O.
+
+(2) Backward without the large attention matrix from   (2) Recomputation: Don’t store attn. matrix
+forward.                                               from forward, recompute it in the backward.
+
+
+
+
+                                                                                                               7
+FlashAttention-2 Algorithm
+
+
+
+
+                             8
+                                   S u mm a ry
+Challenge: Optimizing FlashAttention for Modern Hardware - H100
+
+
+
+
+          FA2 only gets to 35-40% utilization (no WGMMA, no TMA)
+
+                                                                   9
+FlashAttention-3: Optimizing FlashAttention for H100 GPU
+Jay Shah*, Ganesh Bikshandi*, Ying Zhang, Vijay Thakkar, Pradeep Ramani, Tri Dao
+
+
+    1. New instructions on H100:
+       - WGMMA: higher throughput MMA primitive, async,
+           collectively executed by a warpgroup (= 4 contiguous warps)
+       - TMA: faster loading from gmem <-> smem, async, saves registers
+
+    2. Asynchrony
+       - Builds on asynchronous wgmma, TMA, transaction barrier
+       - Inter-warpgroup overlapping: warp-specialization, pingpong
+       - Intra-warpgroup overlapping: softmax and async matmul
+
+    3. Low-precision – FP8: layout conformance, in-kernel V transpose
+
+
+                                                        Upshot: 1.6-3x speedup     10
+New Instructions: WGMMA & TMA
+
+
+
+
+    wgmma necessary, mma.sync can                           TMA: accelerate gmem ->
+    only reach 2/3 peak throughput                          smem, saves registers
+
+     WGMMA and TMA integrate into a producer-consumer warp-specialized pipelined design.
+      Use warpgroup-wide register reallocation to give consumers greater share of registers.
+                                                                                               11
+FlashAttention-3
+Algorithm:
+CTA View
+
+
+
+
+                   12
+Asynchrony: Overlapping GEMM and Softmax
+
+
+Why overlapping?
+Example: headdim 128, block size 128 x 192
+FP16 WGMMA: 2 x 2 x 128 x 192 x 128 = 12.6 MFLOPS, 4096 FLOPS/cycle -> 3072 cycles
+MUFU.EX2: 128 x 192 = 24.6k OPS, 16 OPS/cycle -> 1536 cycles
+
+
+
+
+                        MUFU.EX2 takes 50% the cycles of WGMMA!
+                FP8 is even worse: WGMMA and EX2 both take 1536 cycles.
+             We want to be doing EX2 while tensor cores are busy with WGMMA.
+
+                                                                                     13
+Inter-warpgroup Overlapping of GEMM and Softmax
+
+
+Easy solution: leave it to the warp schedulers!
+
+This works reasonably well, but we can do better.
+
+
+
+
+             Pingpong scheduling using synchronization barriers (with bar.sync):
+             580 TFLOPS -> 640 TFLOPS                                              14
+Intra-warpgroup Overlapping of GEMM and Softmax
+
+
+
+
+     2-stage pipelining: 640 TFLOPS -> 670 TFLOPS (but higher register pressure)
+
+     Note: Corrected image from talk.
+
+                                                                                   15
+FlashAttention-3
+Algorithm:
+Consumer View
+
+
+
+
+                   16
+Low-precision: FP8
+
+
+
+
+             FP8 doubles WGMMA throughput, but trade off accuracy
+
+                                                                    17
+Layout conformance challenges with FP8
+
+
+FP8 WGMMA: requires operand SMEM tensors to be memory-contiguous
+  in the inner dimension (k-major)
+
+It is standard for QKV to be memory-contiguous in the head dimension (BSHD).
+- Note: TMA can’t change the contiguous mode.
+
+
+For gemm0 (Q.K^T), this is fine as is. For gemm1 (P.V), we need to transpose V.
+
+
+            Solution: In-kernel transpose of V in the producer warpgroup.
+    Uses LDSM/STSM instructions with custom layouts and byte permute in-between.
+                                                                                   18
+Layout conformance challenges with FP8, ctd.
+
+We also need to reshape layout of scores accumulator for gemm1.
+Why? FP32 accumulator layout differs from FP8 operand A layout.
+
+
+
+
+Note: Can use in-kernel “transpose” to write out row permutation of V
+such that we can avoid shuffle instructions for the reshape (but not byte permute).
+                                                                                      19
+Persistent Kernels in FlashAttention
+
+Idea: Decouple physical CTAs from logical work tiles, launching fixed number of CTAs.
+Can then overlap epilogue of current work tile with prologue loads of next work tile.
+
+Example: Seqlen = 4096, Heads = 8, Batch = 4. Fix BlockM = 128, so mblocks = 32.
+Have 32*8*4 = 1024 work tiles to process in the kernel.
+
+Without persistent kernel, launch CUDA grid with dims = (32, 8, 4), so 1024 CTAs.
+1-to-1 mapping of CTAs with work tiles.
+
+With persistent kernel on H100 SXM5 GPU, launch 132 CTAs = num SMs.
+Each CTA runs over a fraction of the 1024 work tiles.
+
+Can dynamically allocate work tiles to next available CTA in persistent kernel.
+Helps with load balancing when doing causal masking.
+
+                                                                                        20
+BF16 Benchmark: 1.6-2.0x speedup
+
+
+
+
+            Without causal mask    With causal mask
+
+
+
+
+                                                      21
+BF16 Benchmark: reach up to 850 TFLOPS
+
+
+
+
+            Without causal mask          With causal mask
+
+
+
+
+                                                            22
+FP8 Benchmark: up to 1.3 PFLOPS
+
+
+
+
+             Without causal mask   With causal mask
+
+
+
+
+                                                      23
+BF16 Decode Benchmark for MQA. Lower is better!
+
+
+
+
+                                                  24
+FlashAttention-3 for Decoding Inference
+
+
+For decoding, query length is short (on the order of a few tokens), while context length is
+long (for example, 128k).
+
+
+Optimizations:
+1) Split along the KV sequence length to occupy the GPU with enough work
+- already in FlashAttention-2 as Flash-Decoding. Reuse the same algorithm.
+
+2) GQA packing: Pack multiple query heads into a single query tile.
+
+
+
+
+                                                                                              25
+                                                     S u mm a ry
+Summary – FlashAttention-3
+
+Fast and accurate attention optimized for modern hardware
+
+Key algorithmic ideas: asynchrony, low-precision
+- for inference: Split KV (Flash-Decoding) and GQA packing.
+
+Upshot: faster training, better models with longer sequences
+
+
+
+
+Code: https://github.com/Dao-AILab/flash-attention
+
+
+
+
+                                                                   26
+Building FlashAttention-3 with CUTLASS
+Overall structure has three
+classes:
+
+1. CollectiveMainloop for load
+and mma.
+
+2. CollectiveEpilogue for store.
+
+3. TileScheduler to manage
+work loop for persistent
+kernel.
+
+Each class has its own set of
+kernel parameters
+(to_underlying_arguments).
+                                         27
+

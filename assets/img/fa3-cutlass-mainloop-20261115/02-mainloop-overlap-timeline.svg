@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="470" viewBox="0 0 940 470" role="img">
+  <rect width="940" height="470" fill="#ffffff"/>
+  <text x="470.0" y="34" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">一个 fwd_step 里谁和谁重叠：warpgroup_wait&lt;1&gt;() 等的不是它刚发射的那一批</text>
+  <text x="470.0" y="56" font-size="11.5" fill="#737c88" text-anchor="middle" font-weight="400">行号是钉住那个 commit（L925–L954）的；横轴按 cycle 等比 —— 两组 wgmma 各 3072 cycle，EX2 占 1536 cycle</text>
+  <text x="14" y="190" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">wgmma 张量核</text>
+  <line x1="14" y1="186" x2="916" y2="186" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="14" y="286" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">MUFU.EX2</text>
+  <line x1="14" y1="282" x2="916" y2="282" stroke="#e7eaf0" stroke-width="1.2" stroke-linecap="round"/>
+  <rect x="150.0" y="169" width="378.0" height="34" rx="4" fill="#e8eff7" stroke="#3568a3" stroke-width="1.3"/>
+  <text x="339.0" y="190" font-size="11.5" fill="#3568a3" text-anchor="middle" font-weight="600">gemm0  异步发射（wg_wait=-1）   L934</text>
+  <rect x="528.0" y="169" width="378.0" height="34" rx="4" fill="#e8eff7" stroke="#3568a3" stroke-width="1.3"/>
+  <text x="717.0" y="190" font-size="11.5" fill="#3568a3" text-anchor="middle" font-weight="600">gemm1  异步发射   L937</text>
+  <rect x="543.75" y="265" width="189.0" height="34" rx="4" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.3"/>
+  <text x="638.25" y="286" font-size="11" fill="#2f7d6d" text-anchor="middle" font-weight="600">EX2 与 online_softmax   L947</text>
+  <rect x="528.0" y="158" width="204.75" height="134" rx="6" fill="none" stroke="#b5762a" stroke-width="2.0" stroke-dasharray="6 4"/>
+  <text x="630.375" y="312" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">重叠区</text>
+  <line x1="346.875" y1="130" x2="346.875" y2="300" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <text x="340.875" y="122" font-size="11" fill="#b5762a" text-anchor="end" font-weight="400">wait&lt;1&gt; L939 进</text>
+  <line x1="528.0" y1="130" x2="528.0" y2="300" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <text x="534.0" y="122" font-size="11" fill="#b5762a" text-anchor="start" font-weight="400">gemm0 走完，wait&lt;1&gt; 返回</text>
+  <line x1="906.0" y1="130" x2="906.0" y2="300" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <text x="900.0" y="122" font-size="11" fill="#b5762a" text-anchor="end" font-weight="400">gemm1 走完，wait&lt;0&gt; 返回</text>
+  <text x="470.0" y="352" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">wait&lt;1&gt; 从 cycle 1600 等到 3072 —— wgmma.wait_group 等的是「最早那组」，而 gemm0 正好在 3072 走完。</text>
+  <text x="470.0" y="378" font-size="12" fill="#252b33" text-anchor="middle" font-weight="400">它只保证 gemm0 完成（它读的 K 马上要 release）；gemm1 读的 V 要到 wait&lt;0&gt; 之后才 release，所以 gemm1 继续在飞。</text>
+  <text x="470.0" y="404" font-size="12" fill="#b5762a" text-anchor="middle" font-weight="600">于是 EX2 那 1536 cycle 整个落在 gemm1 的条里 —— 这就是 EX2/WGMMA = 1.00 想换到的东西。</text>
+  <text x="470.0" y="430" font-size="11.5" fill="#737c88" text-anchor="middle" font-weight="400">warpgroup_wait&lt;1&gt;() 的 1 不是「第 1 个」，是「最多留 1 个分组在飞」。我第一遍就是在这里读反的。</text>
+</svg>

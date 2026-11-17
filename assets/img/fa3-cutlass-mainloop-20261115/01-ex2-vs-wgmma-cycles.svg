@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430" role="img">
+  <rect width="940" height="430" fill="#ffffff"/>
+  <text x="470.0" y="34" font-size="17" fill="#252b33" text-anchor="middle" font-weight="600">同一个 128×192 block：WGMMA 与 EX2 各占多少 cycle</text>
+  <text x="470.0" y="56" font-size="11.5" fill="#737c88" text-anchor="middle" font-weight="400">数字全部由《2 整场演讲里唯一能独立验算的一段》那段脚本算出；柱长按 cycle 等比</text>
+  <rect x="58" y="84" width="384" height="268" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="250.0" y="112" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">FP16  张量核 4096 FLOPS/cycle</text>
+  <text x="70" y="149" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">WGMMA</text>
+  <rect x="184" y="123.0" width="216.8470588235294" height="46" rx="6" fill="#e8eff7" stroke="#3568a3" stroke-width="1.3"/>
+  <text x="292.4235294117647" y="151" font-size="14" fill="#3568a3" text-anchor="middle" font-weight="600">3072</text>
+  <text x="70" y="227" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">MUFU.EX2</text>
+  <rect x="184" y="201.0" width="108.4235294117647" height="46" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.3"/>
+  <text x="238.21176470588236" y="229" font-size="14" fill="#b5762a" text-anchor="middle" font-weight="600">1536</text>
+  <text x="250.0" y="330" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">EX2 / WGMMA = 0.50</text>
+  <rect x="498" y="84" width="384" height="268" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="690.0" y="112" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">FP8  张量核 8192 FLOPS/cycle</text>
+  <text x="510" y="149" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">WGMMA</text>
+  <rect x="624" y="123.0" width="108.4235294117647" height="46" rx="6" fill="#e8eff7" stroke="#3568a3" stroke-width="1.3"/>
+  <text x="678.2117647058824" y="151" font-size="14" fill="#3568a3" text-anchor="middle" font-weight="600">1536</text>
+  <text x="510" y="227" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">MUFU.EX2</text>
+  <rect x="624" y="201.0" width="108.4235294117647" height="46" rx="6" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.3"/>
+  <text x="678.2117647058824" y="229" font-size="14" fill="#b5762a" text-anchor="middle" font-weight="600">1536</text>
+  <text x="690.0" y="330" font-size="13" fill="#b5762a" text-anchor="middle" font-weight="600">EX2 / WGMMA = 1.00</text>
+  <text x="470.0" y="390" font-size="13" fill="#252b33" text-anchor="middle" font-weight="600">FP8 把张量核那一侧砍到 1536 cycle，EX2 一动不动还是 1536 ——于是它占的比例从一半变成全部。</text>
+  <text x="470.0" y="410" font-size="11.5" fill="#737c88" text-anchor="middle" font-weight="400">这张图里的 3072 / 1536 / 1536 三个数，来自《2 整场演讲里唯一能独立验算的一段》里那段脚本的输出。</text>
+</svg>

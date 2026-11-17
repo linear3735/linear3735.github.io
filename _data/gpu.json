@@ -1,7 +1,7 @@
 [
   {
     "section": "甲、已经写过的",
-    "note": "带实测数字的才放进来；数字过时了我会改，不会留着",
+    "note": "带实测数字的才放进来；数字过时了我会改，不会留着。没有实测数字的会写明，不混进来充数",
     "items": [
       {
         "title": "用 Nsight Systems 量化「GPU 在等」",
@@ -9,6 +9,13 @@
         "status": "done",
         "post_slug": "nsight-bogus-copies",
         "key": "主结论：优化前后 GPU 跑 kernel 的时间可以完全相同，差的全是空隙"
+      },
+      {
+        "title": "把 FlashAttention-3 的算法读成 CUTLASS 代码",
+        "desc": "Colfax 那场 GPU Mode 讲座的代码拆解；没有实测数字，全部引文和算术都能独立复核",
+        "status": "done",
+        "post_slug": "fa3-cutlass-mainloop",
+        "key": "主结论：warpgroup_wait<1>() 等的不是它刚发射的那一批，它让 EX2 和 gemm1 重叠起来。这一篇我一次实验都没做——所有性能数字都是引用，出处逐条写在文末"
       },
       {
         "title": "GPU / 性能剖析系列的写作体例",

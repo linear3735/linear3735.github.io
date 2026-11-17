@@ -43,6 +43,7 @@ RELEASED = ("done", "ready")
 HUBS = [
     {
         "name": "面试算法",
+        "series": "algo",
         "data": "_data/roadmap.json",
         "page": "roadmap.md",
         "nav": "/roadmap/",
@@ -54,10 +55,22 @@ HUBS = [
     },
     {
         "name": "GPU 与性能剖析",
+        "series": "gpu",
         "data": "_data/gpu.json",
         "page": "gpu.md",
         "nav": "/gpu/",
         "nav_label": "GPU",
+        "dual_language": False,
+    },
+    {
+        "name": "CUDA 与 GPU 优化课程序列",
+        "series": "courses",
+        "data": "_data/courses.json",
+        "page": "courses.md",
+        "nav": "/courses/",
+        "nav_label": "课程",
+        # 这一系列是资源序列,不是实验记录:它的文章可以是纯 text 的清单,
+        # 不必每篇都配平 python / cpp。配平规则是给「教代码」的系列用的。
         "dual_language": False,
     },
 ]
@@ -95,9 +108,11 @@ def check_hub(repo: Path, hub: dict, problems: list[str],
         st = it.get("status")
         if st == "done" and not it.get("post_slug"):
             problems.append(f"[{tag}] done item {it.get('title')!r} has no post_slug")
-        if st == "ready" and not it.get("path"):
-            problems.append(f"[{tag}] ready item {it.get('title')!r} has no path")
-        if st == "planned" and (it.get("post_slug") or it.get("path")):
+        if st == "ready" and not (it.get("path") or it.get("url")):
+            problems.append(f"[{tag}] ready item {it.get('title')!r} "
+                            "has neither path nor url")
+        if st == "planned" and (it.get("post_slug") or it.get("path")
+                                or it.get("url")):
             problems.append(
                 f"[{tag}] planned item {it.get('title')!r} carries a link — "
                 "the page would render a clickable entry for unwritten work")
@@ -111,11 +126,15 @@ def check_hub(repo: Path, hub: dict, problems: list[str],
 
     posts = sorted(p for p in (repo / "_posts").glob("*.md")
                    if slug_of(p) in hub_slugs)
+    # 这个 hub 里所有文章的 slug。覆盖面防护要靠它区分「一篇一目录」和
+    # 「一个系列共用一个目录」—— 后者是合法布局,不该报。
+    all_slugs = [slug_of(p) for p in posts]
     in_progress: list[str] = []
     for post in posts:
         slug = slug_of(post)
         rc, out = run([PY, "assets/blog/_tools/verify_post.py",
-                       str(post.relative_to(repo))], repo)
+                       str(post.relative_to(repo)),
+                       "--series", hub["series"]], repo)
         n_img = len(re.findall(r"!\[[^\]]*\]\(([^)]+)\)",
                                post.read_text(encoding="utf-8")))
         if rc != 0:
@@ -135,6 +154,40 @@ def check_hub(repo: Path, hub: dict, problems: list[str],
         # silently reported "n/a" for gates that were right there.
         cands = sorted((repo / "assets" / "blog").glob(f"{slug}-*/verify_code.py"))
         crc = None
+        if not cands and slug not in SKIP_GATES:
+            # 「没找到门」和「文章还没写门」是两件事,但看输出都是 n/a。
+            # 第 4 条修的是 glob 的深度,没修**名字对不上**这一种:目录叫
+            # `fa3-cutlass-20261115`,文章的 slug 是 `fa3-cutlass-mainloop`,
+            # 于是 glob 找不到门,这篇的代码门在系列检查里静默不跑,还报 n/a。
+            # 如果文章目录就在那儿(说明门大概在别处或名字写错了),那就不
+            # 是「还没写」,是**覆盖漏洞**,必须报出来 —— 否则这道门永远
+            # 发现不了自己漏跑了谁。
+            #
+            # 反证打不中的就是这一类:注入缺陷能让门变红,但「门压根没被调用」
+            # 时它连跑都没跑。所以这里查的是**门自己的覆盖面**。
+            #
+            # 匹配用 slug 的**首段**而不是整个 slug:目录名 `fa3-cutlass-20261115`
+            # 和 slug `fa3-cutlass-mainloop` 连前缀都不共享,拿整个 slug 去匹配
+            # 照样是空集 —— 我第一版就是这么写的,防护压根不响。
+            #
+            # 但首段匹配会**误报共用目录**:课程系列五篇是
+            # `gpu-course-1-model` … `gpu-course-5-fullpath`,共用
+            # `assets/blog/gpu-course-20261117/`。那是合法布局(一个系列一篇
+            # 目录对「每篇一个目录」的系列才成立),不是改名事故。
+            #
+            # 区分办法:共用目录会被**多篇**文章同时匹配到。真正的事故是
+            # 「只有这一篇匹配、但它不是目录名的前缀」。所以这里只在
+            # 「匹配到该目录的文章数 == 1」时才报。
+            stem = slug.split("-")[0]
+            near = sorted(p.name for p in (repo / "assets" / "blog").glob(f"{stem}*")
+                          if p.is_dir() and slug not in p.name)
+            shared = [s for s in all_slugs
+                      if s != slug and s.split("-")[0] == stem]
+            if near and not shared:
+                problems.append(
+                    f"[{tag}] {slug}: 没找到 verify_code.py,但内容像这篇的目录在:"
+                    f"{near} —— 目录名必须以 `<slug>-` 开头(见 CONVENTIONS-GPU §2),"
+                    f"否则这道门不会被跑到")
         if cands and slug not in SKIP_GATES:
             crc, cout = run([PY, str(cands[0].relative_to(repo))], repo)
             if crc != 0:
@@ -153,6 +206,10 @@ def check_hub(repo: Path, hub: dict, problems: list[str],
             f"[{tag}] hub says {s!r} is done (published) but there is no "
             "_posts/*-{}.md".format(s))
     # `ready` items point at a repo file, which must actually be there.
+    #
+    # `path` 的语义是**仓库内相对路径**,所以这里直接 exists() 是对的。
+    # 外部 URL 不能塞进 path —— 那会把它当文件名去 exists(),然后报一条
+    # 假问题(我第一版就是这么写的)。外链走单独的 `url` 字段。
     for it in items():
         if it.get("status") == "ready" and it.get("path"):
             if not (repo / it["path"]).exists():

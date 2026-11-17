@@ -115,7 +115,18 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("post")
     ap.add_argument("--repo", default=str(Path.home() / "projects/linear3735.github.io"))
+    # 「每篇都要有 python 和 cpp 块」是**算法系列**的承诺(见 verify_series 的
+    # dual_language)。它本来硬编码在这个检查器里,于是课程系列那几篇(纯资源
+    # 序列,正文里没有算法解)也被要求凑出 python/cpp 块 —— 为了过门而加无关
+    # 代码,是把门的意义反过来用。
+    #
+    # 默认值保持 "algo":不传参时行为与以前完全一致,老调用不会变。谁属于哪个
+    # 系列由 verify_series 的 HUBS 显式声明后传进来,不靠猜。
+    ap.add_argument("--series", default="algo",
+                    choices=["algo", "gpu", "courses"],
+                    help="按哪个系列的体例查(默认 algo)")
     args = ap.parse_args()
+    dual = args.series == "algo"
     repo = Path(args.repo).expanduser().resolve()
     path = Path(args.post)
     if not path.is_absolute():
@@ -178,11 +189,11 @@ def main() -> int:
     if bad_lang:
         problems.append(f"disallowed fence language(s): {bad_lang} (series is python + cpp)")
     n_py, n_cpp = langs.count("python"), langs.count("cpp")
-    if fences and n_py == 0:
+    if dual and fences and n_py == 0:
         problems.append("no ```python block")
-    if fences and n_cpp == 0:
+    if dual and fences and n_cpp == 0:
         problems.append("no ```cpp block")
-    if n_py and n_py != n_cpp:
+    if dual and n_py and n_py != n_cpp:
         problems.append(f"python/cpp blocks unequal: {n_py} vs {n_cpp} "
                         "(series shows both for every solution)")
 
