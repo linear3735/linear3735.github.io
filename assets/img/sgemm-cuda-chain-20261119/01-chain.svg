@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="700" viewBox="0 0 1180 700" role="img">
+  <rect width="1180" height="700" fill="#ffffff"/>
+  <rect x="0" y="0" width="1180" height="700" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="40" y="44" font-size="19" fill="#252b33" text-anchor="start" font-weight="700">SGEMM 优化链:一样一样加上去,性能是这样涨的</text>
+  <text x="40" y="70" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">A6000 / FP32 / 4096x4096x4096,数字取自该仓库 README 的性能表 —— 不是我在本机测的</text>
+  <text x="44" y="110" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">编号</text>
+  <text x="76" y="110" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">优化手段</text>
+  <text x="386" y="110" font-size="11" fill="#737c88" text-anchor="start" font-weight="400">相对于 cuBLAS 的占比</text>
+  <text x="44" y="134" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">1</text>
+  <text x="102" y="134" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">Naive</text>
+  <rect x="386" y="125" width="8.027492946115203" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="404.0274929461152" y="134" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">1.3%   309.0 GFLOPs</text>
+  <text x="44" y="172" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">2</text>
+  <text x="102" y="172" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">GMEM Coalescing</text>
+  <rect x="386" y="163" width="51.60716743513867" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="447.60716743513865" y="172" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">8.5%   1986.5 GFLOPs</text>
+  <text x="44" y="210" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">3</text>
+  <text x="102" y="210" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">SMEM Caching</text>
+  <rect x="386" y="201" width="77.42503957057328" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="473.4250395705733" y="210" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">12.8%   2980.3 GFLOPs</text>
+  <text x="44" y="248" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">4</text>
+  <text x="102" y="248" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">1D Blocktiling</text>
+  <rect x="386" y="239" width="220.16373615029937" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="616.1637361502994" y="248" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">36.5%   8474.7 GFLOPs</text>
+  <text x="44" y="286" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">5</text>
+  <text x="102" y="286" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">2D Blocktiling</text>
+  <rect x="386" y="277" width="414.9278611244925" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="810.9278611244924" y="286" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">68.7%   15971.7 GFLOPs</text>
+  <text x="44" y="324" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">7</text>
+  <text x="102" y="324" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">Bank Conflicts 线性化</text>
+  <rect x="386" y="315" width="421.20697130273214" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="817.2069713027322" y="324" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">69.7%   16213.4 GFLOPs</text>
+  <line x1="64" y1="320" x2="64.00" y2="323.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="64.00,328.00 59.40,323.00 68.60,323.00" fill="#b5762a"/>
+  <text x="84" y="309" font-size="10" fill="#b5762a" text-anchor="start" font-weight="400">编号在这里断了</text>
+  <text x="44" y="362" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">8</text>
+  <text x="102" y="362" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">Bank Conflicts 补列</text>
+  <rect x="386" y="353" width="427.5925951414218" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="823.5925951414217" y="362" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">70.8%   16459.2 GFLOPs</text>
+  <text x="44" y="400" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">11</text>
+  <text x="102" y="400" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">Double Buffering</text>
+  <rect x="386" y="391" width="448.8719461840203" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="844.8719461840203" y="400" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">74.3%   17278.3 GFLOPs</text>
+  <line x1="64" y1="396" x2="64.00" y2="399.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="64.00,404.00 59.40,399.00 68.60,399.00" fill="#b5762a"/>
+  <text x="84" y="385" font-size="10" fill="#b5762a" text-anchor="start" font-weight="400">编号在这里断了</text>
+  <text x="44" y="438" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">6</text>
+  <text x="102" y="438" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">Vectorized Mem Access</text>
+  <rect x="386" y="429" width="473.78575115270803" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="869.785751152708" y="438" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">78.4%   18237.3 GFLOPs</text>
+  <line x1="64" y1="434" x2="64.00" y2="437.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="64.00,442.00 59.40,437.00 68.60,437.00" fill="#b5762a"/>
+  <text x="84" y="423" font-size="10" fill="#b5762a" text-anchor="start" font-weight="400">编号在这里断了</text>
+  <text x="44" y="476" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">9</text>
+  <text x="102" y="476" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">Autotuning</text>
+  <rect x="386" y="467" width="512.3307067648476" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="908.3307067648476" y="476" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">84.8%   19721.0 GFLOPs</text>
+  <line x1="64" y1="472" x2="64.00" y2="475.00" stroke="#b5762a" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="64.00,480.00 59.40,475.00 68.60,475.00" fill="#b5762a"/>
+  <text x="84" y="461" font-size="10" fill="#b5762a" text-anchor="start" font-weight="400">编号在这里断了</text>
+  <text x="44" y="514" font-size="13" fill="#252b33" text-anchor="start" font-weight="700">10</text>
+  <text x="102" y="514" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="400">Warptiling</text>
+  <rect x="386" y="505" width="565.8031622049411" height="18" rx="3" fill="#e8eff7" stroke="#3568a3" stroke-width="0.9"/>
+  <text x="961.8031622049411" y="514" font-size="11.5" fill="#737c88" text-anchor="start" font-weight="400">93.7%   21779.3 GFLOPs</text>
+  <rect x="34" y="539" width="1112" height="34" rx="5" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="1.0"/>
+  <text x="44" y="552" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="700">0</text>
+  <text x="102" y="552" font-size="12.5" fill="#2f7d6d" text-anchor="start" font-weight="400">cuBLAS</text>
+  <rect x="386" y="543" width="604.0" height="18" rx="3" fill="#e4f1ee" stroke="#2f7d6d" stroke-width="0.9"/>
+  <text x="1000.0" y="552" font-size="11.5" fill="#2f7d6d" text-anchor="start" font-weight="400">100.0%   23249.6 GFLOPs</text>
+  <line x1="34" y1="594" x2="1146" y2="594" stroke="#e7eaf0" stroke-width="1.0" stroke-linecap="round"/>
+  <text x="40" y="616" font-size="13.5" fill="#252b33" text-anchor="start" font-weight="600">从第 1 级到最高一级: 309.0 -&gt; 21779.3 GFLOPs,即 70.5 倍</text>
+  <text x="40" y="640" font-size="12.5" fill="#737c88" text-anchor="start" font-weight="400">手写最优的一级(10 Warptiling)到 cuBLAS 还差 1470.3 GFLOPs,也就是 6.3 个点</text>
+  <text x="40" y="664" font-size="12" fill="#b5762a" text-anchor="start" font-weight="400">表里的行顺序是作者讲故事的顺序,编号是事后补的 —— 第 6 行的编号是 7,第 8 行是 11,第 9 行才是 6</text>
+</svg>

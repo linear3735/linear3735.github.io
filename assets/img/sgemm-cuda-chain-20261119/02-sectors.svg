@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" role="img">
+  <rect width="1180" height="620" fill="#ffffff"/>
+  <rect x="0" y="0" width="1180" height="620" rx="0" fill="#ffffff" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="40" y="44" font-size="19" fill="#252b33" text-anchor="start" font-weight="700">同样是 32 个线程,访存代价差了 7 倍多</text>
+  <text x="40" y="70" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">每格 = 一个 32 字节 sector。填色格 = 这个 warp 真正用掉的事务,灰格 = 没用到的。kernel 1 合计 65 格,kernel 2 合计 9 格</text>
+  <rect x="40" y="92" width="540" height="386" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="310.0" y="116" font-size="13.5" fill="#252b33" text-anchor="middle" font-weight="600">kernel 1  朴素版  blockDim(32, 32)</text>
+  <text x="60" y="140" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="700">A[x*K + i]</text>
+  <text x="560" y="140" font-size="12.5" fill="#b5762a" text-anchor="end" font-weight="700">32 / 48 格</text>
+  <rect x="60.0" y="152" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="122.0" y="152" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="184.0" y="152" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="246.0" y="152" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="308.0" y="152" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="370.0" y="152" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="432.0" y="152" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="494.0" y="152" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <text x="60" y="198" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">warp 内 x 连续 -&gt; 32 个地址散在 32 行,各占一个 sector</text>
+  <text x="60" y="256" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="700">B[i*N + y]</text>
+  <text x="560" y="256" font-size="12.5" fill="#2f7d6d" text-anchor="end" font-weight="700">1 / 48 格</text>
+  <rect x="60.0" y="268" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="122.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="184.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="246.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="308.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="370.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="432.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="494.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <text x="60" y="314" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">y 恒定 -&gt; 广播,32 个线程读同一个地址</text>
+  <text x="60" y="372" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="700">C[x*N + y]</text>
+  <text x="560" y="372" font-size="12.5" fill="#b5762a" text-anchor="end" font-weight="700">32 / 48 格</text>
+  <rect x="60.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="122.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="184.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="246.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="308.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="370.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="432.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="494.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <text x="60" y="430" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">跨行写,步长 N,每行只碰 1 个 float</text>
+  <rect x="640" y="92" width="540" height="386" rx="10" fill="#f3f5f7" stroke="#e7eaf0" stroke-width="1.2"/>
+  <text x="910.0" y="116" font-size="13.5" fill="#252b33" text-anchor="middle" font-weight="600">kernel 2  合并版  blockDim(1024)</text>
+  <text x="660" y="140" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="700">A[cRow*K + i]</text>
+  <text x="1160" y="140" font-size="12.5" fill="#2f7d6d" text-anchor="end" font-weight="700">1 / 48 格</text>
+  <rect x="660.0" y="152" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="722.0" y="152" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="784.0" y="152" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="846.0" y="152" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="908.0" y="152" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="970.0" y="152" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="1032.0" y="152" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="1094.0" y="152" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <text x="660" y="198" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">cRow 恒定 -&gt; 也是广播,与 kernel 1 正好相反</text>
+  <text x="660" y="256" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="700">B[i*N + cCol]</text>
+  <text x="1160" y="256" font-size="12.5" fill="#2f7d6d" text-anchor="end" font-weight="700">4 / 48 格</text>
+  <rect x="660.0" y="268" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="722.0" y="268" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="784.0" y="268" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="846.0" y="268" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="908.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="970.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="1032.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="1094.0" y="268" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <text x="660" y="314" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">cCol 连续 -&gt; 32 个 float 挤进 4 个 sector</text>
+  <text x="660" y="372" font-size="12.5" fill="#252b33" text-anchor="start" font-weight="700">C[cRow*N + cCol]</text>
+  <text x="1160" y="372" font-size="12.5" fill="#2f7d6d" text-anchor="end" font-weight="700">4 / 48 格</text>
+  <rect x="660.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="722.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="784.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="846.0" y="384" width="56.0" height="22.0" rx="3" fill="#fdf0e3" stroke="#b5762a" stroke-width="1.0"/>
+  <rect x="908.0" y="384" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="970.0" y="384" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="1032.0" y="384" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <rect x="1094.0" y="384" width="56.0" height="22.0" rx="3" fill="#eef1f5" stroke="#e7eaf0" stroke-width="0.8"/>
+  <text x="660" y="430" font-size="11" fill="#252b33" text-anchor="start" font-weight="400">连续写,同样合并成 4 个 sector</text>
+  <line x1="40" y1="486" x2="1140" y2="486" stroke="#e7eaf0" stroke-width="1.0" stroke-linecap="round"/>
+  <text x="40" y="512" font-size="13" fill="#252b33" text-anchor="start" font-weight="600">kernel 1: A 与 C 各 32 格,B 是广播只占 1 格 —— 合计 65 格</text>
+  <text x="40" y="538" font-size="13" fill="#2f7d6d" text-anchor="start" font-weight="600">kernel 2: A 变成广播(1 格),B 与 C 各 4 格 —— 合计 9 格,是 kernel 1 的 7.2 分之一</text>
+  <text x="40" y="564" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">换的只是线程到元素的映射,算法一行没动。README 里这一步是 309.0 -&gt; 1986.5 GFLOPs</text>
+  <text x="40" y="588" font-size="12" fill="#737c88" text-anchor="start" font-weight="400">所以那 6.4 倍来自访存,不是来自算得更快 —— 每条线程做的乘加次数完全没变</text>
+</svg>

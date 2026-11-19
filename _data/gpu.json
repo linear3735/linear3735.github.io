@@ -23,6 +23,30 @@
         "status": "ready",
         "path": "assets/blog/_tools/CONVENTIONS-GPU.md",
         "key": "新增一个系列之前先读它，尤其是第 5 节和第 7 节"
+      },
+      {
+        "title": "Boehm 的 SGEMM 工作日志：11 级优化链，逐级拆代码",
+        "desc": "12 个内核源码逐个读；优化链的数字全部来自该仓库 README，没有我实测的 —— 我自己算的是访存地址算术",
+        "status": "done",
+        "post_slug": "sgemm-cuda-chain",
+        "tags": [
+          "CUDA",
+          "内核",
+          "内存"
+        ],
+        "key": "主结论：优化链的收益不是均匀的 —— 增量最大的是第 5 级 2D blocktiling（+32.2 个点），其次是第 4 级（+23.6）；后半程的 bank 冲突、双缓冲、向量化、调参都只有几点，第 10 级 warptiling 的 8.9 点排第三。这一篇我一次实验都没做，性能数字全部引自该仓库 README，我自己算的是访存地址算术（65 格 vs 9 格）"
+      },
+      {
+        "title": "96 张 H100 上复刻 DeepSeek 推理：大 EP 拆开看",
+        "desc": "PD 分离、two-batch overlap、EPLB 的机制拆解；数字全部引自 LMSYS 原文，没有我实测的。含一个反直觉负结果",
+        "status": "done",
+        "post_slug": "lmsys-large-scale-ep",
+        "key": "主结论：把 batch 切成两份让计算和通信重叠，在 decode 每设备 32 token 时反而慢 27%，要到 64–128 以上才转正 —— 重叠的收益得盖过切分带来的 kernel 效率损失。这一篇我一次实验都没做，所有数字都是引用，逐条出处写在文末",
+        "tags": [
+          "多GPU",
+          "通信",
+          "性能优化"
+        ]
       }
     ]
   },
